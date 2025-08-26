@@ -1140,6 +1140,7 @@ print(f"Class average: {average:.1f}")
 Useful for grouping related items:
 
 <CodeEditor language="Python">
+
 # Organize books by genre
 library = {
     "fiction": ["1984", "Dune", "Foundation"],
