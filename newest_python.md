@@ -5147,7 +5147,7 @@ nyc_311_analysis/
 ### Prerequisites
 - Python 3.8 or higher
 - pip package manager
-```
+
 
 ### Installation
 1. Clone this repository:
@@ -5166,7 +5166,6 @@ nyc_311_analysis/
    jupyter lab notebooks/311_analysis.ipynb
    ```
 
-```
 ## Key Findings
 
 ### Most Common Complaints
