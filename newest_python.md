@@ -463,28 +463,30 @@ We've seen basic strings, but Python offers several ways to create and work with
 
 The simplest strings are **literals**—text you type directly in quotes:
 
-```pycon
->>> simple = "Hello, World!"
->>> with_apostrophe = "It's a beautiful day"
->>> with_quotes = 'She said "Hello" to me'
->>> empty = ""  # An empty string is perfectly valid
-```
+<CodeEditor language="Python">
+simple = "Hello, World!"
+with_apostrophe = "It's a beautiful day"
+with_quotes = 'She said "Hello" to me'
+empty = ""  # An empty string is perfectly valid
 
-<PythonREPL />
+# Display the strings
+print(simple)
+print(with_apostrophe)
+print(with_quotes)
+print(f"Empty string: '{empty}'")
+</CodeEditor>
 
 ### Multi-line Strings
 
 For longer text, use triple quotes (either `'''` or `"""`):
 
-```pycon
->>> poem = """Roses are red,
+<CodeEditor language="Python">
+poem = """Roses are red,
 Violets are blue,
 Python is awesome,
 And so are you!"""
->>> print(poem)
-```
-
-<PythonREPL />
+print(poem)
+</CodeEditor>
 
 Triple-quoted strings preserve all formatting, including line breaks and indentation. They're perfect for:
 - Long text passages
@@ -496,89 +498,79 @@ Triple-quoted strings preserve all formatting, including line breaks and indenta
 
 The simplest way to combine strings is with the `+` operator:
 
-```pycon
->>> first_name = "Ada"
->>> last_name = "Lovelace"
->>> full_name = first_name + " " + last_name
->>> print(full_name)
-```
+<CodeEditor language="Python">
+first_name = "Ada"
+last_name = "Lovelace"
+full_name = first_name + " " + last_name
+print(full_name)
 
-But watch out—you need to explicitly include spaces:
-
-```pycon
->>> greeting = "Hello"
->>> name = "World"
->>> print(greeting + name)  # No space!
->>> print(greeting + " " + name)  # Better
-```
-
-<PythonREPL />
+# Watch out—you need to explicitly include spaces:
+greeting = "Hello"
+name = "World"
+print(greeting + name)  # No space!
+print(greeting + " " + name)  # Better
+</CodeEditor>
 
 You can only concatenate strings with other strings:
 
-```pycon
->>> age = 25
->>> # This will cause an error:
->>> # message = "I am " + age + " years old"  # TypeError!
->>> 
->>> # You must convert the number to a string first:
->>> message = "I am " + str(age) + " years old"
->>> print(message)
-```
+<CodeEditor language="Python">
+age = 25
+# This will cause an error:
+# message = "I am " + age + " years old"  # TypeError!
 
-<PythonREPL />
+# You must convert the number to a string first:
+message = "I am " + str(age) + " years old"
+print(message)
+</CodeEditor>
 
 ### F-Strings: The Modern Way
 
 While concatenation works, it quickly becomes cumbersome. Python 3.6 introduced **f-strings** (formatted string literals), which are far more elegant:
 
-```pycon
->>> name = "Ada"
->>> age = 36
->>> occupation = "mathematician"
->>> 
->>> # The old way (concatenation):
->>> old_way = "My name is " + name + ", I am " + str(age) + " years old, and I work as a " + occupation + "."
->>> 
->>> # The new way (f-string):
->>> new_way = f"My name is {name}, I am {age} years old, and I work as a {occupation}."
->>> 
->>> print(old_way)
->>> print(new_way)  # Same result, much cleaner!
-```
+<CodeEditor language="Python">
+name = "Ada"
+age = 36
+occupation = "mathematician"
 
-<PythonREPL />
+# The old way (concatenation):
+old_way = "My name is " + name + ", I am " + str(age) + " years old, and I work as a " + occupation + "."
+
+# The new way (f-string):
+new_way = f"My name is {name}, I am {age} years old, and I work as a {occupation}."
+
+print(old_way)
+print(new_way)  # Same result, much cleaner!
+</CodeEditor>
 
 F-strings start with `f` before the opening quote. Inside the string, anything in curly braces `{}` is evaluated as Python code:
 
-```pycon
->>> items = 3
->>> price = 19.99
->>> print(f"I bought {items} books for ${price * items}")
->>> 
->>> # You can even do calculations inside the braces:
->>> print(f"Next year I'll be {age + 1}")
->>> 
->>> # Or call functions:
->>> print(f"My name in uppercase is {name.upper()}")
-```
+<CodeEditor language="Python">
+name = "Ada"
+age = 36
+items = 3
+price = 19.99
 
-<PythonREPL />
+print(f"I bought {items} books for ${price * items}")
+
+# You can even do calculations inside the braces:
+print(f"Next year I'll be {age + 1}")
+
+# Or call functions:
+print(f"My name in uppercase is {name.upper()}")
+</CodeEditor>
 
 F-strings can also format numbers:
 
-```pycon
->>> pi = 3.14159265359
->>> print(f"Pi rounded to 2 decimals: {pi:.2f}")
->>> 
->>> percentage = 0.875
->>> print(f"Success rate: {percentage:.1%}")  # Converts to percentage!
->>> 
->>> large_number = 1234567
->>> print(f"Population: {large_number:,}")  # Adds comma separators
-```
+<CodeEditor language="Python">
+pi = 3.14159265359
+print(f"Pi rounded to 2 decimals: {pi:.2f}")
 
-<PythonREPL />
+percentage = 0.875
+print(f"Success rate: {percentage:.1%}")  # Converts to percentage!
+
+large_number = 1234567
+print(f"Population: {large_number:,}")  # Adds comma separators
+</CodeEditor>
 
 ## String Methods
 
@@ -586,144 +578,128 @@ Strings in Python are **objects**, which means they come with built-in functions
 
 ### Case Methods
 
-```pycon
->>> text = "Hello, World!"
->>> 
->>> print(text.upper())       # HELLO, WORLD!
->>> print(text.lower())       # hello, world!
->>> print(text.capitalize())  # Hello, world!
->>> print(text.title())       # Hello, World!
->>> print(text.swapcase())    # hELLO, wORLD!
-```
+<CodeEditor language="Python">
+text = "Hello, World!"
 
-<PythonREPL />
+print(text.upper())       # HELLO, WORLD!
+print(text.lower())       # hello, world!
+print(text.capitalize())  # Hello, world!
+print(text.title())       # Hello, World!
+print(text.swapcase())    # hELLO, wORLD!
+</CodeEditor>
 
 Important: String methods don't change the original string (strings are **immutable**). They return a new string:
 
-```pycon
->>> original = "Hello"
->>> uppercase = original.upper()
->>> print(original)  # Still "Hello"
->>> print(uppercase)  # "HELLO"
-```
-
-<PythonREPL />
+<CodeEditor language="Python">
+original = "Hello"
+uppercase = original.upper()
+print(original)  # Still "Hello"
+print(uppercase)  # "HELLO"
+</CodeEditor>
 
 ### Searching and Checking
 
-```pycon
->>> email = "student@university.edu"
->>> 
->>> # Check if string contains something:
->>> print("@" in email)  # True
->>> print(email.count("u"))  # How many times does 'u' appear?
->>> 
->>> # Find position (index) of substring:
->>> print(email.index("@"))  # Position of @ symbol
->>> print(email.find("edu"))  # Position where "edu" starts
->>> 
->>> # Check start and end:
->>> print(email.startswith("student"))  # True
->>> print(email.endswith(".edu"))  # True
-```
+<CodeEditor language="Python">
+email = "student@university.edu"
 
-<PythonREPL />
+# Check if string contains something:
+print("@" in email)  # True
+print(email.count("u"))  # How many times does 'u' appear?
+
+# Find position (index) of substring:
+print(email.index("@"))  # Position of @ symbol
+print(email.find("edu"))  # Position where "edu" starts
+
+# Check start and end:
+print(email.startswith("student"))  # True
+print(email.endswith(".edu"))  # True
+</CodeEditor>
 
 ### Cleaning and Modifying
 
-```pycon
->>> messy = "  Hello, World!  \n"
->>> print(messy)
->>> print(messy.strip())  # Remove whitespace from ends
->>> 
->>> text = "Hello, World!"
->>> print(text.replace("World", "Python"))
->>> print(text.replace("o", "0"))  # Replace all occurrences
->>> 
->>> # Split string into a list:
->>> sentence = "Python is awesome"
->>> words = sentence.split()  # Split on whitespace
->>> print(words)
->>> 
->>> csv_line = "Ada,Lovelace,1815"
->>> data = csv_line.split(",")  # Split on comma
->>> print(data)
-```
+<CodeEditor language="Python">
+messy = "  Hello, World!  \n"
+print(messy)
+print(messy.strip())  # Remove whitespace from ends
 
-<PythonREPL />
+text = "Hello, World!"
+print(text.replace("World", "Python"))
+print(text.replace("o", "0"))  # Replace all occurrences
+
+# Split string into a list:
+sentence = "Python is awesome"
+words = sentence.split()  # Split on whitespace
+print(words)
+
+csv_line = "Ada,Lovelace,1815"
+data = csv_line.split(",")  # Split on comma
+print(data)
+</CodeEditor>
 
 ### String Validation Methods
 
 Python provides methods to check what kind of characters a string contains:
 
-```pycon
->>> # Check if string contains only certain types of characters:
->>> print("hello".isalpha())     # Only letters? True
->>> print("hello123".isalpha())  # Only letters? False
->>> print("123".isdigit())       # Only digits? True
->>> print("hello123".isalnum())  # Only letters/numbers? True
->>> print("  ".isspace())        # Only whitespace? True
->>> print("Hello".isupper())     # All uppercase? False
->>> print("HELLO".isupper())     # All uppercase? True
-```
-
-<PythonREPL />
+<CodeEditor language="Python">
+# Check if string contains only certain types of characters:
+print("hello".isalpha())     # Only letters? True
+print("hello123".isalpha())  # Only letters? False
+print("123".isdigit())       # Only digits? True
+print("hello123".isalnum())  # Only letters/numbers? True
+print("  ".isspace())        # Only whitespace? True
+print("Hello".isupper())     # All uppercase? False
+print("HELLO".isupper())     # All uppercase? True
+</CodeEditor>
 
 ## String Indexing and Slicing
 
 Strings are **sequences**—ordered collections of characters. Each character has a position (index), starting from 0:
 
-```pycon
->>> text = "Python"
->>> #       012345  <- Index positions
->>> 
->>> print(text[0])  # First character: 'P'
->>> print(text[1])  # Second character: 'y'
->>> print(text[5])  # Last character: 'n'
->>> 
->>> # Negative indices count from the end:
->>> print(text[-1])  # Last character: 'n'
->>> print(text[-2])  # Second-to-last: 'o'
-```
+<CodeEditor language="Python">
+text = "Python"
+#       012345  <- Index positions
 
-<PythonREPL />
+print(text[0])  # First character: 'P'
+print(text[1])  # Second character: 'y'
+print(text[5])  # Last character: 'n'
+
+# Negative indices count from the end:
+print(text[-1])  # Last character: 'n'
+print(text[-2])  # Second-to-last: 'o'
+</CodeEditor>
 
 **Slicing** lets you extract portions of a string:
 
-```pycon
->>> text = "Python Programming"
->>> 
->>> # Basic slicing: [start:end]
->>> print(text[0:6])   # Characters 0-5 (end is exclusive)
->>> print(text[7:18])  # "Programming"
->>> 
->>> # Omit start or end:
->>> print(text[:6])    # From beginning to position 5
->>> print(text[7:])    # From position 7 to end
->>> 
->>> # Step parameter: [start:end:step]
->>> print(text[::2])   # Every other character
->>> print(text[::-1])  # Reverse the string!
-```
+<CodeEditor language="Python">
+text = "Python Programming"
 
-<PythonREPL />
+# Basic slicing: [start:end]
+print(text[0:6])   # Characters 0-5 (end is exclusive)
+print(text[7:18])  # "Programming"
+
+# Omit start or end:
+print(text[:6])    # From beginning to position 5
+print(text[7:])    # From position 7 to end
+
+# Step parameter: [start:end:step]
+print(text[::2])   # Every other character
+print(text[::-1])  # Reverse the string!
+</CodeEditor>
 
 ## Escape Sequences
 
 Sometimes you need to include special characters in strings. **Escape sequences** start with a backslash `\`:
 
-```pycon
->>> # Common escape sequences:
->>> print("Hello\nWorld")    # \n = newline
->>> print("Hello\tWorld")    # \t = tab
->>> print("She said \"Hi\"") # \" = quotation mark
->>> print("C:\\Users\\Ada")  # \\ = backslash itself
->>> 
->>> # Raw strings (ignore escape sequences):
->>> print(r"C:\Users\new_folder")  # r prefix makes it raw
-```
+<CodeEditor language="Python">
+# Common escape sequences:
+print("Hello\nWorld")    # \n = newline
+print("Hello\tWorld")    # \t = tab
+print("She said \"Hi\"") # \" = quotation mark
+print("C:\\Users\\Ada")  # \\ = backslash itself
 
-<PythonREPL />
+# Raw strings (ignore escape sequences):
+print(r"C:\Users\new_folder")  # r prefix makes it raw
+</CodeEditor>
 
 ## Review Questions
 
