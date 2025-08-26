@@ -122,10 +122,13 @@ We'll start in the **REPL** (Read-Evaluate-Print Loop), which is like having a c
 
 The most basic way to display output in Python is with the `print()` function. A **function** in programming is a named command that performs a specific task. Functions are like verbs in human language—they do things.
 
-<CodeEditor language="Python">
-# Your first Python program!
-print("Hello, World!")
-</CodeEditor>
+Type the following into the Python REPL below and press <kbd>Enter</kbd>:
+
+```pycon
+>>> print("Hello, World!")
+```
+
+<PythonREPL />
 
 Let's break down what just happened:
 
@@ -142,11 +145,13 @@ Let's break down what just happened:
 
 Try modifying the message:
 
-<CodeEditor language="Python">
-print("Hello, Python!")
-print('My name is Ada')  # Single quotes work too
-print("It's a beautiful day")  # Double quotes are useful when your text contains apostrophes
-</CodeEditor>
+```pycon
+>>> print("Hello, Python!")
+>>> print('My name is Ada')  # Single quotes work too
+>>> print("It's a beautiful day")  # Double quotes are useful when your text contains apostrophes
+```
+
+<PythonREPL />
 
 <Info>The `#` symbol starts a comment—text that Python ignores. We use comments to leave notes for ourselves and other programmers.</Info>
 
@@ -686,10 +691,11 @@ print(text[::-1])  # Reverse the string!
 Sometimes you need to include special characters in strings. **Escape sequences** start with a backslash `\`:
 
 <CodeEditor language="Python">
+
 # Common escape sequences:
 print("Hello\nWorld")    # \n = newline
 print("Hello\tWorld")    # \t = tab
-print("She said \"Hi\"") # \" = quotation mark
+print("She said \\"Hi\\"") # \" = quotation mark
 print("C:\\Users\\Ada")  # \\ = backslash itself
 
 # Raw strings (ignore escape sequences):
