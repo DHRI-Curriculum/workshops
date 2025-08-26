@@ -5151,20 +5151,18 @@ nyc_311_analysis/
 
 ### Installation
 1. Clone this repository:
-   ```bash
    git clone https://github.com/yourusername/nyc_311_analysis.git
    cd nyc_311_analysis
-   ```
+
 
 2. Install required packages:
-   ```bash
    pip install -r requirements.txt
-   ```
+
 
 3. Run the analysis:
-   ```bash
+
    jupyter lab notebooks/311_analysis.ipynb
-   ```
+
 
 ## Key Findings
 
