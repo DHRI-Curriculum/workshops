@@ -393,6 +393,7 @@ if is_student:
 </Secret>
 
 ### Challenge 3: Type Investigation
+
 <Secret>
 ```python
 # Type Investigation Solution
@@ -797,7 +798,6 @@ else:
 
 ### Challenge 2: Text Cleaner
 <Secret>
-
 ```python
 # Text Cleaner
 messy_text = "  hELLo,    wORLD!!!   this   IS  messy   "
@@ -814,12 +814,10 @@ cleaned = cleaned.capitalize()  # Capitalize first letter
 print(f"Original: '{messy_text}'")
 print(f"Cleaned: '{cleaned}'")
 ```
-
 </Secret>
 
 ### Challenge 3: Password Strength Checker
 <Secret>
-
 ```python
 # Password Strength Checker
 password = "MyPass123"
@@ -843,7 +841,6 @@ if all([is_long_enough, has_upper, has_lower, has_digit]):
 else:
     print("Password is WEAK")
 ```
-
 </Secret>
 
 ## Key Terms
@@ -1281,7 +1278,6 @@ Which of these can be a dictionary key? (Select all that apply)
 
 ### Challenge 1: Grade Manager
 <Secret>
-
 ```python
 # Grade Manager
 students = [
@@ -1301,12 +1297,10 @@ for student in students:
 top_student = max(students, key=lambda s: s["average"])
 print(f"\nTop student: {top_student['name']} with {top_student['average']:.1f}")
 ```
-
 </Secret>
 
 ### Challenge 2: Word Frequency Counter
 <Secret>
-
 ```python
 # Word Frequency Counter
 sentence = "The quick brown fox jumps over the lazy dog The fox is quick"
@@ -1331,12 +1325,10 @@ print("Word frequencies:")
 for word, count in word_count.items():
     print(f"{word}: {count}")
 ```
-
 </Secret>
 
 ### Challenge 3: Shopping Cart
 <Secret>
-
 ```python
 # Shopping Cart System
 cart = {
@@ -1358,7 +1350,6 @@ for item, details in cart.items():
 print("-" * 40)
 print(f"{'Total:':15} ${total:6.2f}")
 ```
-
 </Secret>
 
 ## Key Terms
@@ -1793,7 +1784,6 @@ for num in range(1, 31):
 
 ### Challenge 2: Prime Checker
 <Secret>
-
 ```python
 # Prime Checker Solution
 number = int(input("Enter a number to check: "))
@@ -1821,7 +1811,6 @@ else:
 
 ### Challenge 3: Password Validator
 <Secret>
-
 ```python
 # Password Validator Solution
 while True:
@@ -2251,7 +2240,6 @@ When does a function stop executing?
 
 ### Challenge 1: Temperature Converter
 <Secret>
-
 ```python
 def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
@@ -2278,12 +2266,10 @@ print(convert_temperature(100, "C"))  # Boiling point
 print(convert_temperature(32, "F"))   # Freezing point
 print(convert_temperature(37, "C"))   # Body temperature
 ```
-
 </Secret>
 
 ### Challenge 2: Data Validator
 <Secret>
-
 ```python
 def validate_data(data_dict):
     """Validate user data dictionary."""
@@ -2330,12 +2316,10 @@ print(validate_data(test1))
 print(validate_data(test2))
 print(validate_data(test3))
 ```
-
 </Secret>
 
 ### Challenge 3: Statistics Calculator
 <Secret>
-
 ```python
 def analyze_grades(grades_list):
     """Analyze a list of grades and return statistics."""
@@ -2374,7 +2358,6 @@ for key, value in stats.items():
     else:
         print(f"{key}: {value}")
 ```
-
 </Secret>
 
 ## Key Terms
@@ -3043,7 +3026,6 @@ What's the difference between `json.dump()` and `json.dumps()`?
 
 ### Challenge 1: File Statistics
 <Secret>
-
 ```python
 def analyze_text_file(filename):
     """Analyze a text file and return statistics."""
@@ -3089,7 +3071,6 @@ if stats:
 
 ### Challenge 2: CSV Grade Processor
 <Secret>
-
 ```python
 import csv
 
@@ -3145,12 +3126,10 @@ def process_grades(input_file, output_file):
 # Usage
 process_grades("student_grades.csv", "final_grades.csv")
 ```
-
 </Secret>
 
 ### Challenge 3: JSON Configuration
 <Secret>
-
 ```python
 import json
 import os
@@ -3226,7 +3205,6 @@ def process_with_config(config):
 config = load_config()
 process_with_config(config)
 ```
-
 </Secret>
 
 ## Key Terms
