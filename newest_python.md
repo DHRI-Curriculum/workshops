@@ -1164,6 +1164,7 @@ print(f"Total books: {total_books}")
 For hierarchical data:
 
 <CodeEditor language="Python">
+
 # University structure
 university = {
     "name": "State University",
