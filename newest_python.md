@@ -5120,7 +5120,7 @@ Data is collected from NYC Open Data's 311 Service Requests API:
 - API Documentation: [Socrata Open Data API](https://dev.socrata.com/)
 
 ## Project Structure
-```
+
 nyc_311_analysis/
 │
 ├── notebooks/          # Jupyter notebooks
@@ -5140,7 +5140,7 @@ nyc_311_analysis/
 │
 ├── requirements.txt  # Python dependencies
 └── README.md        # This file
-```
+
 
 ## Setup Instructions
 
