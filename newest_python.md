@@ -1370,6 +1370,7 @@ Life is full of decisions: "If it's raining, take an umbrella." "If the data is 
 The simplest decision is "if this is true, do something":
 
 <CodeEditor language="Python">
+
 temperature = 22
 
 if temperature > 20:
@@ -1390,6 +1391,7 @@ print("Have a nice day!")  # This always runs
 These operators create boolean values for our conditions:
 
 <CodeEditor language="Python">
+
 x = 10
 y = 5
 
