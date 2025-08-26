@@ -5233,24 +5233,24 @@ Create `REPRODUCIBILITY.md`:
 See requirements.txt for exact versions used.
 
 To recreate the exact environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    pip install -r requirements.txt
+
 
 ## Data Collection
 Data was collected on 2024-11-15 using the NYC Open Data API.
 To recollect similar data, run:
-```python
-python scripts/collect_data.py --days 7 --limit 2000
-```
+
+    python scripts/collect_data.py --days 7 --limit 2000
+
 
 ## Random Seeds
 All random operations use seed 42 for reproducibility:
-```python
-np.random.seed(42)
-```
+
+    np.random.seed(42)
+
 ```
 
 ### 2. Citation File
