@@ -122,13 +122,10 @@ We'll start in the **REPL** (Read-Evaluate-Print Loop), which is like having a c
 
 The most basic way to display output in Python is with the `print()` function. A **function** in programming is a named command that performs a specific task. Functions are like verbs in human language—they do things.
 
-Type the following into the Python REPL below and press <kbd>Enter</kbd>:
-
-```pycon
->>> print("Hello, World!")
-```
-
-<PythonREPL />
+<CodeEditor language="Python">
+# Your first Python program!
+print("Hello, World!")
+</CodeEditor>
 
 Let's break down what just happened:
 
@@ -145,13 +142,11 @@ Let's break down what just happened:
 
 Try modifying the message:
 
-```pycon
->>> print("Hello, Python!")
->>> print('My name is Ada')  # Single quotes work too
->>> print("It's a beautiful day")  # Double quotes are useful when your text contains apostrophes
-```
-
-<PythonREPL />
+<CodeEditor language="Python">
+print("Hello, Python!")
+print('My name is Ada')  # Single quotes work too
+print("It's a beautiful day")  # Double quotes are useful when your text contains apostrophes
+</CodeEditor>
 
 <Info>The `#` symbol starts a comment—text that Python ignores. We use comments to leave notes for ourselves and other programmers.</Info>
 
