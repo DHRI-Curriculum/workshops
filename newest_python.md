@@ -5166,6 +5166,7 @@ nyc_311_analysis/
    jupyter lab notebooks/311_analysis.ipynb
    ```
 
+```
 ## Key Findings
 
 ### Most Common Complaints
@@ -5182,12 +5183,6 @@ nyc_311_analysis/
 - Peak complaint hour: 10 AM
 - Peak complaint day: Monday
 - Lowest volume: Sunday 3-5 AM
-
-## Visualizations
-
-![Complaint Types by Borough](output/figures/complaints_by_borough.png)
-
-![Resolution Time Distribution](output/figures/resolution_times.png)
 
 ## Future Work
 - Predictive modeling for resolution times
