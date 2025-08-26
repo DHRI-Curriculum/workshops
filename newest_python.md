@@ -639,6 +639,7 @@ print(data)
 Python provides methods to check what kind of characters a string contains:
 
 <CodeEditor language="Python">
+print("hello")
 # Check if string contains only certain types of characters:
 print("hello".isalpha())     # Only letters? True
 print("hello123".isalpha())  # Only letters? False
@@ -670,7 +671,6 @@ print(text[-2])  # Second-to-last: 'o'
 
 <CodeEditor language="Python">
 text = "Python Programming"
-
 # Basic slicing: [start:end]
 print(text[0:6])   # Characters 0-5 (end is exclusive)
 print(text[7:18])  # "Programming"
@@ -694,7 +694,6 @@ Sometimes you need to include special characters in strings. **Escape sequences*
 print("Hello\nWorld")    # \n = newline
 print("Hello\tWorld")    # \t = tab
 print("She said \\"Hi\\"") # \" = quotation mark
-print("C:\\Users\\Ada")  # \\ = backslash itself
 
 # Raw strings (ignore escape sequences):
 print(r"C:\Users\new_folder")  # r prefix makes it raw
@@ -843,42 +842,43 @@ A **list** is Python's most versatile data structure. It's an ordered, mutable (
 
 Lists are created with square brackets `[]`, with items separated by commas:
 
-```pycon
->>> # An empty list
->>> empty_list = []
->>> 
->>> # A list of strings
->>> books = ["1984", "Brave New World", "Fahrenheit 451"]
->>> 
->>> # A list of numbers
->>> temperatures = [20.5, 21.0, 19.8, 22.1, 20.9]
->>> 
->>> # Lists can contain mixed types (though usually not recommended)
->>> mixed = [42, "hello", 3.14, True]
->>> 
->>> # Lists can contain other lists!
->>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-```
+<CodeEditor language="Python">
+# An empty list
+empty_list = []
+print(f"Empty list: {empty_list}")
 
-<PythonREPL />
+# A list of strings
+books = ["1984", "Brave New World", "Fahrenheit 451"]
+print(f"Books: {books}")
+
+# A list of numbers
+temperatures = [20.5, 21.0, 19.8, 22.1, 20.9]
+print(f"Temperatures: {temperatures}")
+
+# Lists can contain mixed types (though usually not recommended)
+mixed = [42, "hello", 3.14, True]
+print(f"Mixed list: {mixed}")
+
+# Lists can contain other lists!
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(f"Matrix: {matrix}")
+</CodeEditor>
 
 ### Accessing List Items
 
 Like strings, lists use **zero-based indexing**. The first item is at index 0:
 
-```pycon
->>> fruits = ["apple", "banana", "cherry", "date"]
->>> 
->>> print(fruits[0])   # First item
->>> print(fruits[1])   # Second item
->>> print(fruits[-1])  # Last item
->>> print(fruits[-2])  # Second-to-last
->>> 
->>> # Trying to access beyond the list causes an error:
->>> # print(fruits[10])  # IndexError!
-```
+<CodeEditor language="Python">
+fruits = ["apple", "banana", "cherry", "date"]
 
-<PythonREPL />
+print(f"First item: {fruits[0]}")
+print(f"Second item: {fruits[1]}")
+print(f"Last item: {fruits[-1]}")
+print(f"Second-to-last: {fruits[-2]}")
+
+# Trying to access beyond the list causes an error:
+# print(fruits[10])  # This would cause an IndexError
+</CodeEditor>
 
 <Info>Off-by-one errors are probably the most common bug in programming. Remember: if a list has 4 items, the valid indices are 0, 1, 2, and 3.</Info>
 
@@ -886,114 +886,108 @@ Like strings, lists use **zero-based indexing**. The first item is at index 0:
 
 Unlike strings, lists are **mutable**—you can change them after creation:
 
-```pycon
->>> colors = ["red", "green", "blue"]
->>> print(colors)
->>> 
->>> # Change an existing item
->>> colors[1] = "yellow"
->>> print(colors)
->>> 
->>> # Add items to the end
->>> colors.append("purple")
->>> print(colors)
->>> 
->>> # Insert at a specific position
->>> colors.insert(1, "orange")  # Insert at index 1
->>> print(colors)
->>> 
->>> # Remove items
->>> colors.remove("yellow")  # Remove first occurrence
->>> print(colors)
->>> 
->>> # Remove and return last item
->>> last_color = colors.pop()
->>> print(last_color)
->>> print(colors)
-```
+<CodeEditor language="Python">
+colors = ["red", "green", "blue"]
+print(f"Original: {colors}")
 
-<PythonREPL />
+# Change an existing item
+colors[1] = "yellow"
+print(f"After change: {colors}")
+
+# Add items to the end
+colors.append("purple")
+print(f"After append: {colors}")
+
+# Insert at a specific position
+colors.insert(1, "orange")  # Insert at index 1
+print(f"After insert: {colors}")
+
+# Remove items
+colors.remove("yellow")  # Remove first occurrence
+print(f"After remove: {colors}")
+
+# Remove and return last item
+last_color = colors.pop()
+print(f"Popped item: {last_color}")
+print(f"Final list: {colors}")
+</CodeEditor>
 
 ### List Slicing
 
 Like strings, you can extract portions of lists:
 
-```pycon
->>> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
->>> 
->>> print(numbers[2:5])    # Items at indices 2, 3, 4
->>> print(numbers[:3])     # First three items
->>> print(numbers[7:])     # From index 7 to end
->>> print(numbers[::2])    # Every other item
->>> print(numbers[::-1])   # Reverse the list
->>> 
->>> # You can assign to slices!
->>> numbers[2:5] = [20, 30, 40]
->>> print(numbers)
-```
+<CodeEditor language="Python">
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-<PythonREPL />
+print(f"Original: {numbers}")
+print(f"Slice [2:5]: {numbers[2:5]}")
+print(f"Slice [:3]: {numbers[:3]}")
+print(f"Slice [7:]: {numbers[7:]}")
+print(f"Slice [::2]: {numbers[::2]}")
+print(f"Slice [::-1] (reversed): {numbers[::-1]}")
+
+# You can assign to slices!
+numbers[2:5] = [20, 30, 40]
+print(f"After assigning to slice: {numbers}")
+</CodeEditor>
 
 ### Useful List Operations
 
-```pycon
->>> grades = [85, 92, 78, 95, 88]
->>> 
->>> # Length of list
->>> print(len(grades))
->>> 
->>> # Check membership
->>> print(92 in grades)
->>> print(100 in grades)
->>> 
->>> # Mathematical operations (with number lists)
->>> print(sum(grades))
->>> print(max(grades))
->>> print(min(grades))
->>> average = sum(grades) / len(grades)
->>> print(f"Average: {average:.2f}")
->>> 
->>> # Sorting
->>> grades.sort()  # Sorts in-place (modifies the original)
->>> print(grades)
->>> 
->>> # Or create a new sorted list
->>> names = ["Charlie", "Alice", "Bob"]
->>> sorted_names = sorted(names)  # Returns new list
->>> print(names)  # Original unchanged
->>> print(sorted_names)
-```
+<CodeEditor language="Python">
+grades = [85, 92, 78, 95, 88]
 
-<PythonREPL />
+# Length of list
+print(f"Number of grades: {len(grades)}")
+
+# Check membership
+print(f"Is 92 in grades? {92 in grades}")
+print(f"Is 100 in grades? {100 in grades}")
+
+# Mathematical operations (with number lists)
+print(f"Sum of grades: {sum(grades)}")
+print(f"Highest grade: {max(grades)}")
+print(f"Lowest grade: {min(grades)}")
+average = sum(grades) / len(grades)
+print(f"Average: {average:.2f}")
+
+# Sorting
+grades.sort()  # Sorts in-place (modifies the original)
+print(f"Sorted grades (in-place): {grades}")
+
+# Or create a new sorted list
+names = ["Charlie", "Alice", "Bob"]
+sorted_names = sorted(names)  # Returns new list
+print(f"Original names: {names}")
+print(f"New sorted list of names: {sorted_names}")
+</CodeEditor>
 
 ### List Methods
 
 Lists have many useful methods:
 
-```pycon
->>> tasks = ["read", "write", "review"]
->>> 
->>> # Add multiple items
->>> tasks.extend(["edit", "submit"])
->>> print(tasks)
->>> 
->>> # Count occurrences
->>> numbers = [1, 2, 3, 2, 2, 4]
->>> print(numbers.count(2))  # How many 2s?
->>> 
->>> # Find index of item
->>> print(tasks.index("write"))
->>> 
->>> # Reverse the list
->>> tasks.reverse()
->>> print(tasks)
->>> 
->>> # Clear all items
->>> tasks.clear()
->>> print(tasks)  # Empty list
-```
+<CodeEditor language="Python">
+tasks = ["read", "write", "review"]
+print(f"Initial tasks: {tasks}")
 
-<PythonREPL />
+# Add multiple items
+tasks.extend(["edit", "submit"])
+print(f"After extend: {tasks}")
+
+# Count occurrences
+numbers = [1, 2, 3, 2, 2, 4]
+print(f"Count of 2s: {numbers.count(2)}")
+
+# Find index of item
+print(f"Index of 'write': {tasks.index('write')}")
+
+# Reverse the list
+tasks.reverse()
+print(f"Reversed tasks: {tasks}")
+
+# Clear all items
+tasks.clear()
+print(f"Cleared tasks: {tasks}")
+</CodeEditor>
 
 ## Dictionaries: Labeled Data
 
@@ -1005,28 +999,29 @@ A dictionary is a collection of **key-value pairs**. Instead of accessing items 
 
 Dictionaries use curly braces `{}` with key-value pairs separated by colons:
 
-```pycon
->>> # Empty dictionary
->>> empty_dict = {}
->>> 
->>> # Student information
->>> student = {
->>>     "name": "Ada Lovelace",
->>>     "age": 36,
->>>     "major": "Mathematics",
->>>     "gpa": 3.9,
->>>     "enrolled": True
->>> }
->>> 
->>> # Dictionary with different key types (usually strings though)
->>> mixed_keys = {
->>>     "name": "Example",
->>>     42: "the answer",
->>>     3.14: "pi approximation"
->>> }
-```
+<CodeEditor language="Python">
+# Empty dictionary
+empty_dict = {}
+print(f"Empty dictionary: {empty_dict}")
 
-<PythonREPL />
+# Student information
+student = {
+    "name": "Ada Lovelace",
+    "age": 36,
+    "major": "Mathematics",
+    "gpa": 3.9,
+    "enrolled": True
+}
+print(f"Student info: {student}")
+
+# Dictionary with different key types (usually strings though)
+mixed_keys = {
+    "name": "Example",
+    42: "the answer",
+    3.14: "pi approximation"
+}
+print(f"Mixed keys: {mixed_keys}")
+</CodeEditor>
 
 **Important notes:**
 - Keys must be unique (no duplicates)
@@ -1038,82 +1033,77 @@ Dictionaries use curly braces `{}` with key-value pairs separated by colons:
 
 Use square brackets with the key:
 
-```pycon
->>> person = {
->>>     "first_name": "Marie",
->>>     "last_name": "Curie",
->>>     "field": "Physics",
->>>     "nobel_prizes": 2
->>> }
->>> 
->>> print(person["first_name"])
->>> print(person["field"])
->>> 
->>> # Accessing a non-existent key causes an error:
->>> # print(person["middle_name"])  # KeyError!
->>> 
->>> # Safer access with .get()
->>> print(person.get("middle_name"))  # Returns None if not found
->>> print(person.get("middle_name", "N/A"))  # Provide default value
-```
+<CodeEditor language="Python">
+person = {
+    "first_name": "Marie",
+    "last_name": "Curie",
+    "field": "Physics",
+    "nobel_prizes": 2
+}
 
-<PythonREPL />
+print(f"First name: {person['first_name']}")
+print(f"Field: {person['field']}")
+
+# Accessing a non-existent key causes an error:
+# print(person["middle_name"])  # This would cause a KeyError
+
+# Safer access with .get()
+print(f"Middle name: {person.get('middle_name')}")
+print(f"Middle name (with default): {person.get('middle_name', 'N/A')}")
+</CodeEditor>
 
 ### Modifying Dictionaries
 
-```pycon
->>> course = {
->>>     "code": "PYTHON101",
->>>     "title": "Intro to Python",
->>>     "credits": 3
->>> }
->>> 
->>> # Add or update values
->>> course["instructor"] = "Dr. Smith"
->>> course["credits"] = 4  # Update existing
->>> print(course)
->>> 
->>> # Remove items
->>> del course["credits"]  # Using del keyword
->>> print(course)
->>> 
->>> # Or use pop() to remove and return value
->>> instructor = course.pop("instructor")
->>> print(instructor)
->>> print(course)
-```
+<CodeEditor language="Python">
+course = {
+    "code": "PYTHON101",
+    "title": "Intro to Python",
+    "credits": 3
+}
+print(f"Original course: {course}")
 
-<PythonREPL />
+# Add or update values
+course["instructor"] = "Dr. Smith"
+course["credits"] = 4  # Update existing
+print(f"After update: {course}")
+
+# Remove items
+del course["credits"]  # Using del keyword
+print(f"After del: {course}")
+
+# Or use pop() to remove and return value
+instructor = course.pop("instructor")
+print(f"Popped instructor: {instructor}")
+print(f"Final course: {course}")
+</CodeEditor>
 
 ### Dictionary Methods
 
-```pycon
->>> inventory = {
->>>     "apples": 5,
->>>     "bananas": 3,
->>>     "oranges": 2
->>> }
->>> 
->>> # Get all keys
->>> print(inventory.keys())
->>> print(list(inventory.keys()))  # Convert to list
->>> 
->>> # Get all values
->>> print(inventory.values())
->>> 
->>> # Get all key-value pairs
->>> print(inventory.items())
->>> 
->>> # Update multiple values at once
->>> inventory.update({"apples": 10, "pears": 4})
->>> print(inventory)
->>> 
->>> # Clear all items
->>> inventory.clear()
->>> print(inventory)
-```
+<CodeEditor language="Python">
+inventory = {
+    "apples": 5,
+    "bananas": 3,
+    "oranges": 2
+}
 
-<PythonREPL />
+# Get all keys
+print(f"Keys: {inventory.keys()}")
+print(f"Keys as list: {list(inventory.keys())}")
+
+# Get all values
+print(f"Values: {inventory.values()}")
+
+# Get all key-value pairs
+print(f"Items: {inventory.items()}")
+
+# Update multiple values at once
+inventory.update({"apples": 10, "pears": 4})
+print(f"After update: {inventory}")
+
+# Clear all items
+inventory.clear()
+print(f"Cleared inventory: {inventory}")
+</CodeEditor>
 
 ## Combining Lists and Dictionaries
 
@@ -1123,84 +1113,82 @@ The real power comes from combining these structures. Here are common patterns:
 
 Perfect for tabular data where each item has the same fields:
 
-```pycon
->>> # Student records
->>> students = [
->>>     {"name": "Alice", "grade": 92, "major": "CS"},
->>>     {"name": "Bob", "grade": 85, "major": "Math"},
->>>     {"name": "Charlie", "grade": 88, "major": "CS"}
->>> ]
->>> 
->>> # Access individual records
->>> print(students[0])  # First student
->>> print(students[0]["name"])  # First student's name
->>> 
->>> # Add a new student
->>> students.append({"name": "Diana", "grade": 95, "major": "Physics"})
->>> 
->>> # Find average grade
->>> total = sum(student["grade"] for student in students)
->>> average = total / len(students)
->>> print(f"Class average: {average:.1f}")
-```
+<CodeEditor language="Python">
+# Student records
+students = [
+    {"name": "Alice", "grade": 92, "major": "CS"},
+    {"name": "Bob", "grade": 85, "major": "Math"},
+    {"name": "Charlie", "grade": 88, "major": "CS"}
+]
 
-<PythonREPL />
+# Access individual records
+print(f"First student: {students[0]}")
+print(f"First student's name: {students[0]['name']}")
+
+# Add a new student
+students.append({"name": "Diana", "grade": 95, "major": "Physics"})
+print(f"Students after adding Diana: {students}")
+
+# Find average grade
+total = sum(student["grade"] for student in students)
+average = total / len(students)
+print(f"Class average: {average:.1f}")
+</CodeEditor>
 
 ### Dictionary of Lists
 
 Useful for grouping related items:
 
-```pycon
->>> # Organize books by genre
->>> library = {
->>>     "fiction": ["1984", "Dune", "Foundation"],
->>>     "non_fiction": ["Educated", "Cosmos"],
->>>     "poetry": ["Leaves of Grass", "The Wasteland"]
->>> }
->>> 
->>> # Add a book to a genre
->>> library["fiction"].append("Neuromancer")
->>> 
->>> # Check all fiction books
->>> print("Fiction books:", library["fiction"])
->>> 
->>> # Count total books
->>> total_books = sum(len(books) for books in library.values())
->>> print(f"Total books: {total_books}")
-```
+<CodeEditor language="Python">
+# Organize books by genre
+library = {
+    "fiction": ["1984", "Dune", "Foundation"],
+    "non_fiction": ["Educated", "Cosmos"],
+    "poetry": ["Leaves of Grass", "The Wasteland"]
+}
 
-<PythonREPL />
+# Add a book to a genre
+library["fiction"].append("Neuromancer")
+
+# Check all fiction books
+print(f"Fiction books: {library['fiction']}")
+
+# Count total books
+total_books = sum(len(books) for books in library.values())
+print(f"Total books: {total_books}")
+</CodeEditor>
 
 ### Nested Dictionaries
 
 For hierarchical data:
 
-```pycon
->>> # University structure
->>> university = {
->>>     "name": "State University",
->>>     "departments": {
->>>         "Computer Science": {
->>>             "faculty": 25,
->>>             "students": 300,
->>>             "courses": ["CS101", "CS102", "CS201"]
->>>         },
->>>         "Mathematics": {
->>>             "faculty": 20,
->>>             "students": 250,
->>>             "courses": ["MATH101", "MATH102", "MATH201"]
->>>         }
->>>     }
->>> }
->>> 
->>> # Navigate the structure
->>> print(university["departments"]["Computer Science"]["faculty"])
->>> 
->>> # Add a new course
->>> university["departments"]["Mathematics"]["courses"].append("MATH301")
-```
+<CodeEditor language="Python">
+# University structure
+university = {
+    "name": "State University",
+    "departments": {
+        "Computer Science": {
+            "faculty": 25,
+            "students": 300,
+            "courses": ["CS101", "CS102", "CS201"]
+        },
+        "Mathematics": {
+            "faculty": 20,
+            "students": 250,
+            "courses": ["MATH101", "MATH102", "MATH201"]
+        }
+    }
+}
 
-<PythonREPL />
+# Navigate the structure
+cs_faculty = university["departments"]["Computer Science"]["faculty"]
+print(f"CS faculty count: {cs_faculty}")
+
+# Add a new course
+university["departments"]["Mathematics"]["courses"].append("MATH301")
+math_courses = university["departments"]["Mathematics"]["courses"]
+print(f"Updated Math courses: {math_courses}")
+</CodeEditor>
 
 ## Review Questions
 
@@ -1354,17 +1342,15 @@ Life is full of decisions: "If it's raining, take an umbrella." "If the data is 
 
 The simplest decision is "if this is true, do something":
 
-```pycon
->>> temperature = 22
->>> 
->>> if temperature > 20:
->>>     print("It's warm today!")
->>>     print("No jacket needed.")
->>> 
->>> print("Have a nice day!")  # This always runs
-```
+<CodeEditor language="Python">
+temperature = 22
 
-<PythonREPL />
+if temperature > 20:
+    print("It's warm today!")
+    print("No jacket needed.")
+
+print("Have a nice day!")  # This always runs
+</CodeEditor>
 
 **Critical points:**
 - The condition (`temperature > 20`) must evaluate to `True` or `False`
@@ -1376,23 +1362,21 @@ The simplest decision is "if this is true, do something":
 
 These operators create boolean values for our conditions:
 
-```pycon
->>> x = 10
->>> y = 5
->>> 
->>> print(x == y)   # Equal to
->>> print(x != y)   # Not equal to
->>> print(x > y)    # Greater than
->>> print(x < y)    # Less than
->>> print(x >= y)   # Greater than or equal to
->>> print(x <= y)   # Less than or equal to
->>> 
->>> # String comparisons work alphabetically
->>> print("apple" < "banana")  # True
->>> print("Zoo" < "ant")  # Capital letters come before lowercase!
-```
+<CodeEditor language="Python">
+x = 10
+y = 5
 
-<PythonREPL />
+print(f"x == y: {x == y}")   # Equal to
+print(f"x != y: {x != y}")   # Not equal to
+print(f"x > y: {x > y}")    # Greater than
+print(f"x < y: {x < y}")    # Less than
+print(f"x >= y: {x >= y}")   # Greater than or equal to
+print(f"x <= y: {x <= y}")   # Less than or equal to
+
+# String comparisons work alphabetically
+print(f"'apple' < 'banana': {'apple' < 'banana'}")
+print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercase!
+</CodeEditor>
 
 **Common mistake:** Using `=` instead of `==`
 - `=` is assignment (storing a value)
@@ -1402,41 +1386,38 @@ These operators create boolean values for our conditions:
 
 Often you want to do one thing if a condition is true, and something else if it's false:
 
-```pycon
->>> age = int(input("Enter your age: "))
->>> 
->>> if age >= 18:
->>>     print("You are an adult.")
->>>     print("You can vote!")
->>> else:
->>>     print("You are a minor.")
->>>     print(f"You can vote in {18 - age} years.")
-```
+<CodeEditor language="Python">
+# Note: input() does not work in this editor, so we'll set the age directly.
+age = 17 # Try changing this value to 18 or higher
 
-<PythonREPL />
+if age >= 18:
+    print("You are an adult.")
+    print("You can vote!")
+else:
+    print("You are a minor.")
+    print(f"You can vote in {18 - age} years.")
+</CodeEditor>
 
 ### Multiple Conditions with `elif`
 
 For more than two possibilities, use `elif` (short for "else if"):
 
-```pycon
->>> score = 85
->>> 
->>> if score >= 90:
->>>     grade = "A"
->>> elif score >= 80:
->>>     grade = "B"
->>> elif score >= 70:
->>>     grade = "C"
->>> elif score >= 60:
->>>     grade = "D"
->>> else:
->>>     grade = "F"
->>> 
->>> print(f"Your grade is: {grade}")
-```
+<CodeEditor language="Python">
+score = 85
 
-<PythonREPL />
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"Your grade is: {grade}")
+</CodeEditor>
 
 Python checks conditions from top to bottom and executes the first block where the condition is `True`. Once a condition matches, the rest are skipped.
 
@@ -1444,47 +1425,43 @@ Python checks conditions from top to bottom and executes the first block where t
 
 Use logical operators to combine multiple conditions:
 
-```pycon
->>> age = 25
->>> has_license = True
->>> 
->>> # AND: Both conditions must be true
->>> if age >= 18 and has_license:
->>>     print("You can rent a car!")
->>> 
->>> # OR: At least one condition must be true
->>> weekend = False
->>> holiday = True
->>> if weekend or holiday:
->>>     print("No work today!")
->>> 
->>> # NOT: Inverts the condition
->>> raining = False
->>> if not raining:
->>>     print("Let's go for a walk!")
-```
+<CodeEditor language="Python">
+age = 25
+has_license = True
 
-<PythonREPL />
+# AND: Both conditions must be true
+if age >= 18 and has_license:
+    print("You can rent a car!")
+
+# OR: At least one condition must be true
+weekend = False
+holiday = True
+if weekend or holiday:
+    print("No work today!")
+
+# NOT: Inverts the condition
+raining = False
+if not raining:
+    print("Let's go for a walk!")
+</CodeEditor>
 
 ### Nested Conditions
 
 You can put `if` statements inside other `if` statements:
 
-```pycon
->>> has_ticket = True
->>> age = 15
->>> 
->>> if has_ticket:
->>>     print("You have a ticket!")
->>>     if age >= 17:
->>>         print("You can see the R-rated movie.")
->>>     else:
->>>         print("You can only see PG-13 or below.")
->>> else:
->>>     print("You need to buy a ticket first.")
-```
+<CodeEditor language="Python">
+has_ticket = True
+age = 15
 
-<PythonREPL />
+if has_ticket:
+    print("You have a ticket!")
+    if age >= 17:
+        print("You can see the R-rated movie.")
+    else:
+        print("You can only see PG-13 or below.")
+else:
+    print("You need to buy a ticket first.")
+</CodeEditor>
 
 But be careful—too much nesting makes code hard to read. Often you can simplify with `and`/`or`.
 
@@ -1496,23 +1473,25 @@ Imagine you need to print "Hello" 100 times. You could write 100 print statement
 
 The `for` loop is Python's workhorse for repetition. It iterates (goes through) each item in a collection:
 
-```pycon
->>> # Loop through a list
->>> fruits = ["apple", "banana", "cherry"]
->>> for fruit in fruits:
->>>     print(f"I like {fruit}!")
->>> 
->>> # Loop through a string (each character)
->>> for letter in "Hello":
->>>     print(letter)
->>> 
->>> # Loop through dictionary keys
->>> scores = {"Alice": 92, "Bob": 85, "Charlie": 88}
->>> for name in scores:
->>>     print(f"{name} scored {scores[name]}")
-```
+<CodeEditor language="Python">
+# Loop through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(f"I like {fruit}!")
 
-<PythonREPL />
+print("-" * 10)
+
+# Loop through a string (each character)
+for letter in "Hello":
+    print(letter)
+
+print("-" * 10)
+
+# Loop through dictionary keys
+scores = {"Alice": 92, "Bob": 85, "Charlie": 88}
+for name in scores:
+    print(f"{name} scored {scores[name]}")
+</CodeEditor>
 
 The loop variable (`fruit`, `letter`, `name`) takes on each value in turn. You can name it anything, but choose descriptive names.
 
@@ -1520,21 +1499,23 @@ The loop variable (`fruit`, `letter`, `name`) takes on each value in turn. You c
 
 What if you just want to repeat something a certain number of times? Use `range()`:
 
-```pycon
->>> # range(n) generates numbers from 0 to n-1
->>> for i in range(5):
->>>     print(f"This is iteration {i}")
->>> 
->>> # range(start, stop) generates from start to stop-1
->>> for num in range(1, 6):
->>>     print(f"Counting: {num}")
->>> 
->>> # range(start, stop, step) with custom step
->>> for even in range(0, 11, 2):
->>>     print(even, end=" ")  # Print on same line
-```
+<CodeEditor language="Python">
+# range(n) generates numbers from 0 to n-1
+for i in range(5):
+    print(f"This is iteration {i}")
 
-<PythonREPL />
+print("-" * 10)
+
+# range(start, stop) generates from start to stop-1
+for num in range(1, 6):
+    print(f"Counting: {num}")
+
+print("-" * 10)
+
+# range(start, stop, step) with custom step
+for even in range(0, 11, 2):
+    print(even, end=" ")  # Print on same line
+</CodeEditor>
 
 **Important:** `range(5)` generates 0, 1, 2, 3, 4 (not 5!). This matches Python's zero-based indexing.
 
@@ -1542,44 +1523,49 @@ What if you just want to repeat something a certain number of times? Use `range(
 
 Sometimes you need both the item and its position:
 
-```pycon
->>> colors = ["red", "green", "blue"]
->>> 
->>> # Method 1: Using range and len
->>> for i in range(len(colors)):
->>>     print(f"{i}: {colors[i]}")
->>> 
->>> # Method 2: Using enumerate (more Pythonic!)
->>> for i, color in enumerate(colors):
->>>     print(f"{i}: {color}")
->>> 
->>> # Start enumeration at 1 instead of 0
->>> for num, color in enumerate(colors, 1):
->>>     print(f"Color #{num}: {color}")
-```
+<CodeEditor language="Python">
+colors = ["red", "green", "blue"]
 
-<PythonREPL />
+# Method 1: Using range and len
+print("Method 1: range(len())")
+for i in range(len(colors)):
+    print(f"{i}: {colors[i]}")
+
+print("-" * 10)
+
+# Method 2: Using enumerate (more Pythonic!)
+print("Method 2: enumerate()")
+for i, color in enumerate(colors):
+    print(f"{i}: {color}")
+
+print("-" * 10)
+
+# Start enumeration at 1 instead of 0
+print("Enumerate starting at 1:")
+for num, color in enumerate(colors, 1):
+    print(f"Color #{num}: {color}")
+</CodeEditor>
 
 ### The `while` Loop: Conditional Repetition
 
 The `while` loop continues as long as a condition is true:
 
-```pycon
->>> count = 0
->>> while count < 5:
->>>     print(f"Count is {count}")
->>>     count += 1  # Don't forget to update the condition!
->>> 
->>> # Useful for input validation
->>> password = ""
->>> while password != "secret":
->>>     password = input("Enter password: ")
->>>     if password != "secret":
->>>         print("Wrong password, try again!")
->>> print("Access granted!")
-```
+<CodeEditor language="Python">
+count = 0
+while count < 5:
+    print(f"Count is {count}")
+    count += 1  # Don't forget to update the condition!
 
-<PythonREPL />
+print("Loop finished.")
+
+# The input() based example won't run here, but the logic is:
+# password = ""
+# while password != "secret":
+#     password = input("Enter password: ") # This line would prompt the user
+#     if password != "secret":
+#         print("Wrong password, try again!")
+# print("Access granted!")
+</CodeEditor>
 
 **Warning:** If the condition never becomes `False`, you get an infinite loop! Always ensure the loop will eventually end.
 
@@ -1587,55 +1573,58 @@ The `while` loop continues as long as a condition is true:
 
 Sometimes you need to exit a loop early or skip certain iterations:
 
-```pycon
->>> # break: Exit the loop immediately
->>> for i in range(10):
->>>     if i == 5:
->>>         break
->>>     print(i)  # Prints 0, 1, 2, 3, 4
->>> 
->>> # continue: Skip the rest of this iteration
->>> for i in range(5):
->>>     if i == 2:
->>>         continue
->>>     print(i)  # Prints 0, 1, 3, 4 (skips 2)
->>> 
->>> # Practical example: Find first negative number
->>> numbers = [4, 8, -2, 5, -7, 3]
->>> for num in numbers:
->>>     if num < 0:
->>>         print(f"Found negative: {num}")
->>>         break
->>> else:  # This else belongs to the for loop!
->>>     print("No negative numbers found")
-```
+<CodeEditor language="Python">
+# break: Exit the loop immediately
+print("Break example:")
+for i in range(10):
+    if i == 5:
+        break
+    print(i, end=" ")
+print("\n")
 
-<PythonREPL />
+# continue: Skip the rest of this iteration
+print("Continue example:")
+for i in range(5):
+    if i == 2:
+        continue
+    print(i, end=" ")
+print("\n")
+
+# Practical example: Find first negative number
+print("Find first negative:")
+numbers = [4, 8, -2, 5, -7, 3]
+for num in numbers:
+    if num < 0:
+        print(f"Found negative: {num}")
+        break
+else:  # This else belongs to the for loop!
+    print("No negative numbers found")
+</CodeEditor>
 
 ### Nested Loops
 
 Loops can contain other loops:
 
-```pycon
->>> # Multiplication table
->>> for i in range(1, 4):
->>>     for j in range(1, 4):
->>>         result = i * j
->>>         print(f"{i} x {j} = {result}")
->>>     print()  # Empty line between sets
->>> 
->>> # Processing nested data
->>> matrix = [[1, 2, 3],
->>>            [4, 5, 6],
->>>            [7, 8, 9]]
->>> 
->>> for row in matrix:
->>>     for value in row:
->>>         print(value, end=" ")
->>>     print()  # New line after each row
-```
+<CodeEditor language="Python">
+# Multiplication table
+for i in range(1, 4):
+    for j in range(1, 4):
+        result = i * j
+        print(f"{i} x {j} = {result}")
+    print("-" * 10)  # Separator line
 
-<PythonREPL />
+# Processing nested data
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for row in matrix:
+    for value in row:
+        print(value, end=" ")
+    print()  # New line after each row
+</CodeEditor>
 
 ## Common Patterns
 
@@ -1643,43 +1632,39 @@ Loops can contain other loops:
 
 Building up a result over iterations:
 
-```pycon
->>> # Sum numbers
->>> numbers = [10, 20, 30, 40, 50]
->>> total = 0  # Initialize accumulator
->>> for num in numbers:
->>>     total += num
->>> print(f"Sum: {total}")
->>> 
->>> # Build a string
->>> words = ["Python", "is", "awesome"]
->>> sentence = ""  # Initialize accumulator
->>> for word in words:
->>>     sentence += word + " "
->>> print(sentence.strip())  # Remove trailing space
-```
+<CodeEditor language="Python">
+# Sum numbers
+numbers = [10, 20, 30, 40, 50]
+total = 0  # Initialize accumulator
+for num in numbers:
+    total += num
+print(f"Sum: {total}")
 
-<PythonREPL />
+# Build a string
+words = ["Python", "is", "awesome"]
+sentence = ""  # Initialize accumulator
+for word in words:
+    sentence += word + " "
+print(sentence.strip())  # Remove trailing space
+</CodeEditor>
 
 ### Filtering Pattern
 
 Selecting items that meet a condition:
 
-```pycon
->>> # Find all even numbers
->>> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
->>> evens = []  # Initialize empty result list
->>> for num in numbers:
->>>     if num % 2 == 0:
->>>         evens.append(num)
->>> print(f"Even numbers: {evens}")
->>> 
->>> # Or using list comprehension (advanced but elegant!)
->>> evens = [num for num in numbers if num % 2 == 0]
->>> print(f"Even numbers: {evens}")
-```
+<CodeEditor language="Python">
+# Find all even numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+evens = []  # Initialize empty result list
+for num in numbers:
+    if num % 2 == 0:
+        evens.append(num)
+print(f"Even numbers (loop): {evens}")
 
-<PythonREPL />
+# Or using list comprehension (advanced but elegant!)
+evens_comp = [num for num in numbers if num % 2 == 0]
+print(f"Even numbers (comprehension): {evens_comp}")
+</CodeEditor>
 
 ## Review Questions
 
@@ -1849,19 +1834,17 @@ Functions are like recipes:
 
 Functions are defined using the `def` keyword:
 
-```pycon
->>> # Define a simple function
->>> def greet():
->>>     """Display a friendly greeting."""
->>>     print("Hello!")
->>>     print("Welcome to Python programming!")
->>> 
->>> # Defining doesn't run the function - it just creates it
->>> # To run it, you must "call" it:
->>> greet()
-```
+<CodeEditor language="Python">
+# Define a simple function
+def greet():
+    """Display a friendly greeting."""
+    print("Hello!")
+    print("Welcome to Python programming!")
 
-<PythonREPL />
+# Defining doesn't run the function - it just creates it
+# To run it, you must "call" it:
+greet()
+</CodeEditor>
 
 Key points:
 - `def` starts the definition
@@ -1875,109 +1858,101 @@ Key points:
 
 Most functions need information to work with. **Parameters** are variables that receive values when the function is called:
 
-```pycon
->>> def greet_person(name):
->>>     """Greet a person by name."""
->>>     print(f"Hello, {name}!")
->>>     print(f"Nice to meet you, {name}.")
->>> 
->>> # Call with different arguments
->>> greet_person("Alice")
->>> greet_person("Bob")
->>> 
->>> # The value you pass is called an "argument"
->>> user = "Charlie"
->>> greet_person(user)
-```
+<CodeEditor language="Python">
+def greet_person(name):
+    """Greet a person by name."""
+    print(f"Hello, {name}!")
+    print(f"Nice to meet you, {name}.")
 
-<PythonREPL />
+# Call with different arguments
+greet_person("Alice")
+print("-" * 10)
+greet_person("Bob")
+print("-" * 10)
+
+# The value you pass is called an "argument"
+user = "Charlie"
+greet_person(user)
+</CodeEditor>
 
 Multiple parameters are separated by commas:
 
-```pycon
->>> def introduce(first_name, last_name, age):
->>>     """Introduce a person with their full name and age."""
->>>     print(f"This is {first_name} {last_name}.")
->>>     print(f"They are {age} years old.")
->>> 
->>> introduce("Ada", "Lovelace", 36)
->>> introduce("Alan", "Turing", 41)
-```
+<CodeEditor language="Python">
+def introduce(first_name, last_name, age):
+    """Introduce a person with their full name and age."""
+    print(f"This is {first_name} {last_name}.")
+    print(f"They are {age} years old.")
 
-<PythonREPL />
+introduce("Ada", "Lovelace", 36)
+print("-" * 10)
+introduce("Alan", "Turing", 41)
+</CodeEditor>
 
 ### Return Values
 
 Functions can send data back using `return`:
 
-```pycon
->>> def add_numbers(a, b):
->>>     """Add two numbers and return the result."""
->>>     result = a + b
->>>     return result
->>> 
->>> # Store the returned value
->>> sum1 = add_numbers(5, 3)
->>> print(f"5 + 3 = {sum1}")
->>> 
->>> # Use the returned value directly
->>> print(f"10 + 20 = {add_numbers(10, 20)}")
->>> 
->>> # You can return any type of data
->>> def get_info():
->>>     """Return a dictionary of information."""
->>>     return {"name": "Python", "version": 3.11, "awesome": True}
->>> 
->>> info = get_info()
->>> print(info["name"])
-```
+<CodeEditor language="Python">
+def add_numbers(a, b):
+    """Add two numbers and return the result."""
+    result = a + b
+    return result
 
-<PythonREPL />
+# Store the returned value
+sum1 = add_numbers(5, 3)
+print(f"5 + 3 = {sum1}")
+
+# Use the returned value directly
+print(f"10 + 20 = {add_numbers(10, 20)}")
+
+# You can return any type of data
+def get_info():
+    """Return a dictionary of information."""
+    return {"name": "Python", "version": 3.11, "awesome": True}
+
+info = get_info()
+print(f"Info from function: {info['name']}")
+</CodeEditor>
 
 **Important:** When a function hits `return`, it immediately exits:
 
-```pycon
->>> def check_age(age):
->>>     """Check if someone is an adult."""
->>>     if age >= 18:
->>>         return "Adult"
->>>     return "Minor"  # Only runs if first return didn't happen
->>> 
->>> print(check_age(25))
->>> print(check_age(16))
-```
+<CodeEditor language="Python">
+def check_age(age):
+    """Check if someone is an adult."""
+    if age >= 18:
+        return "Adult"
+    # This next line only runs if the condition above was false
+    return "Minor"
 
-<PythonREPL />
+print(f"Age 25 is: {check_age(25)}")
+print(f"Age 16 is: {check_age(16)}")
+</CodeEditor>
 
 Functions without explicit `return` statements return `None`:
 
-```pycon
->>> def say_hello():
->>>     print("Hello!")
->>>     # No return statement
->>> 
->>> result = say_hello()  # Prints "Hello!"
->>> print(result)  # Prints "None"
-```
+<CodeEditor language="Python">
+def say_hello():
+    print("Hello!")
+    # No return statement
 
-<PythonREPL />
+result = say_hello()  # This will print "Hello!"
+print(f"The return value is: {result}") # This will print "None"
+</CodeEditor>
 
 ### Default Parameters
 
 You can give parameters default values, making them optional:
 
-```pycon
->>> def greet(name="World", punctuation="!"):
->>>     """Greet someone with customizable punctuation."""
->>>     print(f"Hello, {name}{punctuation}")
->>> 
->>> greet()  # Uses both defaults
->>> greet("Alice")  # Uses default punctuation
->>> greet("Bob", "?")  # Overrides both
->>> greet(punctuation="...")  # Named argument, skips name
-```
+<CodeEditor language="Python">
+def greet(name="World", punctuation="!"):
+    """Greet someone with customizable punctuation."""
+    print(f"Hello, {name}{punctuation}")
 
-<PythonREPL />
+greet()  # Uses both defaults
+greet("Alice")  # Uses default punctuation
+greet("Bob", "?")  # Overrides both
+greet(punctuation="...")  # Named argument, skips name
+</CodeEditor>
 
 Parameters with defaults must come after parameters without defaults.
 
@@ -1985,28 +1960,26 @@ Parameters with defaults must come after parameters without defaults.
 
 Variables created inside functions are **local** - they only exist within that function:
 
-```pycon
->>> def calculate():
->>>     # This 'result' is local to the function
->>>     result = 10 + 20
->>>     return result
->>> 
->>> answer = calculate()
->>> print(answer)  # Works - this is the returned value
->>> # print(result)  # Error! 'result' doesn't exist outside the function
->>> 
->>> # Global vs local variables
->>> name = "Global Alice"  # Global variable
->>> 
->>> def change_name():
->>>     name = "Local Bob"  # Creates a new local variable
->>>     print(f"Inside function: {name}")
->>> 
->>> change_name()
->>> print(f"Outside function: {name}")  # Global unchanged
-```
+<CodeEditor language="Python">
+def calculate():
+    # This 'result' is local to the function
+    result = 10 + 20
+    return result
 
-<PythonREPL />
+answer = calculate()
+print(f"The answer is {answer}")
+# print(result)  # This would cause a NameError because 'result' is local to calculate()
+
+# Global vs local variables
+name = "Global Alice"  # Global variable
+
+def change_name():
+    name = "Local Bob"  # Creates a new local variable, does not affect the global one
+    print(f"Inside function: {name}")
+
+change_name()
+print(f"Outside function: {name}")  # Global variable is unchanged
+</CodeEditor>
 
 This isolation is a feature, not a bug! It prevents functions from accidentally interfering with each other.
 
@@ -2103,68 +2076,77 @@ print(is_valid_email("user@"))             # False
 
 Functions that check if something is valid:
 
-```pycon
->>> def is_positive(number):
->>>     """Check if a number is positive."""
->>>     return number > 0
->>> 
->>> def is_valid_age(age):
->>>     """Check if age is in valid range."""
->>>     return 0 <= age <= 120
->>> 
->>> def is_strong_password(password):
->>>     """Check password strength."""
->>>     if len(password) < 8:
->>>         return False
->>>     has_upper = any(c.isupper() for c in password)
->>>     has_lower = any(c.islower() for c in password)
->>>     has_digit = any(c.isdigit() for c in password)
->>>     return has_upper and has_lower and has_digit
-```
+<CodeEditor language="Python">
+def is_positive(number):
+    """Check if a number is positive."""
+    return number > 0
 
-<PythonREPL />
+def is_valid_age(age):
+    """Check if age is in valid range."""
+    return 0 <= age <= 120
+
+def is_strong_password(password):
+    """Check password strength."""
+    if len(password) < 8:
+        return False
+    has_upper = any(c.isupper() for c in password)
+    has_lower = any(c.islower() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    return has_upper and has_lower and has_digit
+
+print(f"Is 10 positive? {is_positive(10)}")
+print(f"Is -5 positive? {is_positive(-5)}")
+print(f"Is 25 a valid age? {is_valid_age(25)}")
+print(f"Is 'Password123' strong? {is_strong_password('Password123')}")
+print(f"Is 'weak' strong? {is_strong_password('weak')}")
+</CodeEditor>
 
 ### Transformation Functions
 
 Functions that convert data from one form to another:
 
-```pycon
->>> def celsius_to_fahrenheit(celsius):
->>>     """Convert Celsius to Fahrenheit."""
->>>     return celsius * 9/5 + 32
->>> 
->>> def format_name(first, last):
->>>     """Format a name as 'Last, First'."""
->>>     return f"{last}, {first}"
->>> 
->>> def clean_text(text):
->>>     """Clean and normalize text."""
->>>     return text.strip().lower().replace("  ", " ")
-```
+<CodeEditor language="Python">
+def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return celsius * 9/5 + 32
 
-<PythonREPL />
+def format_name(first, last):
+    """Format a name as 'Last, First'."""
+    return f"{last}, {first}"
+
+def clean_text(text):
+    """Clean and normalize text."""
+    cleaned = text.strip().lower()
+    # Keep replacing double spaces until none are left
+    while "  " in cleaned:
+        cleaned = cleaned.replace("  ", " ")
+    return cleaned
+
+print(f"20°C is {celsius_to_fahrenheit(20)}°F")
+print(f"Formatted name: {format_name('Ada', 'Lovelace')}")
+print(f"Cleaned text: '{clean_text('  Some  Messy Text  ')}'")
+</CodeEditor>
 
 ### Aggregation Functions
 
 Functions that summarize collections:
 
-```pycon
->>> def calculate_statistics(numbers):
->>>     """Calculate mean, min, and max of numbers."""
->>>     if not numbers:
->>>         return None
->>>     return {
->>>         "mean": sum(numbers) / len(numbers),
->>>         "min": min(numbers),
->>>         "max": max(numbers),
->>>         "count": len(numbers)
->>>     }
->>> 
->>> stats = calculate_statistics([10, 20, 30, 40, 50])
->>> print(f"Average: {stats['mean']}")
-```
+<CodeEditor language="Python">
+def calculate_statistics(numbers):
+    """Calculate mean, min, and max of numbers."""
+    if not numbers:
+        return None
+    return {
+        "mean": sum(numbers) / len(numbers),
+        "min": min(numbers),
+        "max": max(numbers),
+        "count": len(numbers)
+    }
 
-<PythonREPL />
+stats = calculate_statistics([10, 20, 30, 40, 50])
+print(f"Statistics: {stats}")
+print(f"Average: {stats['mean']}")
+</CodeEditor>
 
 ## Review Questions
 
