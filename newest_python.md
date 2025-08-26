@@ -580,7 +580,6 @@ Strings in Python are **objects**, which means they come with built-in functions
 
 <CodeEditor language="Python">
 text = "Hello, World!"
-
 print(text.upper())       # HELLO, WORLD!
 print(text.lower())       # hello, world!
 print(text.capitalize())  # Hello, world!
@@ -601,7 +600,6 @@ print(uppercase)  # "HELLO"
 
 <CodeEditor language="Python">
 email = "student@university.edu"
-
 # Check if string contains something:
 print("@" in email)  # True
 print(email.count("u"))  # How many times does 'u' appear?
@@ -770,7 +768,6 @@ else:
     else:
         print(f"{email} is invalid")
 ```
-
 </Secret>
 
 ### Challenge 2: Text Cleaner
