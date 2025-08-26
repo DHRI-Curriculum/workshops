@@ -5147,6 +5147,7 @@ nyc_311_analysis/
 ### Prerequisites
 - Python 3.8 or higher
 - pip package manager
+```
 
 ### Installation
 1. Clone this repository:
