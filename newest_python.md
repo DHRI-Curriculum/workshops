@@ -362,7 +362,6 @@ What value does `10 / 5` produce?
 
 ### Challenge 1: Temperature Converter
 <Secret>
-
 ```python
 # Temperature Converter Solution
 celsius = 25
@@ -372,12 +371,10 @@ print("Temperature in Fahrenheit:", fahrenheit)
 # Or more elegantly:
 print(f"{celsius}°C is equal to {fahrenheit}°F")
 ```
-
 </Secret>
 
 ### Challenge 2: Personal Info
 <Secret>
-
 ```python
 # Personal Info Solution
 first_name = "Ada"
@@ -393,12 +390,10 @@ print(f"My name is {first_name} {last_name}, I am {age} years old.")
 if is_student:
     print("I am currently a student.")
 ```
-
 </Secret>
 
 ### Challenge 3: Type Investigation
 <Secret>
-
 ```python
 # Type Investigation Solution
 text_number = "123"
@@ -420,7 +415,6 @@ print("Real number + 10 =", result2)
 result3 = text_number + "10"  # "12310"
 print("Text + '10' =", result3)
 ```
-
 </Secret>
 
 ## Review Questions
@@ -782,7 +776,6 @@ How would you check if an email string contains "@"?
 
 ### Challenge 1: Email Validator
 <Secret>
-
 ```python
 # Email Validator
 email = "student@university.edu"
