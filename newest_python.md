@@ -53,31 +53,31 @@ By the end of this course, successful students will:
 
 Programming, at its heart, is about teaching a computer to do tedious work for you. As researchers, we often face tasks that involve scale and repetition:
 
-1. **Scale:** Reading thousands of documents, processing hundreds of survey responses, analyzing millions of data points. What would take months by hand can often be done in minutes with code.
+1. **Scale:** Reading thousands of documents, processing hundreds of survey responses, analyzing millions of data points. What would take months by hand can be done in minutes with code.
 
-2. **Reproducibility:** When you analyze data by hand or in Excel, it's hard for others (or even yourself months later) to understand exactly what you did. Code documents your exact process, making your research transparent and reproducible.
+2. **Reproducibility:** When you analyze data by hand or in Excel, it's hard for others (or even yourself months later) to understand exactly what you did. Code documents your process, making your research transparent and reproducible.
 
-3. **Flexibility:** Unlike point-and-click software with fixed features, programming lets you build exactly the tool you need for your specific research question.
+3. **Flexibility:** Unlike point-and-click software with fixed features, programming lets you build the tool you need for your research question.
 
-4. **Community:** Python has an enormous, welcoming community. Whatever problem you're trying to solve, someone has probably built a tool (called a "library") to help you.
+4. **Community:** Python has an enormous, welcoming community. Whatever problem you're trying to solve, someone has built a tool (called a "library") to help you.
 
 Python specifically is an excellent first language because:
 - Its syntax reads almost like English, making it accessible to beginners
 - It's the dominant language in data science, machine learning, and scientific computing
-- It has incredible libraries for nearly every research need
+- It has great libraries for nearly every research need
 - It's completely free and open-source
 - Skills you learn in Python transfer well to other languages
 
 ## The Process of Learning to Program
 
-Learning to program is remarkably similar to learning a human language. You need:
+Learning to program is similar to learning a human language. You need:
 
 1. **Vocabulary:** The basic commands and keywords (like `print`, `if`, `for`)
 2. **Grammar:** How to structure these commands into valid statements
 3. **Idioms:** Common patterns that experienced programmers use
 4. **Fluency:** The ability to express your ideas naturally in code
 
-Just as you wouldn't learn French by memorizing a dictionary, you won't learn Python by memorizing commands. Instead, we'll learn by doing—building small programs that gradually increase in complexity.
+Just as you wouldn't learn French by memorizing a dictionary, you won't learn Python by memorizing commands. Instead, we'll learn by doing: building small programs that gradually increase in complexity.
 
 ## What We'll Build Together
 
@@ -106,21 +106,21 @@ This material draws inspiration from several excellent resources: *Think Python*
 
 # Getting Started with Python
 
-Let's begin our journey! As is tradition in the programming world, our very first program will simply display the words "Hello, World!" This tradition dates back to the 1970s and serves as a simple test that our programming environment is working correctly.
+Let's begin our journey! As is tradition in the programming world, our very first program will display the words "Hello, World!" This tradition dates back to the 1970s and serves as a simple test that our programming environment is working correctly.
 
-But there's something deeper happening here. When you write your first program, you're joining a community of millions who started exactly the same way. Every expert programmer, from the creators of your favorite apps to NASA engineers, wrote this same simple program when they were learning.
+But there's something deeper happening here. When you write your first program, you're joining a community of millions who started the same way. Every expert programmer, from the creators of your favorite apps to NASA engineers, wrote this same simple program when they were learning.
 
 ## Hello, World!
 
 ### Understanding How Python Runs
 
-Before we write our first line of code, let's understand what we're actually doing. Python is an **interpreted language**, which means there's a program (called the Python interpreter) that reads your code line by line and executes it. Think of the interpreter as a very literal-minded assistant who follows your instructions exactly as written.
+Before we write our first line of code, let's understand what we're actually doing. Python is an **interpreted language**. There's a program (the Python interpreter) that reads your code line by line and executes it. Think of the interpreter as a very literal-minded assistant who follows your instructions as written.
 
 We'll start in the **REPL** (Read-Evaluate-Print Loop), which is like having a conversation with Python. You type a command, Python executes it immediately and shows you the result, then waits for your next command. It's perfect for learning because you get instant feedback.
 
 ### The `print()` Function
 
-The most basic way to display output in Python is with the `print()` function. A **function** in programming is a named command that performs a specific task. Functions are like verbs in human language—they do things.
+The most basic way to display output in Python is with the `print()` function. A **function** in programming is a named command that performs a specific task. Functions are like verbs in human language: they do things.
 
 Type the following into the Python REPL below and press <kbd>Enter</kbd>:
 
@@ -139,9 +139,9 @@ Let's break down what just happened:
 
 **Syntax Notes:**
 - Python is **case-sensitive**: `print` works, but `Print` or `PRINT` will cause an error
-- The quotes around text are required. Try `print(Hello)` without quotes—you'll get an error because Python thinks Hello is a variable name (which doesn't exist yet)
+- The quotes around text are required. Try `print(Hello)` without quotes and you'll get an error because Python thinks Hello is a variable name (which doesn't exist yet)
 - You can use either single or double quotes: `'Hello'` or `"Hello"` both work
-- In Python, you typically don't need semicolons at the end of lines (unlike many other languages)
+- In Python, you don't need semicolons at the end of lines (unlike many other languages)
 
 Try modifying the message:
 
@@ -153,7 +153,7 @@ Try modifying the message:
 
 <PythonREPL />
 
-<Info>The `#` symbol starts a comment—text that Python ignores. We use comments to leave notes for ourselves and other programmers.</Info>
+<Info>The `#` symbol starts a comment - text that Python ignores. We use comments to leave notes for ourselves and other programmers.</Info>
 
 
 ## Data Types and Variables
@@ -223,14 +223,14 @@ string"""  # Triple quotes allow line breaks
 
 <PythonREPL />
 
-**Quote flexibility:** Python lets you choose your quote style, which is helpful:
+**Quote flexibility:** Python lets you choose your quote style. This is helpful:
 - Use double quotes when your text contains apostrophes: `"It's nice"`
 - Use single quotes when your text contains double quotes: `'She said "Hello"'`
 - Use triple quotes for multi-line text or when your text contains both types of quotes
 
 ### Booleans
 
-Booleans represent truth values—either `True` or `False` (note the capital letters!). They're named after George Boole, a mathematician who founded the field of Boolean algebra. These are the foundation of all decision-making in programs:
+Booleans represent truth values: either `True` or `False` (note the capital letters!). They're named after George Boole, a mathematician who founded the field of Boolean algebra. These are the foundation of all decision-making in programs:
 
 ```pycon
 >>> True
@@ -242,7 +242,7 @@ Booleans represent truth values—either `True` or `False` (note the capital let
 
 <PythonREPL />
 
-Booleans will become crucial when we learn about conditions and loops—they're how programs make decisions.
+Booleans will become crucial when we learn about conditions and loops. They're how programs make decisions.
 
 ### Checking Types
 
@@ -258,13 +258,13 @@ When you're unsure what type of data you're working with, Python's `type()` func
 
 <PythonREPL />
 
-This becomes especially useful when debugging—many errors come from trying to perform an operation on the wrong type of data.
+This is really useful when debugging. Many errors come from trying to perform an operation on the wrong type of data.
 
 ### Variables: Giving Names to Values
 
 So far, every value we've created has disappeared after we used it. Variables let us store values and refer to them by name. Think of a variable as a labeled box where you can store a value and retrieve it later.
 
-Creating a variable is called **assignment**, and we use the `=` operator (single equals sign):
+Creating a variable uses **assignment** with the `=` operator (single equals sign):
 
 ```pycon
 >>> message = "Hello, World!"
@@ -298,7 +298,7 @@ Now we can use these names instead of typing the values:
 - Choose descriptive names: `temperature` is better than `t`
 - Avoid single letters except in short loops (we'll see this later)
 
-Variables can be reassigned—the box can hold different values over time:
+Variables can be reassigned. The box can hold different values over time:
 
 ```pycon
 >>> count = 10
@@ -343,7 +343,7 @@ The `input()` function:
 
 ### Essential Built-in Functions
 
-You just used `int()` to convert a string to a number. Python comes with several built-in functions like this that you'll use all the time. Let's explore the most important ones.
+You just used `int()` to convert a string to a number. Python comes with several built-in functions like this that you'll use constantly. Let's explore the most important ones.
 
 When you need to convert between different types of data, Python provides three main conversion functions. The `int()` function converts text or decimal numbers to whole numbers. The `float()` function converts text or whole numbers to decimal numbers. And the `str()` function converts numbers (or anything else) back to text.
 
@@ -517,7 +517,7 @@ Which statement about variable assignment is correct?
 
 # Working with Text: String Manipulation
 
-Strings are perhaps the most versatile data type in Python. As researchers, much of our data comes in the form of text—survey responses, historical documents, social media posts, or bibliographic records. Learning to manipulate strings effectively is essential for any text-based research.
+Strings are perhaps the most versatile data type in Python. As researchers, much of our data comes in the form of text: survey responses, historical documents, social media posts, or bibliographic records. Learning to manipulate strings effectively is essential for any text-based research.
 
 ## Creating and Combining Strings
 
@@ -525,14 +525,14 @@ We've seen basic strings, but Python offers several ways to create and work with
 
 ### String Literals
 
-The simplest strings are **literals**—text you type directly in quotes:
+The simplest strings are **literals**: text you type directly in quotes:
 
 <CodeEditor language="Python">
 
 simple = "Hello, World!"
 with_apostrophe = "It's a beautiful day"
 with_quotes = 'She said "Hello" to me'
-empty = ""  # An empty string is perfectly valid
+empty = ""  # An empty string is valid
 
 # Display the strings
 print(simple)
@@ -554,7 +554,7 @@ And so are you!"""
 print(poem)
 </CodeEditor>
 
-Triple-quoted strings preserve all formatting, including line breaks and indentation. They're perfect for:
+Triple-quoted strings preserve all formatting, including line breaks and indentation. They're great for:
 - Long text passages
 - Documentation (we'll see this with functions)
 - SQL queries or other code within Python
@@ -571,7 +571,7 @@ last_name = "Lovelace"
 full_name = first_name + " " + last_name
 print(full_name)
 
-# Watch out—you need to explicitly include spaces:
+# Watch out - you need to explicitly include spaces:
 greeting = "Hello"
 name = "World"
 print(greeting + name)  # No space!
@@ -593,7 +593,7 @@ print(message)
 
 ### F-Strings: The Modern Way
 
-While concatenation works, it quickly becomes cumbersome. Python 3.6 introduced **f-strings** (formatted string literals), which are far more elegant:
+While concatenation works, it quickly becomes cumbersome. Python 3.6 introduced **f-strings** (formatted string literals). They're much more elegant:
 
 <CodeEditor language="Python">
 
@@ -644,7 +644,7 @@ print(f"Population: {large_number:,}")  # Adds comma separators
 
 ## String Methods
 
-Strings in Python are **objects**, which means they come with built-in functions (called **methods**) that can manipulate them. You call a method by adding a dot `.` after the string, followed by the method name and parentheses.
+Strings in Python are **objects**. They come with built-in functions (called **methods**) that can manipulate them. You call a method by adding a dot `.` after the string, followed by the method name and parentheses.
 
 ### Case Methods
 
@@ -677,7 +677,7 @@ Beyond just checking if a string contains something with the `in` operator, Pyth
 
 The `.count()` method tells you how many times a substring appears. The `.index()` method finds the position of a substring but raises an error if it's not found. The `.find()` method also finds positions but returns -1 instead of erroring when the substring isn't found.
 
-For checking string beginnings and endings, use `.startswith()` and `.endswith()` - these are especially useful for validating file extensions or URL schemes.
+For checking string beginnings and endings, use `.startswith()` and `.endswith()` - these are really useful for validating file extensions or URL schemes.
 
 <CodeEditor language="Python">
 
@@ -743,7 +743,7 @@ print("HELLO".isupper())     # All uppercase? True
 
 ## String Indexing and Slicing
 
-Strings are **sequences**—ordered collections of characters. Each character has a position (index), starting from 0:
+Strings are **sequences**: ordered collections of characters. Each character has a position (index), starting from 0:
 
 <CodeEditor language="Python">
 
@@ -944,7 +944,7 @@ print("Note: -1 means not found, any other number is the position")
 
 # Collections: Lists and Dictionaries
 
-So far, we've worked with individual pieces of data—a single number, a single string. But real research involves collections of data: lists of participants, sets of measurements, records with multiple fields. Python provides powerful data structures for organizing collections of information.
+So far, we've worked with individual pieces of data: a single number, a single string. But research involves collections of data like lists of participants, sets of measurements, records with multiple fields. Python provides powerful data structures for organizing collections of information.
 
 ## Lists: Ordered Collections
 
@@ -994,11 +994,11 @@ print(f"Second-to-last: {fruits[-2]}")
 # print(fruits[10])  # This would cause an IndexError
 </CodeEditor>
 
-<Info>Off-by-one errors are probably the most common bug in programming. Remember: if a list has 4 items, the valid indices are 0, 1, 2, and 3.</Info>
+<Info>Off-by-one errors are the most common bug in programming. Remember: if a list has 4 items, the valid indices are 0, 1, 2, and 3.</Info>
 
 ### Modifying Lists
 
-Unlike strings, lists are **mutable**—you can change them after creation.
+Unlike strings, lists are **mutable**: you can change them after creation.
 
 **Basic list methods:**
 - `.append(item)` - adds one item to the end of the list
@@ -1124,7 +1124,7 @@ print(f"Cleared tasks: {tasks}")
 
 ## Dictionaries: Labeled Data
 
-While lists are great for ordered sequences, sometimes you need to organize data with meaningful labels rather than numeric positions. This is where **dictionaries** come in.
+While lists are great for ordered sequences, you sometimes need to organize data with meaningful labels instead of numeric positions. This is where **dictionaries** come in.
 
 A dictionary is a collection of **key-value pairs**. Instead of accessing items by position (index), you access them by name (key). Think of it like a real dictionary where you look up a word (key) to find its definition (value).
 
@@ -1254,7 +1254,7 @@ The real power comes from combining these structures. Here are common patterns:
 
 ### List of Dictionaries
 
-Perfect for tabular data where each item has the same fields:
+Good for tabular data where each item has the same fields:
 
 <CodeEditor language="Python">
 
@@ -1548,7 +1548,7 @@ print(f"Most expensive ingredient cost: ${max([flour_cost, sugar_cost, eggs_cost
 
 # Control Flow: Making Decisions and Repeating Actions
 
-So far, our programs have been linear—they execute from top to bottom, line by line. But real programs need to make decisions and repeat actions. This is called **control flow**, and it's what transforms simple scripts into intelligent programs.
+So far, our programs have been linear: they execute from top to bottom, line by line. But real programs need to make decisions and repeat actions. We call this **control flow**, and it transforms simple scripts into intelligent programs.
 
 ## Conditional Statements: Making Decisions
 
@@ -1602,7 +1602,7 @@ print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercas
 
 ### Adding `else`: Either/Or Decisions
 
-Often you want to do one thing if a condition is true, and something else if it's false:
+You often want to do one thing if a condition is true, and something else if it's false:
 
 <CodeEditor language="Python">
 
@@ -1683,7 +1683,7 @@ else:
     print("You need to buy a ticket first.")
 </CodeEditor>
 
-But be careful—too much nesting makes code hard to read. Often you can simplify with `and`/`or`.
+But be careful: too much nesting makes code hard to read. You can often simplify with `and`/`or`.
 
 ## Loops: Repeating Actions
 
@@ -1778,7 +1778,7 @@ The `while` loop continues as long as a condition is true:
 count = 0
 while count < 5:
     print(f"Count is {count}")
-    count += 1  # Don't forget to update the condition!
+    count += 1  # Always update the condition!
 
 print("Loop finished.")
 
@@ -2102,7 +2102,7 @@ Key points:
 
 ### Functions with Parameters
 
-Most functions need information to work with. **Parameters** are variables that receive values when the function is called:
+Most functions need information to work with. **Parameters** are variables that receive values when you call the function:
 
 <CodeEditor language="Python">
 
@@ -2117,7 +2117,7 @@ print("-" * 10)
 greet_person("Bob")
 print("-" * 10)
 
-# The value you pass is called an "argument"
+# We call the value you pass an "argument"
 user = "Charlie"
 greet_person(user)
 </CodeEditor>
@@ -2609,11 +2609,11 @@ for key, value in stats.items():
 
 # Your Local Python Environment
 
-Up until now, we've been working in the browser-based Python REPL. It's been perfect for learning the basics, but it's time to level up. We're going to set up Python on your own computer, which opens up a whole new world of possibilities.
+Up until now, we've been working in the browser-based Python REPL. It's been great for learning the basics, but it's time to level up. We're going to set up Python on your own computer, which opens up a whole new world of possibilities.
 
 ## Why Go Local?
 
-Working on your own computer—what programmers call working "locally"—is like the difference between cooking in someone else's kitchen versus your own. When you work locally, you can:
+Working on your own computer (what programmers call working "locally") is like the difference between cooking in someone else's kitchen versus your own. When you work locally, you can:
 
 - **Save your work permanently:** Create actual Python files (.py) that persist
 - **Work with your own data:** Process files from your research
@@ -2621,7 +2621,7 @@ Working on your own computer—what programmers call working "locally"—is like
 - **Use professional development tools:** Code editors, debuggers, version control
 - **Build real projects:** Create applications you can share with others
 
-This transition might feel like a big step, but don't worry—we'll go through it together, step by step.
+This transition might feel like a big step, but don't worry. We'll go through it together, step by step.
 
 ## What We'll Install
 
@@ -2786,7 +2786,7 @@ Let's create your first Python program on your local machine!
 
 ## Installing Essential Libraries
 
-Now let's install the libraries we'll need for data science work. Open a terminal (Terminal on Mac/Linux, Command Prompt or PowerShell on Windows) and run these commands:
+Let's install the libraries we'll need for data science work. Open a terminal (Terminal on Mac/Linux, Command Prompt or PowerShell on Windows) and run these commands:
 
 ```bash
 # Jupyter for interactive notebooks
@@ -2875,7 +2875,7 @@ What file extension do Python files use?
 
 # Working with Files and Data
 
-Now that you have Python running locally, you can work with actual files on your computer. This is where Python becomes truly powerful for research—you can process hundreds or thousands of files automatically, extract data, and save results.
+Now that you have Python running locally, you can work with actual files on your computer. Python gets really powerful here: you can process hundreds or thousands of files automatically, extract data, and save results.
 
 ## File Paths: Finding Your Files
 
@@ -2894,7 +2894,7 @@ There are two types of paths:
    - `data/survey_results.txt` (file in a subfolder called 'data')
    - `../shared/data.txt` (file in a parent folder's subfolder)
 
-For most projects, use relative paths—they make your code portable.
+For most projects, use relative paths - they make your code portable.
 
 ## Reading Text Files
 
@@ -2907,7 +2907,7 @@ The most basic file operation is reading text. Python makes this elegant:
 file = open("sample.txt", "r")  # "r" means read mode
 content = file.read()
 print(content)
-file.close()  # Don't forget to close!
+file.close()  # Always close files!
 
 # Method 2: Better - using 'with' (automatically closes file)
 with open("sample.txt", "r") as file:
@@ -3475,7 +3475,7 @@ The internet is the largest repository of data ever created. From government dat
 
 ## Understanding Web APIs
 
-An API is like a restaurant menu for data. Instead of visiting a website and clicking around to find information, you send a structured request and get structured data back. It's the difference between reading a newspaper (website) and having a research assistant who hands you exactly the information you need (API).
+An API is like a restaurant menu for data. Instead of visiting a website and clicking around to find information, you send a structured request and get structured data back. It's the difference between reading a newspaper (website) and having a research assistant who hands you just the information you need (API).
 
 ### How APIs Work
 
@@ -3489,7 +3489,7 @@ When you use an API:
 2. Receives structured data (usually JSON) back
 3. Your program processes the data
 
-This is much more efficient for data collection because you skip the visual presentation and get straight to the information.
+It's much more efficient for data collection because you skip the visual presentation and get straight to the information.
 
 ## The requests Library
 
@@ -3509,7 +3509,7 @@ print(response.json())  # Parse JSON response into Python dictionary
 When you make a request, the server responds with a status code that tells you what happened:
 
 - **200-299: Success**
-  - 200: OK - Everything worked perfectly
+  - 200: OK - Everything worked fine
   - 201: Created - Something was created successfully
 - **300-399: Redirection**
   - 301: Moved permanently - The resource has a new location
@@ -3556,7 +3556,7 @@ def explore_jsonplaceholder():
 # Try it!
 explore_jsonplaceholder()
 
-# Now let's get posts by a specific user
+# Get posts by a specific user
 def get_user_posts(user_id):
     """Get all posts written by a specific user."""
     url = f"https://jsonplaceholder.typicode.com/posts?userId={user_id}"
@@ -3610,7 +3610,7 @@ understand_json_structure()
 
 ## Real Example: The Metropolitan Museum of Art
 
-Now let's work with real cultural data. The Met Museum API provides access to 470,000+ artworks with zero authentication required!
+Let's work with real cultural data. The Met Museum API provides access to 470,000+ artworks with zero authentication required!
 
 ```python
 import requests
@@ -3746,7 +3746,7 @@ japanese_art = explore_met_collection("japanese", limit=3)
 
 ## Another Free API: Open-Meteo Weather
 
-Open-Meteo provides weather data worldwide with no registration required. This is perfect for learning about geographic and time-series data:
+Open-Meteo provides weather data worldwide with no registration required. This is great for learning about geographic and time-series data:
 
 ```python
 import requests
@@ -4175,7 +4175,7 @@ What format do most web APIs return data in?
 
 # Jupyter Notebooks: Interactive Research Computing
 
-Jupyter notebooks revolutionized how researchers work with data. Instead of writing a script that runs from start to finish, you create an interactive document that mixes code, results, visualizations, and narrative text. It's like a lab notebook for computational research—you can experiment, document your thinking, and share your entire research process.
+Jupyter notebooks have transformed how researchers work with data. Instead of writing a script that runs from start to finish, you create an interactive document that mixes code, results, visualizations, and narrative text. It's like a lab notebook for computational research: you can experiment, document your thinking, and share your entire research process.
 
 ## What Makes Notebooks Special
 
@@ -4189,7 +4189,7 @@ Traditional programming separates code from its output. You write a script, run 
 
 ## Starting Jupyter
 
-You installed Jupyter earlier with `pip install jupyter`. Now let's use it:
+You installed Jupyter earlier with `pip install jupyter`. Let's use it:
 
 ```bash
 # In your terminal, navigate to your project folder
@@ -4559,7 +4559,7 @@ What does the %matplotlib inline magic command do?
 
 # Building Your Research Project: Understanding Your City
 
-It's time to put everything together! We're going to analyze real data from New York City's 311 service - a phone number residents call to report non-emergency issues like noise complaints, broken streetlights, or potholes. This project will teach you how real researchers work with data.
+It's time to put everything together! We're going to analyze real data from New York City's 311 service - a phone number residents call to report non-emergency issues like noise complaints, broken streetlights, or potholes. This project will teach you how researchers work with data.
 
 Don't worry if this seems big - we'll build it step by step, and every piece will be explained.
 
@@ -4571,11 +4571,11 @@ Cities collect data about citizen complaints to understand problems and allocate
 - How quickly does the city respond?
 - Are there patterns we can learn from?
 
-This is real data used by urban planners, sociologists, and policy makers. You're doing actual research!
+Urban planners, sociologists, and policy makers use this real data. You're doing actual research!
 
 ## Project Setup: Creating Your Workspace
 
-First, let's organize our files properly. Good organization prevents confusion later.
+We need to organize our files properly. Good organization prevents confusion later.
 
 ### Step 1: Create Your Project Folder
 
@@ -4648,7 +4648,7 @@ The NYC 311 data lives at a web address (URL) called an "endpoint". Think of it 
 # Cell 2: Get a tiny sample first
 """
 Let's start with just 10 records to understand the data structure.
-This is like looking at a sample before buying the whole thing.
+It's like looking at a sample before buying the whole thing.
 """
 
 # The URL where NYC stores 311 data
@@ -4721,12 +4721,12 @@ if sample_data:
 
 ## Part 2: Getting More Data (Scaling Up)
 
-Now that we understand the structure, let's get more data to analyze:
+Since we understand the structure, let's get more data to analyze:
 
 ```python
 # Cell 4: Get data from the last week
 """
-Now let's get serious - fetch all complaints from the last 7 days.
+Let's get serious - fetch all complaints from the last 7 days.
 We'll add date filtering to get recent data.
 """
 
@@ -5216,7 +5216,7 @@ You just:
 4. **Visualized** your findings
 5. **Reported** your results professionally
 
-This is exactly what data scientists and researchers do every day!
+This is what data scientists and researchers do every day!
 
 ## What You Learned
 
@@ -5580,7 +5580,7 @@ You've completed a journey from Python basics to professional research computing
 
 The tools and techniques you've learned form the foundation of modern computational research. Whether you're analyzing historical texts, processing survey data, or investigating urban patterns, you now have the skills to turn questions into insights through code.
 
-Remember: programming is a craft that improves with practice. Keep building, keep sharing, and keep learning. The Python community is vast and welcoming—you're now part of it.
+Remember: programming is a craft that improves with practice. Keep building, keep sharing, and keep learning. The Python community is vast and welcoming - you're now part of it.
 
 Good luck with your research!
 
@@ -5589,7 +5589,7 @@ Good luck with your research!
 
 Congratulations on completing your Python journey! You've learned to write code from scratch, debug programs, and build complete projects. You've gained something invaluable: the ability to think computationally and solve problems with code.
 
-Now let's discuss a major shift happening in programming: the rise of AI assistants like ChatGPT, Claude, and GitHub Copilot. These tools are changing how people write code, but they're not replacing the need to understand programming. Instead, they're creating a new workflow where programmers become directors rather than typists.
+Let's discuss a major shift happening in programming: the rise of AI assistants like ChatGPT, Claude, and GitHub Copilot. These tools are changing how people write code, but they're not replacing the need to understand programming. Instead, they're creating a new workflow where programmers become directors rather than typists.
 
 ## What Are AI Programming Assistants?
 
@@ -5600,7 +5600,7 @@ AI assistants are like having a very knowledgeable (but sometimes confused) prog
 - Suggest improvements to existing code
 - Answer programming questions
 
-But here's the crucial point: **they make confident mistakes**. They'll generate code that looks perfect but has subtle bugs. They'll explain concepts convincingly but get details wrong. They hallucinate functions that don't exist. This is why the skills you've learned are essential—you need to catch these mistakes.
+But here's the key issue: **they make confident mistakes**. They'll generate code that looks good but has subtle bugs. They'll explain concepts convincingly but get details wrong. They hallucinate functions that don't exist. This is why the skills you've learned are essential: you need to catch these mistakes.
 
 ## The Calculator Analogy
 
@@ -5792,7 +5792,7 @@ When AI generates incorrect code, it's a learning opportunity:
 As AI tools improve, certain human skills become more valuable:
 
 ### 1. Problem Decomposition
-Breaking complex problems into manageable pieces. AI can't do this for you—it requires understanding the problem domain.
+Breaking complex problems into manageable pieces. AI can't do this for you - it requires understanding the problem domain.
 
 ### 2. Code Review and Quality Assurance
 Spotting bugs, security issues, and inefficiencies. This requires experience and deep understanding.
@@ -5808,7 +5808,7 @@ When things go wrong (and they will), you need to understand the code to fix it.
 
 ## A Final Thought: You're Not Being Replaced
 
-The printing press didn't eliminate writers—it created more demand for writing. Calculators didn't eliminate mathematicians—they freed them to tackle harder problems. AI assistants won't eliminate programmers—they'll amplify what programmers can accomplish.
+The printing press didn't eliminate writers - it created more demand for writing. Calculators didn't eliminate mathematicians - they freed them to tackle harder problems. AI assistants won't eliminate programmers - they'll amplify what programmers can accomplish.
 
 The fundamentals you've learned in this course aren't becoming obsolete. They're becoming prerequisites. You now have the knowledge to:
 - Direct AI assistants effectively
@@ -5817,7 +5817,7 @@ The fundamentals you've learned in this course aren't becoming obsolete. They're
 - Know when to trust them and when to be skeptical
 - Use them as tools rather than crutches
 
-Programming is becoming more about problem-solving and less about syntax memorization. The future programmer is a conductor leading an orchestra of AI assistants, not a typist converting thoughts to code. You've learned to read the music—now you can lead the performance.
+Programming is becoming more about problem-solving and less about syntax memorization. The future programmer directs AI assistants instead of typing every line of code. You've learned to read the code - now you can guide the process.
 
 ## Your Next Steps
 
@@ -5829,7 +5829,7 @@ Programming is becoming more about problem-solving and less about syntax memoriz
 
 Remember: The goal isn't to use AI to avoid learning programming. The goal is to learn programming so well that you can use AI to accomplish things you never could alone.
 
-Welcome to the future of programming—where human creativity and machine capability combine to solve problems we couldn't tackle before. You have the foundation. Now go build something amazing!
+You now have the foundation to work effectively with both traditional programming and AI-assisted development. Go build something great!
 
 ## Key Terms
 
