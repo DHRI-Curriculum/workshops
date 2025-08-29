@@ -199,9 +199,9 @@ You can perform all the arithmetic operations you'd expect:
 >>> 10 - 5      # Subtraction  
 >>> 10 * 5      # Multiplication
 >>> 10 / 5      # Division (always returns a float!)
->>> 10 // 3     # Floor division (returns an integer)
->>> 10 % 3      # Modulo (remainder after division)
 >>> 2 ** 8      # Exponentiation (2 to the power of 8)
+>>> 10 // 3     # Floor division (returns an integer) - more advanced
+>>> 10 % 3      # Modulo (remainder after division) - more advanced
 ```
 
 <PythonREPL />
@@ -305,9 +305,16 @@ Variables can be reassigned—the box can hold different values over time:
 >>> print(count)
 >>> count = count + 1  # Take the current value, add 1, store it back
 >>> print(count)
->>> count += 1  # Shorthand for the same operation
+```
+
+**Compound Assignment Operators**: Python provides shortcuts for common operations. Instead of writing `count = count + 1`, you can write `count += 1`. The `+=` operator adds the right side to the variable and stores the result back in the variable.
+
+```pycon
+>>> count += 1  # Same as: count = count + 1
 >>> print(count)
 ```
+
+Other compound operators work the same way: `-=`, `*=`, `/=`, etc.
 
 <PythonREPL />
 
@@ -330,6 +337,50 @@ The `input()` function:
 >>> age_text = input("Enter your age: ")
 >>> age_number = int(age_text)  # Convert string to integer
 >>> print("Next year you'll be " + str(age_number + 1))
+```
+
+<PythonREPL />
+
+### Essential Built-in Functions
+
+You just used `int()` to convert a string to a number. Python comes with several built-in functions like this that you'll use all the time. Let's explore the most important ones.
+
+When you need to convert between different types of data, Python provides three main conversion functions. The `int()` function converts text or decimal numbers to whole numbers. The `float()` function converts text or whole numbers to decimal numbers. And the `str()` function converts numbers (or anything else) back to text.
+
+```pycon
+>>> int("123")      # Text to number
+123
+>>> float("3.14")   # Text to decimal
+3.14
+>>> str(123)        # Number to text
+'123'
+```
+
+When you're unsure what type of data you're working with, Python's `type()` function tells you:
+
+```pycon
+>>> type(42)
+<class 'int'>
+>>> type("hello")
+<class 'str'>
+```
+
+The `len()` function tells you how long something is - how many characters in a string, how many items in a list, and so on:
+
+```pycon
+>>> len("hello")
+5
+>>> len("Python programming")
+18
+```
+
+```pycon
+>>> # Converting between types
+>>> text_number = "42"
+>>> real_number = int(text_number)
+>>> print("Text: " + text_number)
+>>> print("Number: " + str(real_number))
+>>> print("Length of text: " + str(len(text_number)))
 ```
 
 <PythonREPL />
@@ -569,13 +620,12 @@ age = 36
 items = 3
 price = 19.99
 
-print(f"I bought {items} books for ${price * items}")
+# Start simple - just insert variables:
+print(f"Hello there, {name}!")
 
 # You can even do calculations inside the braces:
 print(f"Next year I'll be {age + 1}")
-
-# Or call built-in functions:
-print(f"My name has {len(name)} letters")
+print(f"I bought {items} books for ${price * items}")
 </CodeEditor>
 
 F-strings can also format numbers:
@@ -601,11 +651,14 @@ Strings in Python are **objects**, which means they come with built-in functions
 <CodeEditor language="Python">
 
 text = "Hello, World!"
+# Basic case conversion:
 print(text.upper())       # HELLO, WORLD!
 print(text.lower())       # hello, world!
-print(text.capitalize())  # Hello, world!
-print(text.title())       # Hello, World!
-print(text.swapcase())    # hELLO, wORLD!
+
+# More advanced case methods:
+print(text.capitalize())  # Hello, world! (first letter only)
+print(text.title())       # Hello, World! (title case)
+print(text.swapcase())    # hELLO, wORLD! (flip all cases)
 </CodeEditor>
 
 Important: String methods don't change the original string (strings are **immutable**). They return a new string:
@@ -620,42 +673,55 @@ print(uppercase)  # "HELLO"
 
 ### Searching and Checking
 
+Beyond just checking if a string contains something with the `in` operator, Python provides several methods for finding and analyzing text within strings.
+
+The `.count()` method tells you how many times a substring appears. The `.index()` method finds the position of a substring but raises an error if it's not found. The `.find()` method also finds positions but returns -1 instead of erroring when the substring isn't found.
+
+For checking string beginnings and endings, use `.startswith()` and `.endswith()` - these are especially useful for validating file extensions or URL schemes.
+
 <CodeEditor language="Python">
 
 email = "student@university.edu"
+
 # Check if string contains something:
 print("@" in email)  # True
-print(email.count("u"))  # How many times does 'u' appear?
 
-# Find position (index) of substring:
-print(email.index("@"))  # Position of @ symbol
-print(email.find("edu"))  # Position where "edu" starts
+# String search and analysis methods:
+print(email.count("u"))  # How many times does "u" appear?
+print(email.index("@"))  # What position is "@" at?
+print(email.find("edu"))  # Where does "edu" start? (-1 if not found)
 
-# Check start and end:
-print(email.startswith("student"))  # True
-print(email.endswith(".edu"))  # True
+# String checking methods:
+print(email.startswith("student"))  # Does it begin with "student"?
+print(email.endswith(".edu"))  # Does it end with ".edu"?
 </CodeEditor>
 
 ### Cleaning and Modifying
 
+Python provides powerful methods for cleaning and transforming strings. The `.strip()` method removes whitespace (spaces, tabs, newlines) from the beginning and end of a string - essential for cleaning user input or data from files.
+
+The `.replace()` method substitutes one substring with another throughout the entire string. It replaces ALL occurrences, not just the first one.
+
+The `.split()` method breaks a string into a list of parts. Called with no arguments, it splits on any whitespace. You can also specify what to split on - very useful for processing CSV data or parsing formatted text.
+
 <CodeEditor language="Python">
 
 messy = "  Hello, World!  \n"
-print(messy)
-print(messy.strip())  # Remove whitespace from ends
+print("Original: " + repr(messy))
+print("Cleaned: " + messy.strip())  # Remove whitespace from both ends
 
 text = "Hello, World!"
-print(text.replace("World", "Python"))
-print(text.replace("o", "0"))  # Replace all occurrences
+print(text.replace("World", "Python"))  # Replace "World" with "Python"
+print(text.replace("o", "0"))  # Replace ALL letter "o" with "0"
 
-# Split string into a list:
+# Break strings into lists:
 sentence = "Python is awesome"
-words = sentence.split()  # Split on whitespace
-print(words)
+words = sentence.split()  # Split on any whitespace
+print("Words: " + str(words))
 
 csv_line = "Ada,Lovelace,1815"
 data = csv_line.split(",")  # Split on comma
-print(data)
+print("CSV data: " + str(data))
 </CodeEditor>
 
 ### String Validation Methods
@@ -693,22 +759,25 @@ print(text[-1])  # Last character: 'n'
 print(text[-2])  # Second-to-last: 'o'
 </CodeEditor>
 
-**Slicing** lets you extract portions of a string:
+**Slicing** lets you extract portions of a string using the syntax `[start:end]`. The key rule to remember: slicing includes the start position but excludes the end position. Think of it as "from start up to (but not including) end."
 
 <CodeEditor language="Python">
 
 text = "Python Programming"
-# Basic slicing: [start:end]
-print(text[0:6])   # Characters 0-5 (end is exclusive)
-print(text[7:18])  # "Programming"
+#       0123456789012345678  <- Position numbers
 
-# Omit start or end:
-print(text[:6])    # From beginning to position 5
-print(text[7:])    # From position 7 to end
+# Basic slicing: [start:end] - includes start, excludes end
+print(text[0:6])   # Characters 0,1,2,3,4,5 → "Python"
+print(text[7:18])  # Characters 7 through 17 → "Programming"
 
-# Step parameter: [start:end:step]
-print(text[::2])   # Every other character
-print(text[::-1])  # Reverse the string!
+# Shortcuts - omit start or end:
+print(text[:6])    # From beginning up to position 6 → "Python"
+print(text[7:])    # From position 7 to the end → "Programming"
+
+# Advanced: Step parameter [start:end:step]
+# The third number is the "step" - how many positions to jump each time
+print(text[::2])   # Start at beginning, go to end, take every 2nd character
+print(text[::-1])  # Negative step (-1) reverses the string!
 </CodeEditor>
 
 ## Escape Sequences
@@ -792,8 +861,8 @@ cleaned = cleaned.replace("  ", " ")
 cleaned = cleaned.replace("  ", " ")  # In case there were triple spaces
 cleaned = cleaned.replace("  ", " ")  # In case there were quadruple spaces
 
-print("Original:", repr(messy_name))
-print("Cleaned:", cleaned)
+print("Original: " + repr(messy_name))
+print("Cleaned: " + cleaned)
 ```
 </Secret>
 
@@ -808,20 +877,19 @@ year = 2024
 # Build citation using f-strings
 citation = f"{author}. '{title}' ({year})."
 
-print("Citation:", citation)
+print("Citation: " + citation)
 
 # Alternative with more formatting
 formatted_citation = f"{author}. '{title}' ({year})."
-print("Formatted citation:", formatted_citation)
+print("Formatted citation: " + formatted_citation)
 
-# You could also build it step by step
-citation_parts = []
-citation_parts.append(author + ".")
-citation_parts.append(f"'{title}'")
-citation_parts.append(f"({year}).")
+# You could also build it step by step using string concatenation
+part1 = author + "."
+part2 = f"'{title}'"
+part3 = f"({year})."
 
-full_citation = " ".join(citation_parts)
-print("Built citation:", full_citation)
+full_citation = part1 + " " + part2 + " " + part3
+print("Built citation: " + full_citation)
 ```
 </Secret>
 
@@ -930,7 +998,13 @@ print(f"Second-to-last: {fruits[-2]}")
 
 ### Modifying Lists
 
-Unlike strings, lists are **mutable**—you can change them after creation:
+Unlike strings, lists are **mutable**—you can change them after creation.
+
+**Basic list methods:**
+- `.append(item)` - adds one item to the end of the list
+- `.insert(index, item)` - adds item at a specific position
+- `.remove(item)` - removes the first occurrence of an item  
+- `.pop()` - removes and returns the last item
 
 <CodeEditor language="Python">
 
@@ -961,25 +1035,30 @@ print(f"Final list: {colors}")
 
 ### List Slicing
 
-Like strings, you can extract portions of lists:
+Like strings, you can extract portions of lists using the same `[start:end:step]` syntax. But unlike strings, lists are mutable, so you can also assign new values to slices.
 
 <CodeEditor language="Python">
 
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 print(f"Original: {numbers}")
-print(f"Slice [2:5]: {numbers[2:5]}")
-print(f"Slice [:3]: {numbers[:3]}")
-print(f"Slice [7:]: {numbers[7:]}")
-print(f"Slice [::2]: {numbers[::2]}")
-print(f"Slice [::-1] (reversed): {numbers[::-1]}")
+print(f"Slice [2:5]: {numbers[2:5]}")  # Get items at positions 2, 3, 4
+print(f"Slice [:3]: {numbers[:3]}")   # First 3 items
+print(f"Slice [7:]: {numbers[7:]}")   # From position 7 to end
+print(f"Slice [::2]: {numbers[::2]}") # Every 2nd item
+print(f"Slice [::-1] (reversed): {numbers[::-1]}") # Reverse the list
 
-# You can assign to slices!
+# Because lists are mutable, you can assign to slices!
+# This replaces positions 2, 3, 4 with new values
 numbers[2:5] = [20, 30, 40]
 print(f"After assigning to slice: {numbers}")
 </CodeEditor>
 
 ### Useful List Operations
+
+Python provides several built-in functions that work great with lists of numbers. The `sum()` function adds up all the numbers in a list. The `max()` and `min()` functions find the largest and smallest numbers respectively. And you already know `len()` - it counts how many items are in the list.
+
+When you need to sort a list, you have two options. The `sorted()` function returns a new sorted list without changing your original list. In contrast, the `.sort()` method modifies your original list directly.
 
 <CodeEditor language="Python">
 
@@ -1012,7 +1091,11 @@ print(f"New sorted list of names: {sorted_names}")
 
 ### List Methods
 
-Lists have many useful methods:
+Lists have many useful methods for adding, removing, and manipulating items. When you want to add a single item to the end of a list, use `.append()`. If you need to add multiple items at once, `.extend()` takes another list and adds all its items to your list. For more precise control, `.insert()` lets you add an item at any specific position.
+
+For removing items, you have several options. The `.remove()` method finds and removes the first occurrence of a specific item. The `.pop()` method removes and returns the last item (handy when you need to use that item). If you want to empty the entire list, `.clear()` removes everything.
+
+When you need to find items, `.count()` tells you how many times an item appears in the list, and `.index()` tells you the position of the first occurrence. For reordering, `.reverse()` flips the list backwards, and `.sort()` arranges items in order (both modify the original list).
 
 <CodeEditor language="Python">
 
@@ -1097,10 +1180,12 @@ print(f"First name: {person['first_name']}")
 print(f"Field: {person['field']}")
 
 # Accessing a non-existent key causes an error:
-# print(person["middle_name"])  # This would cause a KeyError
+# print(person["middle_name"])  # This would cause a KeyError (key not found error)
 
-# Safer access with .get()
+# Safer access with .get() method
+# .get() returns None if key doesn't exist (instead of an error)
 print(f"Middle name: {person.get('middle_name')}")
+# You can also provide a default value if the key is missing
 print(f"Middle name (with default): {person.get('middle_name', 'N/A')}")
 </CodeEditor>
 
@@ -1132,6 +1217,10 @@ print(f"Final course: {course}")
 
 ### Dictionary Methods
 
+Dictionaries have several useful methods for getting information about their contents. The `.keys()` method returns all the dictionary keys, like getting a table of contents. The `.values()` method returns all the values stored in the dictionary. And the `.items()` method returns both keys and values together as pairs.
+
+Since these methods return special dictionary views (not regular lists), you can convert them to lists using the `list()` function if needed.
+
 <CodeEditor language="Python">
 
 inventory = {
@@ -1140,14 +1229,14 @@ inventory = {
     "oranges": 2
 }
 
-# Get all keys
+# .keys() gets all the keys
 print(f"Keys: {inventory.keys()}")
 print(f"Keys as list: {list(inventory.keys())}")
 
-# Get all values
+# .values() gets all the values  
 print(f"Values: {inventory.values()}")
 
-# Get all key-value pairs
+# .items() gets both keys and values
 print(f"Items: {inventory.items()}")
 
 # Update multiple values at once
@@ -1606,20 +1695,20 @@ The `for` loop is Python's workhorse for repetition. It iterates (goes through) 
 
 <CodeEditor language="Python">
 
-# Loop through a list
+# Start simple - loop through a list
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(f"I like {fruit}!")
 
 print("-" * 10)
 
-# Loop through a string (each character)
+# You can loop through strings too (each character)
 for letter in "Hello":
     print(letter)
 
 print("-" * 10)
 
-# Loop through dictionary keys
+# More advanced - loop through dictionary keys and access values
 scores = {"Alice": 92, "Bob": 85, "Charlie": 88}
 for name in scores:
     print(f"{name} scored {scores[name]}")
@@ -1647,7 +1736,7 @@ print("-" * 10)
 
 # range(start, stop, step) with custom step
 for even in range(0, 11, 2):
-    print(even, end=" ")  # Print on same line
+    print("Number: " + str(even))
 </CodeEditor>
 
 **Important:** `range(5)` generates 0, 1, 2, 3, 4 (not 5!). This matches Python's zero-based indexing.
@@ -1715,16 +1804,14 @@ print("Break example:")
 for i in range(10):
     if i == 5:
         break
-    print(i, end=" ")
-print("\n")
+    print("Value: " + str(i))
 
 # continue: Skip the rest of this iteration
 print("Continue example:")
 for i in range(5):
     if i == 2:
-        continue
-    print(i, end=" ")
-print("\n")
+        continue  # Skip when i is 2
+    print("Processing: " + str(i))
 
 # Practical example: Find first negative number
 print("Find first negative:")
@@ -1744,11 +1831,12 @@ Loops can contain other loops:
 <CodeEditor language="Python">
 
 # Multiplication table
-for i in range(1, 4):
-    for j in range(1, 4):
+# Note: i and j are traditional names for loop counters in nested loops
+for i in range(1, 4):    # i represents rows (1, 2, 3)
+    for j in range(1, 4):    # j represents columns (1, 2, 3)
         result = i * j
         print(f"{i} x {j} = {result}")
-    print("-" * 10)  # Separator line
+    print("-" * 10)  # Separator line after each row
 
 # Processing nested data
 matrix = [
@@ -1758,9 +1846,10 @@ matrix = [
 ]
 
 for row in matrix:
+    row_str = ""
     for value in row:
-        print(value, end=" ")
-    print()  # New line after each row
+        row_str += str(value) + " "
+    print("Row: " + row_str)
 </CodeEditor>
 
 ## Common Patterns
@@ -1859,9 +1948,9 @@ Which operator checks if two values are equal?
 
 1. **FizzBuzz:** Write a program that prints numbers from 1 to 30. But for multiples of 3, print "Fizz" instead of the number, for multiples of 5 print "Buzz", and for multiples of both 3 and 5 print "FizzBuzz".
 
-2. **Prime Checker:** Write a program that checks if a number is prime (only divisible by 1 and itself). Use a loop to check all potential divisors.
+2. **Password Validator:** Create a program that keeps asking for a password until the user enters one that meets all requirements: at least 8 characters, contains both uppercase and lowercase, and has at least one digit.
 
-3. **Password Validator:** Create a program that keeps asking for a password until the user enters one that meets all requirements: at least 8 characters, contains both uppercase and lowercase, and has at least one digit.
+3. **Prime Checker:** Write a program that checks if a number is prime (only divisible by 1 and itself). Use a loop to check all potential divisors.
 
 ### Challenge 1: FizzBuzz
 <Secret>
@@ -3019,7 +3108,7 @@ def read_file_safely(filename):
 # Usage
 content = read_file_safely("maybe_exists.txt")
 if content:
-    print("File contents:", content)
+    print("File contents: " + str(content))
 else:
     print("Could not read file.")
 ```
