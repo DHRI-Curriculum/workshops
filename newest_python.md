@@ -311,6 +311,29 @@ Variables can be reassigned—the box can hold different values over time:
 
 <PythonREPL />
 
+### Getting User Input
+
+Sometimes you want your program to interact with the user. Python provides the `input()` function for this:
+
+```pycon
+>>> name = input("What's your name? ")
+>>> print("Hello, " + name)
+```
+
+The `input()` function:
+- Displays the prompt message to the user
+- Waits for the user to type something and press Enter
+- Returns what the user typed as a string
+- Always returns a string, even if the user types numbers
+
+```pycon
+>>> age_text = input("Enter your age: ")
+>>> age_number = int(age_text)  # Convert string to integer
+>>> print("Next year you'll be " + str(age_number + 1))
+```
+
+<PythonREPL />
+
 ## Review Questions
 
 What will be displayed when you run `print("Hello")`?
@@ -366,10 +389,10 @@ What value does `10 / 5` produce?
 # Temperature Converter Solution
 celsius = 25
 fahrenheit = celsius * 9/5 + 32
-print("Temperature in Celsius:", celsius)
-print("Temperature in Fahrenheit:", fahrenheit)
-# Or more elegantly:
-print(f"{celsius}°C is equal to {fahrenheit}°F")
+print("Temperature in Celsius: " + str(celsius))
+print("Temperature in Fahrenheit: " + str(fahrenheit))
+# Or with more descriptive output:
+print(str(celsius) + "°C is equal to " + str(fahrenheit) + "°F")
 ```
 </Secret>
 
@@ -382,13 +405,12 @@ last_name = "Lovelace"
 age = 36
 is_student = True
 
-print("Name:", first_name, last_name)
-print("Age:", age)
-print("Student status:", is_student)
-# Or as a sentence:
-print(f"My name is {first_name} {last_name}, I am {age} years old.")
-if is_student:
-    print("I am currently a student.")
+print("Name: " + first_name + " " + last_name)
+print("Age: " + str(age))
+print("Student status: " + str(is_student))
+# Or as a sentence using string concatenation:
+print("My name is " + first_name + " " + last_name + ", I am " + str(age) + " years old.")
+print("Student status: " + str(is_student))
 ```
 </Secret>
 
@@ -398,11 +420,11 @@ if is_student:
 ```python
 # Type Investigation Solution
 text_number = "123"
-print("Type of text_number:", type(text_number))
+print("Type of text_number: " + str(type(text_number)))
 
 # Convert to integer
 real_number = int(text_number)
-print("Type of real_number:", type(real_number))
+print("Type of real_number: " + str(type(real_number)))
 
 # Try adding 10 to each
 # This will cause an error if uncommented:
@@ -410,32 +432,23 @@ print("Type of real_number:", type(real_number))
 
 # This works:
 result2 = real_number + 10
-print("Real number + 10 =", result2)
+print("Real number + 10 = " + str(result2))
 
 # But this would work (string concatenation):
 result3 = text_number + "10"  # "12310"
-print("Text + '10' =", result3)
+print("Text + '10' = " + result3)
 ```
 </Secret>
 
 ## Review Questions
 
-What does a function return if it has no explicit `return` statement?
+Which statement about variable assignment is correct?
 
 <Quiz>
-- 0
-- False
-- None*
-- Error
-</Quiz>
-
-Which statement about function parameters is correct?
-
-<Quiz>
-- They are defined in the function body.
-- They can be optional.
-- They must be unique within a function.
-- All of the above.*
+- Variables must be declared before use
+- Variable names can start with numbers
+- Variables can be reassigned to different values*
+- Variables cannot contain underscores
 </Quiz>
 
 ### Keywords
@@ -561,8 +574,8 @@ print(f"I bought {items} books for ${price * items}")
 # You can even do calculations inside the braces:
 print(f"Next year I'll be {age + 1}")
 
-# Or call functions:
-print(f"My name in uppercase is {name.upper()}")
+# Or call built-in functions:
+print(f"My name has {len(name)} letters")
 </CodeEditor>
 
 F-strings can also format numbers:
@@ -752,81 +765,98 @@ How would you check if an email string contains "@"?
 - email.contains("@")
 - "@" in email*
 - email.has("@")
-- email.find("@") > 0*
+- email.find("@") > 0
 </Quiz>
 
 ## Challenges
 
-1. **Email Validator:** Write code that takes an email address and checks if it's valid (contains exactly one "@" and at least one "." after the @). Print whether it's valid or not.
+1. **Name Formatter:** Given the string `"  jOHN   dOE  "`, use string methods to clean and format it as "John Doe" (remove extra whitespace, proper capitalization).
 
-2. **Text Cleaner:** Take a messy string with extra spaces, mixed case, and unnecessary punctuation. Clean it up to have proper capitalization and spacing.
+2. **Research Citation Builder:** Create variables for author (`"Zweibel, Stephen"`), title (`"Python for Research"`), and year (`2024`). Use f-strings to format them as: "Zweibel, Stephen. 'Python for Research' (2024)."
 
-3. **Password Strength Checker:** Create a program that checks if a password is strong. It should be at least 8 characters, contain both uppercase and lowercase letters, and have at least one digit.
+3. **Text Analyzer:** Given the text `"Hello world! This is a sample text for analysis."`, count total characters, count words (split on spaces), and check if it contains the word "sample".
 
-### Challenge 1: Email Validator
+### Challenge 1: Name Formatter
 <Secret>
 ```python
-# Email Validator
-email = "student@university.edu"
+# Name Formatter Solution
+messy_name = "  jOHN   dOE  "
 
-# Check for exactly one @
-at_count = email.count("@")
-if at_count != 1:
-    print("Invalid: Email must contain exactly one @")
-else:
-    # Split on @ and check for . in domain part
-    parts = email.split("@")
-    if len(parts) == 2 and "." in parts[1]:
-        print(f"{email} is a valid email format")
-    else:
-        print(f"{email} is invalid")
+# Step by step cleaning
+cleaned = messy_name.strip()  # Remove outer whitespace  
+cleaned = cleaned.lower()     # Convert to lowercase
+cleaned = cleaned.title()     # Proper capitalization
+
+# Handle multiple spaces (using replace repeatedly)
+cleaned = cleaned.replace("  ", " ")
+cleaned = cleaned.replace("  ", " ")  # In case there were triple spaces
+cleaned = cleaned.replace("  ", " ")  # In case there were quadruple spaces
+
+print("Original:", repr(messy_name))
+print("Cleaned:", cleaned)
 ```
 </Secret>
 
-### Challenge 2: Text Cleaner
+### Challenge 2: Research Citation Builder
 <Secret>
 ```python
-# Text Cleaner
-messy_text = "  hELLo,    wORLD!!!   this   IS  messy   "
+# Research Citation Builder Solution
+author = "Zweibel, Stephen"
+title = "Python for Research"
+year = 2024
 
-# Clean it up step by step
-cleaned = messy_text.strip()  # Remove outer whitespace
-cleaned = cleaned.lower()  # Convert to lowercase
-cleaned = cleaned.replace("  ", " ")  # Replace double spaces
-# Keep replacing until no more double spaces
-while "  " in cleaned:
-    cleaned = cleaned.replace("  ", " ")
-cleaned = cleaned.capitalize()  # Capitalize first letter
+# Build citation using f-strings
+citation = f"{author}. '{title}' ({year})."
 
-print(f"Original: '{messy_text}'")
-print(f"Cleaned: '{cleaned}'")
+print("Citation:", citation)
+
+# Alternative with more formatting
+formatted_citation = f"{author}. '{title}' ({year})."
+print("Formatted citation:", formatted_citation)
+
+# You could also build it step by step
+citation_parts = []
+citation_parts.append(author + ".")
+citation_parts.append(f"'{title}'")
+citation_parts.append(f"({year}).")
+
+full_citation = " ".join(citation_parts)
+print("Built citation:", full_citation)
 ```
 </Secret>
 
-### Challenge 3: Password Strength Checker
+### Challenge 3: Text Analyzer
 <Secret>
 ```python
-# Password Strength Checker
-password = "MyPass123"
+# Text Analyzer Solution
+text = "Hello world! This is a sample text for analysis."
 
-# Check each requirement
-is_long_enough = len(password) >= 8
-has_upper = any(c.isupper() for c in password)
-has_lower = any(c.islower() for c in password)
-has_digit = any(c.isdigit() for c in password)
+# Count total characters
+total_chars = len(text)
+print(f"Total characters: {total_chars}")
 
-# Report results
-print(f"Password: {password}")
-print(f"Length >= 8: {is_long_enough}")
-print(f"Has uppercase: {has_upper}")
-print(f"Has lowercase: {has_lower}")
-print(f"Has digit: {has_digit}")
+# Count words (split on spaces)
+words = text.split()
+word_count = len(words)
+print(f"Word count: {word_count}")
 
-# Overall assessment
-if all([is_long_enough, has_upper, has_lower, has_digit]):
-    print("Password is STRONG")
-else:
-    print("Password is WEAK")
+# Check if it contains "sample"
+contains_sample = "sample" in text
+print(f"Contains 'sample': {contains_sample}")
+
+# Additional analysis using string methods
+print(f"Text in uppercase: {text.upper()}")
+print(f"Text starts with 'Hello': {text.startswith('Hello')}")
+print(f"Text ends with period: {text.endswith('.')}")
+
+# Count specific characters
+exclamation_count = text.count("!")
+print(f"Number of exclamation marks: {exclamation_count}")
+
+# Find position of "sample" 
+sample_position = text.find("sample")
+print(f"Position of 'sample': {sample_position}")
+print("Note: -1 means not found, any other number is the position")
 ```
 </Secret>
 
@@ -1154,8 +1184,13 @@ print(f"First student's name: {students[0]['name']}")
 students.append({"name": "Diana", "grade": 95, "major": "Physics"})
 print(f"Students after adding Diana: {students}")
 
-# Find average grade
-total = sum(student["grade"] for student in students)
+# Find average grade (manual calculation)
+alice_grade = students[0]["grade"]
+bob_grade = students[1]["grade"] 
+charlie_grade = students[2]["grade"]
+diana_grade = students[3]["grade"]
+
+total = alice_grade + bob_grade + charlie_grade + diana_grade
 average = total / len(students)
 print(f"Class average: {average:.1f}")
 </CodeEditor>
@@ -1179,8 +1214,12 @@ library["fiction"].append("Neuromancer")
 # Check all fiction books
 print(f"Fiction books: {library['fiction']}")
 
-# Count total books
-total_books = sum(len(books) for books in library.values())
+# Count total books (manual calculation)
+fiction_count = len(library["fiction"])
+history_count = len(library["history"])
+science_count = len(library["science"])
+
+total_books = fiction_count + history_count + science_count
 print(f"Total books: {total_books}")
 </CodeEditor>
 
@@ -1259,85 +1298,146 @@ Which of these can be a dictionary key? (Select all that apply)
 
 ## Challenges
 
-1. **Grade Manager:** Create a list of student dictionaries (name, grades list). Calculate each student's average and add it as a new field. Find the student with the highest average.
+1. **Student Records:** Create a list with three student dictionaries, each containing name, age, and major. Practice accessing and modifying the data using indexing and dictionary keys.
 
-2. **Word Frequency Counter:** Given a sentence, create a dictionary that counts how many times each word appears. Handle case-insensitivity.
+2. **Inventory Manager:** Create a dictionary representing a bookstore inventory with book titles as keys and quantities as values. Practice adding new books and updating quantities.
 
-3. **Shopping Cart:** Create a shopping cart system using a dictionary where keys are item names and values are dictionaries containing price and quantity. Calculate the total cost.
+3. **Recipe Calculator:** Create a recipe dictionary with ingredient names as keys and amounts as values. Calculate the total cost by multiplying each amount by a given price per unit.
 
-### Challenge 1: Grade Manager
+### Challenge 1: Student Records
 <Secret>
 ```python
-# Grade Manager
+# Student Records Solution
 students = [
-    {"name": "Alice", "grades": [92, 88, 95, 90]},
-    {"name": "Bob", "grades": [78, 85, 82, 88]},
-    {"name": "Charlie", "grades": [95, 92, 98, 94]},
-    {"name": "Diana", "grades": [88, 90, 87, 91]}
+    {"name": "Alice", "age": 20, "major": "Computer Science"},
+    {"name": "Bob", "age": 22, "major": "Mathematics"}, 
+    {"name": "Charlie", "age": 19, "major": "Physics"}
 ]
 
-# Calculate averages
-for student in students:
-    grades = student["grades"]
-    student["average"] = sum(grades) / len(grades)
-    print(f"{student['name']}: {student['average']:.1f}")
+# Display initial data
+print("Initial student records:")
+print("Student 1: " + students[0]["name"] + " is " + str(students[0]["age"]) + " years old, majoring in " + students[0]["major"])
+print("Student 2: " + students[1]["name"] + " is " + str(students[1]["age"]) + " years old, majoring in " + students[1]["major"])
+print("Student 3: " + students[2]["name"] + " is " + str(students[2]["age"]) + " years old, majoring in " + students[2]["major"])
 
-# Find top student
-top_student = max(students, key=lambda s: s["average"])
-print(f"\nTop student: {top_student['name']} with {top_student['average']:.1f}")
+# Modify some data
+students[0]["age"] = 21  # Alice had a birthday
+students[2]["major"] = "Engineering"  # Charlie changed majors
+
+# Add a new field to all students
+students[0]["gpa"] = 3.8
+students[1]["gpa"] = 3.5
+students[2]["gpa"] = 3.9
+
+print("\nUpdated records:")
+print(students[0]["name"] + " is now " + str(students[0]["age"]) + " with GPA: " + str(students[0]["gpa"]))
+print(students[2]["name"] + " changed major to " + students[2]["major"] + " with GPA: " + str(students[2]["gpa"]))
+
+# Calculate some statistics using built-in functions
+ages = [students[0]["age"], students[1]["age"], students[2]["age"]]
+gpas = [students[0]["gpa"], students[1]["gpa"], students[2]["gpa"]]
+
+print("\nStatistics:")
+print("Average age: " + str(sum(ages) / len(ages)))
+print("Highest GPA: " + str(max(gpas)))
+print("Total students: " + str(len(students)))
 ```
 </Secret>
 
-### Challenge 2: Word Frequency Counter
+### Challenge 2: Inventory Manager
 <Secret>
 ```python
-# Word Frequency Counter
-sentence = "The quick brown fox jumps over the lazy dog The fox is quick"
-
-# Convert to lowercase and split into words
-words = sentence.lower().split()
-
-# Count frequencies
-word_count = {}
-for word in words:
-    if word in word_count:
-        word_count[word] += 1
-    else:
-        word_count[word] = 1
-
-# Or more elegantly:
-# word_count = {}
-# for word in words:
-#     word_count[word] = word_count.get(word, 0) + 1
-
-print("Word frequencies:")
-for word, count in word_count.items():
-    print(f"{word}: {count}")
-```
-</Secret>
-
-### Challenge 3: Shopping Cart
-<Secret>
-```python
-# Shopping Cart System
-cart = {
-    "apples": {"price": 0.50, "quantity": 6},
-    "bread": {"price": 2.50, "quantity": 2},
-    "milk": {"price": 3.00, "quantity": 1},
-    "cheese": {"price": 5.00, "quantity": 1}
+# Inventory Manager Solution
+inventory = {
+    "The Great Gatsby": 12,
+    "To Kill a Mockingbird": 8,
+    "1984": 15,
+    "Pride and Prejudice": 6
 }
 
-print("Shopping Cart:")
-print("-" * 40)
-total = 0
+# Display initial inventory
+print("Initial inventory:")
+print(f"The Great Gatsby: {inventory['The Great Gatsby']} copies")
+print(f"To Kill a Mockingbird: {inventory['To Kill a Mockingbird']} copies") 
+print(f"1984: {inventory['1984']} copies")
+print(f"Pride and Prejudice: {inventory['Pride and Prejudice']} copies")
 
-for item, details in cart.items():
-    item_cost = details["price"] * details["quantity"]
-    total += item_cost
-    print(f"{item:15} ${details['price']:5.2f} x {details['quantity']:2} = ${item_cost:6.2f}")
+# Add new books
+inventory["Dune"] = 10
+inventory["The Hobbit"] = 7
 
-print("-" * 40)
-print(f"{'Total:':15} ${total:6.2f}")
+# Update existing quantities (sales and restocking)
+inventory["The Great Gatsby"] -= 3  # Sold 3 copies
+inventory["1984"] += 5  # Restocked 5 copies
+
+print("\nUpdated inventory:")
+print("After adding new books and updating quantities:")
+
+# Display all books (we know the keys)
+book_titles = list(inventory.keys())
+print(f"Total unique titles: {len(book_titles)}")
+print(f"Books in stock: {book_titles}")
+
+# Calculate total books using values
+all_quantities = list(inventory.values())
+print(f"Total books in inventory: {sum(all_quantities)}")
+print(f"Average books per title: {sum(all_quantities) / len(all_quantities):.1f}")
+
+# Check specific books
+print("\nSpecific lookups:")
+print(f"Copies of Dune: {inventory['Dune']}")
+print(f"Copies of 1984 after restock: {inventory['1984']}")
+```
+</Secret>
+
+### Challenge 3: Recipe Calculator
+<Secret>
+```python
+# Recipe Calculator Solution
+recipe = {
+    "flour": 2.5,      # cups
+    "sugar": 1.0,      # cups  
+    "eggs": 3,         # whole eggs
+    "butter": 0.5,     # cups
+    "milk": 1.25       # cups
+}
+
+# Price per unit (in dollars)
+prices = {
+    "flour": 0.20,     # per cup
+    "sugar": 0.15,     # per cup
+    "eggs": 0.25,      # per egg
+    "butter": 0.75,    # per cup
+    "milk": 0.12       # per cup
+}
+
+print("Recipe ingredients and amounts:")
+print(f"Flour: {recipe['flour']} cups")
+print(f"Sugar: {recipe['sugar']} cups")
+print(f"Eggs: {recipe['eggs']} eggs")
+print(f"Butter: {recipe['butter']} cups")
+print(f"Milk: {recipe['milk']} cups")
+
+print("\nCost calculation:")
+flour_cost = recipe["flour"] * prices["flour"]
+sugar_cost = recipe["sugar"] * prices["sugar"]
+eggs_cost = recipe["eggs"] * prices["eggs"]
+butter_cost = recipe["butter"] * prices["butter"]
+milk_cost = recipe["milk"] * prices["milk"]
+
+print(f"Flour: {recipe['flour']} cups × ${prices['flour']:.2f} = ${flour_cost:.2f}")
+print(f"Sugar: {recipe['sugar']} cups × ${prices['sugar']:.2f} = ${sugar_cost:.2f}")
+print(f"Eggs: {recipe['eggs']} eggs × ${prices['eggs']:.2f} = ${eggs_cost:.2f}")
+print(f"Butter: {recipe['butter']} cups × ${prices['butter']:.2f} = ${butter_cost:.2f}")
+print(f"Milk: {recipe['milk']} cups × ${prices['milk']:.2f} = ${milk_cost:.2f}")
+
+total_cost = flour_cost + sugar_cost + eggs_cost + butter_cost + milk_cost
+print(f"\nTotal recipe cost: ${total_cost:.2f}")
+
+# Additional calculations using built-in functions
+ingredient_amounts = list(recipe.values())
+print(f"Total volume/count: {sum(ingredient_amounts)} units")
+print(f"Most expensive ingredient cost: ${max([flour_cost, sugar_cost, eggs_cost, butter_cost, milk_cost]):.2f}")
 ```
 </Secret>
 
@@ -1698,11 +1798,10 @@ evens = []  # Initialize empty result list
 for num in numbers:
     if num % 2 == 0:
         evens.append(num)
-print(f"Even numbers (loop): {evens}")
+print(f"Even numbers: {evens}")
 
-# Or using list comprehension (advanced but elegant!)
-evens_comp = [num for num in numbers if num % 2 == 0]
-print(f"Even numbers (comprehension): {evens_comp}")
+# Note: There are more advanced ways to do this that you'll learn later,
+# but for now, the loop approach above is the clearest!
 </CodeEditor>
 
 ## Review Questions
@@ -1816,11 +1915,29 @@ while True:
     
     # Check all requirements
     has_min_length = len(password) >= 8
-    has_upper = any(c.isupper() for c in password)
-    has_lower = any(c.islower() for c in password)
-    has_digit = any(c.isdigit() for c in password)
     
-    if all([has_min_length, has_upper, has_lower, has_digit]):
+    # Check for uppercase letter
+    has_upper = False
+    for char in password:
+        if char.isupper():
+            has_upper = True
+            break
+    
+    # Check for lowercase letter
+    has_lower = False
+    for char in password:
+        if char.islower():
+            has_lower = True
+            break
+    
+    # Check for digit
+    has_digit = False
+    for char in password:
+        if char.isdigit():
+            has_digit = True
+            break
+    
+    if has_min_length and has_upper and has_lower and has_digit:
         print("Password accepted!")
         break
     else:
@@ -2137,9 +2254,28 @@ def is_strong_password(password):
     """Check password strength."""
     if len(password) < 8:
         return False
-    has_upper = any(c.isupper() for c in password)
-    has_lower = any(c.islower() for c in password)
-    has_digit = any(c.isdigit() for c in password)
+    
+    # Check for uppercase letter
+    has_upper = False
+    for char in password:
+        if char.isupper():
+            has_upper = True
+            break
+    
+    # Check for lowercase letter
+    has_lower = False
+    for char in password:
+        if char.islower():
+            has_lower = True
+            break
+    
+    # Check for digit
+    has_digit = False
+    for char in password:
+        if char.isdigit():
+            has_digit = True
+            break
+    
     return has_upper and has_lower and has_digit
 
 print(f"Is 10 positive? {is_positive(10)}")
@@ -2284,7 +2420,7 @@ def validate_data(data_dict):
     # Validate name
     if "name" in data_dict:
         name = data_dict["name"]
-        if isinstance(name, str) and len(name.strip()) > 0:
+        if type(name) == str and len(name.strip()) > 0:
             results["name"] = "Valid"
         else:
             results["name"] = "Invalid: Name must be non-empty string"
@@ -2294,7 +2430,7 @@ def validate_data(data_dict):
     # Validate age
     if "age" in data_dict:
         age = data_dict["age"]
-        if isinstance(age, (int, float)) and 0 <= age <= 120:
+        if (type(age) == int or type(age) == float) and 0 <= age <= 120:
             results["age"] = "Valid"
         else:
             results["age"] = "Invalid: Age must be between 0 and 120"
@@ -2304,7 +2440,7 @@ def validate_data(data_dict):
     # Validate email
     if "email" in data_dict:
         email = data_dict["email"]
-        if isinstance(email, str) and "@" in email and "." in email.split("@")[1]:
+        if type(email) == str and "@" in email and "." in email.split("@")[1]:
             results["email"] = "Valid"
         else:
             results["email"] = "Invalid: Email format incorrect"
@@ -2343,7 +2479,10 @@ def analyze_grades(grades_list):
         median = sorted_grades[n//2]
     
     # Calculate pass rate
-    passing = [g for g in grades_list if g >= 60]
+    passing = []
+    for grade in grades_list:
+        if grade >= 60:
+            passing.append(grade)
     pass_rate = (len(passing) / len(grades_list)) * 100
     
     return {
@@ -2359,7 +2498,7 @@ def analyze_grades(grades_list):
 grades = [78, 92, 45, 88, 67, 73, 85, 90, 52, 95]
 stats = analyze_grades(grades)
 for key, value in stats.items():
-    if isinstance(value, float):
+    if type(value) == float:
         print(f"{key}: {value:.1f}")
     else:
         print(f"{key}: {value}")
@@ -2722,8 +2861,12 @@ with open("multiple.txt", "w") as file:
     for line in lines:
         file.write(line + "\n")  # Add newline after each
     
-    # Or use writelines (but you need to add newlines yourself)
-    # file.writelines([line + "\n" for line in lines])
+    # Alternative: use writelines (but you need to add newlines yourself)
+    # Prepare lines with newlines
+    # lines_with_newlines = []
+    # for line in lines:
+    #     lines_with_newlines.append(line + "\n")
+    # file.writelines(lines_with_newlines)
 ```
 
 ## Working with CSV Files
@@ -2919,8 +3062,16 @@ def analyze_responses(responses):
         return {}
     
     total = len(responses)
-    avg_age = sum(r["age"] for r in responses) / total
-    avg_satisfaction = sum(r["satisfaction"] for r in responses) / total
+    
+    # Calculate averages using loops
+    total_age = 0
+    total_satisfaction = 0
+    for r in responses:
+        total_age += r["age"]
+        total_satisfaction += r["satisfaction"]
+    
+    avg_age = total_age / total
+    avg_satisfaction = total_satisfaction / total
     
     # Count by category
     categories = {}
@@ -2961,10 +3112,9 @@ def generate_summary(analysis):
     
     return "\n".join(summary)
 
-# Main pipeline
-if __name__ == "__main__":
-    # Load data
-    responses = load_survey_data("survey_responses.csv")
+# Main pipeline - run the analysis
+# Load data
+responses = load_survey_data("survey_responses.csv")
     
     if responses:
         # Analyze
@@ -3048,7 +3198,13 @@ def analyze_text_file(filename):
                 word_count[word_lower] = word_count.get(word_lower, 0) + 1
             
             # Find most common word
-            most_common = max(word_count.items(), key=lambda x: x[1])
+            most_common_word = ""
+            highest_count = 0
+            for word, count in word_count.items():
+                if count > highest_count:
+                    highest_count = count
+                    most_common_word = word
+            most_common = (most_common_word, highest_count)
             
             stats = {
                 "lines": len(lines),
@@ -3371,138 +3527,132 @@ Now let's work with real cultural data. The Met Museum API provides access to 47
 import requests
 import time
 
-class MetMuseumExplorer:
+# Metropolitan Museum of Art API functions
+# No API key needed - completely free!
+
+def search_met_artworks(query):
     """
-    Explore the Metropolitan Museum of Art's collection.
-    No API key needed - completely free!
+    Search for artworks by keyword.
+    
+    Args:
+        query: Search term (e.g., "impressionism", "cats", "van gogh")
+    
+    Returns:
+        List of artwork IDs
     """
+    print(f"Searching for artworks about '{query}'...")
     
-    def __init__(self):
-        self.base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+    base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+    search_url = f"{base_url}/search"
+    params = {"q": query}
     
-    def search_artworks(self, query):
-        """
-        Search for artworks by keyword.
+    try:
+        response = requests.get(search_url, params=params)
         
-        Args:
-            query: Search term (e.g., "impressionism", "cats", "van gogh")
-        
-        Returns:
-            List of artwork IDs
-        """
-        print(f"Searching for artworks about '{query}'...")
-        
-        search_url = f"{self.base_url}/search"
-        params = {"q": query}
-        
-        try:
-            response = requests.get(search_url, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            total = data.get("total", 0)
+            object_ids = data.get("objectIDs", [])
             
-            if response.status_code == 200:
-                data = response.json()
-                total = data.get("total", 0)
-                object_ids = data.get("objectIDs", [])
-                
-                print(f"Found {total} artworks")
-                return object_ids
-            else:
-                print(f"Search failed with status {response.status_code}")
-                return []
-                
-        except requests.exceptions.RequestException as e:
-            print(f"Network error: {e}")
+            print(f"Found {total} artworks")
+            return object_ids
+        else:
+            print(f"Search failed with status {response.status_code}")
             return []
+            
+    except requests.exceptions.RequestException as e:
+        print(f"Network error: {e}")
+        return []
+
+def get_met_artwork_details(object_id):
+    """
+    Get detailed information about a specific artwork.
     
-    def get_artwork_details(self, object_id):
-        """
-        Get detailed information about a specific artwork.
+    Args:
+        object_id: The Met's ID for the artwork
         
-        Args:
-            object_id: The Met's ID for the artwork
-            
-        Returns:
-            Dictionary with artwork details
-        """
-        url = f"{self.base_url}/objects/{object_id}"
+    Returns:
+        Dictionary with artwork details
+    """
+    base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+    url = f"{base_url}/objects/{object_id}"
+    
+    try:
+        response = requests.get(url)
         
-        try:
-            response = requests.get(url)
-            
-            if response.status_code == 200:
-                return response.json()
-            else:
-                print(f"Could not get details for artwork {object_id}")
-                return None
-                
-        except requests.exceptions.RequestException as e:
-            print(f"Network error: {e}")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            print(f"Could not get details for artwork {object_id}")
             return None
+            
+    except requests.exceptions.RequestException as e:
+        print(f"Network error: {e}")
+        return None
+
+def explore_met_collection(search_term, limit=5):
+    """
+    Search and display information about artworks.
     
-    def explore_collection(self, search_term, limit=5):
-        """
-        Search and display information about artworks.
+    Args:
+        search_term: What to search for
+        limit: Maximum number of artworks to display
+    """
+    # Search for artworks
+    artwork_ids = search_met_artworks(search_term)
+    
+    if not artwork_ids:
+        print("No artworks found")
+        return
+    
+    # Limit the number we'll look at
+    artwork_ids = artwork_ids[:limit]
+    
+    print(f"\nExploring {len(artwork_ids)} artworks...")
+    print("-" * 60)
+    
+    artworks = []
+    for i, artwork_id in enumerate(artwork_ids, 1):
+        print(f"Fetching artwork {i}/{len(artwork_ids)}...")
         
-        Args:
-            search_term: What to search for
-            limit: Maximum number of artworks to display
-        """
-        # Search for artworks
-        artwork_ids = self.search_artworks(search_term)
+        # Get details
+        details = get_met_artwork_details(artwork_id)
         
-        if not artwork_ids:
-            print("No artworks found")
-            return
-        
-        # Limit the number we'll look at
-        artwork_ids = artwork_ids[:limit]
-        
-        print(f"\nExploring {len(artwork_ids)} artworks...")
-        print("-" * 60)
-        
-        artworks = []
-        for i, artwork_id in enumerate(artwork_ids, 1):
-            print(f"Fetching artwork {i}/{len(artwork_ids)}...")
+        if details:
+            # Extract key information
+            artwork_info = {
+                "title": details.get("title", "Unknown"),
+                "artist": details.get("artistDisplayName", "Unknown artist"),
+                "date": details.get("objectDate", "Unknown date"),
+                "medium": details.get("medium", "Unknown medium"),
+                "department": details.get("department", ""),
+                "url": details.get("objectURL", ""),
+                "image": details.get("primaryImage", "")
+            }
             
-            # Get details
-            details = self.get_artwork_details(artwork_id)
+            artworks.append(artwork_info)
             
-            if details:
-                # Extract key information
-                artwork_info = {
-                    "title": details.get("title", "Unknown"),
-                    "artist": details.get("artistDisplayName", "Unknown artist"),
-                    "date": details.get("objectDate", "Unknown date"),
-                    "medium": details.get("medium", "Unknown medium"),
-                    "department": details.get("department", ""),
-                    "url": details.get("objectURL", ""),
-                    "image": details.get("primaryImage", "")
-                }
-                
-                artworks.append(artwork_info)
-                
-                # Display information
-                print(f"\n{i}. {artwork_info['title']}")
-                print(f"   Artist: {artwork_info['artist']}")
-                print(f"   Date: {artwork_info['date']}")
-                print(f"   Medium: {artwork_info['medium']}")
-                if artwork_info['url']:
-                    print(f"   View online: {artwork_info['url']}")
-            
-            # Be polite to the API
-            if i < len(artwork_ids):
-                time.sleep(0.5)
+            # Display information
+            print(f"\n{i}. {artwork_info['title']}")
+            print(f"   Artist: {artwork_info['artist']}")
+            print(f"   Date: {artwork_info['date']}")
+            print(f"   Medium: {artwork_info['medium']}")
+            if artwork_info['url']:
+                print(f"   View online: {artwork_info['url']}")
         
-        return artworks
+        # Be polite to the API
+        if i < len(artwork_ids):
+            time.sleep(0.5)
+    
+    return artworks
 
 # Let's explore!
-explorer = MetMuseumExplorer()
-
 # Search for impressionist paintings
-impressionist_art = explorer.explore_collection("impressionism", limit=3)
+impressionist_art = explore_met_collection("impressionism", limit=3)
 
 # Try different searches
 print("\n" + "=" * 60)
-japanese_art = explorer.explore_collection("japanese", limit=3)
+japanese_art = explore_met_collection("japanese", limit=3)
 ```
 
 ## Another Free API: Open-Meteo Weather
@@ -3725,139 +3875,129 @@ Let's combine multiple free APIs to create a rich dataset:
 ```python
 import pandas as pd
 import json
+import time
 from datetime import datetime
 
-class ResearchDataCollector:
+def collect_cultural_data(topics, artworks_per_topic=5):
     """
-    Collect data from multiple free APIs for research.
+    Collect artwork data for multiple topics.
     No API keys required!
     """
+    print("=" * 60)
+    print("COLLECTING CULTURAL DATA")
+    print("=" * 60)
     
-    def __init__(self):
-        self.met_museum = MetMuseumExplorer()
-        self.data = []
+    all_artworks = []
     
-    def collect_cultural_data(self, topics, artworks_per_topic=5):
-        """
-        Collect artwork data for multiple topics.
-        """
-        print("=" * 60)
-        print("COLLECTING CULTURAL DATA")
-        print("=" * 60)
+    for topic in topics:
+        print(f"\nSearching for {topic}...")
         
-        all_artworks = []
+        # Search the Met collection using standalone functions
+        artwork_ids = search_met_artworks(topic)
         
-        for topic in topics:
-            print(f"\nSearching for {topic}...")
-            
-            # Search the Met collection
-            artwork_ids = self.met_museum.search_artworks(topic)
-            
-            if artwork_ids:
-                # Limit number per topic
-                for artwork_id in artwork_ids[:artworks_per_topic]:
-                    details = self.met_museum.get_artwork_details(artwork_id)
-                    
-                    if details:
-                        # Extract and structure the data
-                        artwork_data = {
-                            "search_topic": topic,
-                            "title": details.get("title", ""),
-                            "artist": details.get("artistDisplayName", ""),
-                            "date": details.get("objectDate", ""),
-                            "medium": details.get("medium", ""),
-                            "department": details.get("department", ""),
-                            "culture": details.get("culture", ""),
-                            "period": details.get("period", ""),
-                            "has_image": bool(details.get("primaryImage")),
-                            "on_display": details.get("isPublicDomain", False),
-                            "collected_at": datetime.now().isoformat()
-                        }
-                        
-                        all_artworks.append(artwork_data)
-                    
-                    time.sleep(0.5)  # Rate limiting
-        
-        return all_artworks
-    
-    def collect_weather_context(self, locations):
-        """
-        Collect weather data for multiple locations.
-        """
-        print("\n" + "=" * 60)
-        print("COLLECTING WEATHER CONTEXT")
-        print("=" * 60)
-        
-        weather_data = []
-        
-        for loc in locations:
-            weather = get_weather_no_key(
-                loc["lat"], 
-                loc["lon"], 
-                loc.get("name", "Unknown")
-            )
-            
-            if weather:
-                # Structure the weather data
-                weather_record = {
-                    "location": loc.get("name", "Unknown"),
-                    "latitude": loc["lat"],
-                    "longitude": loc["lon"],
-                    "current_temp": weather["current_weather"]["temperature"],
-                    "windspeed": weather["current_weather"]["windspeed"],
-                    "weather_code": weather["current_weather"]["weathercode"],
-                    "collected_at": datetime.now().isoformat()
-                }
+        if artwork_ids:
+            # Limit number per topic
+            for artwork_id in artwork_ids[:artworks_per_topic]:
+                details = get_met_artwork_details(artwork_id)
                 
-                weather_data.append(weather_record)
-            
-            time.sleep(1)
-        
-        return weather_data
+                if details:
+                    # Extract and structure the data
+                    artwork_data = {
+                        "search_topic": topic,
+                        "title": details.get("title", ""),
+                        "artist": details.get("artistDisplayName", ""),
+                        "date": details.get("objectDate", ""),
+                        "medium": details.get("medium", ""),
+                        "department": details.get("department", ""),
+                        "culture": details.get("culture", ""),
+                        "period": details.get("period", ""),
+                        "has_image": bool(details.get("primaryImage")),
+                        "on_display": details.get("isPublicDomain", False),
+                        "collected_at": datetime.now().isoformat()
+                    }
+                    
+                    all_artworks.append(artwork_data)
+                
+                time.sleep(0.5)  # Rate limiting
     
-    def save_research_data(self, cultural_data, weather_data, output_prefix="research"):
-        """
-        Save collected data to files.
-        """
-        print("\n" + "=" * 60)
-        print("SAVING RESEARCH DATA")
-        print("=" * 60)
+    return all_artworks
+
+def collect_weather_context(locations):
+    """
+    Collect weather data for multiple locations.
+    """
+    print("\n" + "=" * 60)
+    print("COLLECTING WEATHER CONTEXT")
+    print("=" * 60)
+    
+    weather_data = []
+    
+    for loc in locations:
+        weather = get_weather_no_key(
+            loc["lat"], 
+            loc["lon"], 
+            loc.get("name", "Unknown")
+        )
         
-        # Convert to DataFrames
-        if cultural_data:
-            df_culture = pd.DataFrame(cultural_data)
-            culture_file = f"{output_prefix}_cultural_data.csv"
-            df_culture.to_csv(culture_file, index=False)
-            print(f"Saved {len(df_culture)} cultural records to {culture_file}")
-        
-        if weather_data:
-            df_weather = pd.DataFrame(weather_data)
-            weather_file = f"{output_prefix}_weather_data.csv"
-            df_weather.to_csv(weather_file, index=False)
-            print(f"Saved {len(df_weather)} weather records to {weather_file}")
-        
-        # Also save as JSON for complete preservation
-        all_data = {
-            "cultural_data": cultural_data,
-            "weather_data": weather_data,
-            "metadata": {
-                "collection_date": datetime.now().isoformat(),
-                "cultural_records": len(cultural_data),
-                "weather_records": len(weather_data)
+        if weather:
+            # Structure the weather data
+            weather_record = {
+                "location": loc.get("name", "Unknown"),
+                "latitude": loc["lat"],
+                "longitude": loc["lon"],
+                "current_temp": weather["current_weather"]["temperature"],
+                "windspeed": weather["current_weather"]["windspeed"],
+                "weather_code": weather["current_weather"]["weathercode"],
+                "collected_at": datetime.now().isoformat()
             }
-        }
+            
+            weather_data.append(weather_record)
         
-        json_file = f"{output_prefix}_combined.json"
-        with open(json_file, "w") as f:
-            json.dump(all_data, f, indent=2)
-        print(f"Saved combined data to {json_file}")
+        time.sleep(1)
+    
+    return weather_data
 
-# Run the complete data collection
-collector = ResearchDataCollector()
+def save_research_data(cultural_data, weather_data, output_prefix="research"):
+    """
+    Save collected data to files.
+    """
+    print("\n" + "=" * 60)
+    print("SAVING RESEARCH DATA")
+    print("=" * 60)
+    
+    # Convert to DataFrames
+    if cultural_data:
+        df_culture = pd.DataFrame(cultural_data)
+        culture_file = f"{output_prefix}_cultural_data.csv"
+        df_culture.to_csv(culture_file, index=False)
+        print(f"Saved {len(df_culture)} cultural records to {culture_file}")
+    
+    if weather_data:
+        df_weather = pd.DataFrame(weather_data)
+        weather_file = f"{output_prefix}_weather_data.csv"
+        df_weather.to_csv(weather_file, index=False)
+        print(f"Saved {len(df_weather)} weather records to {weather_file}")
+    
+    # Also save as JSON for complete preservation
+    all_data = {
+        "cultural_data": cultural_data,
+        "weather_data": weather_data,
+        "metadata": {
+            "collection_date": datetime.now().isoformat(),
+            "cultural_records": len(cultural_data),
+            "weather_records": len(weather_data)
+        }
+    }
+    
+    json_file = f"{output_prefix}_combined.json"
+    with open(json_file, "w") as f:
+        json.dump(all_data, f, indent=2)
+    print(f"Saved combined data to {json_file}")
 
+# Run the complete data collection using functions
 # Cultural topics to explore
 topics = ["renaissance", "impressionism", "ancient egypt"]
-cultural_data = collector.collect_cultural_data(topics, artworks_per_topic=3)
+cultural_data = collect_cultural_data(topics, artworks_per_topic=3)
 
 # Locations for weather context
 locations = [
@@ -3865,10 +4005,10 @@ locations = [
     {"name": "Paris", "lat": 48.8566, "lon": 2.3522},
     {"name": "Cairo", "lat": 30.0444, "lon": 31.2357}
 ]
-weather_data = collector.collect_weather_context(locations)
+weather_data = collect_weather_context(locations)
 
 # Save everything
-collector.save_research_data(cultural_data, weather_data)
+save_research_data(cultural_data, weather_data)
 
 print("\n" + "=" * 60)
 print("DATA COLLECTION COMPLETE!")
@@ -4605,7 +4745,10 @@ columns_to_keep = [
 ]
 
 # Some columns might not exist, so let's check
-columns_that_exist = [col for col in columns_to_keep if col in df.columns]
+columns_that_exist = []
+for col in columns_to_keep:
+    if col in df.columns:
+        columns_that_exist.append(col)
 df_clean = df[columns_that_exist].copy()
 
 print(f"\nAFTER SELECTING COLUMNS")
