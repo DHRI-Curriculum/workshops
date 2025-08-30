@@ -1305,10 +1305,10 @@ print(f"Fiction books: {library['fiction']}")
 
 # Count total books (manual calculation)
 fiction_count = len(library["fiction"])
-history_count = len(library["history"])
-science_count = len(library["science"])
+non_fiction_count = len(library["non_fiction"])
+poetry_count = len(library["poetry"])
 
-total_books = fiction_count + history_count + science_count
+total_books = fiction_count + non_fiction_count + poetry_count
 print(f"Total books: {total_books}")
 </CodeEditor>
 
@@ -2293,8 +2293,8 @@ def create_report(results):
 
 # Main program is now very clear:
 raw_data = load_data("survey_results.csv")
-clean_data = clean_data(raw_data)
-results = analyze_data(clean_data)
+cleaned_data = clean_data(raw_data)
+results = analyze_data(cleaned_data)
 create_report(results)
 ```
 
@@ -2452,7 +2452,7 @@ What happens to variables created inside a function?
 - They cause an error
 </Quiz>
 
-When does a function stop executing?
+When does a function stop executing? (Select all that apply)
 
 <Quiz>
 - When it reaches the end of its code block*
@@ -3204,21 +3204,21 @@ def generate_summary(analysis):
 # Main pipeline - run the analysis
 # Load data
 responses = load_survey_data("survey_responses.csv")
+
+if responses:
+    # Analyze
+    results = analyze_responses(responses)
     
-    if responses:
-        # Analyze
-        results = analyze_responses(responses)
-        
-        # Save detailed results
-        save_report(results, "analysis_results.json")
-        
-        # Generate and save summary
-        summary = generate_summary(results)
-        print("\n" + summary)
-        
-        with open("summary_report.txt", "w") as file:
-            file.write(summary)
-        print("\nSummary report saved to summary_report.txt")
+    # Save detailed results
+    save_report(results, "analysis_results.json")
+    
+    # Generate and save summary
+    summary = generate_summary(results)
+    print("\n" + summary)
+    
+    with open("summary_report.txt", "w") as file:
+        file.write(summary)
+    print("\nSummary report saved to summary_report.txt")
 ```
 
 This pipeline demonstrates a complete workflow: loading data, processing it, and saving results in multiple formats.
@@ -3751,6 +3751,7 @@ Open-Meteo provides weather data worldwide with no registration required. This i
 ```python
 import requests
 from datetime import datetime
+import time
 
 def get_weather_no_key(latitude, longitude, city_name=""):
     """
@@ -5315,7 +5316,7 @@ Let's share your 311 analysis project:
 
 ```bash
 # Navigate to your project folder
-cd nyc_311_analysis
+cd nyc_311_project
 
 # Initialize Git
 git init
@@ -5433,8 +5434,8 @@ nyc_311_analysis/
 
 ### Installation
 1. Clone this repository:
-   git clone https://github.com/yourusername/nyc_311_analysis.git
-   cd nyc_311_analysis
+   git clone https://github.com/yourusername/nyc_311_project.git
+   cd nyc_311_project
 
 
 2. Install required packages:
