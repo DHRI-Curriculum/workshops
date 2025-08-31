@@ -522,7 +522,7 @@ We've seen basic strings, but Python offers several ways to create and work with
 
 The simplest strings are **literals**: text you type directly in quotes:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 simple = "Hello, World!"
 with_apostrophe = "It's a beautiful day"
@@ -540,7 +540,7 @@ print("Empty string: '" + empty + "'")
 
 For longer text, use triple quotes (either `'''` or `"""`):
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 poem = """Roses are red,
 Violets are blue,
@@ -559,7 +559,7 @@ Triple-quoted strings preserve all formatting, including line breaks and indenta
 
 The simplest way to combine strings is with the `+` operator:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 first_name = "Ada"
 last_name = "Lovelace"
@@ -575,7 +575,7 @@ print(greeting + " " + name)  # Better
 
 You can only concatenate strings with other strings:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 age = 25
 # This will cause an error:
@@ -590,7 +590,7 @@ print(message)
 
 While concatenation works, it quickly becomes cumbersome. Python 3.6 introduced **f-strings** (formatted string literals). They're much more elegant:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 name = "Ada"
 age = 36
@@ -608,7 +608,7 @@ print(new_way)  # Same result, much cleaner!
 
 F-strings start with `f` before the opening quote. Inside the string, anything in curly braces `{}` is evaluated as Python code:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 name = "Ada"
 age = 36
@@ -625,7 +625,7 @@ print(f"I bought {items} books for ${price * items}")
 
 F-strings can also format numbers:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 pi = 3.14159265359
 print(f"Pi rounded to 2 decimals: {pi:.2f}")
@@ -643,7 +643,7 @@ Strings in Python are **objects**. They come with built-in functions (called **m
 
 ### Case Methods
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 text = "Hello, World!"
 # Basic case conversion:
@@ -658,7 +658,7 @@ print(text.swapcase())    # hELLO, wORLD! (flip all cases)
 
 Important: String methods don't change the original string (strings are **immutable**). They return a new string:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 original = "Hello"
 uppercase = original.upper()
@@ -674,7 +674,7 @@ The `.count()` method tells you how many times a substring appears. The `.index(
 
 For checking string beginnings and endings, use `.startswith()` and `.endswith()` - these are really useful for validating file extensions or URL schemes.
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 email = "student@university.edu"
 
@@ -699,7 +699,7 @@ The `.replace()` method substitutes one substring with another throughout the en
 
 The `.split()` method breaks a string into a list of parts. Called with no arguments, it splits on any whitespace. You can also specify what to split on, useful for processing CSV data or parsing formatted text.
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 messy = "  Hello, World!  \n"
 print("Original: " + repr(messy))
@@ -723,7 +723,7 @@ print("CSV data: " + str(data))
 
 Python provides methods to check what kind of characters a string contains:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 print("hello")
 # Check if string contains only certain types of characters:
@@ -740,7 +740,7 @@ print("HELLO".isupper())     # All uppercase? True
 
 Strings are **sequences**: ordered collections of characters. Each character has a position (index), starting from 0:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 text = "Python"
 #       012345  <- Index positions
@@ -756,7 +756,7 @@ print(text[-2])  # Second-to-last: 'o'
 
 **Slicing** lets you extract portions of a string using the syntax `[start:end]`. The key rule to remember: slicing includes the start position but excludes the end position. Think of it as "from start up to (but not including) end."
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 text = "Python Programming"
 #       0123456789012345678  <- Position numbers
@@ -779,7 +779,7 @@ print(text[::-1])  # Negative step (-1) reverses the string!
 
 Sometimes you need to include special characters in strings. **Escape sequences** start with a backslash `\`:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Common escape sequences:
 print("Hello\nWorld")    # \n = newline
@@ -951,7 +951,7 @@ A **list** is Python's most versatile data structure. It's an ordered, mutable (
 
 Lists are created with square brackets `[]`, with items separated by commas:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # An empty list
 empty_list = []
@@ -978,7 +978,7 @@ print(f"Matrix: {matrix}")
 
 Like strings, lists use **zero-based indexing**. The first item is at index 0:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 fruits = ["apple", "banana", "cherry", "date"]
 
@@ -1003,7 +1003,7 @@ Unlike strings, lists are **mutable**: you can change them after creation.
 - `.remove(item)` - removes the first occurrence of an item  
 - `.pop()` - removes and returns the last item
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 colors = ["red", "green", "blue"]
 print(f"Original: {colors}")
@@ -1034,7 +1034,7 @@ print(f"Final list: {colors}")
 
 Like strings, you can extract portions of lists using the same `[start:end:step]` syntax. But unlike strings, lists are mutable, so you can also assign new values to slices.
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -1057,7 +1057,7 @@ Python provides several built-in functions that work great with lists of numbers
 
 When you need to sort a list, you have two options. The `sorted()` function returns a new sorted list without changing your original list. In contrast, the `.sort()` method modifies your original list directly.
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 grades = [85, 92, 78, 95, 88]
 
@@ -1094,7 +1094,7 @@ For removing items, you have several options. The `.remove()` method finds and r
 
 When you need to find items, `.count()` tells you how many times an item appears in the list, and `.index()` tells you the position of the first occurrence. For reordering, `.reverse()` flips the list backwards, and `.sort()` arranges items in order (both modify the original list).
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 tasks = ["read", "write", "review"]
 print(f"Initial tasks: {tasks}")
@@ -1129,7 +1129,7 @@ A dictionary is a collection of **key-value pairs**. Instead of accessing items 
 
 Dictionaries use curly braces `{}` with key-value pairs separated by colons:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Empty dictionary
 empty_dict = {}
@@ -1164,7 +1164,7 @@ print(f"Mixed keys: {mixed_keys}")
 
 Use square brackets with the key:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 person = {
     "first_name": "Marie",
@@ -1188,7 +1188,7 @@ print(f"Middle name (with default): {person.get('middle_name', 'N/A')}")
 
 ### Modifying Dictionaries
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 course = {
     "code": "PYTHON101",
@@ -1218,7 +1218,7 @@ Dictionaries have several useful methods for getting information about their con
 
 Since these methods return special dictionary views (not regular lists), you can convert them to lists using the `list()` function if needed.
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 inventory = {
     "apples": 5,
@@ -1253,7 +1253,7 @@ The real power comes from combining these structures. Here are common patterns:
 
 Good for tabular data where each item has the same fields:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Student records
 students = [
@@ -1285,7 +1285,7 @@ print(f"Class average: {average:.1f}")
 
 Useful for grouping related items:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Organize books by genre
 library = {
@@ -1313,7 +1313,7 @@ print(f"Total books: {total_books}")
 
 For hierarchical data:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # University structure
 university = {
@@ -1557,7 +1557,7 @@ Life is full of decisions: "If it's raining, take an umbrella." "If the data is 
 
 The simplest decision is "if this is true, do something":
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 temperature = 22
 
@@ -1578,7 +1578,7 @@ print("Have a nice day!")  # This always runs
 
 These operators create boolean values for our conditions:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 x = 10
 y = 5
@@ -1603,7 +1603,7 @@ print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercas
 
 You often want to do one thing if a condition is true, and something else if it's false:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 age = int(input("Enter your age: "))
 
@@ -1619,7 +1619,7 @@ else:
 
 For more than two possibilities, use `elif` (short for "else if"):
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 score = 85
 if score >= 90:
@@ -1642,7 +1642,7 @@ Python checks conditions from top to bottom and executes the first block where t
 
 Use logical operators to combine multiple conditions:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 age = int(input("Enter your age: "))
 has_license = True
@@ -1667,7 +1667,7 @@ if not raining:
 
 You can put `if` statements inside other `if` statements:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 has_ticket = input("Do you have a ticket? (yes/no): ").lower() == "yes"
 age = int(input("Enter your age: "))
@@ -1692,7 +1692,7 @@ Imagine you need to print "Hello" 100 times. You could write 100 print statement
 
 The `for` loop is Python's workhorse for repetition. It iterates (goes through) each item in a collection:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Start simple - loop through a list
 fruits = ["apple", "banana", "cherry"]
@@ -1719,7 +1719,7 @@ The loop variable (`fruit`, `letter`, `name`) takes on each value in turn. You c
 
 What if you just want to repeat something a certain number of times? Use `range()`:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # range(n) generates numbers from 0 to n-1
 for i in range(5):
@@ -1744,7 +1744,7 @@ for even in range(0, 11, 2):
 
 Sometimes you need both the item and its position:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 colors = ["red", "green", "blue"]
 
@@ -1772,7 +1772,7 @@ for num, color in enumerate(colors, 1):
 
 The `while` loop continues as long as a condition is true:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 count = 0
 while count < 5:
@@ -1796,7 +1796,7 @@ print("Loop finished.")
 
 Sometimes you need to exit a loop early or skip certain iterations:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # break: Exit the loop immediately
 print("Break example:")
@@ -1827,7 +1827,7 @@ else:  # This else belongs to the for loop!
 
 Loops can contain other loops:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Multiplication table
 # Note: i and j are traditional names for loop counters in nested loops
@@ -1857,7 +1857,7 @@ for row in matrix:
 
 Building up a result over iterations:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Sum numbers
 numbers = [10, 20, 30, 40, 50]
@@ -1878,7 +1878,7 @@ print(sentence.strip())  # Remove trailing space
 
 Selecting items that meet a condition:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Find all even numbers
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -2080,7 +2080,7 @@ Functions are like recipes:
 
 Functions are defined using the `def` keyword:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 # Define a simple function
 def greet():
@@ -2105,7 +2105,7 @@ Key points:
 
 Most functions need information to work with. **Parameters** are variables that receive values when you call the function:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def greet_person(name):
     """Greet a person by name."""
@@ -2125,7 +2125,7 @@ greet_person(user)
 
 Multiple parameters are separated by commas:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def introduce(first_name, last_name, age):
     """Introduce a person with their full name and age."""
@@ -2141,7 +2141,7 @@ introduce("Alan", "Turing", 41)
 
 Functions can send data back using `return`:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def add_numbers(a, b):
     """Add two numbers and return the result."""
@@ -2166,7 +2166,7 @@ print(f"Info from function: {info['name']}")
 
 **Important:** When a function hits `return`, it immediately exits:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def check_age(age):
     """Check if someone is an adult."""
@@ -2181,7 +2181,7 @@ print(f"Age 16 is: {check_age(16)}")
 
 Functions without explicit `return` statements return `None`:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def say_hello():
     print("Hello!")
@@ -2195,7 +2195,7 @@ print(f"The return value is: {result}") # This will print "None"
 
 You can give parameters default values, making them optional:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def greet(name="World", punctuation="!"):
     """Greet someone with customizable punctuation."""
@@ -2213,7 +2213,7 @@ Parameters with defaults must come after parameters without defaults.
 
 Variables created inside functions are **local** - they only exist within that function:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def calculate():
     # This 'result' is local to the function
@@ -2330,7 +2330,7 @@ print(is_valid_email("user@"))             # False
 
 Functions that check if something is valid:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def is_positive(number):
     """Check if a number is positive."""
@@ -2379,7 +2379,7 @@ print(f"Is 'weak' strong? {is_strong_password('weak')}")
 
 Functions that convert data from one form to another:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
@@ -2406,7 +2406,7 @@ print(f"Cleaned text: '{clean_text('  Some  Messy Text  ')}'")
 
 Functions that summarize collections:
 
-<CodeEditor language="Python">
+<CodeEditor language="python">
 
 def calculate_statistics(numbers):
     """Calculate mean, min, and max of numbers."""
@@ -3562,7 +3562,7 @@ import json
 def explore_jsonplaceholder():
     """
     Explore a simple API designed for learning.
-    No API key needed!
+    No API key needed.
     """
     # Get all users
     print("Fetching users...")
@@ -3763,7 +3763,7 @@ def explore_met_collection(search_term, limit=5):
     
     return artworks
 
-# Let's explore!
+# Let's explore.
 # Search for impressionist paintings
 impressionist_art = explore_met_collection("impressionism", limit=3)
 
@@ -3913,7 +3913,7 @@ def respectful_api_calls(urls, delay=1.0):
             response = requests.get(url)
             
             if response.status_code == 429:  # Too Many Requests
-                print("Rate limited! Waiting longer...")
+                print("Rate limited. Waiting longer...")
                 time.sleep(delay * 3)  # Triple the delay
                 response = requests.get(url)  # Retry
             
@@ -4129,7 +4129,7 @@ weather_data = collect_weather_context(locations)
 save_research_data(cultural_data, weather_data)
 
 print("\n" + "=" * 60)
-print("DATA COLLECTION COMPLETE!")
+print("Data collection complete.")
 print(f"Collected {len(cultural_data)} artwork records")
 print(f"Collected {len(weather_data)} weather records")
 print("=" * 60)
@@ -4286,7 +4286,7 @@ sns.set_palette("husl")
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 100)
 
-print("Setup complete!")
+print("Setup complete.")
 ```
 
 ```markdown
