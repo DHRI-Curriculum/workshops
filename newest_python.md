@@ -4634,7 +4634,7 @@ nyc_311_project/
     output/     # Where we'll save results
 ```
 
-<Download files='nyc_311_raw.json'>
+<Download files='nyc_311_raw.json'></Download>
 
 <Info>
 Working offline or on a restricted network? Download the sample 311 dataset above, move it into your `nyc_311_project/data/` folder as `311_raw.json`, and use this fallback cell in your notebook to load it if the API is unavailable.
