@@ -1,8 +1,8 @@
 ---
 title: 'Python for Researchers'
 cover title: Python
-description: This is a hands-on introduction to Python, designed for graduate students and researchers interested in automating research tasks, analyzing data, and creating reproducible computational workflows. By the end of this course, you'll be able to collect data from web APIs, clean and analyze it with pandas, create publication-quality visualizations, and share your work professionally—even without a computer science background.
-cover_image: /images/workshop/python-cover.jpg
+description: This is a hands-on introduction to Python, designed for graduate students and researchers interested in automating research tasks, analyzing data, and creating reproducible computational workflows. By the end of this course, you'll be able to collect data from web APIs, clean and analyze it with pandas, create publication-quality visualizations, and share your work professionally, even without a computer science background.
+cover_image: /images/python/test.png
 
 readings:
     - "Think Python (Free Online Book): [Think Python](https://greenteapress.com/wp/think-python-2e/) - An excellent, gentle introduction to programming"
@@ -29,12 +29,12 @@ goals:
     - Create publication-quality visualizations with matplotlib and seaborn.
     - Understand modern AI-assisted programming workflows while maintaining the ability to debug and verify code.
     - Package and share reproducible research projects on GitHub.
-programming_language: 'Python'
+programming_language: 'python'
 ---
 
 # Introduction
 
-Hello! Welcome to *Python for Researchers*, a course designed specifically for those outside of computer science who want to harness the power of programming for their research. This course aims to give you practical skills that you can immediately apply to your work, whether you're analyzing historical texts, processing survey data, or visualizing experimental results.
+Welcome to *Python for Researchers*, a course for researchers outside computer science who want to use programming in their work. We'll focus on practical tasks you can use right away: analyzing texts, processing survey data, and making clear visualizations.
 
 ## Learning Outcomes
 
@@ -61,12 +61,12 @@ Programming, at its heart, is about teaching a computer to do tedious work for y
 
 4. **Community:** Python has an enormous, welcoming community. Whatever problem you're trying to solve, someone has built a tool (called a "library") to help you.
 
-Python specifically is an excellent first language because:
-- Its syntax reads almost like English, making it accessible to beginners
-- It's the dominant language in data science, machine learning, and scientific computing
-- It has great libraries for nearly every research need
-- It's completely free and open-source
-- Skills you learn in Python transfer well to other languages
+Python is a good first language because:
+- Its syntax is readable and beginner-friendly
+- It is widely used in data analysis and scientific computing
+- It provides libraries for many research tasks
+- It is free and open-source
+- Skills learned in Python transfer to other languages
 
 ## The Process of Learning to Program
 
@@ -106,7 +106,7 @@ This material draws inspiration from several excellent resources: *Think Python*
 
 # Getting Started with Python
 
-Let's begin our journey! As is tradition in the programming world, our very first program will display the words "Hello, World!" This tradition dates back to the 1970s and serves as a simple test that our programming environment is working correctly.
+Let's begin. As is tradition in programming, our first program will display the words "Hello, World!". This serves as a simple check that the environment is working.
 
 But there's something deeper happening here. When you write your first program, you're joining a community of millions who started the same way. Every expert programmer, from the creators of your favorite apps to NASA engineers, wrote this same simple program when they were learning.
 
@@ -114,7 +114,7 @@ But there's something deeper happening here. When you write your first program, 
 
 ### Understanding How Python Runs
 
-Before we write our first line of code, let's understand what we're actually doing. Python is an **interpreted language**. There's a program (the Python interpreter) that reads your code line by line and executes it. Think of the interpreter as a very literal-minded assistant who follows your instructions as written.
+Before we write our first line of code, let's understand what we're actually doing. Python is an **interpreted language**. There's a program (the Python interpreter) that reads your code line by line and executes it. Think of the interpreter as a literal-minded assistant who follows your instructions as written.
 
 We'll start in the **REPL** (Read-Evaluate-Print Loop), which is like having a conversation with Python. You type a command, Python executes it immediately and shows you the result, then waits for your next command. It's perfect for learning because you get instant feedback.
 
@@ -128,7 +128,7 @@ Type the following into the Python REPL below and press <kbd>Enter</kbd>:
 >>> print("Hello, World!")
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 Let's break down what just happened:
 
@@ -151,7 +151,7 @@ Try modifying the message:
 >>> print("It's a beautiful day")  # Double quotes are useful when your text contains apostrophes
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 <Info>The `#` symbol starts a comment - text that Python ignores. We use comments to leave notes for ourselves and other programmers.</Info>
 
@@ -175,7 +175,7 @@ Integers (`int` for short) are whole numbers without decimal points. Use them fo
 >>> 2024
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 #### Floating-point numbers (decimals)
 
@@ -188,7 +188,7 @@ Floats (`float` for short) are numbers with decimal points. Use them for measure
 >>> 1.23e5   # Scientific notation: 123000.0
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 **Why the distinction matters:** Operations with integers stay as integers when possible (except division), while operations with floats always produce floats. This affects both precision and performance in large calculations.
 
@@ -204,7 +204,7 @@ You can perform all the arithmetic operations you'd expect:
 >>> 10 % 3      # Modulo (remainder after division) - more advanced
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 <Info>Note: Division (`/`) always returns a float, even when dividing evenly. If you need an integer result, use floor division (`//`).</Info>
 
@@ -221,7 +221,7 @@ string"""  # Triple quotes allow line breaks
 >>> ""  # An empty string is valid
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 **Quote flexibility:** Python lets you choose your quote style. This is helpful:
 - Use double quotes when your text contains apostrophes: `"It's nice"`
@@ -240,7 +240,7 @@ Booleans represent truth values: either `True` or `False` (note the capital lett
 >>> 1 != 1      # Is 1 not equal to 1?
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 Booleans will become crucial when we learn about conditions and loops. They're how programs make decisions.
 
@@ -256,7 +256,7 @@ When you're unsure what type of data you're working with, Python's `type()` func
 >>> type(5 > 3)  # What type does a comparison produce?
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 This is really useful when debugging. Many errors come from trying to perform an operation on the wrong type of data.
 
@@ -282,7 +282,7 @@ Now we can use these names instead of typing the values:
 >>> print(next_year)
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 **Variable naming rules and conventions:**
 - Must start with a letter or underscore: `name`, `_private`
@@ -316,7 +316,7 @@ Variables can be reassigned. The box can hold different values over time:
 
 Other compound operators work the same way: `-=`, `*=`, `/=`, etc.
 
-<PythonREPL />
+<PythonREPL/>
 
 ### Getting User Input
 
@@ -339,7 +339,7 @@ The `input()` function:
 >>> print("Next year you'll be " + str(age_number + 1))
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 ### Essential Built-in Functions
 
@@ -356,14 +356,7 @@ When you need to convert between different types of data, Python provides three 
 '123'
 ```
 
-When you're unsure what type of data you're working with, Python's `type()` function tells you:
-
-```pycon
->>> type(42)
-<class 'int'>
->>> type("hello")
-<class 'str'>
-```
+Recall: to check the data type at any time, use `type(value)`.
 
 The `len()` function tells you how long something is - how many characters in a string, how many items in a list, and so on:
 
@@ -383,7 +376,7 @@ The `len()` function tells you how long something is - how many characters in a 
 >>> print("Length of text: " + str(len(text_number)))
 ```
 
-<PythonREPL />
+<PythonREPL/>
 
 ## Review Questions
 
@@ -517,6 +510,8 @@ Which statement about variable assignment is correct?
 
 # Working with Text: String Manipulation
 
+Now that you’ve seen numbers, strings, variables, and input, let’s deepen your text skills, the most common data you’ll handle in research.
+
 Strings are perhaps the most versatile data type in Python. As researchers, much of our data comes in the form of text: survey responses, historical documents, social media posts, or bibliographic records. Learning to manipulate strings effectively is essential for any text-based research.
 
 ## Creating and Combining Strings
@@ -538,7 +533,7 @@ empty = ""  # An empty string is valid
 print(simple)
 print(with_apostrophe)
 print(with_quotes)
-print(f"Empty string: '{empty}'")
+print("Empty string: '" + empty + "'")
 </CodeEditor>
 
 ### Multi-line Strings
@@ -702,7 +697,7 @@ Python provides powerful methods for cleaning and transforming strings. The `.st
 
 The `.replace()` method substitutes one substring with another throughout the entire string. It replaces ALL occurrences, not just the first one.
 
-The `.split()` method breaks a string into a list of parts. Called with no arguments, it splits on any whitespace. You can also specify what to split on - very useful for processing CSV data or parsing formatted text.
+The `.split()` method breaks a string into a list of parts. Called with no arguments, it splits on any whitespace. You can also specify what to split on, useful for processing CSV data or parsing formatted text.
 
 <CodeEditor language="Python">
 
@@ -943,6 +938,8 @@ print("Note: -1 means not found, any other number is the position")
 
 
 # Collections: Lists and Dictionaries
+
+With text fundamentals in place, we’ll organize multiple values using lists (ordered) and dictionaries (labeled) to model real-world data.
 
 So far, we've worked with individual pieces of data: a single number, a single string. But research involves collections of data like lists of participants, sets of measurements, records with multiple fields. Python provides powerful data structures for organizing collections of information.
 
@@ -1548,6 +1545,8 @@ print(f"Most expensive ingredient cost: ${max([flour_cost, sugar_cost, eggs_cost
 
 # Control Flow: Making Decisions and Repeating Actions
 
+Once you can store data, you need logic and loops to make decisions and process many items efficiently.
+
 So far, our programs have been linear: they execute from top to bottom, line by line. But real programs need to make decisions and repeat actions. We call this **control flow**, and it transforms simple scripts into intelligent programs.
 
 ## Conditional Statements: Making Decisions
@@ -2063,6 +2062,8 @@ while True:
 
 # Functions: Building Reusable Code
 
+After practicing control flow, functions let you package logic, reduce repetition, and make programs easier to test and reuse.
+
 As your programs grow, you'll find yourself writing similar code in multiple places. Maybe you're calculating averages in three different parts of your program, or validating user input in several locations. Functions let you write code once and use it many times, making your programs cleaner, more reliable, and easier to understand.
 
 ## What Are Functions?
@@ -2291,7 +2292,7 @@ def create_report(results):
     # Code to create report
     pass
 
-# Main program is now very clear:
+# Main program is now clear:
 raw_data = load_data("survey_results.csv")
 cleaned_data = clean_data(raw_data)
 results = analyze_data(cleaned_data)
@@ -2609,6 +2610,8 @@ for key, value in stats.items():
 
 # Your Local Python Environment
 
+You’ve practiced in the browser; now we’ll set up a local environment so you can build real projects with files and libraries.
+
 Up until now, we've been working in the browser-based Python REPL. It's been great for learning the basics, but it's time to level up. We're going to set up Python on your own computer, which opens up a whole new world of possibilities.
 
 ## Why Go Local?
@@ -2875,6 +2878,8 @@ What file extension do Python files use?
 
 # Working with Files and Data
 
+With a local setup, you can read, write, and process files, automate tasks, and prepare data for analysis.
+
 Now that you have Python running locally, you can work with actual files on your computer. Python gets really powerful here: you can process hundreds or thousands of files automatically, extract data, and save results.
 
 ## File Paths: Finding Your Files
@@ -2949,13 +2954,6 @@ lines = [
 with open("multiple.txt", "w") as file:
     for line in lines:
         file.write(line + "\n")  # Add newline after each
-    
-    # Alternative: use writelines (but you need to add newlines yourself)
-    # Prepare lines with newlines
-    # lines_with_newlines = []
-    # for line in lines:
-    #     lines_with_newlines.append(line + "\n")
-    # file.writelines(lines_with_newlines)
 ```
 
 ## Working with CSV Files
@@ -3048,6 +3046,34 @@ df.to_csv("processed_data.csv", index=False)
 ```
 
 We'll dive much deeper into pandas in upcoming lessons, but you can already see how powerful it is.
+
+### Counting Categories and Finding Top Values
+
+Before our project, learn two common patterns:
+
+```python
+# Count category frequencies in a column
+counts = df["city"].value_counts()
+print(counts.head(5))  # Top 5 cities
+
+# Get the most frequent category name
+most_common_city = df["city"].value_counts().idxmax()
+print(most_common_city)
+
+# Group then count within groups (e.g., complaints per borough)
+# df.groupby("borough")["complaint_type"].value_counts()
+
+# Sort counts explicitly when needed
+sorted_counts = counts.sort_values(ascending=False)
+
+# Reorder a Series to a specific order using reindex
+day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+# Example: day_counts.reindex(day_order)
+```
+
+<Info>
+You’ll use `value_counts()`, `idxmax()`, and `reindex()` in the NYC 311 project below. This preview keeps the project steps focused on analysis, not new syntax.
+</Info>
 
 ## Working with JSON
 
@@ -3470,6 +3496,8 @@ process_with_config(config)
 - File I/O (Input/Output)
 
 # Collecting Data from the Web
+
+Finally, we’ll fetch structured data from web APIs, then apply your pandas and visualization skills to build research-ready datasets.
 
 The internet is the largest repository of data ever created. From government databases to museum collections, from weather stations to library catalogs, vast amounts of information are available through web APIs (Application Programming Interfaces). Learning to collect this data programmatically transforms you from someone who can analyze data to someone who can gather it at scale.
 
@@ -4133,7 +4161,7 @@ print("=" * 60)
 - The server might be returning an HTML error page
 - You might have hit a rate limit
 
-Remember: APIs are designed to be used! Don't be afraid to experiment. Start with the simple examples above, and gradually build complexity as you become comfortable.
+APIs are built for programs. Start simple, then add complexity as you go.
 
 ## Review Questions
 
@@ -4560,9 +4588,9 @@ What does the %matplotlib inline magic command do?
 
 # Building Your Research Project: Understanding Your City
 
-It's time to put everything together! We're going to analyze real data from New York City's 311 service - a phone number residents call to report non-emergency issues like noise complaints, broken streetlights, or potholes. This project will teach you how researchers work with data.
+Now we'll put the pieces together by analyzing data from New York City's 311 service (non-emergency complaints such as noise, streetlights, and potholes). This project follows a typical research workflow.
 
-Don't worry if this seems big - we'll build it step by step, and every piece will be explained.
+If this seems big, we'll build it step by step.
 
 ## Why This Project Matters
 
@@ -4572,7 +4600,7 @@ Cities collect data about citizen complaints to understand problems and allocate
 - How quickly does the city respond?
 - Are there patterns we can learn from?
 
-Urban planners, sociologists, and policy makers use this real data. You're doing actual research!
+Urban planners, sociologists, and policy makers use this dataset. The steps here mirror common research practice.
 
 ## Project Setup: Creating Your Workspace
 
@@ -4606,6 +4634,32 @@ nyc_311_project/
     output/     # Where we'll save results
 ```
 
+<Download files='nyc_311_raw.json'>
+
+<Info>
+Working offline or on a restricted network? Download the sample 311 dataset above, move it into your `nyc_311_project/data/` folder as `311_raw.json`, and use this fallback cell in your notebook to load it if the API is unavailable.
+</Info>
+
+```python
+# Fallback: load local sample if network/API is unavailable
+import pandas as pd, json, os
+
+local_path = os.path.join('data', '311_raw.json')
+df_raw = None
+
+if os.path.exists(local_path):
+    try:
+        df_raw = pd.read_json(local_path)
+    except ValueError:
+        # If not JSON-lines, try standard JSON array
+        with open(local_path, 'r') as f:
+            data = json.load(f)
+        df_raw = pd.DataFrame(data)
+
+if df_raw is not None:
+    print(f"Loaded {len(df_raw)} rows from local sample")
+```
+
 ### Step 2: Start Jupyter
 
 Still in your terminal, type:
@@ -4624,7 +4678,7 @@ Before diving into thousands of records, let's understand what we're working wit
 """
 NYC 311 Service Request Analysis
 =================================
-Let's explore what New Yorkers complain about!
+First, let's explore what New Yorkers complain about.
 
 First, we import the tools we need:
 - requests: to get data from the internet
@@ -4665,7 +4719,7 @@ response = requests.get(url, params=params)
 
 # Check if it worked
 if response.status_code == 200:
-    print("✓ Success! Got the data")
+    print("✓ Retrieved data")
     
     # Convert the JSON data to a Python list
     sample_data = response.json()
@@ -4717,7 +4771,7 @@ if sample_data:
             value = complaint[field]
             print(f"{field:15} : {value}")
     
-    print("\nThis is real data from NYC!")
+    print("\nLoaded data from NYC Open Data")
 ```
 
 ## Part 2: Getting More Data (Scaling Up)
@@ -4769,7 +4823,7 @@ def fetch_recent_complaints(days_back=7, limit=1000):
         
         if response.status_code == 200:
             data = response.json()
-            print(f"✓ Success! Got {len(data)} complaints")
+            print(f"✓ Retrieved {len(data)} complaints")
             return data
         else:
             print(f"❌ Error: {response.status_code}")
@@ -4853,6 +4907,10 @@ if 'closed_date' in df_clean.columns:
     df_clean['closed_date'] = pd.to_datetime(df_clean['closed_date'])
     print("✓ Converted closed_date to datetime format")
 
+<Info>
+Pandas datetime basics: after converting with `pd.to_datetime(...)`, a Series gains the `.dt` accessor for datetime properties and methods. For example, `series.dt.day_name()` gives day of week, `series.dt.hour` gives the hour, and `(end - start).dt.total_seconds()` converts timedeltas to seconds.
+</Info>
+
 # Remove duplicates
 before = len(df_clean)
 df_clean = df_clean.drop_duplicates(subset='unique_key', keep='first')
@@ -4865,7 +4923,7 @@ print(f"Final shape: {df_clean.shape[0]} rows, {df_clean.shape[1]} columns")
 
 ## Part 4: Basic Analysis (What Can We Learn?)
 
-Now for the fun part - discovering patterns in the data!
+Next, let's look for patterns in the data.
 
 ```python
 # Cell 7: Most common complaints
@@ -4877,13 +4935,10 @@ Let's count complaint types and visualize them.
 # Count each complaint type
 complaint_counts = df_clean['complaint_type'].value_counts()
 
-# Show top 10
+# Show top 10 (simple listing)
 print("TOP 10 COMPLAINT TYPES")
-print("=" * 40)
 for i, (complaint, count) in enumerate(complaint_counts.head(10).items(), 1):
-    # Create a simple bar chart with text
-    bar = "█" * (count // 10)  # Each █ represents 10 complaints
-    print(f"{i:2}. {complaint:30} {count:4} {bar}")
+    print(f"{i:2}. {complaint}: {count}")
 
 # Now make a proper chart
 plt.figure(figsize=(10, 6))
@@ -4918,14 +4973,13 @@ if 'borough' in df_clean.columns:
         percentage = (count / total) * 100
         print(f"{borough:15} {count:4} ({percentage:.1f}%)")
     
-    # Visualize
-    plt.figure(figsize=(8, 8))
-    plt.pie(borough_counts.values, 
-            labels=borough_counts.index,
-            autopct='%1.1f%%',
-            startangle=90)
+    # Visualize (bar chart for clarity)
+    plt.figure(figsize=(8, 5))
+    borough_counts.plot(kind='bar', color='steelblue', edgecolor='navy')
     plt.title('311 Complaints by Borough', fontsize=14, fontweight='bold')
-    plt.axis('equal')  # Make the pie chart circular
+    plt.xlabel('Borough')
+    plt.ylabel('Number of Complaints')
+    plt.tight_layout()
     plt.show()
 else:
     print("Borough information not available in this dataset")
@@ -5006,6 +5060,10 @@ day_counts = df_clean['day_of_week'].value_counts()
 day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 day_counts = day_counts.reindex(day_order)
 
+<Info>
+`reindex(day_order)` rearranges the bars into calendar order. If a day is missing, it will appear as NaN; use `.fillna(0)` to display 0 instead.
+</Info>
+
 # Visualize
 plt.figure(figsize=(10, 5))
 day_counts.plot(kind='bar', color='skyblue', edgecolor='navy')
@@ -5013,7 +5071,6 @@ plt.title('311 Complaints by Day of Week', fontsize=14, fontweight='bold')
 plt.xlabel('Day of Week')
 plt.ylabel('Number of Complaints')
 plt.xticks(rotation=45)
-plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.show()
 
@@ -5148,7 +5205,7 @@ Let's save our cleaned data and visualizations:
 ```python
 # Cell 13: Save everything
 """
-Good researchers save their work!
+Save your work as you go.
 Let's save our data and create a summary visualization.
 """
 
@@ -5208,7 +5265,7 @@ print("✓ Saved visualization to 311_analysis_summary.png")
 plt.show()
 ```
 
-## Congratulations! You've Completed a Real Data Analysis
+## Wrap-Up: Analysis Complete
 
 You just:
 1. **Collected** real data from NYC's API
@@ -5217,7 +5274,7 @@ You just:
 4. **Visualized** your findings
 5. **Reported** your results professionally
 
-This is what data scientists and researchers do every day!
+These are common steps in data analysis.
 
 ## What You Learned
 
@@ -5272,7 +5329,7 @@ plt.show()
 - Work with fewer days of data
 - Close other programs to free up memory
 
-Remember: Real data is messy! Handling these issues is part of the learning process.
+Note: Real data is often messy. Handling these issues is part of the learning process.
 
 ## Key Takeaways
 
@@ -5282,7 +5339,7 @@ Remember: Real data is messy! Handling these issues is part of the learning proc
 - **Visualize to understand:** Charts reveal patterns that numbers hide
 - **Document everything:** Your future self will thank you
 
-You're now ready to analyze any dataset using these same techniques!
+You can apply these techniques to other datasets.
 
 # Sharing Your Research: Git and GitHub
 
@@ -5583,18 +5640,18 @@ The tools and techniques you've learned form the foundation of modern computatio
 
 Remember: programming is a craft that improves with practice. Keep building, keep sharing, and keep learning. The Python community is vast and welcoming - you're now part of it.
 
-Good luck with your research!
+Good luck with your research.
 
 
 # Appendix: The New Workflow - Programming with AI Assistants
 
-Congratulations on completing your Python journey! You've learned to write code from scratch, debug programs, and build complete projects. You've gained something invaluable: the ability to think computationally and solve problems with code.
+You've finished the core material. You can write code, debug programs, and build small projects. The goal is to think computationally and solve problems with code.
 
 Let's discuss a major shift happening in programming: the rise of AI assistants like ChatGPT, Claude, and GitHub Copilot. These tools are changing how people write code, but they're not replacing the need to understand programming. Instead, they're creating a new workflow where programmers become directors rather than typists.
 
 ## What Are AI Programming Assistants?
 
-AI assistants are like having a very knowledgeable (but sometimes confused) programming tutor available 24/7. They can:
+AI assistants are like having a knowledgeable (but sometimes inconsistent) programming tutor available 24/7. They can:
 - Explain code and concepts in plain English
 - Generate code from your descriptions
 - Help debug errors
@@ -5830,7 +5887,7 @@ Programming is becoming more about problem-solving and less about syntax memoriz
 
 Remember: The goal isn't to use AI to avoid learning programming. The goal is to learn programming so well that you can use AI to accomplish things you never could alone.
 
-You now have the foundation to work effectively with both traditional programming and AI-assisted development. Go build something great!
+You now have a solid foundation to work with both traditional programming and AI-assisted tools.
 
 ## Key Terms
 
