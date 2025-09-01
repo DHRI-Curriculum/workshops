@@ -501,10 +501,8 @@ $ ls
 See any differences? If the command was successful, you should see a file called foo.txt in the home folder. Pretty cool, right?
 
 <Info>
-    
 **Why the file is called foo.txt?**
 As we mentioned in the ethical considerations of this workshop, the command line is laden with masculine and military metaphors. You could use any name, but *foo* is a common name in Computer Science which possibly comes from the unfortunate abbreviation for "fucked up beyond all repair" from the Second World War. 
-
 </Info>
 
 ## Handy Tip 

@@ -3072,10 +3072,6 @@ day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
 # Example: day_counts.reindex(day_order)
 ```
 
-<Info>
-You’ll use `value_counts()`, `idxmax()`, and `reindex()` in the NYC 311 project below. This preview keeps the project steps focused on analysis, not new syntax.
-</Info>
-
 ## Working with JSON
 
 JSON (JavaScript Object Notation) is the standard format for web APIs and modern data exchange. It looks like Python dictionaries and lists:
