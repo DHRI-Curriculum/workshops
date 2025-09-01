@@ -1780,14 +1780,15 @@ while count < 5:
     count += 1  # Always update the condition!
 
 print("Loop finished.")
+</CodeEditor>
 
-# The input() based example won't run here, but the logic is:
-# password = ""
-# while password != "secret":
-#     password = input("Enter password: ") # This line would prompt the user
-#     if password != "secret":
-#         print("Wrong password, try again!")
-# print("Access granted!")
+<CodeEditor language="python">
+password = ""
+while password != "secret":
+    password = input("Enter password: ") # This line would prompt the user
+    if password != "secret":
+        print("Wrong password, try again!")
+print("Access granted!")
 </CodeEditor>
 
 **Warning:** If the condition never becomes `False`, you get an infinite loop! Always ensure the loop will eventually end.
