@@ -624,7 +624,7 @@ For ethical considerations of the [impact of our knowledge production](https://r
 - Maps
 - Algorithms
 
-<!-->
+<!-- hidden: formats table start -->
 ## The Importance of Using Open Data Formats
 
 A small detour to discuss data formats. Open data formats are usually available to anyone free-of-charge and allows for easy reusability. Proprietary formats often hold copyrights, patents, or have other restrictions placed on them, and are dependent on (expensive) licensed softwares. If the licensed software ceases to support its proprietary format or it becomes obsolete, you may be stuck with a file format that cannot be easily opened or (re)used (e.g. .mac). For accessibility, future-proofing, and preservation, keep your data in open, sustainable formats. A demonstration:
@@ -699,7 +699,7 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
         <th colspan="3"> For a list of file formats, consider the Library of Congress' list of <a href="https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml#"> Sustainability of Digital Formats</a>.</th>
     </tr>
 </table>
-<-->
+<!-- hidden: formats table end -->
 
 ## Evaluation
 
@@ -748,74 +748,7 @@ It is recommended to keep it in a `.csv` file type as it can be opened up by mor
 - [Tidy Data](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/tidy-data.md)
 
 
-<!--## Side Note on Data Structures: Tidy Data
 
-There are different guidelines to the processing of data, one of which is the [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) format, which follows these rules in structuring data:
-
-1. Each variable is in a column.
-2. Each observation is a row.
-3. Each value is a cell.
-
-Look back at our example of cats to see how they may or may not follow those guidelines. **Important note:** Some data formats allow for more than one dimension of data (like the `JSON` structure below). How might that complicate the concept of **Tidy Data**?
-
-```json
-{
-    "Cats": [
-            {
-                "Calico": [
-                    {
-                        "firstName": "Smally",
-                        "lastName":"McTiny"
-                    },
-                    {
-                        "firstName": "Kitty",
-                        "lastName": "Kitty"
-                    }
-                ],
-                "Tortoiseshell": [
-                    {
-                        "firstName": "Foots",
-                        "lastName":"Smith"
-                    },
-                    {
-                        "firstName": "Tiger",
-                        "lastName":"Jaws"
-                    }
-                ]
-            }
-        ]
-}
-```
-
-While tiny data is a really popular method of structuring and organizing data, it is not the only way to do so. Depending on the type of data you have, it is also not always the best way to structure data.<
-
-## Evaluation
-
-1. Tiny data format only allows one value per cell.
-
-<Quiz>
-- True*
-- False
-</Quiz>
-
-2. Do you think you can explain the rules of tidy data structuring?
-
-## Challenge: Tidy Data
-1. Looking at the `moSmall.csv` dataset, there are a couple of columns with nested information that don't follow the rules of tidy data. Can you identify at least two of the columns that demonstrate this?
-2. Would you convert `moSmall.csv` to follow the tidy data format? Can you demonstrate how you would do so?
-
-### Solution
-
-<Secret>
-1. `Artist Role`, `Artist Display Name`, `Artist Display Bio`, `Artist Alpha Sort`, `Artist Nationality`, `Artist Begin Date`, `Artist End Date`, or `Classification`.
-2. I will choose to convert to the tidy data format if I was interested in any of the variables listed above, so that it will be easier to analyze the entries. I will have to unnest the entries by separating the data into different columns. For example, if I am interested in understanding the type of roles that are predominantly held by non-cisgender men, I will unnest the column `Artist Role` as two columns (e.g. `Artist 1 Role`, `Artist 2 Role`) as illustrated in this example:
-
-![Comparison of moSmall after tidy format](/images/data-ethics/moSmall2_tidytogether.png)
-</Secret>
-
-### Keywords
-
-- [Tidy Data](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/tidy-data.md)<-->
 
 # Stages of Data: Cleaned
 
@@ -1011,68 +944,67 @@ Visualizing your data helps you tell a story and construct a narrative that guid
         <th rowspan="3">Comparisons</th>
          <td>Bar charts</td>
          <td>Comparison across distinct categories</td>
-        <td><img src="/images/data-ethics/D4PG_bar.png" alt="Bar Chart"><figcaption>From <a href="https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/" target="_blank">The Data for Public Good</a> at the Graduate Center.</figcaption></td>
+        <td><img src="/images/data-ethics/D4PG_bar.png" alt="Bar Chart" /><figcaption>From <a href="https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/" target="_blank">The Data for Public Good</a> at the Graduate Center.</figcaption></td>
     </tr>
     <tr>
         <td>Histograms</td>
         <td>Comparison across continuous variable</td>
-        <td><img src="/images/data-ethics/PolicyViz_histogram.png" alt="Histogram"><figcaption>From <a href="https://policyviz.com/2018/11/27/histogram-design-decisions/" target="_blank">Policy Viz.</a></figcaption></td>
+        <td><img src="/images/data-ethics/PolicyViz_histogram.png" alt="Histogram" /><figcaption>From <a href="https://policyviz.com/2018/11/27/histogram-design-decisions/" target="_blank">Policy Viz.</a></figcaption></td>
     </tr>
     <tr>
         <td>Scatter plots</td>
         <td>Useful to check for correlation (not causation!)</td>
-        <td><img src="/images/data-ethics/538_scatter.png" alt="Scatter plot"><figcaption>From <a href="https://fivethirtyeight.com/features/the-gops-primary-rules-might-doom-carson-and-cruz/" target="_blank">FiveThirtyEight.</a></figcaption></td>
+        <td><img src="/images/data-ethics/538_scatter.png" alt="Scatter plot" /><figcaption>From <a href="https://fivethirtyeight.com/features/the-gops-primary-rules-might-doom-carson-and-cruz/" target="_blank">FiveThirtyEight.</a></figcaption></td>
     </tr>
     <tr>
         <th rowspan="3">Time</th>
         <td>Stacked area charts</td>
         <td>Evolution of value across different groups</td>
-        <td><img src="/images/data-ethics/DatatoViz_stackedarea.png" alt="Stacked area chart"><figcaption>From <a href="https://www.data-to-viz.com/graph/stackedarea.html" target="_blank">Data to Viz.</a></figcaption></td>
+        <td><img src="/images/data-ethics/DatatoViz_stackedarea.png" alt="Stacked area chart" /><figcaption>From <a href="https://www.data-to-viz.com/graph/stackedarea.html" target="_blank">Data to Viz.</a></figcaption></td>
     </tr>
     <tr>
         <td>Sankey Diagrams</td>
         <td>Displaying flows of changes</td>
-        <td><img src="/images/data-ethics/DatatoViz_sankey.png" alt="Sankey"><figcaption>From <a href="https://www.data-to-viz.com/graph/sankey.html" target="_blank">Data to Viz.</a></figcaption></td>
+        <td><img src="/images/data-ethics/DatatoViz_sankey.png" alt="Sankey" /><figcaption>From <a href="https://www.data-to-viz.com/graph/sankey.html" target="_blank">Data to Viz.</a></figcaption></td>
     </tr>
    <tr>
         <td>Line graphs</td>
         <td>Tracking changes over time</td>
-        <td><img src="/images/data-ethics/D4PG_line.jpg" alt="Line Graph"><figcaption>From <a href="https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/" target="_blank">The Data for Public Good</a> at the Graduate Center.</figcaption></td>
+        <td><img src="/images/data-ethics/D4PG_line.jpg" alt="Line Graph" /><figcaption>From <a href="https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/" target="_blank">The Data for Public Good</a> at the Graduate Center.</figcaption></td>
     </tr>
     <tr>
         <th rowspan="2">Small numbers/percentages</th>
         <td>Pie charts</td>
         <td>Demonstrate proportions between categories</td>
-        <td><img src="/images/data-ethics/DB_pie.jpg" alt="Pie chart"><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
+        <td><img src="/images/data-ethics/DB_pie.jpg" alt="Pie chart" /><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
     </tr>
     <tr>
         <td>Tree maps</td>
         <td>Demonstrate hierarchy and proportion</td>
-        <td><img src="/images/data-ethics/DataViz_treemap.png" alt="Tree map"><figcaption>From <a href="https://datavizcatalogue.com/methods/treemap.html" target="_blank">The Data Visualization Catalogue.</a></figcaption></td>
+        <td><img src="/images/data-ethics/DataViz_treemap.png" alt="Tree map" /><figcaption>From <a href="https://datavizcatalogue.com/methods/treemap.html" target="_blank">The Data Visualization Catalogue.</a></figcaption></td>
     </tr>
     <tr>
         <th rowspan="2">Survey responses</th>
         <td>Stacked bar charts</td>
         <td>Compares total amount across each group (e.g. plotting Likert scale)</td>
-        <td><img src="/images/data-ethics/DB_stackedbar.jpg" alt="Stacked bar charts"><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
+        <td><img src="/images/data-ethics/DB_stackedbar.jpg" alt="Stacked bar charts" /><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
     </tr>
     <tr>
         <td>Nested area graphs</td>
         <td>Visualize branching/nested questions</td>
-        <td><img src="/images/data-ethics/evergreen_nestedarea.jpg" alt="Nested area graph"><figcaption>From <a href="https://stephanieevergreen.com/nested-area-graph/" target="_blank">Evergreen Data.</a></figcaption></td>
+        <td><img src="/images/data-ethics/evergreen_nestedarea.jpg" alt="Nested area graph" /><figcaption>From <a href="https://stephanieevergreen.com/nested-area-graph/" target="_blank">Evergreen Data.</a></figcaption></td>
     </tr>
     <tr>
         <th rowspan="2">Place</th>
         <td>Choropleth maps</td>
         <td>Visualize values over a geographic area to demonstrate pattern</td>
-        <td><img src="/images/data-ethics/DB_choropleth.jpg" alt="Choropleth map"><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
+        <td><img src="/images/data-ethics/DB_choropleth.jpg" alt="Choropleth map" /><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
     </tr>
     <tr>
         <td>Hex(bin) or Tile maps</td>
         <td>Similar to Choropleth with the hexbin/tile representing regions equally rather than by geographic size</td>
-        <td><img src="/images/data-ethics/rgraph_hexbin.png" alt="Hexbin graph"><figcaption>From <a href="https://www.r-graph-gallery.com/328-hexbin-map-of-the-usa.html" target="_blank">R Graph Gallery.</a></figcaption></td>
+        <td><img src="/images/data-ethics/rgraph_hexbin.png" alt="Hexbin graph" /><figcaption>From <a href="https://www.r-graph-gallery.com/328-hexbin-map-of-the-usa.html" target="_blank">R Graph Gallery.</a></figcaption></td>
     </tr>
-    <tr>
 </table>
 
 Adapted from [Stephanie D. Evergreen (2019) Effective data visualization : The right chart for the right data](https://us.sagepub.com/en-us/nam/effective-data-visualization/book265203_), [The Data Visualization Catalogue](https://datavizcatalogue.com/), and [From Data to Viz](https://www.data-to-viz.com/)
@@ -1214,7 +1146,7 @@ Revisit Lesson <Link page='21' workshop='data-literacies'>Data Structures: Tidy 
 
 # Theory to Practice
 
-Now that you've gained an understanding of some of the considerations around data and ethics, let's think a bit further about how you may apply some of what we have discussed in your work.  <!--Below the quiz segment you will find some additional readings that dives deeper into some of the topics that were covered in our lessons. If you would like, you can also consider exploring the "Projects or Challenges to Try" to see how you might apply what you've learnt.<-->
+Now that you've gained an understanding of some of the considerations around data and ethics, let's think a bit further about how you may apply some of what we have discussed in your work.  {/* Below the quiz segment you will find some additional readings that dives deeper into some of the topics that were covered in our lessons. If you would like, you can also consider exploring the "Projects or Challenges to Try" to see how you might apply what you've learnt. */}
 
 We invite you to consider the ethical implications of the dataset of [Refugee Arrivals](https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/refugee-arrivals-by-destination.csv) that you will learn to manipulate in the Pandas workshop. This dataset is adapted from the one compiled by Jeremy Singer-Vine for his 2015 BuzzFeed article [“Where U.S. Refugees Come From — And Go — In Charts.”](https://www.buzzfeednews.com/article/jsvine/where-us-refugees-come-from-and-go-in-charts#.vooNwy74jO) which includes information on refugee arrivals to the United States between 2005 and 2015 from the Department of State’s Refugee Processing Center." 
 
@@ -1225,7 +1157,7 @@ Some questions to ask in preparation are:
 - What consequences does this data have in the world? 
 - What does this data tell us about our world?
 
-<!--### Review your knowledge: 6 questions from the lessons
+{/* ### Review your knowledge: 6 questions from the lessons
 
 TODO: fix links to pages of lessons
 
@@ -1287,7 +1219,7 @@ __6. Tiny data format only allows one value per cell. (Select one of the followi
 - False
 </Quiz>
 
-Revisit lesson [Side Note on Data Structures: Tidy Data](/workshops/data-ethics/?page=6) to learn more.<-->
+Revisit lesson [Side Note on Data Structures: Tidy Data](/workshops/data-ethics/?page=6) to learn more. */}
 
 ## Suggested Further Resources
 
