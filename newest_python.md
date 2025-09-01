@@ -784,7 +784,7 @@ Sometimes you need to include special characters in strings. **Escape sequences*
 # Common escape sequences:
 print("Hello\nWorld")    # \n = newline
 print("Hello\tWorld")    # \t = tab
-print("She said \\"Hi\\"") # \" = quotation mark
+print("She said \"Hi\"") # \" = quotation mark
 
 # Raw strings (ignore escape sequences):
 print(r"C:\Users\new_folder")  # r prefix makes it raw
