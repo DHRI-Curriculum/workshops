@@ -102,18 +102,14 @@ The first "computers" were humans: it was an occupation. Before electronic compu
 ![A group of all women human computers](/images/command-line/ComputersForExplorer1Trayectory.jpg)
 
 <Info>
-    
 To learn about the hidden labor of African-American women at NASA starting in 1943, we recommend [Human Computers at NASA](https://omeka.macalester.edu/humancomputerproject/), a digital archive.
 **Bonus:** This archive is done with Omeka, a program that requires installations using the command line.
-
 </Info>
 
 The Electrical Numerical Integrator and Calculator (ENIAC), which was created in 1945, was the first electronic, programmable computer. At 1,800 square feet (167 square meters) it occupied an entire room. In fact, it would have been as large as the average house at the time. Its purpose was [warfare](https://www.jstor.org/stable/45363261). The enormous size of computers in the 1940s alone made them challenging to interface with. 
 
 <Info>
-    
 Although ENIAC was developed by women and men, available histories typically focus on  hardware developers, who were often male, over programmers, who were often female. [The Forgotten Female Programmers Who Created Modern Tech](https://www.npr.org/sections/alltechconsidered/2014/10/06/345799830/the-forgotten-female-programmers-who-created-modern-tech) is a six-minute radio program that includes the voice of one of the ENIAC programmers. 
-
 </Info>
 
 In order to tell ENIAC –and other early computers– what to do, programmers used *punch cards*, a piece of thick paper with holes. The holes represented machine code, which is the information electronic computers need to perform calculations. This is how punched cards look: 
@@ -121,9 +117,7 @@ In order to tell ENIAC –and other early computers– what to do, programmers u
 ![A used punch card](/images/command-line/Punch-card.png "Punch card")
 
 <Info>
-    
 Punch cards have been around since 1725 to operate looms in textile manufacturing. In the 1800s, they were used to automate the operation of the loom, key to the Industrial Revolution.  This type of card became important for computing way before electrical computers existed. The idea of a mechanical computer device was intertwined with the loom machines. To learn about it we recommend this [article about Ada Lovelace](https://theconversation.com/ada-lovelaces-skills-with-language-music-and-needlepoint-contributed-to-her-pioneering-work-in-computing-193930), who proposed the use of punch cards and created a program. She is known as the first computer programmer.
-    
 </Info>
 
 Punching cards was not a quick or friendly way to interact with computers -even after mechanical keypunches were invented. Interacting with the computers required physically traveling to a place and going into a specific room. Also, to communicate with those first machines, people required very specialized knowledge, especially mathematics. 
