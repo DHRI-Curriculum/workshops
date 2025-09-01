@@ -51,7 +51,7 @@ projects:
     - Feminist Linguistics Repository:
         description: This digital repository was created by Silvia Rivera Alfaro as her Interactive Technology and Pedagogy project. It belongs to Indisciplinadxs, a community of practice that was founded by LAILaC students along with feminist linguists from across the Americas. The command line is used in the project for doing installations of different programs required for DSpace and to install this repository software. The repository is hosted on a single-board computer so the command line was used to configure it as a home server. The command line is used to go into developer mode and make improvements in the front–end of the repository. It is also used for collaborating remotely in case of troubleshooting and to give general maintenance to the project.
         link: https://repositorio.linguisticafeminista.com/
-    - Fair World 64::
+    - Fair World 64:
         description: A Text-Based Game of the 1964–1965 World's Fair. A recent digital capstone project by Christofer Gass runs a Python script on the command line.
         link: https://academicworks.cuny.edu/gc_etds/3786/
    
