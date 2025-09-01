@@ -1034,48 +1034,15 @@ This report tells us how many non-null, or non-blank, values are in each column,
 Pandas uses a different lexicon to describe data types from those we learned in our intro to Python curriculum <Link workshop='python' page=5 />. Below is a table that explains what each data type means:
 
 
-<table>
-  <tr>
-   <td><strong>Pandas data types</strong>
-   </td>
-   <td><strong>Python data types</strong>
-   </td>
-   <td><strong>Usage</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>object
-   </td>
-   <td>String or mixed
-   </td>
-   <td>Text or mixed numeric and non-numeric values
-   </td>
-  </tr>
-  <tr>
-   <td>float64
-   </td>
-   <td>float
-   </td>
-   <td>Floating point numbers
-   </td>
-  </tr>
-  <tr>
-   <td>int64
-   </td>
-   <td>integer
-   </td>
-   <td>Integer numbers
-   </td>
-  </tr>
-  <tr>
-   <td>datetime64
-   </td>
-   <td>NA
-   </td>
-   <td>Date and time values
-   </td>
-  </tr>
-</table>
+
+
+| Pandas data types | Python data types | Usage |
+| --- | --- | --- |
+| object | String or mixed | Text or mixed numeric and non-numeric values |
+| float64 | float | Floating point numbers |
+| int64 | integer | Integer numbers |
+| datetime64 | NA | Date and time values |
+
 
 
 <Keywords>
