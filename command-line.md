@@ -143,9 +143,7 @@ Today, with computers that can be transported in our hands, we interact with the
 GUI is the friendliest interface for user experience. However, the command line continues to be a faster and more efficient way to interact with our computers. These characteristics make the CLI especially important for people working on digital projects. So, far from being something from the past, as many users might have felt when GUI became popular, the command line is actually an everyday skill for many people working with computers, especially those working with networks, systems, and servers.  
 
 <Info>
-    
 We recommend [Hello, World - Command Line Heroes Season 2](https://www.redhat.com/en/command-line-heroes/season-2/hello-world), a podcast episode about the computer programming pioneer Grace Hopper. In 1951, Hopper invented the first *compiler*, a program to translate a source code (e.g. English) to machine code (bytecode) or other programming languages. For her huge contribution to HCI, in the field people refer to her as the mother of computer science or the godmother of independent programming languages. Hopper was a computer scientist, mathematician, and rear admiral who joined the US Navy Reserves during World War II. Her career illustrates the relationship between computer innovation and warfare. 
-    
 </Info>
 
 # Talking computer
@@ -308,10 +306,8 @@ For example, we might have multiple users for a digital project. Sometimes we mi
 Now that we know 'thyself', our next step should be to understand where we are. 
 
 <Info>
-
 **Transfering `whoami` to your computer**
 Computers have the option of including multiple users. The output to `whoami` will be the individual username. Thus, it changes not only from one computer to another, but also from user to user.
-    
 </Info>
 
 
@@ -347,9 +343,7 @@ As computers became smaller, anyone -with the purchasing power- could take home.
 The metaphor that originated the term file system is not so clear in our lives anymore. This can challenge those teaching and learning about computers, as you can read in the article [File Not Found](https://www.theverge.com/22684730/students-file-folder-directory-structure-education-gen-z). However, as for the command line, understanding the hierarchical structure of the file system continues to be an essential task to be able to interact with the computer and give it commands!
 
 <Info>
-    
 Going back to the metaphor, now libraries store digital collections. We can visit them without the physical experience of the shelves and the information organized in the space. We also relate to new information structures in our everyday practices, as  the [Arium: Beyond the Desktop Metaphor](https://kilthub.cmu.edu/articles/thesis/Arium_Beyond_the_Desktop_Metaphor_A_new_way_of_navigating_searching_and_organizing_personal_digital_data/6723005) elaborates. 
-    
 </Info>
 
 ## Orienting yourself in the command line 
@@ -631,7 +625,6 @@ $ pwd
 It might seem repetitive or basic to check our location once again. However, when you are working on a bigger project, documenting the location of files is important, as we need to know the path to access them. Think again of the metaphor of the library: to find a book, you need to know how to get to the right shelf. 
 
 <Info>
-
 A useful command when you have to navigate from one path to another is 
 
 ```console
@@ -639,7 +632,6 @@ $ cd ~
 ```
 
 The sign `~` is called *tilde*. The command `cd ~` gets you to your user folder, `home`. Once you are there, it will be easier to get to a new location. 
-    
 </Info>
 
 ### Now that we are ready, let's create the cheat sheet!
@@ -739,9 +731,7 @@ $ cat cheat-sheet.txt
 ```
 
 <Info>
-    
 **Bonus:** There is another way to add new text from the command line without overwriting. It is using append `>>`. This symbol uses two greater-than symbols together, but for the computer field, it is called *append*. In this workshop, we prefer `nano` for its efficiency in editing the text of our cheat sheet. Append has its own uses for specific purposes, such as adding new entries to a data file. 
-
 </Info>
 
 ## Organizing your cheat sheet
@@ -999,13 +989,11 @@ In this line, we are combining two commands:
 Use the commands you've learned so far to create a new version of the nypl_items.csv file with the duplicated lines removed. Hint: we created a new version of our cheat sheet after sorting it alphabetically. 
 
 <Secret>
-
 ```console
 $ cat nypl_items.csv | uniq > clean_nypl_items.csv
 ```
 
 This will allow you to create a new version of the nypl_items.csv file with the duplicated lines removed. You can decide on any name you prefer for your file!
-
 </Secret>
 
 ### Evaluation
@@ -1096,7 +1084,6 @@ tail -n		shows a specific number of lines of the head
 ```
 
 <Info>
-
 **Bonus:** We included the `flag -n` in the commands for your cheat sheet. It works as an option for head and tail, to show only a specific number of lines. You can select the number of lines you want to see by replacing the number symbol for the specific number of lines you want. Try it with our dataset:
 
 ```console
@@ -1106,7 +1093,6 @@ head -n 1 nypl_items.csv
 ```console
 tail -n 3 nypl_items.csv
 ```
-
 </Info>
 
 # Summary 
