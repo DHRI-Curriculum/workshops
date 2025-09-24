@@ -242,7 +242,7 @@ Select all the following that accurately describe the data type categories.
 - Booleans represent only `True` or `False` values.*
 - Integers can be expressed with numbers like `1` or letters `one`.
 - Strings can contain numbers within quotations, like `"1"`.*
-- Lists can contain strings, like `['banana, 'coffee', 'eggs']`.*
+- Lists can contain strings, like `['banana', 'coffee', 'eggs']`.*
 </Quiz>
 
 ### Keywords
@@ -1659,9 +1659,9 @@ __6. Select all the following that accurately describe the data type categories.
 <Quiz>
 - Booleans represent only True or False values.*
 - Strings can contain numbers within quotations, like "1".*
-- Lists can contain strings, like ["banana", 'coffee', 'eggs'].*
+- Lists can contain strings, like ["banana", "coffee", "eggs"].*
 - Integers can be expressed with numbers like 1 or letters one.
-- Lists can contain strings, like ['banana, 'coffee', 'eggs'].
+- Lists can contain strings, like ['banana', 'coffee', 'eggs'].
 - Lists can contain strings, like ['banana', 'coffee', 'eggs'].*
 </Quiz>
 
