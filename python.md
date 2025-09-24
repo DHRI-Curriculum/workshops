@@ -234,16 +234,6 @@ Open your web browser, and google the phrase "python function." Skim through the
 When you google "python function," you may see some phrases that look unfamiliar, like "return value" or "pass parameters." These are advanced terms for inputting and outputting data from a function. It's important to become familiar with Python's terminology about functions, as it will be helpful later on when you start working with these components.
 </Secret>
 
-## Evaluation
-
-Select all the following that accurately describe the data type categories.
-
-<Quiz>
-- Booleans represent only `True` or `False` values.*
-- Integers can be expressed with numbers like `1` or letters `one`.
-- Strings can contain numbers within quotations, like `"1"`.*
-- Lists can contain strings, like `['banana', 'coffee', 'eggs']`.*
-</Quiz>
 
 ### Keywords
 
