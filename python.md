@@ -486,11 +486,11 @@ How could we change our greeting function to say hello to a specific person? Hin
 
 ### Solution
 <Secret>
-<CodeEditor>
+```python
 def greet(person):
   print("Hello " + person + "! How are you today?")
 greet("Sarah")
-</CodeEditor>
+```
 </Secret>
 As you can see, the result of calling this function prints `"Hello Sarah! How are you today?"`
 
@@ -1331,7 +1331,7 @@ Once you get the loop to work, you can add more `elif` statements to add more bo
 Here's how you would include a `while` statement in our library application:
 
 <Secret>
-<CodeEditor>
+```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 keep_going = True
 while keep_going == True:
@@ -1351,7 +1351,7 @@ while keep_going == True:
         keep_going = False
     else:
         print("I don't know what you want me to do!")
-</CodeEditor>
+```
 
 Make sure to type "exit" to end the program and view the results of your commands.
 </Secret>
