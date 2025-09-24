@@ -347,6 +347,7 @@ print("Hello World!")
 ```
 
 <CodeEditor>
+print("Hello World!")
 </CodeEditor>
 
 You should see the text `Hello World!` appear in the output below the code editor in the shell.
@@ -357,7 +358,9 @@ Congratulations! You've written your first script. That's a big deal!
 
 Rewrite your program so that you assign the "Hello World!" message to a variable, then print the variable. This will make your program two lines instead of one. There's a fancy programmer word for rewriting your code without changing its behavior—"refactoring."
 
-<CodeEditor></CodeEditor>
+<CodeEditor>
+# TODO: refactor the greeting program to use a variable
+</CodeEditor>
 
 ### Solution
 
@@ -477,7 +480,9 @@ First we define our `greet()` function, and add a line to print to the screen. L
 
 How could we change our greeting function to say hello to a specific person? Hint: your print statement will need to use string interpolation. We did this in the "Variables" section when we assigned y to "hello" `y = "hello"`, and then added `y + " and goodbye"`, which yielded the result `"hello and goodbye"`.
 
-<CodeEditor></CodeEditor>
+<CodeEditor>
+# Update the greeting function to accept a name here
+</CodeEditor>
 
 ### Solution
 <Secret>
@@ -657,7 +662,9 @@ books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 print(books)
 ```
 
-<CodeEditor></CodeEditor>
+<CodeEditor>
+# Try printing the list to confirm it contains the books
+</CodeEditor>
 
 You should see the list printed out in the output.
 
