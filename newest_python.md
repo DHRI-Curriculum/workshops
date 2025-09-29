@@ -2788,6 +2788,97 @@ Let's create your first Python program on your local machine!
    - Or press the Run button (▶) in the top right
    - You'll see a terminal appear at the bottom with your program running!
 
+## Navigating the Command Line
+
+Now let’s practice using the command line directly. This is how you'll run scripts, install libraries, and move around your project folders. You'll use Terminal on Mac/Linux and either PowerShell or Command Prompt on Windows.
+
+### Where am I? (Working directory)
+
+Your working directory is the folder your commands operate in.
+
+- Mac/Linux:
+```bash
+# Show your current folder
+pwd
+
+# List files and folders here
+ls
+
+# Go to your Desktop project folder (adjust if different)
+cd ~/Desktop/python_projects
+
+# Move up one folder
+cd ..
+
+# Go to your home folder
+cd ~
+```
+
+- Windows (PowerShell):
+```powershell
+# Show your current folder
+pwd
+
+# List files and folders here
+dir
+
+# Go to your Desktop project folder (adjust if different)
+cd ~\Desktop\python_projects
+
+# Move up one folder
+cd ..
+
+# Go to your home folder
+cd ~
+```
+
+<Info>
+Tips: Use Tab to auto-complete file/folder names. If a folder name has spaces, wrap it in quotes, e.g., `cd "My Projects"`. Press the up/down arrows to cycle through previous commands.
+</Info>
+
+### Run Python from the command line
+
+Once you're in the folder that contains your script (like `hello.py`), run it like this:
+
+- Mac/Linux:
+```bash
+python3 hello.py
+```
+
+- Windows:
+```powershell
+# Most systems
+python hello.py
+
+# If that doesn't work, try the Python launcher
+py hello.py
+```
+
+What you should see: the same prompts and output you saw when running in VS Code. You're now running your program directly from your system shell.
+
+<Info>
+If you see an error like "command not found" or "is not recognized":
+- Make sure you're in the correct folder (`ls`/`dir` should show `hello.py`).
+- Try `python3` (Mac/Linux) or `py` (Windows).
+- Verify installation with `python --version` (Windows) or `python3 --version` (Mac/Linux).
+</Info>
+
+### Paths and running from anywhere
+
+- Run a script in another folder by giving a path: `python3 scripts/hello.py` (Mac/Linux) or `python scripts\hello.py` (Windows).
+- Relative paths start from your current folder; absolute paths work from the root of your drive.
+- When your script opens files, relative paths are resolved from the working directory you ran the script from, not necessarily where the script lives.
+
+<Info>
+Use the same interpreter for pip by preferring `python -m pip ...` (Windows) or `python3 -m pip ...` (Mac/Linux). This guarantees you install into the interpreter you're using to run scripts.
+</Info>
+
+### Handy controls
+
+- Stop a running program: Ctrl+C
+- Clear the screen: `clear` (Mac/Linux), `cls` (Windows)
+- See which Python will run: `which python3` (Mac/Linux) or `where python` (Windows)
+
 ## Installing Essential Libraries
 
 Let's install the libraries we'll need for data science work. Open a terminal (Terminal on Mac/Linux, Command Prompt or PowerShell on Windows) and run these commands:
