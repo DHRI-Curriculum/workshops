@@ -306,27 +306,27 @@ This is useful for debugging or when you need to handle different types of data 
 
 Which command is generally preferred for displaying test output in the browser console?
 
-<Quiz>
+:::quiz
 - `alert()`
 - `console.log()`*
 - `document.write()`
 - `print()`
-</Quiz>
+:::
 
 Select all the *strictly* true comparisons:
    
-<Quiz>
+:::quiz
 - `100 === "100"`
 - `100 !== "100"`*
 - `5 > 4`*
 - `'apple' === 'Apple'`
 - `true === true`*
 - `0 === false`
-</Quiz>
+:::
 
 Which of these variable names are valid in JavaScript? (Select all that apply)
    
-<Quiz>
+:::quiz
 - `_count`*
 - `$amount`*
 - `1stPlace`
@@ -334,16 +334,16 @@ Which of these variable names are valid in JavaScript? (Select all that apply)
 - `user-name`
 - `let`
 - `MAX_ITEMS`*
-</Quiz>
+:::
 
 When should you primarily use `const` to declare a variable?
 
-<Quiz>
+:::quiz
 - When the variable's value might change later.
 - When you are declaring a number.
 - When the variable's value will not be reassigned after declaration.*
 - Only for boolean values.
-</Quiz>
+:::
 
 ## Challenges
 
@@ -352,7 +352,7 @@ When should you primarily use `const` to declare a variable?
 3.  **Type Exploration:** Declare variables of different types (number, string, boolean). Use `console.log()` and the `typeof` operator to display both the value and the type of each variable. Example output: "Value: Hello, Type: string".
 
 ### Challenge 1: Area Calculation
-<Secret>
+:::secret
 ```javascript
 // Challenge 1: Area Calculation
 const length = 10;
@@ -360,10 +360,10 @@ const width = 5;
 const area = length * width;
 console.log("The area is: " + area);
 ```
-</Secret>
+:::
 
 ### Challenge 2: Full Name
-<Secret>
+:::secret
 ```javascript
 // Challenge 2: Full Name
 const firstName = "Ada";
@@ -371,10 +371,10 @@ const lastName = "Lovelace";
 const fullName = firstName + " " + lastName;
 console.log(fullName);
 ```
-</Secret>
+:::
 
 ### Challenge 3: Type Exploration
-<Secret>
+:::secret
 ```javascript
 // Challenge 3: Type Exploration
 const city = "New York";
@@ -384,7 +384,7 @@ console.log("Value: " + city + ", Type: " + typeof city);
 console.log("Value: " + population + ", Type: " + typeof population);
 console.log("Value: " + isCapital + ", Type: " + typeof isCapital);
 ```
-</Secret>
+:::
 
 ## Key Terms (Review)
 
@@ -705,9 +705,9 @@ if (firstChoice === "LEFT") {
 }
 ```
 
-<CodeEditor language='JavaScript' height = '600px'>
+:::codeeditor{language="JavaScript"}
 // Paste the code above here to try it!
-</CodeEditor>
+:::
 
 *   **Improvements:** This code works, but notice the repetition (prompting, converting to uppercase). It also exits immediately on invalid input. Loops and functions (covered next) can make this much cleaner and more robust.
 
@@ -715,21 +715,21 @@ if (firstChoice === "LEFT") {
 
 The `prompt()` function returns user input as which data type?
 
-<Quiz>
+:::quiz
 - Number
 - Boolean
 - String*
 - Object
-</Quiz>
+:::
 
 What is the primary purpose of the `break` statement inside a `switch` block?
 
-<Quiz>
+:::quiz
 - To indicate the default case.
 - To stop the entire script.
 - To exit the `switch` statement after a matching `case` is executed.*
 - To repeat the current `case`.
-</Quiz>
+:::
 
 Examine this code. What will be logged to the console if `score` is `75`?
   ```javascript
@@ -745,12 +745,12 @@ Examine this code. What will be logged to the console if `score` is `75`?
   }
   ```
 
-<Quiz>
+:::quiz
 - A
 - B
 - C*
 - D
-</Quiz>
+:::
 
 ## Challenges
 
@@ -758,7 +758,7 @@ Examine this code. What will be logged to the console if `score` is `75`?
 2.  **Simple Calculator:** Prompt the user for two numbers and an operator (`+`, `-`, `*`, `/`). Use `if/else if/else` or a `switch` statement to perform the calculation based on the operator and alert the result. Handle potential division by zero.
 
 ### Challenge 1: Even or Odd
-<Secret>
+:::secret
 ```javascript
 // Challenge 1: Even or Odd
 const numString = prompt("Enter a whole number:");
@@ -772,10 +772,10 @@ if (isNaN(num)) {
   alert(num + " is odd.");
 }
 ```
-</Secret>
+:::
 
 ### Challenge 2: Simple Calculator
-<Secret>
+:::secret
 ```javascript
 // Challenge 2: Simple Calculator (using if/else if/else)
 const num1String = prompt("Enter the first number:");
@@ -808,7 +808,7 @@ if (isNaN(num1) || isNaN(num2)) {
   alert("Invalid operator.");
 }
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -945,7 +945,7 @@ Arrays come with built-in properties and methods (functions associated with the 
 
 There are many more useful array methods ([MDN Array Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)). Arrays are essential for managing collections of data.
 
-<CodeEditor language='JavaScript' height='400px'>
+:::codeeditor{language="JavaScript"}
 // Try array methods here
 const testArray = ['one', 'two', 'three'];
 console.log("Original:", testArray);
@@ -963,8 +963,7 @@ console.log("Includes 'one':", testArray.includes('one'));
 
 testArray.sort();
 console.log("Sorted:", testArray);
-
-</CodeEditor>
+:::
 
 ## Looping
 
@@ -1001,7 +1000,7 @@ for (let i = 0; i < colors.length; i++) {
 // Color at index 2 is blue
 ```
 
-<CodeEditor language='JavaScript' height='250px'>
+:::codeeditor{language="JavaScript"}
 const numbers = [10, 20, 30];
 let sum = 0;
 for (let i = 0; i < numbers.length; i++) {
@@ -1009,7 +1008,7 @@ for (let i = 0; i < numbers.length; i++) {
   console.log("Adding", numbers[i], "Current sum:", sum);
 }
 console.log("Final sum:", sum); // Output: Final sum: 60
-</CodeEditor>
+:::
 
 *   `i++` is shorthand for `i = i + 1`.
 *   The loop variable (`i` here) is often used to access array elements by index (`colors[i]`).
@@ -1046,14 +1045,14 @@ console.log("Blast off!");
 // Blast off!
 ```
 
-<CodeEditor language='JavaScript' height='200px'>
+:::codeeditor{language="JavaScript"}
 let i = 0;
 while (i < 5) {
     console.log("Current value of i:", i);
     i++; // Increment i to eventually make the condition false
 }
 console.log("Loop finished.");
-</CodeEditor>
+:::
 
 *   **Infinite Loops:** If the condition in a `while` loop *never* becomes false, the loop runs forever, crashing the browser tab. Always ensure there's a way to exit the loop (like incrementing/decrementing a counter).
 
@@ -1141,7 +1140,7 @@ while (userCommand !== 'QUIT') {
 } // End of while loop
 ```
 
-<CodeEditor language='JavaScript' height='550px'>
+:::codeeditor{language="JavaScript"}
 // Paste all parts of the Library App code here to run it.
 
 // 1. Setup
@@ -1214,8 +1213,7 @@ while (userCommand !== 'QUIT') {
         }
     }
 } // End of while loop
-
-</CodeEditor>
+:::
 
 *   **Explanation:**
     *   The `while` loop continues as long as `userCommand` is not 'QUIT'.
@@ -1232,39 +1230,39 @@ while (userCommand !== 'QUIT') {
 
 If `myArray` is `['a', 'b', 'c']`, what is `myArray[1]`?
 
-<Quiz>
+:::quiz
 - 'a'
 - 'b'*
 - 'c'
 - undefined
-</Quiz>
+:::
 
 What does the `.push()` method do to an array?
 
-<Quiz>
+:::quiz
 - Removes the last element.
 - Removes the first element.
 - Adds an element to the beginning.
 - Adds an element to the end.*
-</Quiz>
+:::
 
 Consider the loop: `for (let i = 0; i < 3; i++) { console.log(i); }`. What will be logged to the console?
 
-<Quiz>
+:::quiz
 - 1, 2, 3
 - 0, 1, 2*
 - 0, 1, 2, 3
 - 1, 2
-</Quiz>
+:::
 
 What is the primary risk associated with `while` loops if not coded carefully?
 
-<Quiz>
+:::quiz
 - They are slower than `for` loops.
 - They can only loop through arrays.
 - They might cause an infinite loop if the condition never becomes false.*
 - They cannot use a counter variable.
-</Quiz>
+:::
 
 ## Challenges
 
@@ -1272,7 +1270,7 @@ What is the primary risk associated with `while` loops if not coded carefully?
 2.  **Improved Library Search:** Modify the Library App's search logic. Instead of an exact match, use the string method `.includes()` ([MDN .includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)) to check if the `bookTitle` *contains* the `searchTerm` (both converted to uppercase or lowercase for case-insensitivity). Alert the user if any matches are found. This allows partial title searches.
 
 ### Challenge 1: Sum of Evens
-<Secret>
+:::secret
 ```javascript
 // Challenge 1: Sum of Evens
 let sumOfEvens = 0;
@@ -1283,10 +1281,10 @@ for (let i = 1; i <= 20; i++) {
 }
 console.log("Sum of even numbers from 1 to 20:", sumOfEvens); // Should be 110
 ```
-</Secret>
+:::
 
 ### Challenge 2: Improved Library Search
-<Secret>
+:::secret
 ```javascript
 // Challenge 2: Improved Library Search (showing only the relevant part)
 // Assume bookTitles array and searchTerm variable exist from the app
@@ -1313,7 +1311,7 @@ if (foundTitles.length > 0) {
 
 // --- End of relevant part ---
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -1394,7 +1392,7 @@ console.log(anotherResult); // Output: 8
 console.log("2 + 2 equals " + add(2, 2)); // Output: 2 + 2 equals 4
 ```
 
-<CodeEditor language='JavaScript' height='250px'>
+:::codeeditor{language="JavaScript"}
 function greet(name) {
   const message = "Hello, " + name + "!";
   return message;
@@ -1404,8 +1402,7 @@ const greetingForAlice = greet("Alice");
 console.log(greetingForAlice);
 
 console.log(greet("Bob"));
-
-</CodeEditor>
+:::
 
 *   **Parameters vs. Arguments:**
     *   **Parameters** are the variables listed in the function definition (`num1`, `num2` in `add`).
@@ -1426,8 +1423,9 @@ const returnValue = sayHello(); // Output: Hello there! (again)
 console.log(returnValue);       // Output: undefined
 ```
 
-<CodeEditor language='JavaScript'>
-</CodeEditor>
+:::codeeditor{language="JavaScript"}
+
+:::
 
 ## Scope: Where Variables Live
 
@@ -1458,8 +1456,9 @@ testScope();
 // console.log(functionVar); // ERROR! functionVar is not defined here
 ```
 
-<CodeEditor language='JavaScript'>
-</CodeEditor>
+:::codeeditor{language="JavaScript"}
+
+:::
 
 *   Variables declared inside a block are not accessible outside that block.
 *   Inner blocks can access variables from outer blocks.
@@ -1549,7 +1548,7 @@ console.log(student.major);        // Output: Computer Science
 console.log(student.minor);        // Output: Physics
 ```
 
-<CodeEditor language='JavaScript' height='300px'>
+:::codeeditor{language="JavaScript"}
 const book = {
   title: "Moby Dick",
   author: "Herman Melville",
@@ -1564,8 +1563,7 @@ console.log("First genre:", book.genres[0]); // Access array inside object
 book.yearPublished = 1851; // Correct if wrong, or just reassign
 book.rating = 5; // Add new property
 console.log(book);
-
-</CodeEditor>
+:::
 
 Objects are incredibly versatile for structuring complex data.
 
@@ -1677,7 +1675,7 @@ printGrades(students);
 printLetterGrades(students);
 ```
 
-<CodeEditor language='JavaScript' height='600px'>
+:::codeeditor{language="JavaScript"}
 // Paste all parts of the Student Grades code here to run it.
 
 // 1. Data Structure
@@ -1731,8 +1729,7 @@ printGrades(students);
 addStudent(students, "Biff", [71, 80, 56, 65, 60]);
 printGrades(students);
 printLetterGrades(students);
-
-</CodeEditor>
+:::
 *Check your browser's developer console for the output.*
 
 By using functions, we've made the code modular and easier to understand. Each function has a single, clear purpose.
@@ -1741,39 +1738,39 @@ By using functions, we've made the code modular and easier to understand. Each f
 
 What is the primary benefit of using functions in programming?
 
-<Quiz>
+:::quiz
 - They make the code run faster.
 - They allow you to reuse blocks of code, making it organized and maintainable.*
 - They are the only way to use loops.
 - They automatically handle errors.
-</Quiz>
+:::
 
 In the function definition `function calculateArea(width, height)`, what are `width` and `height` called?
 
-<Quiz>
+:::quiz
 - Arguments
 - Methods
 - Parameters*
 - Returns
-</Quiz>
+:::
 
 Variables declared with `let` and `const` inside a `for` loop's code block (`{...}`) are accessible:
 
-<Quiz>
+:::quiz
 - Only inside that `for` loop block.*
 - Anywhere within the function containing the loop.
 - Globally throughout the script.
 - Only before the loop starts.
-</Quiz>
+:::
 
 How do you access the value associated with the key `email` in an object named `user`? (Select all correct ways)
 
-<Quiz>
+:::quiz
 - `user(email)`
 - `user.email`*
 - `user[email]` (Only if `email` is a variable holding the string "email")
 - `user["email"]`*
-</Quiz>
+:::
 
 ## Challenges
 
@@ -1782,7 +1779,7 @@ How do you access the value associated with the key `email` in an object named `
 3.  **Remove Student Function:** Add a function `removeStudent(studentArray, nameToRemove)` to the Student Grades program. This function should find the student object with the matching `nameToRemove` in the `studentArray` and remove it. (Hint: Find the index of the student first, perhaps using a loop or the `.findIndex()` array method, then use the `.splice()` method to remove that student object). Test it by removing "Biff".
 
 ### Challenge 1: Average Grade Function
-<Secret>
+:::secret
 ```javascript
 // Challenge 1: Average Grade Function
 function calculateAverage(gradesArray) {
@@ -1801,10 +1798,10 @@ const bobsGrades = students[0].grades;
 const bobsAverage = calculateAverage(bobsGrades);
 console.log(`Bob's average grade: ${bobsAverage}`);
 ```
-</Secret>
+:::
 
 #### Challenge 2: Add Student as Arrow Function
-<Secret>
+:::secret
 ```javascript
 // Challenge 2: addStudent as Arrow Function
 const addStudentArrow = (studentArray, name, grades) => {
@@ -1817,10 +1814,10 @@ const addStudentArrow = (studentArray, name, grades) => {
 addStudentArrow(students, "Chloe", [85, 88, 92, 90, 89]);
 console.log(students); // Check if Chloe was added
 ```
-</Secret>
+:::
 
 ### Challenge 3: Remove Student Function
-<Secret>
+:::secret
 ```javascript
 // Challenge 3: Remove Student Function
 function removeStudent(studentArray, nameToRemove) {
@@ -1848,7 +1845,7 @@ console.log(students); // Check if Biff was removed
 
 removeStudent(students, "NonExistent"); // Test case for student not found
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -1892,8 +1889,9 @@ if (oops === 12 { // SYNTAX ERROR!
 }
 ```
 
-<CodeEditor language="JavaScript">
-    </CodeEditor>
+:::codeeditor{language="JavaScript"}
+
+:::
 
 *   **Console Message:** Often looks like `Uncaught SyntaxError: Unexpected token '{'` or similar, pointing near the location of the mistake.
 *   **Fixing:** Carefully read the error message and examine the line number indicated (and often the line *before* it). Look for missing parentheses `()`, curly braces `{}`, square brackets `[]`, quotes `""`/`''`, commas `,`, or semicolons `;`, and check for misspelled keywords (`functin` instead of `function`).
@@ -1914,8 +1912,9 @@ function test() {
 test();
 ```
 
-<CodeEditor language="JavaScript">
-    </CodeEditor>
+:::codeeditor{language="JavaScript"}
+
+:::
 
 *   **Console Message:** `Uncaught ReferenceError: blockScopedVar is not defined`.
 *   **Fixing:** Check for typos in the variable name. Ensure the variable is declared (`let`, `const`) *before* you use it and *within* a scope accessible from where you're trying to use it. Remember `let`/`const` are block-scoped.
@@ -1932,8 +1931,9 @@ let num = 123;
 console.log(num.toUpperCase()); // TYPE ERROR!
 ```
 
-<CodeEditor language="JavaScript">
-    </CodeEditor>
+:::codeeditor{language="JavaScript"}
+
+:::
 
 *   **Console Message:** `Uncaught TypeError: num.toUpperCase is not a function`.
 *   **Fixing:** Make sure the value has the type you expect. Use `typeof` to check if needed. Convert the value to the correct type if necessary (e.g., `num.toString().toUpperCase()`). Ensure you are calling methods that actually exist for that data type.
@@ -1957,8 +1957,9 @@ while (count > 0) { // Logical Error: Condition is always true
 console.log(sum); // This might never be reached if not for the safety break
 ```
 
-<CodeEditor language="JavaScript">
-    </CodeEditor>
+:::codeeditor{language="JavaScript"}
+
+:::
 
 *   **Console Message:** Usually none, unless the error leads to another type (like an infinite loop eventually crashing the browser).
 *   **Fixing:** Requires careful analysis of the code's logic. Step through the code mentally or using debugging tools. Check conditions (`if`, `while`, `for`), calculations, and the overall flow. `console.log()` is invaluable here.
@@ -2049,39 +2050,39 @@ Debugging is a skill that improves with practice. Don't get discouraged! Treat e
 
 An error caused by forgetting a closing parenthesis `)` is most likely a:
 
-<Quiz>
+:::quiz
 - `TypeError`
 - `ReferenceError`
 - `SyntaxError`*
 - Logical Error
-</Quiz>
+:::
 
 If the console shows `Uncaught ReferenceError: myVar is not defined`, what is the most likely cause?
 
-<Quiz>
+:::quiz
 - You tried to add a string to a number.
 - You forgot a semicolon.
 - You are using a variable that hasn't been declared or is out of scope.*
 - Your `if` statement condition is wrong.
-</Quiz>
+:::
 
 Code that runs without crashing but produces the wrong answer contains a:
 
-<Quiz>
+:::quiz
 - `TypeError`
 - `SyntaxError`
 - `ReferenceError`
 - Logical Error*
-</Quiz>
+:::
 
 Which debugging technique involves explaining your code step-by-step, often out loud?
 
-<Quiz>
+:::quiz
 - Divide and Conquer
 - Using `console.log()`
 - Writing Pseudo-code
 - Rubber Duck Debugging*
-</Quiz>
+:::
 
 ## Challenges
 
@@ -2097,8 +2098,8 @@ Which debugging technique involves explaining your code step-by-step, often out 
     }
     console.log("Factorial of 5:", factorial(5)); // Should be 120
     ```
-    <CodeEditor language="JavaScript">
-    // Fix the factorial function here
+    :::codeeditor{language="JavaScript"}
+// Fix the factorial function here
     function factorial(n) {
       if (n < 0) return undefined; // Factorial not defined for negative numbers
       if (n === 0) return 1;      // Factorial of 0 is 1
@@ -2112,7 +2113,7 @@ Which debugging technique involves explaining your code step-by-step, often out 
     }
     console.log("Factorial of 5:", factorial(5));
     console.log("Factorial of 0:", factorial(0));
-    </CodeEditor>
+:::
 
 2.  **Pseudo-code Practice:** Write pseudo-code for a function that takes an array of strings and returns a new array containing only the strings that have more than 5 characters.
 
@@ -2139,7 +2140,7 @@ From now on, create a dedicated folder on your computer for this course's work (
 
 Click the button below to download starting files (`index.html`, `script.js`). Unzip the downloaded file and place these two files inside your new `javascript_course` folder.
 
-<Download files='index.html, script.js'><br />
+::download{files="index.html, script.js"}<br />
 *(These will be very basic files to get you started).*
 
 ## Visual Studio Code (VSCode)
@@ -2288,39 +2289,39 @@ This Stage -> Commit -> Push cycle is fundamental to using Git and GitHub.
 
 What is the primary function of Git?
 
-<Quiz>
+:::quiz
 - To host websites online.
 - To edit code files.
 - To track changes to files over time (version control).*
 - To manage software licenses.
-</Quiz>
+:::
 
 What is GitHub primarily used for?
 
-<Quiz>
+:::quiz
 - Running JavaScript code directly.
 - Hosting Git repositories remotely for backup and collaboration.*
 - Designing user interfaces.
 - Compiling code.
-</Quiz>
+:::
 
 In the Git workflow, what does "staging" mean?
 
-<Quiz>
+:::quiz
 - Saving the file to your hard drive.
 - Uploading the file to GitHub.
 - Marking changes that will be included in the next commit.*
 - Reverting changes to a previous version.
-</Quiz>
+:::
 
 What command uploads your local commits to your remote GitHub repository?
 
-<Quiz>
+:::quiz
 - `git commit`
 - `git stage`
 - `git init`
 - `git push`* (or clicking "Sync Changes" in VSCode)
-</Quiz>
+:::
 
 ## Challenge
 
@@ -2636,39 +2637,39 @@ This is how JavaScript makes web pages dynamic. We'll explore DOM manipulation (
 
 What is the primary role of HTML?
 
-<Quiz>
+:::quiz
 - To define the visual style and layout.
 - To add interactivity and dynamic behavior.
 - To define the structure and content of a webpage.*
 - To store data on the server.
-</Quiz>
+:::
 
 Which HTML tag is used to link an external CSS file?
 
-<Quiz>
+:::quiz
 - `<script>`
 - `<style>`
 - `<meta>`
 - `<link>`*
-</Quiz>
+:::
 
 In CSS, which selector is used to target an element with the attribute `class="warning"`?
 
-<Quiz>
+:::quiz
 - `warning`
 - `#warning`
 - `.warning`*
 - `[class=warning]`
-</Quiz>
+:::
 
 Which selector is generally the *most* specific in CSS?
 
-<Quiz>
+:::quiz
 - Type selector (e.g., `p`)
 - Class selector (e.g., `.info`)
 - ID selector (e.g., `#header`)*
 - Universal selector (`*`)
-</Quiz>
+:::
 
 ## Challenges
 
@@ -2699,7 +2700,7 @@ Which selector is generally the *most* specific in CSS?
 
 Here are the course files reflecting the state at the end of this lesson:
 
-<Download files='8_index.html, 8_script.js, 8_styles.css'> <br/>
+::download{files="8_index.html, 8_script.js, 8_styles.css"} <br/>
 
 ---
 
@@ -3040,39 +3041,39 @@ jQuery often requires less code for the same result, especially when selecting m
 
 In jQuery, what does the `$` symbol typically represent?
 
-<Quiz>
+:::quiz
 - A variable declaration
 - A CSS class selector
 - The jQuery function/object*
 - A comment
-</Quiz>
+:::
 
 Which jQuery selector would target an HTML element with `id="main-nav"`?
 
-<Quiz>
+:::quiz
 - `$('.main-nav')`
 - `$('#main-nav')`*
 - `$('main-nav')`
 - `$('id=main-nav')`
-</Quiz>
+:::
 
 Which jQuery method is used to set the HTML content of an element?
 
-<Quiz>
+:::quiz
 - `.text()`
 - `.content()`
 - `.value()`
 - `.html()`*
-</Quiz>
+:::
 
 Why is it common practice to wrap jQuery code inside `$(document).ready(function() { ... });`?
 
-<Quiz>
+:::quiz
 - To make the code run faster.
 - To ensure the code only runs after the HTML DOM is fully loaded and ready.*
 - To automatically include the jQuery library.
 - To handle errors more effectively.
-</Quiz>
+:::
 
 ## Challenges
 
@@ -3102,7 +3103,7 @@ Why is it common practice to wrap jQuery code inside `$(document).ready(function
 
 Here are the course files reflecting the state at the end of this lesson:
 
-<Download files='9_index.html, 9_script.js, 9_styles.css'> <br/>
+::download{files="9_index.html, 9_script.js, 9_styles.css"} <br/>
 
 ---
 
@@ -3518,39 +3519,39 @@ This example demonstrates fetching external data, processing it with loops and c
 
 What is the primary advantage of using a separate JSON file for the poem data instead of embedding it directly in `poem.js`?
 
-<Quiz>
+:::quiz
 - It makes the JavaScript code run faster.
 - It separates data from code, making both easier to manage and update.*
 - JSON files can include functions, unlike JavaScript objects.
 - It's the only way to use loops.
-</Quiz>
+:::
 
 In the code `poemHtml += <a href="#" class="info-term" data-info="${wordObject.info}">${wordObject.text}</a>`, what is the purpose of `data-info="${wordObject.info}"`?
 
-<Quiz>
+:::quiz
 - To style the link using CSS.
 - To store the information string directly on the HTML element for later retrieval.*
 - To create a link to an external website with more info.
 - To define the text content of the link.
-</Quiz>
+:::
 
 What does `event.preventDefault();` do inside the click handler for the `<a>` tags?
 
-<Quiz>
+:::quiz
 - It stops the click event from reaching parent elements.
 - It prevents the browser's default action for the link (like navigating to `#`).*
 - It hides the element that was clicked.
 - It reloads the page.
-</Quiz>
+:::
 
 Why is using `.on("click", ".info-term", ...)` attached to `#poem` generally preferred over attaching `.click()` directly to every `.info-term` element?
 
-<Quiz>
+:::quiz
 - It's shorter to type.
 - It only works for the first `.info-term` element.
 - It uses event delegation, which is more efficient and works for elements added after the initial page load.*
 - It automatically prevents the default link behavior.
-</Quiz>
+:::
 
 ## Challenges
 
@@ -3575,7 +3576,7 @@ Why is using `.on("click", ".info-term", ...)` attached to `#poem` generally pre
 
 Here are the course files reflecting the state at the end of this lesson:
 
-<Download files='10_index.html, 10_script.js, 10_styles.css, 10_poem.html, 10_poem.css, 10_poem.js, poem.json'> <br/>
+::download{files="10_index.html, 10_script.js, 10_styles.css, 10_poem.html, 10_poem.css, 10_poem.js, poem.json"} <br/>
 
 ---
 
@@ -3832,39 +3833,39 @@ Leaflet offers a vast API for customization, custom icons, different base maps, 
 
 In Leaflet, what is the purpose of a Tile Layer?
 
-<Quiz>
+:::quiz
 - To display markers for specific locations.
 - To draw shapes like circles and polygons.
 - To provide the underlying base map image (e.g., streets, satellite).*
 - To handle user click events on the map.
-</Quiz>
+:::
 
 What is the function `L.map('mapDivId')` used for?
 
-<Quiz>
+:::quiz
 - To add a marker to the map.
 - To define the map's tile layer URL.
 - To initialize a map instance within the HTML element with the specified ID.*
 - To set the map's zoom level.
-</Quiz>
+:::
 
 Which method is used to add a layer (like a marker or tile layer) to a Leaflet map instance (e.g., `myMap`)?
 
-<Quiz>
+:::quiz
 - `.setView(myMap)`
 - `.bindPopup(myMap)`
 - `.on('add', myMap)`
 - `.addTo(myMap)`*
-</Quiz>
+:::
 
 In a Leaflet map click event handler `map.on('click', function(e) { ... })`, how do you typically access the latitude and longitude of the click location?
 
-<Quiz>
+:::quiz
 - `e.coords`
 - `e.location`
 - `e.latlng`*
 - `map.getClickCoords()`
-</Quiz>
+:::
 
 ## Challenges
 
@@ -3891,7 +3892,7 @@ In a Leaflet map click event handler `map.on('click', function(e) { ... })`, how
 
 Here are the course files reflecting the state at the end of this lesson:
 
-<Download files='11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js'> <br/>
+::download{files="11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js"} <br/>
 
 ---
 
@@ -3925,7 +3926,7 @@ We'll use a GeoJSON file containing NYC neighborhood boundaries. GeoJSON has a s
 **Get the Data:**
 
 1.  Download the dataset: [nycneighborhoods.json](https://raw.githubusercontent.com/dwillis/nyc-maps/master/neighborhoods.geojson) (Right-click, Save Link As...) or use the button below.
-    <Download files='nycneighborhoods.json'><br />
+    ::download{files="nycneighborhoods.json"}<br />
 2.  Save it in your `javascript_course` project folder.
 
 **Prepare the Data File for Leaflet (`L.geoJSON`):**
@@ -4270,39 +4271,39 @@ Save and refresh. You should now see the list of neighborhoods. Clicking a name 
 
 In GeoJSON, what does a "FeatureCollection" typically contain?
 
-<Quiz>
+:::quiz
 - A single point's coordinates.
 - An array of style properties.
 - An array of "Feature" objects.*
 - The map's tile layer URL.
-</Quiz>
+:::
 
 What information is typically stored in the `properties` object of a GeoJSON "Feature"?
 
-<Quiz>
+:::quiz
 - The type of geometry (e.g., "Polygon").
 - The coordinate data for the shape.
 - Non-spatial attributes like name, ID, or description.*
 - The map projection system.
-</Quiz>
+:::
 
 In Leaflet's `L.geoJSON(data, { onEachFeature: function(feature, layer) {...} })`, what does the `layer` parameter represent?
 
-<Quiz>
+:::quiz
 - The entire GeoJSON dataset.
 - The specific GeoJSON feature object being processed.
 - The Leaflet layer (e.g., `L.Polygon`, `L.Marker`) created for the current feature.*
 - The base tile layer of the map.
-</Quiz>
+:::
 
 What is the primary purpose of using `event.preventDefault()` inside a click handler for an `<a>` tag with `href="#"`?
 
-<Quiz>
+:::quiz
 - To trigger the link's navigation.
 - To stop the browser from jumping to the top of the page or adding `#` to the URL.*
 - To get the `data-` attributes from the link.
 - To hide the link after it's clicked.
-</Quiz>
+:::
 
 ## Challenges
 
@@ -4327,7 +4328,7 @@ What is the primary purpose of using `event.preventDefault()` inside a click han
 
 Here are the course files reflecting the state at the end of this lesson:
 
-<Download files='12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js'> <br/>
+::download{files="12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"} <br/>
 
 ---
 
@@ -4428,39 +4429,39 @@ As you start your final project, make documentation your go-to resource when you
 
 What is the main difference between a "Getting Started" guide and an "API Reference"?
 
-<Quiz>
+:::quiz
 - Getting Started is for experts, API Reference is for beginners.
 - Getting Started is sequential/tutorial-based, API Reference is a detailed lookup resource.*
 - Getting Started covers only errors, API Reference covers only features.
 - Getting Started is online, API Reference is offline.
-</Quiz>
+:::
 
 When using API reference documentation, what is generally the most effective first step?
 
-<Quiz>
+:::quiz
 - Reading the entire page from top to bottom.
 - Searching for specific keywords related to your task or function name.*
 - Looking only at the introduction section.
 - Copying the first code example you find.
-</Quiz>
+:::
 
 Which website is considered the primary and most authoritative documentation source for core web technologies like HTML, CSS, and JavaScript?
 
-<Quiz>
+:::quiz
 - Stack Overflow
 - W3Schools
 - Mozilla Developer Network (MDN)*
 - jQuery API Documentation
-</Quiz>
+:::
 
 When searching the web for help with a programming error, what is generally recommended?
 
-<Quiz>
+:::quiz
 - Copy and paste the entire multi-line error stack trace.
 - Search only using the error type (e.g., "TypeError").
 - Include the language/library name and the core part of the error message.*
 - Avoid mentioning the error message in the search.
-</Quiz>
+:::
 
 ## Challenges
 

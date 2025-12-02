@@ -106,7 +106,7 @@ Let's try a little math in the Python prompt. In the Python REPL environment bel
 >>> 21 % 4
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 The first four operations above are addition, subtraction, multiplication, and division, respectively. The last operation is _modulo_, or mod, which returns the remainder after division.
 
@@ -124,7 +124,9 @@ $ python
 
 at the prompt and hit <kbd>enter</kbd>. This will start the Python REPL environment, and you can interact it with it just as you did with the math example above. You can get out of Python by hitting <kbd>control</kbd> + <kbd>d</kbd> (or <kbd>control</kbd> + <kbd>z</kbd> or <kbd>control</kbd> + <kbd>z</kbd> + <kbd>enter</kbd> if you're on a computer running Windows) or by typing `exit()`. You can get back in the REPL again by typing `python` at the regular `$` prompt. 
 
-<Info>Remember that you're in the Python REPL when you see `>>>`, and you're in bash or your terminal when you see the `$`.</Info>
+:::info
+Remember that you're in the Python REPL when you see `>>>`, and you're in bash or your terminal when you see the `$`.
+:::
 
 ## Challenge
 
@@ -132,31 +134,33 @@ One operator (math symbol) we didn't learn is the exponent—e.g., "x raised to 
 
 ### Solution
 
-<Secret>The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.</Secret>
+:::secret
+The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.
+:::
 
 ## Evaluation
 
 What are the characteristics of the REPL? Select all that apply.
 
-<Quiz>
+:::quiz
 - The REPL has a prompt that begins with `$`.
 - The REPL has a prompt that begins with `>>>`.*
 - The REPL and the terminal are the same thing.
 - The REPL can be used to evaluate mathematical expressions like `2 + 2`.*
-</Quiz>
+:::
 
 ### Keywords
 
 Do you remember the glossary terms from this section?
 
-<Keywords>
+:::keywords
 - REPL
 REPL stands for Read, Eval, Print, Loop. It is also known as the Python Interpreter or Interactive Shell, and it refers to a Python environment that processes your code as soon as you press enter. First, it **Reads** your code, then **Evaluates** what you wrote, then **Prints** the result (if there is a result), and finally **Loops** back to the initial prompt, allowing the user to start the loop again. 
 
 The REPL is useful for testing code on the fly, seeing if it works or what will happen. Since the REPL doesn't save your data after each session, though, you need a text editor to write and save longer scripts. Think of the REPL as a sandbox or playpen for exploring Python commands and expressions in the moment. 
 
 To use the REPL, just type `python` into your interpreter. You'll know you're there when you see the three `>>>`. To get out of the REPL, press `control-d` or type `quit()`.
-</Keywords>
+:::
 
 # Types
 
@@ -174,7 +178,7 @@ In the Python REPL environment below, write the following commands one line at a
 >>> type([1, 2, 3])
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 What do you suppose is happening here? Well, each of the responses show how the different types of data register as different "types" for Python:
 
@@ -194,14 +198,14 @@ Don't worry about trying to actively remember these types. We'll be working with
 
 Using the Python REPL, find __1)__ the type of `("12")`, and __2)__ the type of `(["dog", 13, 3.0])`. What do you think the results will be for each?
 
-<PythonREPL/>
+::pythonrepl
 
 ### Solution
 
-<Secret>
+:::secret
 1: Writing type("12") will return the type of string. While 12 is an integer, enclosing a number within quotation marks will result in a type of string. 
 2: Writing type(["dog", 13, 3.0]) will result in a list. Individually, while dog is a string, 13 is an integer, and 3.0 is a float, putting these elements together in brackets results in a list object being returned. As you can see, a list can contain items of different types.
-</Secret>
+:::
 
 ## What's the deal with type()?
 
@@ -213,7 +217,7 @@ Using the Python REPL, find __1)__ the type of `("12")`, and __2)__ the type of 
 
 These are all valid ways of thinking about functions. We'll be learning more about functions in later sections.
 
-<Keywords>
+:::keywords
 - REPL
 The REPL is an interactive environment for writing and running Python code. It stands for Read-Evaluate-Print Loop.
 
@@ -222,7 +226,7 @@ Functions are a way of doing something in Python. They can be used to save code 
 
 - Method
 Methods are functions that are attached to a specific object. For example, the string method `upper()` is attached to the string `"hello"`, and can be called by writing `"hello".upper()`.
-</Keywords>
+:::
 
 ## Challenge
 
@@ -230,9 +234,9 @@ Open your web browser, and google the phrase "python function." Skim through the
 
 ### Solution
 
-<Secret>
+:::secret
 When you google "python function," you may see some phrases that look unfamiliar, like "return value" or "pass parameters." These are advanced terms for inputting and outputting data from a function. It's important to become familiar with Python's terminology about functions, as it will be helpful later on when you start working with these components.
-</Secret>
+:::
 
 
 ### Keywords
@@ -259,7 +263,7 @@ A variable is **a symbol that refers to an object**, such as a string, integer, 
 >>> y + " and goodbye"
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 As you can see from the examples above, the `=` sign lets you assign symbols like `x` and `y` to data.
 
@@ -271,7 +275,7 @@ Variables can be longer words as well, and they can be set to lists. For instanc
 >>> type(books)
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 ...you can see that we have assigned the `list` variable `books` three different book items to work with.
 
@@ -285,11 +289,11 @@ So I just told you that variables shouldn't start with a number. What does that 
 
 Only one way to find out. Try giving weird names to variables and see if you can learn a bit about the rules:
 
-<PythonREPL/>
+::pythonrepl
 
 ### Solution
 
-<Secret>
+:::secret
 When creating variable statements in Python, you have to follow specific rules. Python processes code from left to right, and the order of elements is important.
 
 - Avoid starting a variable name with numbers or special characters. For instance, names like 1_book, 1book, or those with special characters like @, #, $, etc., are not permitted in Python. Always initiate a variable with a letter and refrain from using special characters.
@@ -297,18 +301,18 @@ When creating variable statements in Python, you have to follow specific rules. 
 - After starting with a letter, you can include numbers in the variable name, like book_1 or b1. However, the use of special characters at any point in the variable name is not allowed.
 
 - Remember that the syntax for a variable mandates writing the variable name first, followed by an equal sign (=), and then the value or data. Starting the variable statement with the data value is not allowed. Python interprets the first item written as the one to be assigned, and the data after the equal sign is what becomes attached to the preceding variable.
-</Secret>
+:::
 
 ## Evaluation
 
 Select all the variable expressions that are allowed in Python.
 
-<Quiz>
+:::quiz
 - `1 = one`
 - `one = 1`*
 - `$$$ = "dollar_signs"`
 - `first_book = "Orlando"`*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -336,9 +340,9 @@ To open the code editor, click the Open Editor button below. Then, type the foll
 print("Hello World!")
 ```
 
-<CodeEditor>
+:::codeeditor
 print("Hello World!")
-</CodeEditor>
+:::
 
 You should see the text `Hello World!` appear in the output below the code editor in the shell.
 
@@ -348,38 +352,38 @@ Congratulations! You've written your first script. That's a big deal!
 
 Rewrite your program so that you assign the "Hello World!" message to a variable, then print the variable. This will make your program two lines instead of one. There's a fancy programmer word for rewriting your code without changing its behavior—"refactoring."
 
-<CodeEditor>
+:::codeeditor
 # TODO: refactor the greeting program to use a variable
-</CodeEditor>
+:::
 
 ### Solution
 
 Your code should look something like this:
 
-<Secret>
+:::secret
 ```python
 greeting = "Hello World!"
 print(greeting)
 ```
-</Secret>
+:::
 
 Then, when you run the code, you should see the following output:
 
-<Secret>
+:::secret
 ```console
 Hello world!
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 What are the differences between the terminal, REPL, and text editor? Select the correct statement from the below options.
 
-<Quiz>
+:::quiz
 - You can run scripts from the **terminal** that were written on the text editor.*
 - The **REPL** allows you to save scripts for later use.
 - The **text editor** allows you to test code on the fly.
-</Quiz>
+:::
 
 ### Keywords
 
@@ -470,30 +474,30 @@ First we define our `greet()` function, and add a line to print to the screen. L
 
 How could we change our greeting function to say hello to a specific person? Hint: your print statement will need to use string interpolation. We did this in the "Variables" section when we assigned y to "hello" `y = "hello"`, and then added `y + " and goodbye"`, which yielded the result `"hello and goodbye"`.
 
-<CodeEditor>
+:::codeeditor
 # Update the greeting function to accept a name here
-</CodeEditor>
+:::
 
 ### Solution
-<Secret>
+:::secret
 ```python
 def greet(person):
   print("Hello " + person + "! How are you today?")
 greet("Sarah")
 ```
-</Secret>
+:::
 As you can see, the result of calling this function prints `"Hello Sarah! How are you today?"`
 
 ## Evaluation
 
 Which of the following are __not__ true about a function?:
 
-<Quiz>
+:::quiz
 - A function can be reused
 - A function can take any number of arguments (including no arguments)
 - A function needs to be called in order to run
 - A function can only perform mathematical operations*
-</Quiz>
+:::
 
 ### Keywords
 - [argument](https://www.w3schools.com/python/python_functions.asp)
@@ -516,7 +520,7 @@ As an example, type the following in the Python REPL below:
 
 `print('This string has mismatched quotes.")`
 
-<PythonREPL/>
+::pythonrepl
 
 You should receive an error:  `SyntaxError: unterminated string literal`, which points out that our line has faulty syntax. Note the caret (`^`) underneath the mismatched quote, helpfully pointing out where the error lies. Similarly, if this error happened when running a script, Python would tell us the filename and the line number for the line on which the error occurs.
 
@@ -550,7 +554,7 @@ If you changed the program and expect a different output, but are getting old ou
 
 In the Python REPL below, try to create as many errors as you can in the next few minutes. After getting your first two syntax errors, try instead to get traceback errors. Some areas to try include mathematical impossibilities and using math operations on types that do not support them.
 
-<PythonREPL/>
+::pythonrepl
 
 ### Solution
 
@@ -558,7 +562,7 @@ Some examples of **syntax errors** include...
 
 - Starting the variable name with a special character:
 
-<Secret>
+:::secret
 ```pycon
 >>> %greeting = "Hello World"
     File "<stdin>", line 1
@@ -566,21 +570,21 @@ Some examples of **syntax errors** include...
     ^
 SyntaxError: invalid syntax
 ```
-</Secret>
+:::
 
 - Starting a variable by writing the data values before the variable:
 
-<Secret>
+:::secret
 ```pycon
 >>> "hey there!" = greeting
     File "<stdin>", line 1
 SyntaxError: can't assign to literal
 ```
-</Secret>
+:::
 
 - Including spaces in a variable:
 
-<Secret>
+:::secret
 ```pycon
 >>> pleasant greeting = "Hello!"
     File "<stdin>", line 1
@@ -588,24 +592,24 @@ SyntaxError: can't assign to literal
                     ^
 SyntaxError: invalid syntax
 ```
-</Secret>
+:::
 
 Some examples of **traceback errors** include...
 
 - Concatenating data types, like strings and integers:
 
-<Secret>
+:::secret
 ```pycon
 >>> greeting = "hello" + 1
 Traceback (most recent call last):
     File "<stdin>", line 1, in <module>
 TypeError: can only concatenate str (not "int") to str
 ```
-</Secret>
+:::
 
 - Using Booleans (`True` or `False`) without capitalizing them:
 
-<Secret>
+:::secret
 ```pycon
 >>> greeting = false
 Traceback (most recent call last):
@@ -617,18 +621,18 @@ NameError: name 'false' is not defined
 >>> greeting
 False
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 If you get an error, what can you do to debug it? Select all that apply:
 
-<Quiz>
+:::quiz
 - If it's a _syntax error_, look for the caret as a starting point.*
 - If it's a _traceback error_, make sure all your variables are defined.*
 - Copy the error message into a Google search.*
 - Check for spelling errors in your code.*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -652,9 +656,9 @@ books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 print(books)
 ```
 
-<CodeEditor>
+:::codeeditor
 # Try printing the list to confirm it contains the books
-</CodeEditor>
+:::
 
 You should see the list printed out in the output.
 
@@ -662,12 +666,12 @@ Let's try out another built-in function, called `len()`, which returns the numbe
 
 Take a look at the code provided for you in the editor below:
 
-<CodeEditor>
+:::codeeditor
 books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 # print(books)
 list_length = len(books)
 print(list_length)
-</CodeEditor>
+:::
 
 First, we have our list of books from before. Next, we "comment out" the `print(books)` statement with the hashtag `#`, which tells Python to _ignore_ that line of code. Comments are not read by the interpreter and are only for us humans. 
 
@@ -738,7 +742,7 @@ In the editor, make a list of books with at least 5 books. Make sure the total n
 
 ### Solution
 
-<Secret>
+:::secret
 ```pycon
 >>> books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life', 'Radiant Textuality', 'The Undercommons']
 
@@ -746,18 +750,18 @@ In the editor, make a list of books with at least 5 books. Make sure the total n
 
 >>> books[1:4] # ['Cruising Utopia', 'Living a Feminist Life', 'Radiant Textuality']
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 How would you get Python to print the length of the last book in the list? Hint: this number reflects the length of the _string_ which is the last item in the list. Choose the correct expression from the options below.
 
-<Quiz>
+:::quiz
 - `len(books)`
 - `print(books[-1])`
 - `print(len[-1])`
 - `print(len(books[-1]))`*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -840,35 +844,35 @@ __Note:__ the "f-string" is a new string formatting method for Python 3. You can
 
 1. To get the square of the elements in the list `prime_numbers`, you can:
 
-<Secret>
+:::secret
 ```python
 prime_numbers = [2, 3, 5, 7, 11]
 
 for num in prime_numbers:
     print(num * num)
 ```
-</Secret>
+:::
 
 2. Using "f-strings" to output the list of results in the challenge would look something like this:
 
-<Secret>
+:::secret
 ```python
 prime_numbers= [2,3,5,7,11]
 for num in prime_numbers:
     print(f"The square of {num} is {num * num}")
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 What are different ways for describing what a "for loop" can do?
 
-<Quiz>
+:::quiz
 - for each item in a list, multiply it against itself.*
 - print the contents of a list.*
 - add a new item to a list.
 - loop through characters in a string.*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -934,7 +938,7 @@ Now, if you were to change the `field` variable, you could run other blocks of c
 
 Add two more `elif` statements to the program to make it better able to handle different potential fields of study. Change the field of study a couple of times, making sure to save after each change, to test out your code.
 
-<CodeEditor>
+:::codeeditor
 field = "Media Studies"
 if field == "Media Studies":
     print("Grammophone, Film, Typewriter")
@@ -944,11 +948,11 @@ elif field == "Textual Scholarship":
     print("Radiant Textuality")
 else:
     print("I don't know what field you're talking about! I'm just a little program...")
-</CodeEditor>
+:::
 
 ### Solution
 
-<Secret>
+:::secret
 ```python
 field = "Media Studies"
 
@@ -965,18 +969,18 @@ elif field == "DH Methodologies"
 else:
     print("I don't know what field you're talking about! I'm just a little program...")
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 What is the difference between the double equals (`==`) and single equals (`=`)?
 
-<Quiz>
+:::quiz
 - The double equals checks to see if one value is equivalent to the other, as in `2 == 2`.*
 - The double equals assigns the value on the right to the variable on the left, as in `x == 2`.
 - The single equals checks to see if one value is equivalent to the other, as in `2 = 2`.
 - The single equals assigns the value on the right to the variable on the left, as in `x = 2`.*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -998,7 +1002,7 @@ Let's try it out by setting the function to a variable, which we will call `gree
 
 When you press <kbd>enter</kbd>, you should see a pop-up asking for input. Type in your favorite greeting. I'm going to type `hey you!`. Then, press <kbd>enter</kbd>. 
 
-<PythonREPL/>
+::pythonrepl
 
 Next, write `greeting` into the REPL. You should see something like the following appear:
 
@@ -1030,7 +1034,7 @@ We can answer with `like a rollercoaster of emotions`. Then, when we type in our
 
 Remember this loop?
 
-<CodeEditor>
+:::codeeditor
 field = "Media Studies"
 if field == "Media Studies":
     print("Grammophone, Film, Typewriter")
@@ -1040,13 +1044,13 @@ elif field == "Textual Scholarship":
     print("Radiant Textuality")
 else:
     print("I don't know what field you're talking about! I'm just a little program...")
-</CodeEditor>
+:::
 
 Now, that we understand a bit about how `input()` works, let's use it to improve our book application. We are going to use `input()` to ask for the field before displaying the output. To do this, add one more line of code in the editor above that sets the `field` variable to an `input()`. Make sure you include a little prompt that asks the user what book they want to select or read that day.
 
 ### Solution
 
-<Secret>
+:::secret
 ```python
 field = input("Which field of study do you want to read about today?")
 
@@ -1059,18 +1063,18 @@ elif field == "Textual Scholarship":
 else:
     print("I don't know what field you're talking about! I'm just a little program...")
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 If we wanted to calculate the length of an input using `len()`, how would we write that expression?
 
-<Quiz>
+:::quiz
 - `input() = len()`
 - `response = len().input()`
 - `len(input()) = length_of_response`
 - `length_of_response = len(input())`*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -1106,11 +1110,11 @@ You'll see that we have a couple of new things happening with symbols.
 
 What if we want to add items to the list? We can use the `append()` method for that. For instance, try the following:
 
-<CodeEditor>
+:::codeeditor
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 library.append("La Frontera")
 print(library)
-</CodeEditor>
+:::
 
 You can see that we have added `"La Frontera"` as an argument to the `append()` method by putting the string between the parenthesis. It basically means that we will be appending this specific title to the library list.
 
@@ -1118,11 +1122,11 @@ When you print `library`, you should see your new book appear at the end of the 
 
 What if you wanted to take out some of the books? We can use `pop()` to remove the last item, or "pop" it off, from our list.
 
-<CodeEditor>
+:::codeeditor
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls", "La Frontera", "Dawn"]
 library.pop()
 print(library)
-</CodeEditor>
+:::
 
 The last item that you added to your list should be missing from the `library` when you print the list.
 
@@ -1146,7 +1150,7 @@ response = input("What do you want to do with your books today?")
 
 I'll do the first one, `sort()`, for you:
 
-<CodeEditor>
+:::codeeditor
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 response = input("What do you want to do with your books today? ")
 if response == "sort":
@@ -1154,7 +1158,7 @@ if response == "sort":
     print(library)
 else:
     print("I don't know what you want me to do!")
-</CodeEditor>
+:::
 
 See how the order of statements build on each other toward the final product? First, we create a library of books. Then, we set the user's response about what to do with those books. Then, we create a conditional statement that matches the response to specific tasks. The first condition checks to see if the user wants to "sort" the books, then sorts them, then prints the final result.
 
@@ -1164,7 +1168,7 @@ After adding a few more conditions, test out your code! You should have a little
 
 ### Solution
 
-<Secret>
+:::secret
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 response = input("What do you want to do with your books today?")
@@ -1180,18 +1184,18 @@ elif response == "remove":
 else:
     print("I don't know what you want me to do!")
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 Select the following statements that truly describe `sort()`, `append()`, and `pop()`.
 
-<Quiz>
+:::quiz
 - methods are like functions which are attached to objects.*
 - `sort()`, `append()`, and `pop()` are functions.
 - `append()` always takes an argument.*
 - `pop()` can be applied to a string.
-</Quiz>
+:::
 
 __Advanced question:__ If you `sort()` the library in between adding and popping a book, you'll end up with a different list than if you didn't run `sort()` in between `append()` and `pop()`. Can you guess why?
 
@@ -1249,7 +1253,7 @@ According to one answer, we can make a string lowercase by adding `.lower()` to 
 
 Let's incorporate this transformation into our library app:
 
-<CodeEditor>
+:::codeeditor
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 response = input("What do you want to do with your books today?")
 response = response.lower()
@@ -1264,7 +1268,7 @@ elif response == "remove":
     print(library)
 else:
     print("I don't know what you want me to do!")
-</CodeEditor>
+:::
 
 This new script should handle any combination of upper or lowercase characters. The new second line sets the response variable to a new value, `response.lower()`, which is a lowercase version of the original input.
 
@@ -1295,7 +1299,7 @@ Make sure that everything under `while True:` is indented (this creates a "code 
 
 Give it a shot! Try adding the condition and `while` loop to the program below:
 
-<CodeEditor>
+:::codeeditor
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 # add a new variable condition and while loop here
 response = input("What do you want to do with your books today?")
@@ -1312,7 +1316,7 @@ elif response == "remove":
 # add an exit condition here
 else:
     print("I don't know what you want me to do!")
-</CodeEditor>
+:::
 
 Once you get the loop to work, you can add more `elif` statements to add more books to the list. Then, run the program, adding books, sorting them and removing them. You can read more about `while` loops [here](https://www.w3schools.com/python/python_while_loops.asp).
 
@@ -1320,7 +1324,7 @@ Once you get the loop to work, you can add more `elif` statements to add more bo
 
 Here's how you would include a `while` statement in our library application:
 
-<Secret>
+:::secret
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 keep_going = True
@@ -1344,18 +1348,18 @@ while keep_going == True:
 ```
 
 Make sure to type "exit" to end the program and view the results of your commands.
-</Secret>
+:::
 
 ## Evaluation
 
 If we wanted to make a string like `'hello'` uppercase, we would use the method `upper()`, in the following way:
 
-<Quiz>
+:::quiz
 - `upper('hello')`
 - `upper().'hello'`
 - `'hello'.upper()`*
 - `'hello'(upper)`
-</Quiz>
+:::
 
 ### Keywords
 
@@ -1432,12 +1436,12 @@ In your research, you may also want to look at the libraries that come with Pyth
 
 What is a module? Select all that apply:
 
-<Quiz>
+:::quiz
 - A module is a file of code.*
 - Applications can incorporate many different modules.*
 - A module needs to be downloaded and installed.
 - A module needs to be imported with an `import` statement.*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -1476,7 +1480,7 @@ Then, use the `dir()` function on `s`:
 
 `>>> dir(s)`
 
-<PythonREPL/>
+::pythonrepl
 
 You should get output like this:
 
@@ -1490,7 +1494,7 @@ The above output shows some of the methods and attributes for Python strings tha
 
 You can also use `dir()` to see what functions are available from Python libraries that you import. Try importing the `random` library again and see what you get when you enter `dir(random)` in the REPL.
 
-<PythonREPL/>
+::pythonrepl
 
 You should see something like this:
 
@@ -1532,7 +1536,7 @@ Starting with the code above, roll the die twice, storing each result. Using bot
 
 ### Solution
 
-<Secret>
+:::secret
 ```python
 import random
 # create a 'roll' function to return a random # between 1-6
@@ -1549,7 +1553,7 @@ elif die2 > die1:
 else:
     print('Tie!')
 ```
-</Secret>
+:::
 
 # Theory to Practice
 
@@ -1581,7 +1585,9 @@ $ python hello.py
 
 You should see the text `Hello world!` appear as output in the terminal.
 
-<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
+:::info
+You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.
+:::
 
 ## A Note on Text
 
@@ -1591,116 +1597,116 @@ Fundamentally, Python programs are just text files. You can write them in any te
 
 __1. Which of the following is not true about a function? (Select one):__
 
-<Quiz>
+:::quiz
 - A function can only perform mathematical operations.*
 - A function can be reused.
 - A function can take any number of arguments (including no arguments).
 - A function needs to be called in order to run.
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='20'>`Functions`</Link> lesson to learn more.
+Revisit the :link[`Functions`]{workshop="python" page="20"} lesson to learn more.
 
 __2. What are the differences between the terminal, REPL, and text editor? Select the correct statement from the options below.__
 
-<Quiz>
+:::quiz
 - You can run scripts from the terminal that were written on the text editor.*
 - The REPL allows you to save scripts for later use.
 - The text editor allows you to test code on the fly.
 - The REPL doesn’t allow you to test code on the fly.
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='16'>`Running Scripts`</Link> lesson to learn more.
+Revisit the :link[`Running Scripts`]{workshop="python" page="16"} lesson to learn more.
 
 __3. If we wanted to calculate the length of an input using len(), how would we write that expression? (Select one):__
 
-<Quiz>
+:::quiz
 - length_of_response = len(input())*
 - input() = len()
 - response = len().input()
 - len(input()) = length_of_response
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='42'>`Input`</Link> lesson to learn more.
+Revisit the :link[`Input`]{workshop="python" page="42"} lesson to learn more.
 
 __4. What is the difference between the double equals (==) and single equals (=)? (Select all that apply):__
 
-<Quiz>
+:::quiz
 - The double equals checks to see if one value is equivalent to the other, as in 2 == 2.*
 - The single equals assigns the value on the right to the variable on the left, as in x = 2.*
 - The double equals assigns the value on the right to the variable on the left, as in x == 2.
 - The single equals checks to see if one value is equivalent to the other, as in 2 = 2.
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='39'>`Conditionals`</Link> lesson to learn more.
+Revisit the :link[`Conditionals`]{workshop="python" page="39"} lesson to learn more.
 
 __5. Select all the variable expressions that are allowed in Python. (Select all that apply):__
 
-<Quiz>
+:::quiz
 - one = 1*
 - first_book = "Orlando"*
 - 1 = one
 - $$$ = "dollar_signs"
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='13'>`Variables`</Link> lesson to learn more.
+Revisit the :link[`Variables`]{workshop="python" page="13"} lesson to learn more.
 
 __6. Select all the following that accurately describe the data type categories. (Select all that apply):__
 
-<Quiz>
+:::quiz
 - Booleans represent only True or False values.*
 - Strings can contain numbers within quotations, like "1".*
 - Lists can contain strings, like ["banana", "coffee", "eggs"].*
 - Integers can be expressed with numbers like 1 or letters one.
 - Lists can contain strings, like ['banana', 'coffee', 'eggs'].
 - Lists can contain strings, like ['banana', 'coffee', 'eggs'].*
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='8'>`Data Types`</Link> lesson to learn more.
+Revisit the :link[`Data Types`]{workshop="python" page="8"} lesson to learn more.
  
 __7. What are different ways for describing what a “for loop” can do? (Select all that apply):__
 
-<Quiz>
+:::quiz
 - for each item in a list, multiply it against itself.*
 - print the contents of a list.*
 - add a new item to a list.*
 - loop through characters in a string.*
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='35'>`Loops`</Link> lesson to learn more.
+Revisit the :link[`Loops`]{workshop="python" page="35"} lesson to learn more.
 
 __8. Select the following statements that truly describe sort(), append(), and pop(). (Select all that apply):__
 
-<Quiz>
+:::quiz
 - methods are like functions which are attached to objects.*
 - append() always takes an argument.*
 - sort(), append(), and pop() are functions.
 - pop() can be applied to a string.
 - sort(), append(), and pop() are methods.*
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='45'>`Doing Things to Lists`</Link> lesson to learn more.
+Revisit the :link[`Doing Things to Lists`]{workshop="python" page="45"} lesson to learn more.
 
 __9. What are the characteristics of the REPL? (Select all that apply):__
 
-<Quiz>
+:::quiz
 - The REPL has a prompt that begins with >>>.*
 - The REPL can be used to evaluate mathematical expressions like 2 + 2.*
 - The REPL has a prompt that begins with $.
 - The REPL and the terminal are the same thing.
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='2'>`Interacting With Python`</Link> lesson to learn more.
+Revisit the :link[`Interacting With Python`]{workshop="python" page="2"} lesson to learn more.
 
 __10. Why would someone use dir()? (Select all that apply):__
 
-<Quiz>
+:::quiz
 - to examine a function like print().*
 - to see what can be done with an object, like a string or a list.*
 - to see what can be done with a variable that’s been assigned to a value.*
 - to examine a particular method, like sort().
-</Quiz>
+:::
 
-Revisit the <Link workshop='python' page='56'>`Objects in Python`</Link> lesson to learn more.
+Revisit the :link[`Objects in Python`]{workshop="python" page="56"} lesson to learn more.
 
 ## Suggested Further Readings and Tutorials
 

@@ -101,24 +101,24 @@ The first "computers" were humans: it was an occupation. Before electronic compu
  
 ![A group of all women human computers](/images/command-line/ComputersForExplorer1Trayectory.jpg)
 
-<Info>
+:::info
 To learn about the hidden labor of African-American women at NASA starting in 1943, we recommend [Human Computers at NASA](https://omeka.macalester.edu/humancomputerproject/), a digital archive.
 **Bonus:** This archive is done with Omeka, a program that requires installations using the command line.
-</Info>
+:::
 
 The Electrical Numerical Integrator and Calculator (ENIAC), which was created in 1945, was the first electronic, programmable computer. At 1,800 square feet (167 square meters) it occupied an entire room. In fact, it would have been as large as the average house at the time. Its purpose was [warfare](https://www.jstor.org/stable/45363261). The enormous size of computers in the 1940s alone made them challenging to interface with. 
 
-<Info>
-Although ENIAC was developed by women and men, available histories typically focus on  hardware developers, who were often male, over programmers, who were often female. [The Forgotten Female Programmers Who Created Modern Tech](https://www.npr.org/sections/alltechconsidered/2014/10/06/345799830/the-forgotten-female-programmers-who-created-modern-tech) is a six-minute radio program that includes the voice of one of the ENIAC programmers. 
-</Info>
+:::info
+Although ENIAC was developed by women and men, available histories typically focus on  hardware developers, who were often male, over programmers, who were often female. [The Forgotten Female Programmers Who Created Modern Tech](https://www.npr.org/sections/alltechconsidered/2014/10/06/345799830/the-forgotten-female-programmers-who-created-modern-tech) is a six-minute radio program that includes the voice of one of the ENIAC programmers.
+:::
 
 In order to tell ENIAC –and other early computers– what to do, programmers used *punch cards*, a piece of thick paper with holes. The holes represented machine code, which is the information electronic computers need to perform calculations. This is how punched cards look: 
 
 ![A used punch card](/images/command-line/Punch-card.png "Punch card")
 
-<Info>
+:::info
 Punch cards have been around since 1725 to operate looms in textile manufacturing. In the 1800s, they were used to automate the operation of the loom, key to the Industrial Revolution.  This type of card became important for computing way before electrical computers existed. The idea of a mechanical computer device was intertwined with the loom machines. To learn about it we recommend this [article about Ada Lovelace](https://theconversation.com/ada-lovelaces-skills-with-language-music-and-needlepoint-contributed-to-her-pioneering-work-in-computing-193930), who proposed the use of punch cards and created a program. She is known as the first computer programmer.
-</Info>
+:::
 
 Punching cards was not a quick or friendly way to interact with computers -even after mechanical keypunches were invented. Interacting with the computers required physically traveling to a place and going into a specific room. Also, to communicate with those first machines, people required very specialized knowledge, especially mathematics. 
 
@@ -142,9 +142,9 @@ Today, with computers that can be transported in our hands, we interact with the
 
 GUI is the friendliest interface for user experience. However, the command line continues to be a faster and more efficient way to interact with our computers. These characteristics make the CLI especially important for people working on digital projects. So, far from being something from the past, as many users might have felt when GUI became popular, the command line is actually an everyday skill for many people working with computers, especially those working with networks, systems, and servers.  
 
-<Info>
-We recommend [Hello, World - Command Line Heroes Season 2](https://www.redhat.com/en/command-line-heroes/season-2/hello-world), a podcast episode about the computer programming pioneer Grace Hopper. In 1951, Hopper invented the first *compiler*, a program to translate a source code (e.g. English) to machine code (bytecode) or other programming languages. For her huge contribution to HCI, in the field people refer to her as the mother of computer science or the godmother of independent programming languages. Hopper was a computer scientist, mathematician, and rear admiral who joined the US Navy Reserves during World War II. Her career illustrates the relationship between computer innovation and warfare. 
-</Info>
+:::info
+We recommend [Hello, World - Command Line Heroes Season 2](https://www.redhat.com/en/command-line-heroes/season-2/hello-world), a podcast episode about the computer programming pioneer Grace Hopper. In 1951, Hopper invented the first *compiler*, a program to translate a source code (e.g. English) to machine code (bytecode) or other programming languages. For her huge contribution to HCI, in the field people refer to her as the mother of computer science or the godmother of independent programming languages. Hopper was a computer scientist, mathematician, and rear admiral who joined the US Navy Reserves during World War II. Her career illustrates the relationship between computer innovation and warfare.
+:::
 
 # Talking computer
 ### What is *text* for computers?
@@ -192,27 +192,27 @@ While it doesn't matter which text editor you choose, you should try to become c
 
 What is the command line? (Select one)
 
-<Quiz>
+:::quiz
 - A program to edit plain text.
 - A text-based interface to communicate with the computer.*
 - A Graphical User Interface.
 - A programming language.
-</Quiz>
+:::
 
 What is the difference between a plain text document and a rich text document? (Select all that apply)
 
-<Quiz>
+:::quiz
 - Plain text contains no formatting, only line breaks and spacing.*
 - Plain text cannot be marked up.*
 - Rich text is styled text, _i.e.,_ plain text completed by information such as font size, format, and colors.*
 - One can't determine whether there is a difference between the two without looking at their content.
-</Quiz>
+:::
 
 ### Reflection
 As the command line is a way to interact with a computer, think of how you interact with computers in your everyday life. For example, consider the number of hours you interact with computers per day, the reasons or goals for interacting with them, and the number of computers you might interact with within a day.
 Now, think of factors that can affect how people interact with computers and the consequences. Consider how gender, disability, or other socioeconomic factors you might want to consider can affect the interaction. For example, some studies demonstrate there is a gender digital divide in the reasons to interact with computers. 
 
-<Keywords>
+:::keywords
 - Character
  An individual symbol that is represented by bytes to the computer.
 
@@ -239,7 +239,7 @@ A program used for creating plain text.
 
 -Word processor
 A program used to create rich text.
-</Keywords>
+:::
 
 # Hands-on!
 
@@ -305,10 +305,10 @@ For example, we might have multiple users for a digital project. Sometimes we mi
 
 Now that we know 'thyself', our next step should be to understand where we are. 
 
-<Info>
+:::info
 **Transfering `whoami` to your computer**
 Computers have the option of including multiple users. The output to `whoami` will be the individual username. Thus, it changes not only from one computer to another, but also from user to user.
-</Info>
+:::
 
 
 # The file system 
@@ -342,9 +342,9 @@ As computers became smaller, anyone -with the purchasing power- could take home.
 
 The metaphor that originated the term file system is not so clear in our lives anymore. This can challenge those teaching and learning about computers, as you can read in the article [File Not Found](https://www.theverge.com/22684730/students-file-folder-directory-structure-education-gen-z). However, as for the command line, understanding the hierarchical structure of the file system continues to be an essential task to be able to interact with the computer and give it commands!
 
-<Info>
-Going back to the metaphor, now libraries store digital collections. We can visit them without the physical experience of the shelves and the information organized in the space. We also relate to new information structures in our everyday practices, as  the [Arium: Beyond the Desktop Metaphor](https://kilthub.cmu.edu/articles/thesis/Arium_Beyond_the_Desktop_Metaphor_A_new_way_of_navigating_searching_and_organizing_personal_digital_data/6723005) elaborates. 
-</Info>
+:::info
+Going back to the metaphor, now libraries store digital collections. We can visit them without the physical experience of the shelves and the information organized in the space. We also relate to new information structures in our everyday practices, as  the [Arium: Beyond the Desktop Metaphor](https://kilthub.cmu.edu/articles/thesis/Arium_Beyond_the_Desktop_Metaphor_A_new_way_of_navigating_searching_and_organizing_personal_digital_data/6723005) elaborates.
+:::
 
 ## Orienting yourself in the command line 
 
@@ -432,14 +432,14 @@ Because we changed our location within the file system, the information to the l
 ### Evaluation
 What command do you run to identify the directory where you are currently located?
 
-<Quiz>
+:::quiz
 - $ `ls`
 - $ `pwd`*
 - $ `cd`
 - $ `whoami`
-</Quiz>
+:::
 
-<Keywords>
+:::keywords
 - Directory
 Cataloging structure that organizes the folders within the file system hierarchy. 
 
@@ -451,7 +451,7 @@ Hierarchical method to organize the information in the computers composed of fil
 
 -Folder
 A storage space that contains files and other folders.
-</Keywords>
+:::
 
 # Creating files and folders 
 
@@ -488,10 +488,10 @@ $ ls
 
 See any differences? If the command was successful, you should see a file called foo.txt in the home folder. Pretty cool, right?
 
-<Info>
+:::info
 **Why the file is called foo.txt?**
-As we mentioned in the ethical considerations of this workshop, the command line is laden with masculine and military metaphors. You could use any name, but *foo* is a common name in Computer Science which possibly comes from the unfortunate abbreviation for "fucked up beyond all repair" from the Second World War. 
-</Info>
+As we mentioned in the ethical considerations of this workshop, the command line is laden with masculine and military metaphors. You could use any name, but *foo* is a common name in Computer Science which possibly comes from the unfortunate abbreviation for "fucked up beyond all repair" from the Second World War.
+:::
 
 ## Handy Tip 
 
@@ -536,11 +536,9 @@ Congratulations! You've got yourself a `projects` folder!
 
 In this case `projects` is the name of the folder, but it could be called any name we wanted. For example, we could have used `$ mkdir bananas` and the directory would be `bananas`.
 
-<Info>
-    
+:::info
 When you work on your computer and create folders, they will be visible on your GUI too. Paying attention to the path will help you find them easily later when you interact with your computer out of the command line.
-
-</Info>
+:::
 
 ## Moving a file
 
@@ -575,24 +573,24 @@ To check the result, use `cd` to access `/projects`. Then use `ls` to check that
 
 Do you want to check the solution?
 
-<Secret>
+:::secret
 1. Type `pwd` to see where you are located. If you are not in the projects folder we just created, navigate to that folder using the commands `cd` and `cd ...` that we learned before
 2. Type `mkdir` name-of-your-subfolder to create a subfolder.
 3. Type `cd name-of-your-folder` to navigate to that folder.
 4. Type `name-of-your-file.txt` to create a new text file.
 5. Type `ls` to check whether you created the file correctly.
-</Secret>
+:::
 
 ### Evaluation
 
 What does the <kbd>up arrow</kbd> do?
 
-<Quiz>
+:::quiz
 - It quits the terminal.
 - It undoes my last command.
 - It inserts my last command.*
 - It shows me what folder I am working in.
-</Quiz>
+:::
 
 ### Reflection
 
@@ -602,7 +600,7 @@ Do you follow a specific system to organize it?
 Is it possible for you to draw a diagram representing it? 
 Now, keep in mind your responses to these questions and relate them to the information from the workshop: what practices could help you improve in managing your digital information?
 
-<Keywords>
+:::keywords
 - Home
 User's directory in a multi-user computer. 
 
@@ -611,7 +609,7 @@ A string of characters that represents the location of a file or folder within a
 
 - Root
 Highest directory in the hierarchy of the file system, e.g. "C:/" on Windows and "Macintosh HD" on Mac
-</Keywords>
+:::
 
 ## Creating a cheat sheet 
 
@@ -624,15 +622,15 @@ $ pwd
 
 It might seem repetitive or basic to check our location once again. However, when you are working on a bigger project, documenting the location of files is important, as we need to know the path to access them. Think again of the metaphor of the library: to find a book, you need to know how to get to the right shelf. 
 
-<Info>
+:::info
 A useful command when you have to navigate from one path to another is 
 
 ```console
 $ cd ~
 ```
 
-The sign `~` is called *tilde*. The command `cd ~` gets you to your user folder, `home`. Once you are there, it will be easier to get to a new location. 
-</Info>
+The sign `~` is called *tilde*. The command `cd ~` gets you to your user folder, `home`. Once you are there, it will be easier to get to a new location.
+:::
 
 ### Now that we are ready, let's create the cheat sheet!
 
@@ -730,9 +728,9 @@ Now we can check our file:
 $ cat cheat-sheet.txt 
 ```
 
-<Info>
-**Bonus:** There is another way to add new text from the command line without overwriting. It is using append `>>`. This symbol uses two greater-than symbols together, but for the computer field, it is called *append*. In this workshop, we prefer `nano` for its efficiency in editing the text of our cheat sheet. Append has its own uses for specific purposes, such as adding new entries to a data file. 
-</Info>
+:::info
+**Bonus:** There is another way to add new text from the command line without overwriting. It is using append `>>`. This symbol uses two greater-than symbols together, but for the computer field, it is called *append*. In this workshop, we prefer `nano` for its efficiency in editing the text of our cheat sheet. Append has its own uses for specific purposes, such as adding new entries to a data file.
+:::
 
 ## Organizing your cheat sheet
 
@@ -817,7 +815,7 @@ $ ls
 
 Were you close in your first guess?
 
-<Secret>
+:::secret
 The output of printing the list of files in `test` will be
     
 ```console
@@ -825,7 +823,7 @@ cheat  sheet.txt
 ```
 
 It means that we created two files instead of a single one. The first of them `cheat` has no extension. The second one is a .txt file.
-</Secret>
+:::
 
 
 ### Practices for better interaction with the computer
@@ -846,12 +844,12 @@ What effect does the following command produce? (select one)
 $ echo "Hello! My Name is Mark!" > introduction.txt
 ```
 
-<Quiz>
+:::quiz
 - It adds the line "Hello! My Name is Mark!" to the existing content of the `introduction.txt` file.
 - It checks whether the content of the `introduction.txt` file contains the line "Hello! My Name is Mark!"
 - It replaces the content of the `introduction.txt` file with the line "Hello! My Name is Mark!"*
 - None of the above.
-</Quiz>
+:::
 
 ## Interlude
 
@@ -916,9 +914,9 @@ With larger amounts of data, it might take some seconds to run each command befo
 
 What is the output?
 
-<Secret>
+:::secret
 The total of words in the file should be 2,298,575.
-</Secret>
+:::
 
 ### The symbol `-`
 **What did we do here?**
@@ -988,23 +986,23 @@ In this line, we are combining two commands:
 
 Use the commands you've learned so far to create a new version of the nypl_items.csv file with the duplicated lines removed. Hint: we created a new version of our cheat sheet after sorting it alphabetically. 
 
-<Secret>
+:::secret
 ```console
 $ cat nypl_items.csv | uniq > clean_nypl_items.csv
 ```
 
 This will allow you to create a new version of the nypl_items.csv file with the duplicated lines removed. You can decide on any name you prefer for your file!
-</Secret>
+:::
 
 ### Evaluation
 
 What do command line flags allow you to do? (select one)
 
-<Quiz>
+:::quiz
 - Flags allow you to mark the file you are working on.
 - Flags are useful to create a new version of the file you are working on while preserving the old version for future access.
-- Flags are a common way to specify options for the command line programs.* 
-</Quiz>
+- Flags are a common way to specify options for the command line programs.*
+:::
 
 ## Search the data 
 
@@ -1047,20 +1045,20 @@ If you want to get a little more mileage out of the `grep` command, refer to [th
 
 What do `|` allow you to do? (select all that apply)
 
-<Quiz>
+:::quiz
 - Pipes let you take the output of one command and use it as the input for another.*
 - Pipes allow you to combine multiple commands in a single line.*
 - Pipes let you work on multiple files at the same time.
-</Quiz>
+:::
 
 Let's think about the `grep` command. Select all that pertain to the command.
 
-<Quiz>
+:::quiz
 - It searches the given file for lines containing a match to the given strings or words.*
 - It can be combined with other commands, so as to produce a search that matches their output.*
 - It produces a new file with the lines containing the strings or words you are searching.
 - It delete the strings or words you are searching from a file.
-</Quiz>
+:::
 
 ### Adding to the cheat sheet
 Go to your projects folder and open your cheat-sheet.txt file using the `nano` command to add the new commands learned in the workshop: 
@@ -1083,7 +1081,7 @@ head -n     shows a specific number of lines of the head
 tail -n		shows a specific number of lines of the head
 ```
 
-<Info>
+:::info
 **Bonus:** We included the `flag -n` in the commands for your cheat sheet. It works as an option for head and tail, to show only a specific number of lines. You can select the number of lines you want to see by replacing the number symbol for the specific number of lines you want. Try it with our dataset:
 
 ```console
@@ -1093,7 +1091,7 @@ head -n 1 nypl_items.csv
 ```console
 tail -n 3 nypl_items.csv
 ```
-</Info>
+:::
 
 # Summary 
 
@@ -1122,20 +1120,20 @@ On the next page, we make a general review. Then, we will explain how you can tr
 
 What does the <kbd>up</kbd> arrow command do? (Select one of the following)
    
-<Quiz>
+:::quiz
 - It inserts my last command.*
 - It quits the Terminal/GitBash.
 - It undoes my last command.
 - It shows me what folder I am working in.
-</Quiz>
+:::
 
 What do command line flags allow you to do? (Select one of the following)
 
-<Quiz>
+:::quiz
 - Flags are a common way to specify options for command line programs.*
 - Flags allow you to earmark the file you are working on.
 - Flags are useful to create a new version of the file you are working on while preserving the old version for future access.
-</Quiz>
+:::
 
 What effect does the following command produce?
 
@@ -1145,47 +1143,47 @@ $ echo "Hello! My Name is Mark!" > introduction.txt
 
 (Select one of the following)
 
-<Quiz>
+:::quiz
 - It replaces the content of the introduction.txt file with the line "Hello! My Name is Mark!"*
 - It adds the line "Hello! My Name is Mark!" to the existing content of the introduction.txt file.
 - It checks whether the content of the introduction.txt file contains the line "Hello! My Name is Mark!"
 - None of the above.
-</Quiz>
+:::
 
 What do `|` allow you to do? (Select all that apply)
 
-<Quiz>
+:::quiz
 - Pipes let you take the output of one command and use it as the input for another.*
 - Pipes allow you to combine multiple commands in a single line.*
 - Pipes let you work on multiple files at the same time.
-</Quiz>
+:::
 
 What command do you run if you are trying to identify where in the filesystem you are currently located/working? (Select all that apply)
    
-<Quiz>
+:::quiz
 - `$ pwd`*
 - `$ ls`
 - `$ cd`
 - `$ whoami`
-</Quiz>
+:::
 
 Let's think about the `grep` command. Select all that pertain to the command.
    
-<Quiz>
+:::quiz
 - It searches the given file for lines containing a match to the given strings or words.*
 - It can be combined with other commands, so as to produce a search that matches their output.*
 - It produces a new file with the lines containing the strings or words you are searching.
-- It delete the strings or words you are searching from a file. 
-</Quiz>
+- It delete the strings or words you are searching from a file.
+:::
 
 What is the difference between a plain text document and a rich text document? (Select all that apply)
 
-<Quiz>
+:::quiz
 - Plain text contains no formatting, only line breaks and spacing.*
 - Rich text is styled text, i.e., plain text completed by information such as font size, format, and colors.*
 - Plain text cannot be marked up.*
-- One can't determine whether there is a difference between the two without looking at their content. 
-</Quiz>
+- One can't determine whether there is a difference between the two without looking at their content.
+:::
 
 **Reflection**
 

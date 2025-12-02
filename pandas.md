@@ -83,13 +83,13 @@ Learning and On-the-Go:
 
 In essence, JupyterLite is a more nimble version of Jupyter Notebooks, suitable for scenarios where a lighter computational environment is sufficient. It shares the same core principles of interactive computing but in a more accessible and portable form, making it a valuable tool for quick experiments, learning, and situations where resource constraints or simplicity are paramount.
 
-<Keywords>
+:::keywords
 - Jupyter Notebook
 Comprehensive toolset for interactive computing and data exploration, blending narrative text, code, and visualizations
 
 - JupyterLite
 A lightweight version of Jupyter Notebook
-</Keywords>
+:::
 
 
 # Preparing your workspace and folders
@@ -110,10 +110,10 @@ Let’s create a “pandas_workshop” folder in our JupyterLite code editor wor
 - To rename the folder, click on the folder name while  pressing the "control" key on your keyboard at the same time (MacOS) or right-clicking on your mousepad (Windows), and selecting "Rename" from the drop-down menu. 
 - Rename the folder: “pandas_workshop”.
 
-<Keywords>
+:::keywords
 - Code editor
 A code editor is a software application that is specifically designed for writing and editing source code of computer programs. It provides features and tools to make the process of coding more efficient and productive for developers. Code editors are essential tools for software development and come in various forms, ranging from simple text editors to feature-rich integrated development environments (IDEs).
-</Keywords>
+:::
 
 ## Download the Full Code in a Jupyter Notebook & upload it into the code editor
 
@@ -121,7 +121,7 @@ We’ve saved all of the code for this section in a Jupyter Notebook file.
 
 - To access this file, click the following button: 
 
-<Jupyter IPYNB='https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/pandas/pandas_workshop_2024.ipynb' />
+::jupyter{ipynb="https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/pandas/pandas_workshop_2024.ipynb"}
 
 - Open your code editor in the right hand corner and locate the `pandas_workshop_2024.ipynb` file
 - When prompted, select the "Python Pyodide" kernel
@@ -152,13 +152,13 @@ Finally, let's launch a new JupyterLite Notebook from within the “pandas_works
 
 Hooray! You are all set to move forward!
 
-<Keywords>
+:::keywords
 - Jupyter Notebook
 Comprehensive toolset for interactive computing and data exploration, blending narrative text, code, and visualizations
 
 - JupyterLite
 A lightweight version of Jupyter Notebook
-</Keywords>
+:::
 
 
 
@@ -169,10 +169,10 @@ A lightweight version of Jupyter Notebook
 * You can think of it as a FREE equivalent to Stata or SPSS for data manipulation and analysis. It is also more powerful than Excel
 * Knowing how to use Pandas is important if you plan on working with data organized in spreadsheets (either quantitative or qualitative)
 
-<Keywords>
+:::keywords
 - Pandas
 A powerful Python library for data manipulation and analysis, particularly designed to handle structured data. It provides data structures like DataFrames that allow users to easily organize, clean, and analyze tabular data, such as spreadsheets or SQL tables. With Pandas, non-technical users can perform tasks like filtering, aggregating, and visualizing data without extensive programming knowledge, making it a valuable tool for data exploration and preparation.
-</Keywords>
+:::
 
 
 ## Import Pandas and Matplotlib
@@ -193,13 +193,13 @@ The second import, `matplotlib`, is used to import the Matplotlib library, which
 
 If you don’t see an error when you run the notebook—that is, if there is no output—you can move on to the next step. It is not rare in programming that when you do things right, the result will be nothing happening. This is what we like to call a silent success.
 
-<Keywords>
+:::keywords
 - Import
 In Python, the "import" keyword is used to bring external modules or libraries into your script, making their functionality available for use. Once imported, you can access the functions, classes, or variables defined in the module using the module's name as a prefix.
 
 - Silent Success
 In Python, a "silent success" typically refers to a successful operation or function call that does not produce any visible output or raise explicit errors. It implies that the operation was completed successfully, but the result might not be explicitly displayed, making it important for developers to check return values or logs to confirm the success.
-</Keywords>
+:::
 
 ## Read in a CSV file as a DataFrame
 
@@ -218,7 +218,7 @@ refugee_df = pd.read_csv(url, delimiter=",", encoding='utf-8')
 - With this command, we are creating a **Pandas DataFrame** object, which is a 2-dimensional labeled data structure with columns of different types. You can think of it like a spreadsheet or SQL table, or a dictionary of Series objects. 
 - It is common practice to abbreviate DataFrame with “df”, as in refugee_df.  
 
-<Keywords>
+:::keywords
 - DataFrame
 In Python, a DataFrame is a two-dimensional, tabular data structure provided by the Pandas library. It organizes data into rows and columns, similar to a spreadsheet, and offers powerful tools for data manipulation, analysis, and cleaning.
 
@@ -227,27 +227,27 @@ In a CSV (Comma-Separated Values) file, a delimiter is a character or sequence o
 
 - Encoding
 In the context of text data, encoding refers to the method used to represent characters as binary data. UTF-8, for example, is a widely used encoding that can represent most characters in the Unicode standard, allowing for the storage and transmission of text in multiple languages.
-</Keywords>
+:::
 
 ## Evaluation
 
 What is the primary data structure in Pandas for working with tabular data?
 
-<Quiz>
+:::quiz
 - Series
 - DataFrame*
 - Array
 - List
-</Quiz>
+:::
 
 What is a DataFrame?
 
-<Quiz>
+:::quiz
 - A two-dimensional data structure*
 - A three-dimensional data structure
 - A single-dimensional data structure
 - A series object
-</Quiz>
+:::
 
 # Data exploration
 In the following section we will learn how to view the DataFrame in addition to viewing smaller sections of it. 
@@ -401,10 +401,10 @@ Let’s take a look at a few elements in this DataFame:
 * NAN
     * NaN is the Pandas value for any missing data. 
 
-<Keywords>
+:::keywords
 - Index
 In a Pandas DataFrame, the index serves as a unique identifier for each row, allowing for easy access and manipulation of data. It provides a label for the rows, facilitating efficient data retrieval, alignment, and merging operations in various analytical tasks.
-</Keywords>
+:::
 
 
 ## Display a selection of the DataFrame
@@ -769,13 +769,13 @@ refugee_df[-10:]
 </table>
 </div>
 
-<Keywords>
+:::keywords
 - Function vs. Method
 In Python, a function is a block of reusable code that can be defined and called independently of any object, while a method is a function associated with an object, often designed to operate on that specific object. Methods are invoked using dot notation on an instance of a class, whereas functions are typically standalone and can be called without an associated object.
 
 - .head() & .tail()
 In Pandas, the .head() method is used to display the first few rows of a DataFrame, providing a quick overview of its structure, while the .tail() method shows the last few rows. Both methods help users inspect data frames efficiently.
-</Keywords>
+:::
 
 
 ## Display a random sample of the DataFrame
@@ -944,67 +944,67 @@ refugee_df.sample(15)
 
 We can tell it's a random sample since the index numbers are completely disorganized. 
 
-<Keywords>
+:::keywords
 - .sample()
 In Pandas, the `.sample()` method is used to randomly select a specified number of rows from a DataFrame. It provides a way to obtain a random subset of data for exploratory analysis or testing purposes.
-</Keywords>
+:::
 
 ## Challenge
 Using both the `.head()` method and a slice, write code to display the top 9 rows of the DataFrame:
 
 ### Solution
-<Secret>
+:::secret
 ```python
 refugee_df.head(9)
 refugee_df[:9]
 ```
-</Secret>
+:::
 
 Write code to display the last 5 rows of the DataFrame (there are two ways to do this):
 
 ### Solution
-<Secret>
+:::secret
 ```python
 refugee_df.tail(5)
 refugee_df[-5:]
 ```
-</Secret>
+:::
 
 Write code to display a random selection of 10 rows in the DataFrame:
 
 ### Solution
-<Secret>
+:::secret
 ```python
 refugee_df.sample(10)
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 What is the purpose of the `.head()` method in Pandas?
 
-<Quiz>
+:::quiz
 - To extract the first few rows of a DataFrame*
 - To display a summary of the data types in a DataFrame
 - To sort the DataFrame in ascending order
 - To count the number of rows in a DataFrame
-</Quiz>
+:::
 
 Which of the following commands would return the top three rows in a dataframe? Select all that apply
 
-<Quiz>
+:::quiz
 - `refugee_df[0:3]`*
 - `refugee_df[0:4]`
 - `refugee_df[0:2]`
 - `refugee_df.head(3)`*
-</Quiz>
+:::
 
 # Basic data cleaning
 In the following sections we will review some basic data cleaning steps including checking and converting our data types in addition to checking and removing duplicate rows. 
 
-<Info>
+:::info
 Data cleaning is a crucial process for refining tabular data. Begin by addressing missing values. Tackle outliers to maintain data integrity and accuracy. Remove duplicates for a clean and unique dataset. Standardize formats for consistency, and finally, engage in feature engineering to enhance data insights and prepare it for analysis. These steps collectively ensure a refined and reliable foundation for effective data exploration and interpretation.
-</Info>
+:::
 
 ## Data Types
 
@@ -1045,10 +1045,10 @@ Pandas uses a different lexicon to describe data types from those we learned in 
 
 
 
-<Keywords>
+:::keywords
 - Data Type
 In Python, data types define the type of values that variables can hold, such as integers, floats, strings, and booleans. Each data type comes with specific operations that can be performed on the associated values.
-</Keywords>
+:::
 
 
 ## Converting data types
@@ -1085,10 +1085,10 @@ refugee_df.dtypes
 
 As we can see, the data in the “year” column was successfully transformed into the datetime64 data type.
 
-<Keywords>
+:::keywords
 - Datetime
 In Pandas, the datetime data type represents date and time information. It allows for efficient handling, manipulation, and analysis of temporal data in a tabular format, offering functionalities for parsing, formatting, and performing operations on date and time values.
-</Keywords>
+:::
 
 ## Check for duplicate rows
 
@@ -1411,21 +1411,21 @@ refugee_df[refugee_df.duplicated(keep=False)]
 
 Great news! We successfully removed our duplicate rows!
 
-<Keywords>
+:::keywords
 - .duplicated()
 The .duplicated() method in Pandas identifies duplicate rows in a DataFrame based on the values in all columns. When keep=False is specified, all occurrences of the duplicated rows are marked as True, meaning none are considered unique, and all duplicates are included in the result. If keep is set to 'first' or 'last', it retains the first or last occurrence of each duplicated set, respectively, while marking the rest as True.
-</Keywords>
+:::
 
 ## Evaluation
 
 What does the keep parameter in the .duplicated() method of Pandas control?
 
-<Quiz>
+:::quiz
 - It specifies the number of duplicates to keep.
 - It determines whether to display all occurrences or just the first occurrence of duplicated rows.*
 - It controls the sorting order of duplicated values.
 - It determines whether to keep or remove duplicated rows.
-</Quiz>
+:::
 
 
 # Rename, select, drop, filter and add new columns
@@ -1576,10 +1576,10 @@ refugee_df
 <p>121231 rows × 5 columns</p>
 </div>
 
-<Keywords>
+:::keywords
 - .rename()
 In Pandas, the rename method is used to change the labels (names) of columns or index in a DataFrame. It allows for both selective renaming and modifying all labels using a dictionary or a function.
-</Keywords>
+:::
 
 ## Select columns
 
@@ -1761,10 +1761,10 @@ refugee_df[['state','city']]
 <p>121231 rows × 2 columns</p>
 </div>
 
-<Keywords>
+:::keywords
 - DataFrame vs Series Object
 In Pandas, a Series is a one-dimensional labeled array that can hold any data type, while a DataFrame is a two-dimensional tabular data structure comprising multiple columns, each of which is a Series. Essentially, a DataFrame is a collection of Series that share the same index, providing a structure similar to a table in a relational database.
-</Keywords>
+:::
 
 
 ## Drop columns
@@ -1891,10 +1891,10 @@ refugee_drop_city_df
 <p>121231 rows × 4 columns</p>
 </div>
 
-<Keywords>
+:::keywords
 - .drop()
 In Pandas, the drop method is used to remove specified rows or columns from a DataFrame. It returns a new DataFrame with the specified elements removed, and the original DataFrame remains unchanged unless the inplace parameter is set to True or the new DataFrame is stored in a new variable.
-</Keywords>
+:::
 
 ## Filter columns
 
@@ -2036,10 +2036,10 @@ refugee_iraq_df
 
 We stored our results in a new variable `refugee_iraq_df`
 
-<Keywords>
+:::keywords
 - ==
 In Python, the == operator is used for equality comparison, determining whether two values or expressions are equal. It returns True if the values are equal and False otherwise.
-</Keywords>
+:::
 
 ## Drop Rows
 If we wanted to exclude all rows containing the value “Iraq”, we could run the following command:
@@ -2176,10 +2176,10 @@ refugee_drop_iraq_df
 <p>103026 rows × 5 columns</p>
 </div>
 
-<Keywords>
+:::keywords
 - !=
 In Python, the != operator is used for inequality comparison, checking whether two values or expressions are not equal. It returns True if the values are different and False if they are equal.
-</Keywords>
+:::
 
 ## Add columns
 
@@ -2337,63 +2337,63 @@ refugee_df
 
 You can read the command we just ran as: create a new column that calculates the number of arrivals in a row divided by the total number of arrivals in the dataset, times 100. The result of this calculation will equal the percentage of total refugee arrivals for each row.
 
-<Keywords>
+:::keywords
 - .sum()
 In Pandas, the .sum() method is used to calculate the sum of values along a specified axis in a DataFrame or Series. It can be applied to numeric columns, providing the total sum of the values in the specified axis.
-</Keywords>
+:::
 
 ## Challenge
 Write code for selecting the year, origin, and arrivals columns:
 
 ### Solution
-<Secret>
+:::secret
 ```python
 new_df= refugee_df[['year', 'origin', 'arrivals']]
 ```
-</Secret>
+:::
 
 Write code to drop all rows where the origin is Vietnam:
 
 ### Solution
-<Secret>
+:::secret
 ```python
 no_burma_df = refugee_df[refugee_df['origin'] != 'Vietnam']
 ```
-</Secret>
+:::
 
 Write code to only keep rows where the arrival state is California:
 ### Solution
-<Secret>
+:::secret
 ```python
 california_df = refugee_df[refugee_df['state'] == 'California']
 ```
-</Secret>
+:::
 
 ## Evaluation 
 How do you select a specific column in a Pandas DataFrame named "df"?
 
-<Quiz>
+:::quiz
 - df.select("column_name")
 - df.column_name
 - df.get_column("column_name")
 - df[["column_name"]]*
-</Quiz>
+:::
 
 What is the primary purpose of the == operator in Python?
 
-<Quiz>
+:::quiz
 - It assigns a value to a variable.
 - It makes sure two values are different. 
 - It is used for mathematical addition.
 - It checks if two values or expressions are equal.*
-</Quiz>
+:::
 
 # Sort Columns, Groupby Columns, & Calculations
 In the following section we will learn how to sort and group columns in order to perform calculations.  
 
-<Info>
+:::info
 Did you know you can perform both quantitative and qualitative manipulations across entire columns in Pandas? You can use the .apply() method along with a lambda function or a user-defined function to transform text values. For instance, apply the .str accessor to access string methods like .lower() or .replace() for case normalization or substitution. The apply function works element-wise, allowing you to process each element in the column independently. This approach empowers you to clean, modify, or extract information from text columns with ease, facilitating comprehensive data preparation for analysis.
-</Info>
+:::
 
 ## Stacking requests
 
@@ -2585,10 +2585,10 @@ refugee_df.sort_values(by='arrivals', ascending=False)[:15]
 
 Note: In the command above, we used the `by=` parameter to specify that the data be sorted according to the `arrivals` column and we added the `ascending=False` parameter in order to request that the data be displayed with the highest number first. By default, Pandas will sort in `ascending` order, meaning from the smallest value to the largest value. We also added a Python list slice (i.e., [:15]) to view just the top 15 rows.
 
-<Keywords>
+:::keywords
 - .sort_values()
 In Pandas, the .sort_values() method is used to sort the rows of a DataFrame based on the values in one or more columns. It allows users to arrange the data in ascending or descending order, facilitating better analysis and visualization of the dataset.
-</Keywords>
+:::
 
 ## Groupby Columns
 
@@ -2655,10 +2655,10 @@ Let’s unpack the command to better understand these results:
 * .sort_values(ascending=False): This method specifies how we want our output to be sorted. We include the ascending=False parameter in order to request that the data be displayed with the highest percentage first.
 * [:20]: This Python slide specifies that we just want to see the top 20 rows.
 
-<Keywords>
+:::keywords
 - .groupby()
 In Pandas, the .groupby() method is used to group rows of a DataFrame based on one or more columns, creating a groupby object. This object allows for the application of various aggregation functions to analyze and summarize data within each group efficiently.
-</Keywords>
+:::
 
 ## Convert Series Object to Dataframe
 You will notice that our output is not a Dataframe. Instead, it's a Series Object, which doesn't allow us to select data or make further calculations on the data. We can convert it to a Dataframe by first storing the command above in a new variable and stacking two extra commands, `to_frame` and `reset_index`:
@@ -2800,70 +2800,70 @@ ref_sum_df
 </table>
 </div>
 
-<Keywords>
+:::keywords
 - .to_frame()
 In Pandas, the .to_frame() method is used to convert a Pandas Series into a DataFrame. It allows for the transformation of a one-dimensional series with an index into a two-dimensional tabular structure, preserving the index and data.
 
 - .reset_index()
 In Pandas, the .reset_index() method is used to reset the index of a DataFrame, converting the index values into columns and providing a default integer index. This operation is useful when you want to remove the current index or revert to the default integer-based index.
-</Keywords>
+:::
 
 ## Challenge
 Write code to create a GroupBy object based on the 'state' column:
 
 ### Solution
-<Secret>
+:::secret
 ```python
 refugee_df.groupby('state')
 ```
-</Secret>
+:::
 
 Write code to sum the number of refugee arrivals by state with the output showing the top 15 rows sorted by ascending order:
 
 ### Solution
-<Secret>
+:::secret
 ```python
 refugee_df.groupby('state')['arrivals'].sum().sort_values(ascending=True)[:15]
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 What is the primary purpose of the .reset_index() method in Pandas?
 
-<Quiz>
+:::quiz
 - It reorganizes the DataFrame based on specified column values.
 - It converts a Pandas Series into a DataFrame.
 - It resets the index of a DataFrame, converting index values into columns.*
 - It sorts the values of a DataFrame based on specified columns.
-</Quiz>
+:::
 
 When might you use the .to_frame() method in Pandas?
 
-<Quiz>
+:::quiz
 - To group rows of a DataFrame based on one or more columns.
 - To reset the index of a DataFrame
 - To sort the rows of a DataFrame based on specific values.
 - To convert a Pandas Series into a DataFrame.*
-</Quiz>
+:::
 
 What is the primary purpose of the .groupby() method in Pandas?
 
-<Quiz>
+:::quiz
 - To sort the rows of a DataFrame based on specific column values.
 - To group rows of a DataFrame based on one or more columns.*
 - To reset the index of a DataFrame.
 - To convert a Pandas Series into a DataFrame.
-</Quiz>
+:::
 
 Which Pandas method is used to sort the rows of a DataFrame based on specified column values?
 
-<Quiz>
+:::quiz
 - .reset_index()
 - .to_frame()
 - .groupby()
 - .sort_vales()*
-</Quiz>
+:::
 
 
 
@@ -2882,17 +2882,17 @@ We can specify the title with the title= parameter and the kind of plot by alter
 * `hexbin` for hexagonal bin plots
 * `pie` for pie plots
 
-<Keywords>
+:::keywords
 - Data visualizations
 Data visualizations are important as they provide a clear and intuitive way to communicate complex information, making it easier for individuals to understand patterns, trends, and insights in data. Visualizations enhance decision-making by offering a more accessible and engaging representation of data, enabling quicker and more informed analysis.
 
 - .plot()
 In Pandas, the .plot() method is used to create basic visualizations from DataFrame or Series data. It provides a convenient way to generate various plots, such as line charts, bar plots, and scatter plots, directly from Pandas objects for quick data exploration and analysis.
-</Keywords>
+:::
 
-<Info>
-Python boasts a vibrant ecosystem of open-source libraries for data visualizations, offering a wealth of options for enthusiasts and professionals alike. Matplotlib, the foundation for many other libraries, empowers users with high-quality and customizable plots. Seaborn, built on Matplotlib, enhances aesthetics and simplifies complex visualizations. Plotly, known for its interactivity, enables the creation of dynamic and shareable visualizations. Bokeh stands out for its interactive and real-time streaming capabilities. With these open-source tools, the Python community collaborates and innovates, fostering a dynamic environment for creative and effective data visualization solutions. 
-</Info>
+:::info
+Python boasts a vibrant ecosystem of open-source libraries for data visualizations, offering a wealth of options for enthusiasts and professionals alike. Matplotlib, the foundation for many other libraries, empowers users with high-quality and customizable plots. Seaborn, built on Matplotlib, enhances aesthetics and simplifies complex visualizations. Plotly, known for its interactivity, enables the creation of dynamic and shareable visualizations. Bokeh stands out for its interactive and real-time streaming capabilities. With these open-source tools, the Python community collaborates and innovates, fostering a dynamic environment for creative and effective data visualization solutions.
+:::
 
 ## Bar Charts
 For example, we can visualize the data we got from our Groupby command looking at the total number of refugees by country of arrival as a bar chart:
@@ -2925,13 +2925,13 @@ Let’s unpack the command to better understand these results:
     * We are also giving the chart a title with the `title='Total number of refugee arrivals in the U.S. \n by country of origin'` parameter. 
         * Note: By adding `\n` in the title text, we signify that the text that follows should be on a new line. 
 
-<Keywords>
+:::keywords
 - Bar chart
 A bar chart is a visual representation of data that uses rectangular bars to show the values of different categories. The length or height of each bar corresponds to the quantity or frequency of the data it represents, making it a popular tool for comparing and displaying categorical information.
 
 - '\n'
 In Python, "\n" is an escape sequence representing a newline character. When encountered in a string, it causes a line break, moving the subsequent text to a new line, making it useful for formatting and organizing output.
-</Keywords>
+:::
 
 ## Pie Charts
 We can also visualize the data as a pie chart:
@@ -2960,10 +2960,10 @@ ref_sum_df.set_index('origin')[:10].plot(kind='pie', y='arrivals',
 - We also specify the y values - in our case `arrivals`
 
 
-<Keywords>
+:::keywords
 - Pie chart
 A pie chart is a circular statistical graphic that is divided into slices to illustrate numerical proportions. Each slice represents a proportion of the whole, and the size of each slice is proportional to the corresponding value it represents in the dataset.
-</Keywords>
+:::
 
 
 ## Time Series
@@ -3018,44 +3018,43 @@ total_arrivals_by_year.plot(kind='line', title="Total Number of Refugee Arrivals
     
 In this command, we are adding the `.plot()` method to request a chart, and specifying that we want a line graph with the “kind=line” parameter. We are also giving the chart a title with the “title='Total Number of Refugee Arrivals by Year'” parameter. 
 
-<Keywords>
+:::keywords
 - Line chart
 A line chart is a graphical representation of data that uses points connected by straight lines to display trends or changes over a continuous interval. It is commonly used to visualize the relationship between two variables and to show how one variable changes in response to the other.
 
 - Time series
 A time series is a sequence of data points collected or recorded over a period of time, typically at regular intervals. It is used to analyze and visualize trends, patterns, and behaviors in data that evolve over time.
-
-</Keywords>
+:::
 
 ## Challenge
 Write code to visualize the data we got from our Groupby command looking at the total number of refugees by country of arrival as a scatter plot: 
 
 ### Solution
-<Secret>
+:::secret
 ```python
 ref_sum_df.plot(kind='scatter', x= 'origin', y='arrivals', 
                 title='Total number of refugee arrivals in the U.S. \n by country of origin')
 ```
-</Secret>
+:::
 
 ## Evaluation
 Which Pandas method is commonly used to create basic visualizations, such as line charts, bar plots, and scatter plots, directly from DataFrame or Series data?
 
-<Quiz>
+:::quiz
 - .format()
 - .visualize()
 - .plot()*
 - .display()
-</Quiz>
+:::
 
 What type of chart is best suited for illustrating numerical proportions in a dataset, where each slice represents a proportion of the whole?
 
-<Quiz>
+:::quiz
 - Line chart
 - Bar chart
 - Pie chart*
 - Time series chart
-</Quiz>
+:::
 
 # Write to CSV
 
@@ -3068,10 +3067,10 @@ refugee_df.to_csv("new_refugee.csv", encoding='utf-8', index=False)
 
 In addition to a filename, we’re also specifying that the encoding is utf-8 and that the Index (the bolded left-most column) is not included in the CSV file.
 
-<Keywords>
+:::keywords
 - .to_csv
 In Pandas, the .to_csv() method is used to write the contents of a DataFrame to a CSV (Comma-Separated Values) file. It allows users to save the data in a tabular format that can be easily shared, imported, or analyzed using other tools.
-</Keywords>
+:::
 
 
 # From theory to practice: Building your Pandas skills with the Pandas documentation and other resources

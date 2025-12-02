@@ -91,9 +91,9 @@ With that said, let's get started!
 Let's try a little math in the R prompt. When you hit "Run Code," a code editor (really just a mini R engine) will pop up and you can start playing around! The top part is the code and the bottom part is the output.
 
 
-<CodeEditor>
-    1+1
-</CodeEditor>
+:::codeeditor
+1+1
+:::
 
 ## First Puzzle
 
@@ -107,17 +107,13 @@ Replace the _ with some combination of the following operators in the code edito
 - "\+"
 - "\-"
 
-<CodeEditor>
-
+:::codeeditor
 10 [] 5 [] 6 [] 4
+:::
 
-</CodeEditor>
-
-<Secret>
-
+:::secret
 10 / 5 * 6 - 4
-
-</Secret>
+:::
 
 Try adding paraentheses - does it change the answer?
 
@@ -128,13 +124,11 @@ Try adding paraentheses - does it change the answer?
 
 What do you predict will happen when we hit run code?
 
-<CodeEditor>
-
+:::codeeditor
 3 == 3
 4 == 10
 4 == "hello"
-
-</CodeEditor>
+:::
 
 Why might something like this be useful...these statements are obviously true or false!
 
@@ -160,11 +154,10 @@ What do you think 5.44445 is?
 
 How about "5.44445"?
 
-<CodeEditor>
+:::codeeditor
 typeof(5.44445)
 typeof("5.44445")
-
-</CodeEditor>
+:::
 
 So typeof() is our first function! Function is simply a way of doing something, a way of saving some code for reuse, and a way of taking an input, transforming that input, and returning an output. 
 
@@ -174,17 +167,15 @@ This is where we leave simple calculator land and enter...computer language!
 
 Let's look at the difference between:
 
-<CodeEditor>
-    
+:::codeeditor
 2 / 3
-
-</CodeEditor>
+:::
 
 and...
 
-<CodeEditor>
+:::codeeditor
 head_size <- 2 / 3
-</CodeEditor>
+:::
 
 We are going from values to objects. Storing values in objects allows you to do interesting things with them later. To create an object, you pick a succinct, easy to remember name and then use the assignment operator <- to give the name a value.
 
@@ -210,14 +201,12 @@ Try assigning numbers of each of these variable names. What happens?
 
 You might have noticed that assigning a value to an object doesn’t print anything. To print the value, you can either use parentheses around the assignment or type the object name:
 
-<CodeEditor>
-
+:::codeeditor
 head_size <- 40 # doesn't print anything
 (head_size <- 40) # prints output
 
 head_size # prints output if you've already assigned a value to the object
-
-</CodeEditor>
+:::
 
 Important aside: The comments written to the right of the hash mark don’t get run as code. Using informative comments is good coding practice. Clear comments are essential for when you want someone else to run your code and be able to interpret what you’re typing.
 

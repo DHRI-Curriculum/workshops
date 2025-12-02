@@ -128,7 +128,7 @@ Type the following into the Python REPL below and press <kbd>Enter</kbd>:
 >>> print("Hello, World!")
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 Let's break down what just happened:
 
@@ -151,9 +151,11 @@ Try modifying the message:
 >>> print("It's a beautiful day")  # Double quotes are useful when your text contains apostrophes
 ```
 
-<PythonREPL/>
+::pythonrepl
 
-<Info>The `#` symbol starts a comment - text that Python ignores. We use comments to leave notes for ourselves and other programmers.</Info>
+:::info
+The `#` symbol starts a comment - text that Python ignores. We use comments to leave notes for ourselves and other programmers.
+:::
 
 
 ## Data Types and Variables
@@ -175,7 +177,7 @@ Integers (`int` for short) are whole numbers without decimal points. Use them fo
 >>> 2024
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 #### Floating-point numbers (decimals)
 
@@ -188,7 +190,7 @@ Floats (`float` for short) are numbers with decimal points. Use them for measure
 >>> 1.23e5   # Scientific notation: 123000.0
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 **Why the distinction matters:** Operations with integers stay as integers when possible (except division), while operations with floats always produce floats. This affects both precision and performance in large calculations.
 
@@ -204,9 +206,11 @@ You can perform all the arithmetic operations you'd expect:
 >>> 10 % 3      # Modulo (remainder after division) - more advanced
 ```
 
-<PythonREPL/>
+::pythonrepl
 
-<Info>Note: Division (`/`) always returns a float, even when dividing evenly. If you need an integer result, use floor division (`//`).</Info>
+:::info
+Note: Division (`/`) always returns a float, even when dividing evenly. If you need an integer result, use floor division (`//`).
+:::
 
 ### Strings
 
@@ -221,7 +225,7 @@ string"""  # Triple quotes allow line breaks
 >>> ""  # An empty string is valid
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 **Quote flexibility:** Python lets you choose your quote style. This is helpful:
 - Use double quotes when your text contains apostrophes: `"It's nice"`
@@ -240,7 +244,7 @@ Booleans represent truth values: either `True` or `False` (note the capital lett
 >>> 1 != 1      # Is 1 not equal to 1?
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 Booleans will become crucial when we learn about conditions and loops. They're how programs make decisions.
 
@@ -256,7 +260,7 @@ When you're unsure what type of data you're working with, Python's `type()` func
 >>> type(5 > 3)  # What type does a comparison produce?
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 This is really useful when debugging. Many errors come from trying to perform an operation on the wrong type of data.
 
@@ -282,7 +286,7 @@ Now we can use these names instead of typing the values:
 >>> print(next_year)
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 **Variable naming rules and conventions:**
 - Must start with a letter or underscore: `name`, `_private`
@@ -316,7 +320,7 @@ Variables can be reassigned. The box can hold different values over time:
 
 Other compound operators work the same way: `-=`, `*=`, `/=`, etc.
 
-<PythonREPL/>
+::pythonrepl
 
 ### Getting User Input
 
@@ -339,7 +343,7 @@ The `input()` function:
 >>> print("Next year you'll be " + str(age_number + 1))
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 ### Essential Built-in Functions
 
@@ -376,22 +380,22 @@ The `len()` function tells you how long something is - how many characters in a 
 >>> print("Length of text: " + str(len(text_number)))
 ```
 
-<PythonREPL/>
+::pythonrepl
 
 ## Review Questions
 
 What will be displayed when you run `print("Hello")`?
 
-<Quiz>
+:::quiz
 - Hello*
 - "Hello"
 - print("Hello")
 - Nothing
-</Quiz>
+:::
 
 Which of the following are valid variable names in Python? (Select all that apply)
 
-<Quiz>
+:::quiz
 - user_name*
 - 2nd_place
 - _private*
@@ -399,25 +403,25 @@ Which of the following are valid variable names in Python? (Select all that appl
 - firstName*
 - class
 - CONSTANT_VALUE*
-</Quiz>
+:::
 
 What is the data type of `3.0`?
 
-<Quiz>
+:::quiz
 - int
 - float*
 - str
 - bool
-</Quiz>
+:::
 
 What value does `10 / 5` produce?
 
-<Quiz>
+:::quiz
 - 2
 - 2.0*
 - 5
 - 0.5
-</Quiz>
+:::
 
 ## Challenges
 
@@ -428,7 +432,7 @@ What value does `10 / 5` produce?
 3. **Type Investigation:** Create a variable with the value `"123"`. Check its type. Now create another variable that converts this to an actual number using `int()`. What happens if you try to add 10 to each variable?
 
 ### Challenge 1: Temperature Converter
-<Secret>
+:::secret
 ```python
 # Temperature Converter Solution
 celsius = 25
@@ -438,10 +442,10 @@ print("Temperature in Fahrenheit: " + str(fahrenheit))
 # Or with more descriptive output:
 print(str(celsius) + "°C is equal to " + str(fahrenheit) + "°F")
 ```
-</Secret>
+:::
 
 ### Challenge 2: Personal Info
-<Secret>
+:::secret
 ```python
 # Personal Info Solution
 first_name = "Ada"
@@ -456,11 +460,11 @@ print("Student status: " + str(is_student))
 print("My name is " + first_name + " " + last_name + ", I am " + str(age) + " years old.")
 print("Student status: " + str(is_student))
 ```
-</Secret>
+:::
 
 ### Challenge 3: Type Investigation
 
-<Secret>
+:::secret
 ```python
 # Type Investigation Solution
 text_number = "123"
@@ -482,18 +486,18 @@ print("Real number + 10 = " + str(result2))
 result3 = text_number + "10"  # "12310"
 print("Text + '10' = " + result3)
 ```
-</Secret>
+:::
 
 ## Review Questions
 
 Which statement about variable assignment is correct?
 
-<Quiz>
+:::quiz
 - Variables must be declared before use
 - Variable names can start with numbers
 - Variables can be reassigned to different values*
 - Variables cannot contain underscores
-</Quiz>
+:::
 
 ### Keywords
 
@@ -522,8 +526,7 @@ We've seen basic strings, but Python offers several ways to create and work with
 
 The simplest strings are **literals**: text you type directly in quotes:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 simple = "Hello, World!"
 with_apostrophe = "It's a beautiful day"
 with_quotes = 'She said "Hello" to me'
@@ -534,20 +537,19 @@ print(simple)
 print(with_apostrophe)
 print(with_quotes)
 print("Empty string: '" + empty + "'")
-</CodeEditor>
+:::
 
 ### Multi-line Strings
 
 For longer text, use triple quotes (either `'''` or `"""`):
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 poem = """Roses are red,
 Violets are blue,
 Python is awesome,
 And so are you!"""
 print(poem)
-</CodeEditor>
+:::
 
 Triple-quoted strings preserve all formatting, including line breaks and indentation. They're great for:
 - Long text passages
@@ -559,8 +561,7 @@ Triple-quoted strings preserve all formatting, including line breaks and indenta
 
 The simplest way to combine strings is with the `+` operator:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 first_name = "Ada"
 last_name = "Lovelace"
 full_name = first_name + " " + last_name
@@ -571,12 +572,11 @@ greeting = "Hello"
 name = "World"
 print(greeting + name)  # No space!
 print(greeting + " " + name)  # Better
-</CodeEditor>
+:::
 
 You can only concatenate strings with other strings:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 age = 25
 # This will cause an error:
 # message = "I am " + age + " years old"  # TypeError!
@@ -584,14 +584,13 @@ age = 25
 # You must convert the number to a string first:
 message = "I am " + str(age) + " years old"
 print(message)
-</CodeEditor>
+:::
 
 ### F-Strings: The Modern Way
 
 While concatenation works, it quickly becomes cumbersome. Python 3.6 introduced **f-strings** (formatted string literals). They're much more elegant:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 name = "Ada"
 age = 36
 occupation = "mathematician"
@@ -604,12 +603,11 @@ new_way = f"My name is {name}, I am {age} years old, and I work as a {occupation
 
 print(old_way)
 print(new_way)  # Same result, much cleaner!
-</CodeEditor>
+:::
 
 F-strings start with `f` before the opening quote. Inside the string, anything in curly braces `{}` is evaluated as Python code:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 name = "Ada"
 age = 36
 items = 3
@@ -621,12 +619,11 @@ print(f"Hello there, {name}!")
 # You can even do calculations inside the braces:
 print(f"Next year I'll be {age + 1}")
 print(f"I bought {items} books for ${price * items}")
-</CodeEditor>
+:::
 
 F-strings can also format numbers:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 pi = 3.14159265359
 print(f"Pi rounded to 2 decimals: {pi:.2f}")
 
@@ -635,7 +632,7 @@ print(f"Success rate: {percentage:.1%}")  # Converts to percentage!
 
 large_number = 1234567
 print(f"Population: {large_number:,}")  # Adds comma separators
-</CodeEditor>
+:::
 
 ## String Methods
 
@@ -643,8 +640,7 @@ Strings in Python are **objects**. They come with built-in functions (called **m
 
 ### Case Methods
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 text = "Hello, World!"
 # Basic case conversion:
 print(text.upper())       # HELLO, WORLD!
@@ -654,17 +650,16 @@ print(text.lower())       # hello, world!
 print(text.capitalize())  # Hello, world! (first letter only)
 print(text.title())       # Hello, World! (title case)
 print(text.swapcase())    # hELLO, wORLD! (flip all cases)
-</CodeEditor>
+:::
 
 Important: String methods don't change the original string (strings are **immutable**). They return a new string:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 original = "Hello"
 uppercase = original.upper()
 print(original)  # Still "Hello"
 print(uppercase)  # "HELLO"
-</CodeEditor>
+:::
 
 ### Searching and Checking
 
@@ -674,8 +669,7 @@ The `.count()` method tells you how many times a substring appears. The `.index(
 
 For checking string beginnings and endings, use `.startswith()` and `.endswith()` - these are really useful for validating file extensions or URL schemes.
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 email = "student@university.edu"
 
 # Check if string contains something:
@@ -689,7 +683,7 @@ print(email.find("edu"))  # Where does "edu" start? (-1 if not found)
 # String checking methods:
 print(email.startswith("student"))  # Does it begin with "student"?
 print(email.endswith(".edu"))  # Does it end with ".edu"?
-</CodeEditor>
+:::
 
 ### Cleaning and Modifying
 
@@ -699,8 +693,7 @@ The `.replace()` method substitutes one substring with another throughout the en
 
 The `.split()` method breaks a string into a list of parts. Called with no arguments, it splits on any whitespace. You can also specify what to split on, useful for processing CSV data or parsing formatted text.
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 messy = "  Hello, World!  \n"
 print("Original: " + repr(messy))
 print("Cleaned: " + messy.strip())  # Remove whitespace from both ends
@@ -717,14 +710,13 @@ print("Words: " + str(words))
 csv_line = "Ada,Lovelace,1815"
 data = csv_line.split(",")  # Split on comma
 print("CSV data: " + str(data))
-</CodeEditor>
+:::
 
 ### String Validation Methods
 
 Python provides methods to check what kind of characters a string contains:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 print("hello")
 # Check if string contains only certain types of characters:
 print("hello".isalpha())     # Only letters? True
@@ -734,14 +726,13 @@ print("hello123".isalnum())  # Only letters/numbers? True
 print("  ".isspace())        # Only whitespace? True
 print("Hello".isupper())     # All uppercase? False
 print("HELLO".isupper())     # All uppercase? True
-</CodeEditor>
+:::
 
 ## String Indexing and Slicing
 
 Strings are **sequences**: ordered collections of characters. Each character has a position (index), starting from 0:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 text = "Python"
 #       012345  <- Index positions
 
@@ -752,12 +743,11 @@ print(text[5])  # Last character: 'n'
 # Negative indices count from the end:
 print(text[-1])  # Last character: 'n'
 print(text[-2])  # Second-to-last: 'o'
-</CodeEditor>
+:::
 
 **Slicing** lets you extract portions of a string using the syntax `[start:end]`. The key rule to remember: slicing includes the start position but excludes the end position. Think of it as "from start up to (but not including) end."
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 text = "Python Programming"
 #       0123456789012345678  <- Position numbers
 
@@ -773,14 +763,13 @@ print(text[7:])    # From position 7 to the end → "Programming"
 # The third number is the "step" - how many positions to jump each time
 print(text[::2])   # Start at beginning, go to end, take every 2nd character
 print(text[::-1])  # Negative step (-1) reverses the string!
-</CodeEditor>
+:::
 
 ## Escape Sequences
 
 Sometimes you need to include special characters in strings. **Escape sequences** start with a backslash `\`:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Common escape sequences:
 print("Hello\nWorld")    # \n = newline
 print("Hello\tWorld")    # \t = tab
@@ -788,7 +777,7 @@ print("She said \"Hi\"") # \" = quotation mark
 
 # Raw strings (ignore escape sequences):
 print(r"C:\Users\new_folder")  # r prefix makes it raw
-</CodeEditor>
+:::
 
 ## Review Questions
 
@@ -798,39 +787,39 @@ name = "Python"
 print(name[1:4])
 ```
 
-<Quiz>
+:::quiz
 - Pyth
 - yth*
 - ytho
 - Pyt
-</Quiz>
+:::
 
 Which method would you use to remove spaces from the beginning and end of a string?
 
-<Quiz>
+:::quiz
 - .remove()
 - .strip()*
 - .clean()
 - .delete()
-</Quiz>
+:::
 
 What is the result of `"3" + "7"` in Python?
 
-<Quiz>
+:::quiz
 - 10
 - "10"
 - "37"*
 - Error
-</Quiz>
+:::
 
 How would you check if an email string contains "@"?
 
-<Quiz>
+:::quiz
 - email.contains("@")
 - "@" in email*
 - email.has("@")
 - email.find("@") > 0
-</Quiz>
+:::
 
 ## Challenges
 
@@ -841,7 +830,7 @@ How would you check if an email string contains "@"?
 3. **Text Analyzer:** Given the text `"Hello world! This is a sample text for analysis."`, count total characters, count words (split on spaces), and check if it contains the word "sample".
 
 ### Challenge 1: Name Formatter
-<Secret>
+:::secret
 ```python
 # Name Formatter Solution
 messy_name = "  jOHN   dOE  "
@@ -859,10 +848,10 @@ cleaned = cleaned.replace("  ", " ")  # In case there were quadruple spaces
 print("Original: " + repr(messy_name))
 print("Cleaned: " + cleaned)
 ```
-</Secret>
+:::
 
 ### Challenge 2: Research Citation Builder
-<Secret>
+:::secret
 ```python
 # Research Citation Builder Solution
 author = "Zweibel, Stephen"
@@ -886,10 +875,10 @@ part3 = f"({year})."
 full_citation = part1 + " " + part2 + " " + part3
 print("Built citation: " + full_citation)
 ```
-</Secret>
+:::
 
 ### Challenge 3: Text Analyzer
-<Secret>
+:::secret
 ```python
 # Text Analyzer Solution
 text = "Hello world! This is a sample text for analysis."
@@ -921,7 +910,7 @@ sample_position = text.find("sample")
 print(f"Position of 'sample': {sample_position}")
 print("Note: -1 means not found, any other number is the position")
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -951,8 +940,7 @@ A **list** is Python's most versatile data structure. It's an ordered, mutable (
 
 Lists are created with square brackets `[]`, with items separated by commas:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # An empty list
 empty_list = []
 print(f"Empty list: {empty_list}")
@@ -972,14 +960,13 @@ print(f"Mixed list: {mixed}")
 # Lists can contain other lists!
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(f"Matrix: {matrix}")
-</CodeEditor>
+:::
 
 ### Accessing List Items
 
 Like strings, lists use **zero-based indexing**. The first item is at index 0:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 fruits = ["apple", "banana", "cherry", "date"]
 
 print(f"First item: {fruits[0]}")
@@ -989,9 +976,11 @@ print(f"Second-to-last: {fruits[-2]}")
 
 # Trying to access beyond the list causes an error:
 # print(fruits[10])  # This would cause an IndexError
-</CodeEditor>
+:::
 
-<Info>Off-by-one errors are the most common bug in programming. Remember: if a list has 4 items, the valid indices are 0, 1, 2, and 3.</Info>
+:::info
+Off-by-one errors are the most common bug in programming. Remember: if a list has 4 items, the valid indices are 0, 1, 2, and 3.
+:::
 
 ### Modifying Lists
 
@@ -1003,8 +992,7 @@ Unlike strings, lists are **mutable**: you can change them after creation.
 - `.remove(item)` - removes the first occurrence of an item  
 - `.pop()` - removes and returns the last item
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 colors = ["red", "green", "blue"]
 print(f"Original: {colors}")
 
@@ -1028,14 +1016,13 @@ print(f"After remove: {colors}")
 last_color = colors.pop()
 print(f"Popped item: {last_color}")
 print(f"Final list: {colors}")
-</CodeEditor>
+:::
 
 ### List Slicing
 
 Like strings, you can extract portions of lists using the same `[start:end:step]` syntax. But unlike strings, lists are mutable, so you can also assign new values to slices.
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 print(f"Original: {numbers}")
@@ -1049,7 +1036,7 @@ print(f"Slice [::-1] (reversed): {numbers[::-1]}") # Reverse the list
 # This replaces positions 2, 3, 4 with new values
 numbers[2:5] = [20, 30, 40]
 print(f"After assigning to slice: {numbers}")
-</CodeEditor>
+:::
 
 ### Useful List Operations
 
@@ -1057,8 +1044,7 @@ Python provides several built-in functions that work great with lists of numbers
 
 When you need to sort a list, you have two options. The `sorted()` function returns a new sorted list without changing your original list. In contrast, the `.sort()` method modifies your original list directly.
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 grades = [85, 92, 78, 95, 88]
 
 # Length of list
@@ -1084,7 +1070,7 @@ names = ["Charlie", "Alice", "Bob"]
 sorted_names = sorted(names)  # Returns new list
 print(f"Original names: {names}")
 print(f"New sorted list of names: {sorted_names}")
-</CodeEditor>
+:::
 
 ### List Methods
 
@@ -1094,8 +1080,7 @@ For removing items, you have several options. The `.remove()` method finds and r
 
 When you need to find items, `.count()` tells you how many times an item appears in the list, and `.index()` tells you the position of the first occurrence. For reordering, `.reverse()` flips the list backwards, and `.sort()` arranges items in order (both modify the original list).
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 tasks = ["read", "write", "review"]
 print(f"Initial tasks: {tasks}")
 
@@ -1117,7 +1102,7 @@ print(f"Reversed tasks: {tasks}")
 # Clear all items
 tasks.clear()
 print(f"Cleared tasks: {tasks}")
-</CodeEditor>
+:::
 
 ## Dictionaries: Labeled Data
 
@@ -1129,8 +1114,7 @@ A dictionary is a collection of **key-value pairs**. Instead of accessing items 
 
 Dictionaries use curly braces `{}` with key-value pairs separated by colons:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Empty dictionary
 empty_dict = {}
 print(f"Empty dictionary: {empty_dict}")
@@ -1152,7 +1136,7 @@ mixed_keys = {
     3.14: "pi approximation"
 }
 print(f"Mixed keys: {mixed_keys}")
-</CodeEditor>
+:::
 
 **Important notes:**
 - Keys must be unique (no duplicates)
@@ -1164,8 +1148,7 @@ print(f"Mixed keys: {mixed_keys}")
 
 Use square brackets with the key:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 person = {
     "first_name": "Marie",
     "last_name": "Curie",
@@ -1184,12 +1167,11 @@ print(f"Field: {person['field']}")
 print(f"Middle name: {person.get('middle_name')}")
 # You can also provide a default value if the key is missing
 print(f"Middle name (with default): {person.get('middle_name', 'N/A')}")
-</CodeEditor>
+:::
 
 ### Modifying Dictionaries
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 course = {
     "code": "PYTHON101",
     "title": "Intro to Python",
@@ -1210,7 +1192,7 @@ print(f"After del: {course}")
 instructor = course.pop("instructor")
 print(f"Popped instructor: {instructor}")
 print(f"Final course: {course}")
-</CodeEditor>
+:::
 
 ### Dictionary Methods
 
@@ -1218,8 +1200,7 @@ Dictionaries have several useful methods for getting information about their con
 
 Since these methods return special dictionary views (not regular lists), you can convert them to lists using the `list()` function if needed.
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 inventory = {
     "apples": 5,
     "bananas": 3,
@@ -1243,7 +1224,7 @@ print(f"After update: {inventory}")
 # Clear all items
 inventory.clear()
 print(f"Cleared inventory: {inventory}")
-</CodeEditor>
+:::
 
 ## Combining Lists and Dictionaries
 
@@ -1253,8 +1234,7 @@ The real power comes from combining these structures. Here are common patterns:
 
 Good for tabular data where each item has the same fields:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Student records
 students = [
     {"name": "Alice", "grade": 92, "major": "CS"},
@@ -1279,14 +1259,13 @@ diana_grade = students[3]["grade"]
 total = alice_grade + bob_grade + charlie_grade + diana_grade
 average = total / len(students)
 print(f"Class average: {average:.1f}")
-</CodeEditor>
+:::
 
 ### Dictionary of Lists
 
 Useful for grouping related items:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Organize books by genre
 library = {
     "fiction": ["1984", "Dune", "Foundation"],
@@ -1307,14 +1286,13 @@ poetry_count = len(library["poetry"])
 
 total_books = fiction_count + non_fiction_count + poetry_count
 print(f"Total books: {total_books}")
-</CodeEditor>
+:::
 
 ### Nested Dictionaries
 
 For hierarchical data:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # University structure
 university = {
     "name": "State University",
@@ -1340,47 +1318,47 @@ print(f"CS faculty count: {cs_faculty}")
 university["departments"]["Mathematics"]["courses"].append("MATH301")
 math_courses = university["departments"]["Mathematics"]["courses"]
 print(f"Updated Math courses: {math_courses}")
-</CodeEditor>
+:::
 
 ## Review Questions
 
 What will `[1, 2, 3][1]` return?
 
-<Quiz>
+:::quiz
 - 1
 - 2*
 - 3
 - Error
-</Quiz>
+:::
 
 How do you add an item to the end of a list called `my_list`?
 
-<Quiz>
+:::quiz
 - my_list.add(item)
 - my_list.append(item)*
 - my_list.insert(item)
 - my_list += item
-</Quiz>
+:::
 
 What happens when you try to access a dictionary key that doesn't exist?
 
-<Quiz>
+:::quiz
 - Returns None
 - Returns 0
 - Returns empty string
 - Raises KeyError*
-</Quiz>
+:::
 
 Which of these can be a dictionary key? (Select all that apply)
 
-<Quiz>
+:::quiz
 - "name"*
 - 42*
 - [1, 2, 3]
 - 3.14*
 - {"a": 1}
 - (1, 2)*
-</Quiz>
+:::
 
 ## Challenges
 
@@ -1391,7 +1369,7 @@ Which of these can be a dictionary key? (Select all that apply)
 3. **Recipe Calculator:** Create a recipe dictionary with ingredient names as keys and amounts as values. Calculate the total cost by multiplying each amount by a given price per unit.
 
 ### Challenge 1: Student Records
-<Secret>
+:::secret
 ```python
 # Student Records Solution
 students = [
@@ -1428,10 +1406,10 @@ print("Average age: " + str(sum(ages) / len(ages)))
 print("Highest GPA: " + str(max(gpas)))
 print("Total students: " + str(len(students)))
 ```
-</Secret>
+:::
 
 ### Challenge 2: Inventory Manager
-<Secret>
+:::secret
 ```python
 # Inventory Manager Solution
 inventory = {
@@ -1474,10 +1452,10 @@ print("\nSpecific lookups:")
 print(f"Copies of Dune: {inventory['Dune']}")
 print(f"Copies of 1984 after restock: {inventory['1984']}")
 ```
-</Secret>
+:::
 
 ### Challenge 3: Recipe Calculator
-<Secret>
+:::secret
 ```python
 # Recipe Calculator Solution
 recipe = {
@@ -1525,7 +1503,7 @@ ingredient_amounts = list(recipe.values())
 print(f"Total volume/count: {sum(ingredient_amounts)} units")
 print(f"Most expensive ingredient cost: ${max([flour_cost, sugar_cost, eggs_cost, butter_cost, milk_cost]):.2f}")
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -1557,8 +1535,7 @@ Life is full of decisions: "If it's raining, take an umbrella." "If the data is 
 
 The simplest decision is "if this is true, do something":
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 temperature = 22
 
 if temperature > 20:
@@ -1566,7 +1543,7 @@ if temperature > 20:
     print("No jacket needed.")
 
 print("Have a nice day!")  # This always runs
-</CodeEditor>
+:::
 
 **Critical points:**
 - The condition (`temperature > 20`) must evaluate to `True` or `False`
@@ -1578,8 +1555,7 @@ print("Have a nice day!")  # This always runs
 
 These operators create boolean values for our conditions:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 x = 10
 y = 5
 
@@ -1593,7 +1569,7 @@ print(f"x <= y: {x <= y}")   # Less than or equal to
 # String comparisons work alphabetically
 print(f"'apple' < 'banana': {'apple' < 'banana'}")
 print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercase!
-</CodeEditor>
+:::
 
 **Common mistake:** Using `=` instead of `==`
 - `=` is assignment (storing a value)
@@ -1603,8 +1579,7 @@ print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercas
 
 You often want to do one thing if a condition is true, and something else if it's false:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 age = int(input("Enter your age: "))
 
 if age >= 18:
@@ -1613,14 +1588,13 @@ if age >= 18:
 else:
     print("You are a minor.")
     print(f"You can vote in {18 - age} years.")
-</CodeEditor>
+:::
 
 ### Multiple Conditions with `elif`
 
 For more than two possibilities, use `elif` (short for "else if"):
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 score = 85
 if score >= 90:
     grade = "A"
@@ -1634,7 +1608,7 @@ else:
     grade = "F"
 
 print(f"Your grade is: {grade}")
-</CodeEditor>
+:::
 
 Python checks conditions from top to bottom and executes the first block where the condition is `True`. Once a condition matches, the rest are skipped.
 
@@ -1642,8 +1616,7 @@ Python checks conditions from top to bottom and executes the first block where t
 
 Use logical operators to combine multiple conditions:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 age = int(input("Enter your age: "))
 has_license = True
 
@@ -1661,14 +1634,13 @@ if weekend or holiday:
 raining = False
 if not raining:
     print("Let's go for a walk!")
-</CodeEditor>
+:::
 
 ### Nested Conditions
 
 You can put `if` statements inside other `if` statements:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 has_ticket = input("Do you have a ticket? (yes/no): ").lower() == "yes"
 age = int(input("Enter your age: "))
 
@@ -1680,7 +1652,7 @@ if has_ticket:
         print("You can only see PG-13 or below.")
 else:
     print("You need to buy a ticket first.")
-</CodeEditor>
+:::
 
 But be careful: too much nesting makes code hard to read. You can often simplify with `and`/`or`.
 
@@ -1692,8 +1664,7 @@ Imagine you need to print "Hello" 100 times. You could write 100 print statement
 
 The `for` loop is Python's workhorse for repetition. It iterates (goes through) each item in a collection:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Start simple - loop through a list
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
@@ -1711,7 +1682,7 @@ print("-" * 10)
 scores = {"Alice": 92, "Bob": 85, "Charlie": 88}
 for name in scores:
     print(f"{name} scored {scores[name]}")
-</CodeEditor>
+:::
 
 The loop variable (`fruit`, `letter`, `name`) takes on each value in turn. You can name it anything, but choose descriptive names.
 
@@ -1719,8 +1690,7 @@ The loop variable (`fruit`, `letter`, `name`) takes on each value in turn. You c
 
 What if you just want to repeat something a certain number of times? Use `range()`:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # range(n) generates numbers from 0 to n-1
 for i in range(5):
     print(f"This is iteration {i}")
@@ -1736,7 +1706,7 @@ print("-" * 10)
 # range(start, stop, step) with custom step
 for even in range(0, 11, 2):
     print("Number: " + str(even))
-</CodeEditor>
+:::
 
 **Important:** `range(5)` generates 0, 1, 2, 3, 4 (not 5!). This matches Python's zero-based indexing.
 
@@ -1744,8 +1714,7 @@ for even in range(0, 11, 2):
 
 Sometimes you need both the item and its position:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 colors = ["red", "green", "blue"]
 
 # Method 1: Using range and len
@@ -1766,30 +1735,29 @@ print("-" * 10)
 print("Enumerate starting at 1:")
 for num, color in enumerate(colors, 1):
     print(f"Color #{num}: {color}")
-</CodeEditor>
+:::
 
 ### The `while` Loop: Conditional Repetition
 
 The `while` loop continues as long as a condition is true:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 count = 0
 while count < 5:
     print(f"Count is {count}")
     count += 1  # Always update the condition!
 
 print("Loop finished.")
-</CodeEditor>
+:::
 
-<CodeEditor language="python">
+:::codeeditor{language="python"}
 password = ""
 while password != "secret":
     password = input("Enter password: ") # This line would prompt the user
     if password != "secret":
         print("Wrong password, try again!")
 print("Access granted!")
-</CodeEditor>
+:::
 
 **Warning:** If the condition never becomes `False`, you get an infinite loop! Always ensure the loop will eventually end.
 
@@ -1797,8 +1765,7 @@ print("Access granted!")
 
 Sometimes you need to exit a loop early or skip certain iterations:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # break: Exit the loop immediately
 print("Break example:")
 for i in range(10):
@@ -1822,14 +1789,13 @@ for num in numbers:
         break
 else:  # This else belongs to the for loop!
     print("No negative numbers found")
-</CodeEditor>
+:::
 
 ### Nested Loops
 
 Loops can contain other loops:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Multiplication table
 # Note: i and j are traditional names for loop counters in nested loops
 for i in range(1, 4):    # i represents rows (1, 2, 3)
@@ -1850,7 +1816,7 @@ for row in matrix:
     for value in row:
         row_str += str(value) + " "
     print("Row: " + row_str)
-</CodeEditor>
+:::
 
 ## Common Patterns
 
@@ -1858,8 +1824,7 @@ for row in matrix:
 
 Building up a result over iterations:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Sum numbers
 numbers = [10, 20, 30, 40, 50]
 total = 0  # Initialize accumulator
@@ -1873,14 +1838,13 @@ sentence = ""  # Initialize accumulator
 for word in words:
     sentence += word + " "
 print(sentence.strip())  # Remove trailing space
-</CodeEditor>
+:::
 
 ### Filtering Pattern
 
 Selecting items that meet a condition:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Find all even numbers
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 evens = []  # Initialize empty result list
@@ -1891,7 +1855,7 @@ print(f"Even numbers: {evens}")
 
 # Note: There are more advanced ways to do this that you'll learn later,
 # but for now, the loop approach above is the clearest!
-</CodeEditor>
+:::
 
 ## Review Questions
 
@@ -1906,12 +1870,12 @@ else:
     print("C")
 ```
 
-<Quiz>
+:::quiz
 - A*
 - B
 - A and B
 - C
-</Quiz>
+:::
 
 How many times will this loop print "Hello"?
 ```python
@@ -1919,30 +1883,30 @@ for i in range(3, 8):
     print("Hello")
 ```
 
-<Quiz>
+:::quiz
 - 3
 - 5*
 - 6
 - 8
-</Quiz>
+:::
 
 What does the `continue` statement do in a loop?
 
-<Quiz>
+:::quiz
 - Exits the loop completely
 - Skips to the next iteration*
 - Pauses the loop
 - Restarts the loop from beginning
-</Quiz>
+:::
 
 Which operator checks if two values are equal?
 
-<Quiz>
+:::quiz
 - =
 - ==*
 - !=
 - >=
-</Quiz>
+:::
 
 ## Challenges
 
@@ -1953,7 +1917,7 @@ Which operator checks if two values are equal?
 3. **Prime Checker:** Write a program that checks if a number is prime (only divisible by 1 and itself). Use a loop to check all potential divisors.
 
 ### Challenge 1: FizzBuzz
-<Secret>
+:::secret
 ```python
 # FizzBuzz Solution
 for num in range(1, 31):
@@ -1966,10 +1930,10 @@ for num in range(1, 31):
     else:
         print(num)
 ```
-</Secret>
+:::
 
 ### Challenge 2: Prime Checker
-<Secret>
+:::secret
 ```python
 # Prime Checker Solution
 number = int(input("Enter a number to check: "))
@@ -1992,11 +1956,10 @@ else:
 # import math
 # for divisor in range(2, int(math.sqrt(number)) + 1):
 ```
-
-</Secret>
+:::
 
 ### Challenge 3: Password Validator
-<Secret>
+:::secret
 ```python
 # Password Validator Solution
 while True:
@@ -2041,8 +2004,7 @@ while True:
             print("- Must contain a digit")
         print("Try again.\n")
 ```
-
-</Secret>
+:::
 
 ## Key Terms
 
@@ -2081,8 +2043,7 @@ Functions are like recipes:
 
 Functions are defined using the `def` keyword:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 # Define a simple function
 def greet():
     """Display a friendly greeting."""
@@ -2092,7 +2053,7 @@ def greet():
 # Defining doesn't run the function - it just creates it
 # To run it, you must "call" it:
 greet()
-</CodeEditor>
+:::
 
 Key points:
 - `def` starts the definition
@@ -2106,8 +2067,7 @@ Key points:
 
 Most functions need information to work with. **Parameters** are variables that receive values when you call the function:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def greet_person(name):
     """Greet a person by name."""
     print(f"Hello, {name}!")
@@ -2122,12 +2082,11 @@ print("-" * 10)
 # We call the value you pass an "argument"
 user = "Charlie"
 greet_person(user)
-</CodeEditor>
+:::
 
 Multiple parameters are separated by commas:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def introduce(first_name, last_name, age):
     """Introduce a person with their full name and age."""
     print(f"This is {first_name} {last_name}.")
@@ -2136,14 +2095,13 @@ def introduce(first_name, last_name, age):
 introduce("Ada", "Lovelace", 36)
 print("-" * 10)
 introduce("Alan", "Turing", 41)
-</CodeEditor>
+:::
 
 ### Return Values
 
 Functions can send data back using `return`:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def add_numbers(a, b):
     """Add two numbers and return the result."""
     result = a + b
@@ -2163,12 +2121,11 @@ def get_info():
 
 info = get_info()
 print(f"Info from function: {info['name']}")
-</CodeEditor>
+:::
 
 **Important:** When a function hits `return`, it immediately exits:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def check_age(age):
     """Check if someone is an adult."""
     if age >= 18:
@@ -2178,26 +2135,24 @@ def check_age(age):
 
 print(f"Age 25 is: {check_age(25)}")
 print(f"Age 16 is: {check_age(16)}")
-</CodeEditor>
+:::
 
 Functions without explicit `return` statements return `None`:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def say_hello():
     print("Hello!")
     # No return statement
 
 result = say_hello()  # This will print "Hello!"
 print(f"The return value is: {result}") # This will print "None"
-</CodeEditor>
+:::
 
 ### Default Parameters
 
 You can give parameters default values, making them optional:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def greet(name="World", punctuation="!"):
     """Greet someone with customizable punctuation."""
     print(f"Hello, {name}{punctuation}")
@@ -2206,7 +2161,7 @@ greet()  # Uses both defaults
 greet("Alice")  # Uses default punctuation
 greet("Bob", "?")  # Overrides both
 greet(punctuation="...")  # Named argument, skips name
-</CodeEditor>
+:::
 
 Parameters with defaults must come after parameters without defaults.
 
@@ -2214,8 +2169,7 @@ Parameters with defaults must come after parameters without defaults.
 
 Variables created inside functions are **local** - they only exist within that function:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def calculate():
     # This 'result' is local to the function
     result = 10 + 20
@@ -2234,7 +2188,7 @@ def change_name():
 
 change_name()
 print(f"Outside function: {name}")  # Global variable is unchanged
-</CodeEditor>
+:::
 
 This isolation is a feature, not a bug! It prevents functions from accidentally interfering with each other.
 
@@ -2331,8 +2285,7 @@ print(is_valid_email("user@"))             # False
 
 Functions that check if something is valid:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def is_positive(number):
     """Check if a number is positive."""
     return number > 0
@@ -2374,14 +2327,13 @@ print(f"Is -5 positive? {is_positive(-5)}")
 print(f"Is 25 a valid age? {is_valid_age(25)}")
 print(f"Is 'Password123' strong? {is_strong_password('Password123')}")
 print(f"Is 'weak' strong? {is_strong_password('weak')}")
-</CodeEditor>
+:::
 
 ### Transformation Functions
 
 Functions that convert data from one form to another:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
     return celsius * 9/5 + 32
@@ -2401,14 +2353,13 @@ def clean_text(text):
 print(f"20°C is {celsius_to_fahrenheit(20)}°F")
 print(f"Formatted name: {format_name('Ada', 'Lovelace')}")
 print(f"Cleaned text: '{clean_text('  Some  Messy Text  ')}'")
-</CodeEditor>
+:::
 
 ### Aggregation Functions
 
 Functions that summarize collections:
 
-<CodeEditor language="python">
-
+:::codeeditor{language="python"}
 def calculate_statistics(numbers):
     """Calculate mean, min, and max of numbers."""
     if not numbers:
@@ -2423,45 +2374,45 @@ def calculate_statistics(numbers):
 stats = calculate_statistics([10, 20, 30, 40, 50])
 print(f"Statistics: {stats}")
 print(f"Average: {stats['mean']}")
-</CodeEditor>
+:::
 
 ## Review Questions
 
 What does a function return if it has no explicit `return` statement?
 
-<Quiz>
+:::quiz
 - 0
 - False
 - None*
 - Error
-</Quiz>
+:::
 
 Which statement about function parameters is correct?
 
-<Quiz>
+:::quiz
 - Parameters with defaults must come before parameters without defaults
 - Parameters with defaults must come after parameters without defaults*
 - All parameters must have defaults
 - No parameters can have defaults
-</Quiz>
+:::
 
 What happens to variables created inside a function?
 
-<Quiz>
+:::quiz
 - They become global variables
 - They are only accessible within that function*
 - They replace global variables with the same name
 - They cause an error
-</Quiz>
+:::
 
 When does a function stop executing? (Select all that apply)
 
-<Quiz>
+:::quiz
 - When it reaches the end of its code block*
 - When it encounters a return statement*
 - When it encounters an error*
 - Only when the program ends
-</Quiz>
+:::
 
 ## Challenges
 
@@ -2472,7 +2423,7 @@ When does a function stop executing? (Select all that apply)
 3. **Statistics Calculator:** Create a function `analyze_grades(grades_list)` that returns a dictionary containing the mean, median, highest, lowest, and pass rate (percentage >= 60).
 
 ### Challenge 1: Temperature Converter
-<Secret>
+:::secret
 ```python
 def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
@@ -2499,10 +2450,10 @@ print(convert_temperature(100, "C"))  # Boiling point
 print(convert_temperature(32, "F"))   # Freezing point
 print(convert_temperature(37, "C"))   # Body temperature
 ```
-</Secret>
+:::
 
 ### Challenge 2: Data Validator
-<Secret>
+:::secret
 ```python
 def validate_data(data_dict):
     """Validate user data dictionary."""
@@ -2549,10 +2500,10 @@ print(validate_data(test1))
 print(validate_data(test2))
 print(validate_data(test3))
 ```
-</Secret>
+:::
 
 ### Challenge 3: Statistics Calculator
-<Secret>
+:::secret
 ```python
 def analyze_grades(grades_list):
     """Analyze a list of grades and return statistics."""
@@ -2594,7 +2545,7 @@ for key, value in stats.items():
     else:
         print(f"{key}: {value}")
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -2832,9 +2783,9 @@ cd ..
 cd ~
 ```
 
-<Info>
+:::info
 Tips: Use Tab to auto-complete file/folder names. If a folder name has spaces, wrap it in quotes, e.g., `cd "My Projects"`. Press the up/down arrows to cycle through previous commands.
-</Info>
+:::
 
 ### Run Python from the command line
 
@@ -2856,12 +2807,12 @@ py hello.py
 
 What you should see: the same prompts and output you saw when running in VS Code. You're now running your program directly from your system shell.
 
-<Info>
+:::info
 If you see an error like "command not found" or "is not recognized":
 - Make sure you're in the correct folder (`ls`/`dir` should show `hello.py`).
 - Try `python3` (Mac/Linux) or `py` (Windows).
 - Verify installation with `python --version` (Windows) or `python3 --version` (Mac/Linux).
-</Info>
+:::
 
 ### Paths and running from anywhere
 
@@ -2869,9 +2820,9 @@ If you see an error like "command not found" or "is not recognized":
 - Relative paths start from your current folder; absolute paths work from the root of your drive.
 - When your script opens files, relative paths are resolved from the working directory you ran the script from, not necessarily where the script lives.
 
-<Info>
+:::info
 Use the same interpreter for pip by preferring `python -m pip ...` (Windows) or `python3 -m pip ...` (Mac/Linux). This guarantees you install into the interpreter you're using to run scripts.
-</Info>
+:::
 
 ### Handy controls
 
@@ -2932,30 +2883,30 @@ Each library serves a specific purpose:
 
 What does pip stand for?
 
-<Quiz>
+:::quiz
 - Python Internal Packages
 - Pip Installs Packages*
 - Python Installation Program
 - Package Internet Protocol
-</Quiz>
+:::
 
 Why is it important to add Python to PATH during installation?
 
-<Quiz>
+:::quiz
 - It makes Python run faster
 - It allows Python to be run from any terminal/command prompt*
 - It installs additional features
 - It's required for VS Code
-</Quiz>
+:::
 
 What file extension do Python files use?
 
-<Quiz>
+:::quiz
 - .python
 - .py*
 - .pyt
 - .txt
-</Quiz>
+:::
 
 ## Key Terms
 
@@ -3341,39 +3292,39 @@ This pipeline demonstrates a complete workflow: loading data, processing it, and
 
 What is the advantage of using `with open()` instead of just `open()`?
 
-<Quiz>
+:::quiz
 - It's faster
 - It automatically closes the file when done*
 - It allows writing to the file
 - It works with more file types
-</Quiz>
+:::
 
 What mode would you use to add content to an existing file without erasing it?
 
-<Quiz>
+:::quiz
 - "r"
 - "w"
 - "a"*
 - "x"
-</Quiz>
+:::
 
 In pandas, what does `df.head()` do?
 
-<Quiz>
+:::quiz
 - Reads the file header
 - Shows column names only
 - Displays the first few rows of the DataFrame*
 - Sorts data by the first column
-</Quiz>
+:::
 
 What's the difference between `json.dump()` and `json.dumps()`?
 
-<Quiz>
+:::quiz
 - There is no difference
 - dump() writes to a file, dumps() returns a string*
 - dumps() is faster
 - dump() is deprecated
-</Quiz>
+:::
 
 ## Challenges
 
@@ -3384,7 +3335,7 @@ What's the difference between `json.dump()` and `json.dumps()`?
 3. **JSON Configuration:** Build a program that reads settings from a JSON config file (like database connection, file paths, etc.) and uses those settings to process data files.
 
 ### Challenge 1: File Statistics
-<Secret>
+:::secret
 ```python
 def analyze_text_file(filename):
     """Analyze a text file and return statistics."""
@@ -3431,11 +3382,10 @@ if stats:
     print(f"Characters: {stats['characters']}")
     print(f"Most common word: '{stats['most_common_word']}' ({stats['most_common_count']} times)")
 ```
-
-</Secret>
+:::
 
 ### Challenge 2: CSV Grade Processor
-<Secret>
+:::secret
 ```python
 import csv
 
@@ -3491,10 +3441,10 @@ def process_grades(input_file, output_file):
 # Usage
 process_grades("student_grades.csv", "final_grades.csv")
 ```
-</Secret>
+:::
 
 ### Challenge 3: JSON Configuration
-<Secret>
+:::secret
 ```python
 import json
 import os
@@ -3570,7 +3520,7 @@ def process_with_config(config):
 config = load_config()
 process_with_config(config)
 ```
-</Secret>
+:::
 
 ## Key Terms
 
@@ -4255,30 +4205,30 @@ APIs are built for programs. Start simple, then add complexity as you go.
 
 What does a 404 HTTP status code mean?
 
-<Quiz>
+:::quiz
 - Server error
 - Success
 - Resource not found*
 - Unauthorized
-</Quiz>
+:::
 
 Why should you add delays between API requests?
 
-<Quiz>
+:::quiz
 - To make your program slower
 - To avoid overwhelming the server and respect rate limits*
 - To save memory
 - It's required by Python
-</Quiz>
+:::
 
 What format do most web APIs return data in?
 
-<Quiz>
+:::quiz
 - HTML
 - JSON*
 - CSV
 - PDF
-</Quiz>
+:::
 
 ## Key Terms
 
@@ -4637,30 +4587,30 @@ print(f"Matplotlib version: {plt.matplotlib.__version__}")
 
 What is the keyboard shortcut to run a cell and move to the next one?
 
-<Quiz>
+:::quiz
 - Ctrl + Enter
 - Shift + Enter*
 - Alt + Enter
 - Enter
-</Quiz>
+:::
 
 Which cell type would you use to write documentation?
 
-<Quiz>
+:::quiz
 - Code cell
 - Markdown cell*
 - Raw cell
 - Text cell
-</Quiz>
+:::
 
 What does the %matplotlib inline magic command do?
 
-<Quiz>
+:::quiz
 - Makes plots interactive
 - Displays plots within the notebook*
 - Saves plots to files
 - Increases plot quality
-</Quiz>
+:::
 
 ## Key Terms
 
@@ -4722,11 +4672,11 @@ nyc_311_project/
     output/     # Where we'll save results
 ```
 
-<Download files='nyc_311_raw.json'></Download>
+::download{files="nyc_311_raw.json"}</Download>
 
-<Info>
+:::info
 Working offline or on a restricted network? Download the sample 311 dataset above, move it into your `nyc_311_project/data/` folder as `311_raw.json`, and use this fallback cell in your notebook to load it if the API is unavailable.
-</Info>
+:::
 
 ```python
 # Fallback: load local sample if network/API is unavailable
@@ -4995,9 +4945,9 @@ if 'closed_date' in df_clean.columns:
     df_clean['closed_date'] = pd.to_datetime(df_clean['closed_date'])
     print("✓ Converted closed_date to datetime format")
 
-<Info>
+:::info
 Pandas datetime basics: after converting with `pd.to_datetime(...)`, a Series gains the `.dt` accessor for datetime properties and methods. For example, `series.dt.day_name()` gives day of week, `series.dt.hour` gives the hour, and `(end - start).dt.total_seconds()` converts timedeltas to seconds.
-</Info>
+:::
 
 # Remove duplicates
 before = len(df_clean)
@@ -5148,9 +5098,9 @@ day_counts = df_clean['day_of_week'].value_counts()
 day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 day_counts = day_counts.reindex(day_order)
 
-<Info>
+:::info
 `reindex(day_order)` rearranges the bars into calendar order. If a day is missing, it will appear as NaN; use `.fillna(0)` to display 0 instead.
-</Info>
+:::
 
 # Visualize
 plt.figure(figsize=(10, 5))
@@ -5700,21 +5650,21 @@ url: "https://github.com/yourusername/nyc_311_analysis"
 
 What is the purpose of a .gitignore file?
 
-<Quiz>
+:::quiz
 - To ignore Git commands
 - To specify files that shouldn't be tracked by Git*
 - To hide files from GitHub
 - To delete temporary files
-</Quiz>
+:::
 
 What should always be included in a research repository?
 
-<Quiz>
+:::quiz
 - All raw data files
 - README with documentation*
 - Your API keys
 - Temporary files
-</Quiz>
+:::
 
 ## Final Thoughts
 

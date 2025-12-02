@@ -195,7 +195,7 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
 
 <!--**What are some forms of data you use in your research?**
 
-<Secret>
+:::secret
 - Non-digital text (lab books, field notebooks)
 - Digital texts or digital copies of text
 - Statistical analysis (SPSS, SAS, R)
@@ -206,12 +206,12 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
 - Protein or genetic sequences
 - Artistic products
 - Curriculum materials (e.g. course syllabi)
-</Secret>
+:::
 
 
 **The above forms of data can be arranged in different structures using various open source or proprietary computing applications. For example, the text in your application can be formatted as a spreadsheet or a database. What formats have you used to structure or organize your data?**
 
-<Secret>
+:::secret
 - Spreadsheets (e.g. `.xlsx`, `.numbers`, `.csv`)
 - Audio (e.g. `.mp3`, `.wav`, `.aac`)
 - Video (e.g. `.mov`, `.mp4`)
@@ -222,12 +222,12 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
 - Web files (e.g. `.html`, `.asp`, `.php`)
 - Matlab files & 3D Models (e.g. `.stl`, `.dae`, `.3ds`)
 - Metadata & Paradata (e.g. `.xml`, `.json`)
-</Secret>
+:::
 Adapted from: [NC State](https://www.lib.ncsu.edu/do/data-management/defining-research-data/)
 
-<Info>
+:::info
 As mentioned in the Command Line workshop, proprietary software is owned by the individual or company who published it and often comes with restrictions. Open source software is available for anyone to access or change the code and is less restrictive than proprietary software. (add note about format)
-</Info> -->
+::: -->
 
 
 ## What forms of data do you use?
@@ -239,12 +239,12 @@ As mentioned in the Command Line workshop, proprietary software is owned by the 
 
 Research data can be defined as: (select all that apply)
 
-<Quiz>
+:::quiz
 - materials or information necessary to come to my conclusion.*
 - the recorded factual material commonly accepted in the scientific community as necessary to validate research findings.*
 - method of collection and analysis.
 - objective and error-free.
-</Quiz>
+:::
 
 ## Challenge: Forms of Data 
 
@@ -257,17 +257,17 @@ Below you will find two front matter pages of two distinct digital projects. As 
 
 [Human Computers at NASA](https://omeka.macalester.edu/humancomputerproject/) is an archival project that "seeks to shed light on the buried stories of African American women with math and science degrees who began working at NACA (now NASA) in 1943 in secret, segregated facilities."
 
-<Secret>
+:::secret
 From the image, we can deduce that newspaper articles (digital copies of text) and photographs (digital copies of images) were used to compile this archive. Noticing the highlighted name in the news article, the data may be outputted as searchable text, searchable database, and/or searchable images. The data most likely was retrieved from a database and/or non-digital field notes. This is the [data source page](https://omeka.macalester.edu/humancomputerproject/items/browse) for Human Computers At NASA.
-</Secret>
+:::
 
 ![Screenshot of the frontmatter of an audio community mapping project called Listen for the Iraqis in NYC!](/images/data-ethics/Listen-for-the-Iraqis-in-NYC.png)
 
 [Listen for the Iraqis in NYC!](https://www.arcgis.com/apps/Cascade/index.html?appid=caace3a2d1624aecac2754b5802de3fc) is an audio community mapping project that seeks to locate the Iraqi population in NYC using their own voices. 
 
-<Secret>
+:::secret
 From the image, we can deduce that audio recordings of participants and a map (geospatial data) were used to compile this project. Given the details in the text on the right of the screen, we learn that the researcher will provide a map (geospatial data) and testaments (audio files) for us to peruse. The researcher has gathered digital field notes in the form of audio files from participants through a survey. The Call for Participants for Listen for the Iraqis in NYC! can be found [here](https://docs.google.com/document/d/1G8RxmEILImlW4O5LgRQ5I3e3JOlg0Sg6b7dM2CmrvEQ/edit).
-</Secret>
+:::
 
 # Institutional Compliance for Data and Research
  
@@ -285,21 +285,21 @@ Three core principles of the Belmont report are:
 
 1. **Respect for persons**:
 
-<Secret>
+:::secret
 >> "Respect for persons incorporates at least two ethical convictions: first, that individuals should be treated as autonomous agents, and second, that persons with diminished autonomy are entitled to protection. The principle of respect for persons thus divides into two separate moral requirements: the requirement to acknowledge autonomy and the requirement to protect those with diminished autonomy."
-</Secret>
+:::
 
 2. **Beneficence**:
 
-<Secret>
+:::secret
 >> "Persons are treated in an ethical manner not only by respecting their decisions and protecting them from harm, but also by making efforts to secure their well-being... Two general rules have been formulated as complementary expressions of beneficent actions in this sense: (1) do not harm and (2) maximize possible benefits and minimize possible harms."
-</Secret>
+:::
 
 3. **Justice**:
 
-<Secret>
+:::secret
 >> "Who ought to receive the benefits of research and bear its burdens? This is a question of justice, in the sense of "fairness in distribution" or "what is deserved." An injustice occurs when some benefit to which a person is entitled is denied without good reason or when some burden is imposed unduly... There are several widely accepted formulations of just ways to distribute burdens and benefits... These formulations are (1) to each person an equal share, (2) to each person according to individual need, (3) to each person according to individual effort, (4) to each person according to societal contribution, and (5) to each person according to merit."
-</Secret>
+:::
 
 Every university or research institution must, legally, have its own or an affiliated IRB. The IRB is intended to provide oversight, administrative support, and educational training to ensure that research done at that location complies with federal and state regulations, and university or institutional policy.make 1 page-->
 
@@ -321,25 +321,25 @@ Your oral history project does the following; do you need a CUNY HRPP/IRB?
 
 HRPP/IRB Required?
 
-<Secret>
+:::secret
 No
-</Secret>
+:::
 
 2. Systematic investigations involving open-ended interviews that are designed to develop or contribute to generalizable knowledge (e.g.,designed to draw conclusions, inform policy, or generalize findings).
 
 HRPP/IRB Required?
 
-<Secret>
+:::secret
 Yes
-</Secret>
+:::
 
 3. Creation of archives for the purpose of providing a resource for others to do research. The intent of the archive is to create a repository of information for other investigators to conduct research.
 
 HRPP/IRB Required?
 
-<Secret>
+:::secret
 Yes
-</Secret>
+:::
 
 For guidance and  more examples see [The CUNY Human Research Protection Program (HRPP), "CUNY HRPP Guidance: When is CUNY HRPP or IRB Review Required?"](https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/research/research-compliance/human-research-protection-program-hrpp/hrpp-policies-procedures/HRPP_IRB_Review_Required.pdf) 
 
@@ -383,11 +383,9 @@ At the end of our analysis, a decision is then made about how we would present t
 
 ![Stages of data are non-linear](/images/data-ethics/stages-of-data-non-linear.png)
 
-<Info>
-
+:::info
 There is no one way to go through the stages. For example, we could do a preliminary analysis first, such as running a correlation of variables, to explore what is missing before we begin the process of cleaning. Often, we also end up doing multiple iterations of cleaning and analysis, making decisions and choices to collapse particular variables or remove them entirely at each iteration. Making sure that we keep a clear documentation of our process will ensure that we are accountable to the data we have collected/are using and also ensure that our results can be replicated and reproduced if others choose to work on our "raw" data. While making these decisions seems innocuous, there are ethical considerations, beyond the institution, and impacts we must evaluate in the process.
-
-</Info>
+:::
 
 # Ethics Beyond Compliance 
 
@@ -399,9 +397,9 @@ As we learn to manipulate data, we will consider our ethical obligations beyond 
 
 Thinking through how ethical ideas and practices, or lack thereof, are situated may prompt questions such as: How is data retrieved? By whom? For whom? From where? Why? 
 
-<Info>
+:::info
 In the Command Line workshop you learned about the history of the computer and considered the questions: How were computers developed? By whom? Where? Why?
-</Info>
+:::
 
 ## Levels of Impact
 
@@ -421,10 +419,10 @@ Additionally, this workshop will address the range of impact, or the range of ac
 
 Throughout the workshop we will refer to the impacts by number for quick reference.
 
-<!--<Info>
+<!--:::info
 **Reflection**
 Now would be a good point to reflect on some ethical debates and concerns happening in your field
-</Info>-->
+:::-->
 
 ## Challenge: Ethics Beyond Compliance 
 
@@ -432,18 +430,18 @@ Think of the following scenario and the possible considerations and impacts for 
 
 A graduate student decides to analyze a data set they collected through surveying fellow graduate students. The survey asks students to denote their graduate level, current job, gross income, and housing status. The graduate student hopes to analyze the survey and present their findings at a student council meeting as part of the council's attempt to persuade the administration to provide more funding to the graduate students. The student learns that they can analyze the data and create a visual using Chat GPT. For the sake of time, they decide to use Chat GPT to analyze and visualize the data set. What ethical considerations should the student evaluate? How might using Chat GPT impact the students surveyed?
 
-<Secret>
+:::secret
 Using a large language model application such as Chat GPT to analyze personal information collected by the survey can cause direct impact on the "human subjects" and reproduce categories and information that can be harmful to the participants. The data inputted into Chat GPT is stored and used to produce outputs for other prompts unbeknownst to the graduate student researcher or the participants. Considering these impacts, it is better ethical practice for the graduate student to use a tool that is private and secure for their analysis and visualization.
-</Secret> 
+::: 
 
-<Info>
+:::info
 The reveal above is only one of the possible considerations, but there might be many others to evaluate.
-</Info>
+:::
 
 
 # Stages of Data: Raw
 
-"Raw" data is yet to be processed, meaning it has yet to be manipulated by a human or computer. Received or collected data could be in any number of formats, locations, etc. It could be in any of the forms listed in the <Link workshop='data-literacies' page='4'>Forms of Data Section.</Link>. 
+"Raw" data is yet to be processed, meaning it has yet to be manipulated by a human or computer. Received or collected data could be in any number of formats, locations, etc. It could be in any of the forms listed in the :link[Forms of Data Section.]{workshop="data-literacies" page="4"}. 
 
 But "raw" data is a relative term, inasmuch as when one person finishes processing data and presents it as a finished product, another person may take that product and work on it further, and for them that data is "raw" data. For example, we may consider the [General Social Survey](http://gss.norc.org/) data to be "raw" as it will require us to filter out missing entries and collapse variables or fields before we can run our analysis. A researcher who participated in the creation of this survey may not consider the version on the site as "raw" because the "raw" version is the physical paper copies of the file. As you can see, this consideration of what is "raw" is non-definitive and is dependent on the project you are working on and the narrative you want to tell with the results.
 
@@ -481,45 +479,45 @@ For a deeper discussion on data and labor, consider Catherine D'Ignazio and Laur
 
 1. The stages of data is a single iteration process, i.e. there is a fixed stage progression from data collection to visualization.
 
-<Quiz>
+:::quiz
 - True
 - False*
-</Quiz>
+:::
 
 2. Which of the following statements are true for "raw" data: (select all that apply)
 
-<Quiz>
+:::quiz
 - is data that is yet to be processed.*
 - is data that is received and/or collected.*
 - is the same to every researcher/research team.
 - can only be collected from participants.
-</Quiz>
+:::
 
 ## Challenge: Raw Data
 
 <!--1. Do you think "big data" is "raw data"? Why or why not? Does the quantity of data play into our assumptions of "rawness"?
 
-<Secret>
+:::secret
 I think big data can be raw data depending on how the data is obtained and the processes I need to take before I can apply an analysis. I think that with large datasets, I always assume "rawness" because I won't need all of the variables or there will be decisions that need to be made about missing entries.
-</Secret>
+:::
 
 2. How should we approach data that we have "scraped"?
 
-<Secret>
+:::secret
 I think my approach to scraped data is similar to big data.
-</Secret>
+:::
 
 3. How do you collect "raw" data? What are some of your practices? What are your field's practices?
 
-<Secret>
+:::secret
 Currently I collect through either pushshift.io or scrap permissible social media sites on my own or with my collaborator (who will have appropriate authorship). I know that my field of psychology is guilty of the discussion on mechanical turk and also often rely on undergraduates for experimental data collection who would have to sign up for experiments for credits in class or do the labour of working in the lab for the promises of bettering their resume for grad school applications.
-</Secret>-->
+:::-->
 
 If you have not done so, please download [`moSmall.csv`](https://raw.githubusercontent.com/DHRI-Curriculum/data-literacies/v2.0/files/moSmall.csv) and open it from your local computer/laptop. As the original file has about 500,000 entries, we've taken a random sample of 1% of the [original dataset](https://github.com/metmuseum/openaccess). In this case, would you consider this file to be a "raw" dataset?
 
-<Secret>
+:::secret
 The dataset would be a "raw" dataset for you because you would most likely need to remove certain variables/entries to work towards your question or in this case our question: “What proportion of the artwork collected and/or hosted in the Met are by non cis-gender men artists?”
-</Secret>
+:::
 
 ### Keywords
 
@@ -705,41 +703,41 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
 
 1. Structured data can be: (select all that apply)
 
-<Quiz>
+:::quiz
 - a XML list.*
 - a Excel table.*
 - an email chain.
 - a collection of text files.
-</Quiz>
+:::
 
 2. We may choose to store our data in open data formats because they: (select all that apply)
 
-<Quiz>
+:::quiz
 - are sustainable.*
 - allow for easy reusability.*
 - are free-of-charge to use.*
-</Quiz>
+:::
 
 3. Tiny data format only allows one value per cell.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 ## Challenge: Processed/Transformed
 
 1. Explore the `moSmall.csv` dataset, what questions might you ask with this dataset? What columns (variables) will you keep?
 
-<Secret>
+:::secret
 You would keep columns (variables) relevant to our question, such as the `Artist Gender`, `Is Public Domain` and `Rights and Reproduction` columns. We would also keep some of the descriptive columns such as `Object ID` and `Artist Role` to help contextualize the results (e.g. what kind of roles do female artists tend to take on?)
-</Secret>
+:::
 
 2.  If you are saving the file `moSmall.csv` in a proprietary spreadsheet application like Microsoft Excel (Windows/macOS) or Numbers (macOS), you may be prompted to save the file as `.xlsx` or `.numbers`. What format would you choose to save it in? Why would you choose to do so?
 
-<Secret>
+:::secret
 It is recommended to keep it in a `.csv` file type as it can be opened up by more programs and if Microsoft stops supporting `.xlsx` file types you may no longer have access to opening the dataset. **or** you will choose to switch to a `.xlsx` format as it is easier to use on a graphical user interface like Microsoft Excel. Any stylistic changes you'd have made to the file will remain as well, such as alternative highlighting rows for readability or bolding column headings.
-</Secret>
+:::
 
 ### Keywords
 
@@ -801,26 +799,26 @@ Measurements must be uniform, in that the same unit of measure must be used in a
 
 Measurements are *accurate* when: (select one)
 
-<Quiz>
+:::quiz
 - observations do not contradict each other.
 - they represent the correct values.*
 - when they are unique responses (e.g. no duplication).
 - when the same unit of measure is used in all relevant measurements.
-</Quiz>
+:::
 
 ## Challenge: When Do We Stop Cleaning?
 
 1. How do we know when our data is cleaned enough?
 
-<Secret>
+:::secret
 Often this is decided before the cleaning process begins, perhaps after some quick visualization or analysis of the "raw" data. Generally, empty entries are removed from the data sets. Perhaps if one is working with social media data, they may remove URLs as these influence the topic modeling algorithms (e.g. "http" may end up being the most prominent topic of the corpus). One may decide here is where to stop cleaning. Some might suggest the removal of stop words like "the" "a" "an," but some may consider impact II, politics of knowledge production, and feel uncertain about the removal of these words. This is especially because the dictionary of stop words were generated through canon western texts that is not representative of the many variations of English. For example, if one were looking at the tweets of Singaporean youths, the stop word dictionary may not be appropriate.
-</Secret>
+:::
 
 2. What happens to the data that is removed?
 
-<Secret>
+:::secret
 Usually the IRB desires that the data is destroyed. Removed data can remain in the original "raw" file. The file that is cleaned is usually a duplicate file to allow for recovery in case a researcher made a poor decision in the process of cleaning.
-</Secret>
+:::
 
 3. Explore the `moSmall.csv` dataset.
     - Are all the measurements valid? Try checking the `Object ID` column for duplicates.
@@ -830,14 +828,14 @@ Usually the IRB desires that the data is destroyed. Removed data can remain in t
     - Is the collected data consistent? Does the column `Is Public Domain` correspond with the data in `Rights and Reproduction`? If it does not, which would you follow? Why?
     - As the dataset is not one that we personally collected, how do we make sense that only `Female` or `|` is collected as responses in the column (with the exception of NA and empty fields)? What do we have to do to the data to make sure it is uniform? What decisions do we make in this process?
 
-<Secret>
+:::secret
 Exploring the dataset, here are possible responses to the questions:
     - Using `Object ID` indicates that there is no duplicates in the dataset. Every entry is unique.
     - You may choose to compare it to another trusted source like a database from [The Getty Research Institute](https://www.getty.edu/research/tools/).
     - The data collected is not completed. There are missing fields. Depending on where the missing field is, you may choose to code it as `0` for the ease of analysis. For example, the column `Dynasty` only contain 1 meaningful entry within this sample data set, as such, you may choose to not run any analysis that may rely on this column and choose to drop it. The column `Accession Year` only has 1 NA and you may choose to drop that row if this becomes a useful variable for your analysis.
     - While the `Rights and Reproduction` contains a lot of NA and inappropriate responses (e.g. "Ceramics"), for the most part, for the items labeled as `YES` in the column `Is Public Domain` the corresponding column in `Rights and Reproduction` does not record a copyright holder. You may assume that the NA can stand in for the object being in the public domain.
     - Taking only `Female` as a valid gender response, everything else will be converted to a `0` for ease of analysis. You may assume `|` as equivalent to a NA or an empty field rather than an alternative gender. Hence in this analysis, the proportion will only record female artists' objects against the rest of the collected items. You may not be able to necessarily answer the larger question of all non-cisgender men against the total in this case.
-</Secret>
+:::
 
 ## Level of Impact III: Social, Political, and Economic Impacts of Projects or Research
 
@@ -891,36 +889,36 @@ As we have discussed thus far, data are not neutral or objective. They are guide
 
 Descriptive analysis helps us summarize a data set.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 ## Challenge: Analysis
 
 1. As we consider the types of analysis that we choose to apply onto our data set, what are we representing and leaving out?
 
-<Secret>
+:::secret
 You may choose to leave out data that are perceived to be outliers, especially if they differ too much from the "normal" curve. You may end up representing only those who fall within the "normal" curve which may not actually be an equitable representation. This would require considering ethical impact two: the ramifications of (re)producing categories.
-</Secret>
+:::
 
 2. How do we guide our decisions of interpretation with our choices of analyses?
 
-<Secret>
+:::secret
 The interpretation of the results should align itself with the type of analyses that you ran. In addition, it should be guided in some capacity by previous work in this area to inform your understanding and the ethical implications you have evaluated.
-</Secret>
+:::
 
 3. Are we comfortable with the intended use of our research? Are we comfortable with the unintended use of our research? What are potential misuses of our outputs?
 
-<Secret>
+:::secret
 Potential misuse we should concern ourselves with is the weaponization of marginalized participants' words and thoughts. We need to be wary of the unintended use of our research because we can't consider every circumstance that the analysis can be misused or misquoted. When working on an oral history project, we may set up some layers of boundaries to prevent too easy of an access to audio files as an attempt at negotiating access and protection of my narrators. Walsh in [The Challenges and Possibilities of Social Media Data: New Directions in Literary Studies and the Digital Humanities](https://dhdebates.gc.cuny.edu/read/debates-in-the-digital-humanities-2023/section/a57b98ab-0f10-45d0-b205-3e563aab7ea8#ch18) gives us an example of the Inter-University Consortium for Political and Social Research (ICPSR) that requires different "levels of restriction and access" to social media data.
-</Secret>
+:::
 
 4. What can happen when we are trying to just go for the next big thing (tool/methods/algorithms) or just ran out of time and/or budget for our project?
 
-<Secret> 
+:::secret
 In chasing the next big thing, the original intentions for beginning the project might be lost. When working with communities, our priority is that our work is meaningful to them and the excitement of exploring a new tool can sometimes distract us from this intention. Running out of time and/or budget can also mean that the project may end abruptly, and relationships built could be strained in a haphazard wrap up. This brings us back to making sure that before the project begins to spend a significant amount of time on project planning to reduce the chances of this happening.
-</Secret>
+:::
 
 ### Keywords
 
@@ -1036,34 +1034,34 @@ As we transform our results into visuals, we are also trying to tell a narrative
 
 1. What are we assuming when we choose to visually represent data in particular ways?
 
-<Secret>
+:::secret
 An underlying assumption we make is that the conventions of top-down, left-right are universal or at least universal enough for most folx to understand. This neglects potential right-to-left readers. Certain conventions that use color as a way to represent good and bad (e.g. green as good and red as bad) also assume that this is an effective differentiation that excludes those who have visual impairments and can decipher the data in a similar fashion.
-</Secret>
+:::
 
 2. As you may have realized, many of the visualization examples work with quantitative data, as such, how do you think we can visualize qualitative data? (e.g. Word Clouds, Heat Map)
 
-<Secret>
+:::secret
 Exploring [Voyant-Tools](https://voyant-tools.org/) can be a good place to start to see how visualization of qualitative data can look like.
-</Secret>
+:::
 
 3. How can data visualization mislead us? (for e.g. Nathan Yau discusses [how data visualization can lie](https://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/))
 
-<Secret>
+:::secret
 Exaggerated differences through the choice of scales on the x and y-axis can mislead a casual viewer to think that the data is representing a larger difference than it actually is reporting.
-</Secret>
+:::
 
 4. How can data visualization help us tell a story? (for e.g. Data Feminism's [On rational, Scientific, Objective Viewpoints from Mythical, Imaginary, Impossible Standpoints](https://data-feminism.mitpress.mit.edu/pub/5evfe9yd/release/3?readingCollection=0cd867ef))
 
-<Secret>
+:::secret
 Data visualization can help us convey dense information quickly. The casual viewer can glance at the visualization and understand what we are trying to communicate with our data. Data visualization also can be affective device, like the DuBois' examples which helps to tell the urgency of the narrative/story.
-</Secret>
+:::
 
 5. Can you try to plot the `moSmall.csv` dataset based on the `Artist Gender` variable? What would you have to do before you can plot this graph? How might you explain what your visualization represents?
 
-<Secret>
+:::secret
 The difficulty of representing this dataset is how at first glance there's an assumption that gender is binary given that only 2 bars are representing the dataset. Even though the other bar is labeled `Unknown` to suggest that this is not a comprehensive breakdown, it makes one wonder how effective it is.
 ![Plot of media objects in public domain by gender of artist](/images/data-ethics/genderPD.png)
-</Secret>
+:::
 
 <!--# Data Literacy and Ethics
 
@@ -1086,63 +1084,63 @@ For a set of great questions to help you think through your data exploration and
 
 __1. Structured data can be: (Select all that apply)__
 
-<Quiz>
+:::quiz
 - a XML list.*
 - a Excel table.*
 - an email chain.
 - a collection of text files.
-</Quiz>
+:::
 
-Revisit Lesson <Link page='20' workshop='data-literacies'>Stages of Data: Processed/Transformed</Link> to learn more.
+Revisit Lesson :link[Stages of Data: Processed/Transformed]{workshop="data-literacies" page="20"} to learn more.
 
 __2. Descriptive analysis help us summarize a data set. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
-Revisit lesson <Link page='29' workshop='data-literacies'>Stages of Data: Analyzed</Link> to learn more.
+Revisit lesson :link[Stages of Data: Analyzed]{workshop="data-literacies" page="29"} to learn more.
 
 __3. Measurements are accurate when: (Select one of the following)__
 
-<Quiz>
+:::quiz
 - they represent the correct values.*
 - observations do not contradict each other.
 - when they are unique responses (e.g. no duplication).
 - when the same unit of measure is used in all relevant measurements.
-</Quiz>
+:::
 
-Revisit Lesson <Link page='25' workshop='data-literacies'>Stages of Data: Cleaned</Link> to learn more.
+Revisit Lesson :link[Stages of Data: Cleaned]{workshop="data-literacies" page="25"} to learn more.
 
 __4. Research data can be defined as: (Select all that apply)__
 
-<Quiz>
+:::quiz
 - materials or information necessary to come to my conclusion.*
 - the recorded factual material commonly accepted in the scientific community as necessary to validate research findings.*
 - method of collection and analysis.
 - objective and error-free.
-</Quiz>
+:::
 
-Review lesson <Link page='2' workshop='data-literacies'>Data is Foundational</Link> to learn more.
+Review lesson :link[Data is Foundational]{workshop="data-literacies" page="2"} to learn more.
 
 __5. The stages of data is a single iteration process, i.e. there is a fixed stage progression from data collection to visualization. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - False*
 - True
-</Quiz>
+:::
 
-Revisit Lesson <Link page='15' workshop='data-literacies'>Stages of Data: Raw</Link> to learn more.
+Revisit Lesson :link[Stages of Data: Raw]{workshop="data-literacies" page="15"} to learn more.
 
 __6. Tiny data format only allows one value per cell. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
-Revisit Lesson <Link page='21' workshop='data-literacies'>Data Structures: Tidy Data</Link> to learn more.
+Revisit Lesson :link[Data Structures: Tidy Data]{workshop="data-literacies" page="21"} to learn more.
 
 # Theory to Practice
 
@@ -1163,61 +1161,61 @@ TODO: fix links to pages of lessons
 
 __1. Structured data can be: (Select all that apply)__
 
-<Quiz>
+:::quiz
 - a XML list.*
 - a Excel table.*
 - an email chain.
 - a collection of text files.
-</Quiz>
+:::
 
 Revisit lesson [Stages of Data: Processed/Transformed](/workshops/data-ethics/?page=5) to learn more.
 
 __2. Descriptive analysis helps us summarize a data set. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 Revisit lesson [More Stages of Data: Analyzed](/workshops/data-ethics/?page=8) to learn more.
 
 __3. Measurements are accurate when: (Select one of the following)__
 
-<Quiz>
+:::quiz
 - they represent the correct values.*
 - observations do not contradict each other.
 - when they are unique responses (e.g. no duplication).
 - when the same unit of measure is used in all relevant measurements.
-</Quiz>
+:::
 
 Revisit lesson [More Stages of Data: Cleaned](/workshops/data-ethics/?page=7) to learn more.
 
 __4. Research data can be defined as: (Select all that apply)__
 
-<Quiz>
+:::quiz
 - materials or information necessary to come to my conclusion.*
 - the recorded factual material commonly accepted in the scientific community as necessary to validate research findings.*
 - method of collection and analysis.
 - objective and error-free.
-</Quiz>
+:::
 
 Revisit lesson [Data is Foundational](/workshops/data-ethics/?page=2) to learn more.
 
 __5. The stages of data is a single iteration process, i.e. there is a fixed stage progression from data collection to visualization. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - False*
 - True
-</Quiz>
+:::
 
 Revisit lesson [Stages of Data: Raw](/workshops/data-ethics/?page=4) to learn more.
 
 __6. Tiny data format only allows one value per cell. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 Revisit lesson [Side Note on Data Structures: Tidy Data](/workshops/data-ethics/?page=6) to learn more. */}
 

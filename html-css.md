@@ -70,8 +70,10 @@ resources:
 
 Websites seem like these magical things that appear when we open our web browser (i.e. Chrome, Firefox, Safari). We know that websites are hypertext, meaning that we can click between navigate through information via links, traveling from page to page until we find what we need. Our journey through hypertext is unique to our experience. Information retrieval systems such as encyclopedia indexes and library cataloging systems pre-date digital navigation tools such as links, but follow the same logic. With **hypertext**, we can explore linked information in non-linear paths. What may be less obvious about websites is that, fundamentally **websites are plain text documents**, usually written in HTML or another web-based markup language, such as XML or XHTML.
   
-<Info>**Fun fact**: More than 90% of all websites (whose markup language we know) use HTML
-[(w3techs.com)](https://w3techs.com/technologies/details/ml-html/all/all).</Info>
+:::info
+**Fun fact**: More than 90% of all websites (whose markup language we know) use HTML
+[(w3techs.com)](https://w3techs.com/technologies/details/ml-html/all/all).
+:::
 
 ### Hypertext Markup Language (HTML)
 
@@ -87,7 +89,9 @@ For a practical example of this difference, we can think about tables, asking wh
 
 Fundamentally, then, a script or program is *a set of instructions given to the computer*. It follows the same logic as explored in the command line workshop. A document in a markup language determines how information is presented to a user.
 
-<Info>**Markup vs Markdown:** [Markdown](https://www.markdownguide.org/) and HTML are both types of markup languages; Markdown is a play on words. [Markup languages](https://instruct.uwo.ca/english/706a/site/site/MLGen.html) help format content.</Info>
+:::info
+**Markup vs Markdown:** [Markdown](https://www.markdownguide.org/) and HTML are both types of markup languages; Markdown is a play on words. [Markup languages](https://instruct.uwo.ca/english/706a/site/site/MLGen.html) help format content.
+:::
 
 ### Cascading Style Sheets (CSS)
 
@@ -99,7 +103,7 @@ HTML tells the browser what the different parts of a document _are_. CSS tells t
 
 Together, **HTML** and **CSS** can be used to write and style a website using a text editor (such as Visual Studio Code) directly from your computer. No internet access needed.
 
-However, internet access is necessary if you plan on making your website available to the public. At the end of this workshop, we will briefly discuss <Link workshop='html-css' page='49'>`how to get your website from your local computer onto the internet`</Link>.
+However, internet access is necessary if you plan on making your website available to the public. At the end of this workshop, we will briefly discuss :link[`how to get your website from your local computer onto the internet`]{workshop="html-css" page="49"}.
 
 In our activities during this workshop we will focus on building locally-hosted websites. These are websites that you can open on your web browser, however, they only exist on your own device and are only accessible to you. Locally-hosted websites are not yet on the internet.
 
@@ -107,10 +111,10 @@ In our activities during this workshop we will focus on building locally-hosted 
 
 **True or False**: The primary difference between markup languages and programming languages is that markup languages are used to determine the format, appearance, and purpose of content, whereas programming languages are used to transform data.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 ### Keywords
 
@@ -178,9 +182,10 @@ The **body section** contains the content of the page, including paragraphs, ima
 
 ## Activity
 
-<Info> __Tip__:
+:::info
+__Tip__:
 If you have not already installed Visual Studio Code, you can [follow our installation guide here](https://github.com/DHRI-Curriculum/install/blob/v2.0/guides/visual-studio-code.md). You can also click the following links for corresponding operation system specific installation instructions: [macOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows), [Linux](https://code.visualstudio.com/docs/setup/linux). You may also want to enable the [Live Server plugin](https://www.geeksforgeeks.org/how-to-enable-live-server-on-visual-studio-code/).
-</Info>
+:::
 
 In this activity we aim to complete the following tasks (instructions follow):
 
@@ -272,9 +277,10 @@ $ code index.html
 
     - For both operating systems, select **Firefox** or **Google Chrome** from the app list that appears.
 
-<Info>__Tip__:
-You can also use the **Live Server plugin** to open `index.html` from within VS Code. Right-click `index.html` and left-click `"Open With Live Server"`. The advantage to this is that changes will automatically refresh if you keep the file open. 
-</Info>
+:::info
+__Tip__:
+You can also use the **Live Server plugin** to open `index.html` from within VS Code. Right-click `index.html` and left-click `"Open With Live Server"`. The advantage to this is that changes will automatically refresh if you keep the file open.
+:::
 
 ### What Happens?
 
@@ -296,10 +302,10 @@ Viewing the page, no content should render except for `... ...`, because there i
 
 Which one of these two HTML commands is also known as the "root element"?
 
-<Quiz>
+:::quiz
 - `<!DOCTYPE html>`
 - `<html lang="en">`*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -355,10 +361,10 @@ If you look back at the basic template in your `index.html` file, you'll see tha
 
 Which one of the following statements is correct:
 
-<Quiz>
+:::quiz
 - Elements have opening and closing tags.*
 - Tags have opening and closing elements.
-</Quiz>
+:::
 
 ### Keywords
 
@@ -449,9 +455,10 @@ Once you have updated your ``index.hmtl`` file, re-save it. Open it in your brow
 
 What do you notice about how the information is organized in the webpage? In other words, where are the title, heading, and paragraph text?
 
-<Info>__Tip__:
+:::info
+__Tip__:
 Although you don't need to break lines between opening and closing tags, note the conventions in the sample code of the boiler story, which follow industry standards.
-</Info>
+:::
 
 ### What Should You See?
 
@@ -463,10 +470,10 @@ The heading should appear at the top of the page, followed by the paragraph text
 
 If I wanted to indicate that "About" is a subheading in my page, which element should I use?
 
-<Quiz>
+:::quiz
 - `<head>`
 - `<h2>`*
-</Quiz>
+:::
 
 # Links
 
@@ -517,9 +524,10 @@ On your webpage it will appear as:
 
 This pathway is directing your browser to look online for this text document at the URL address provided.
 
-<Info>__Tip:__
-HTTP stands for 'hypertext transfer protocol', and is also a foundational component of the internet. HTTPS stands for 'hypertext transfer protocol secure', which encrypts the data transferred through the protocol. 
-</Info>
+:::info
+__Tip:__
+HTTP stands for 'hypertext transfer protocol', and is also a foundational component of the internet. HTTPS stands for 'hypertext transfer protocol secure', which encrypts the data transferred through the protocol.
+:::
 
 ## More on Links
 
@@ -586,10 +594,10 @@ Congratulations, you have just created hyperlinks. This is a foundational compon
 
 Which one of the following options is a relative link?
 
-<Quiz>
+:::quiz
 - `<a href="https://www.nytimes.com/">The New York Times</a>`
 - `<a href="digitalProject.html">Digital Project</a>`*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -639,8 +647,10 @@ Download and save an image from the web, download and save this image of a boile
 
 ![Image of a boiler](/images/html-css/boiler.jpg)
 
-<Info>__Tip:__
-Give the file a simple name. Also, the name **cannot** have spaces. A good practice is to use either dashes or underscores where there would otherwise be spaces. For example: `this-is-an-image.jpg` or `this_is_an_image.jpg`.</Info>
+:::info
+__Tip:__
+Give the file a simple name. Also, the name **cannot** have spaces. A good practice is to use either dashes or underscores where there would otherwise be spaces. For example: `this-is-an-image.jpg` or `this_is_an_image.jpg`.
+:::
 
 ```html
 <img alt="This is an image" src="image.jpeg" />
@@ -685,18 +695,18 @@ The updated verison should display as follows.
 
 Does including "alt text" in websites improve their accessibility?
 
-<Quiz>
+:::quiz
 - Yes*
 - No
-</Quiz>
+:::
 
 What unit does the browser use for setting image size?
 
-<Quiz>
+:::quiz
 - Inches
 - Centimeters
 - Pixels*
-</Quiz>
+:::
 
 # Conventions
 
@@ -738,9 +748,10 @@ This is the same code, with nesting:
 ```
 
 
-<Info>__Tip:__
+:::info
+__Tip:__
 While VSCode usually auto-indents and auto-completes tags, it’s not foolproof. Always double check your code for errors.
-</Info>
+:::
 
 # Major Challenge: Create a Small Website
 
@@ -854,10 +865,10 @@ Examples of what CSS can help you determine include:
 
 Is CSS a __markup language__ or a __programming language__?
 
-<Quiz>
+:::quiz
 - Markup Language*
 - Programming Language
-</Quiz>
+:::
 
 # Integrating CSS and HTML
 
@@ -1051,10 +1062,10 @@ Is the following code-snippet an example of **inline styling** or **internal sty
     </body>
 </html>
 ```
-<Quiz>
+:::quiz
 - Inline Styling
 - Internal Styling*
-</Quiz>
+:::
 
 # Rule Sets
 
@@ -1093,7 +1104,7 @@ Note the different syntax being used to select items for for styling with rule s
 
 ## Challenge
 
-Copy and paste the CSS rules from <Link workshop='html-css' page='36'>`the previous section`</Link> into your `style.css` file and re-save the file. Then open or refresh your `index.html` file in your browser and see what happens.  
+Copy and paste the CSS rules from :link[`the previous section`]{workshop="html-css" page="36"} into your `style.css` file and re-save the file. Then open or refresh your `index.html` file in your browser and see what happens.  
   
 ```css
 h1 {
@@ -1129,10 +1140,10 @@ What are some other rules you might set for different HTML elements? Do a quick 
 
 How do we associate a CSS file with an HTML page?
 
-<Quiz>
+:::quiz
 - By including a link to the CSS file in the HTML page's `<head>` element.*
 - By putting the CSS file in the same folder as the HTML page.
-</Quiz>
+:::
 
 ### Keywords
 
@@ -1264,19 +1275,20 @@ Note that it's possible to assign more than one class to an element—just leave
 </ul>
 ```
 
-<Info>__Tip__
+:::info
+__Tip__
 
-If you run into an error, be sure to _check your punctuation_. Oftentimes the problem is a typo, or overlooking a semi-colon, a period, etc. See the<Link workshop='html-css' page='47'>`Troubleshooting`</Link> section for more information on common issues.
-</Info>
+If you run into an error, be sure to _check your punctuation_. Oftentimes the problem is a typo, or overlooking a semi-colon, a period, etc. See the:link[`Troubleshooting`]{workshop="html-css" page="47"} section for more information on common issues.
+:::
 
 ## Evaluation
 
 **True or False:** Classes are used to create categories of related elements, IDs are used create unique identifiers.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 ### Keywords
 
@@ -1379,7 +1391,7 @@ font-family: 'Lato', sans-serif;
 
 # Major Challenge: Styling Your Personal Website Using CSS
 
-Using the CSS basics we've just reviewed, and the list of properties found on the <Link workshop='html-css' page='45'>`Properties page`</Link> and online, give your website some styling.
+Using the CSS basics we've just reviewed, and the list of properties found on the :link[`Properties page`]{workshop="html-css" page="45"} and online, give your website some styling.
   
 I encourage you to use an external stylesheet with classes and IDs to style particular aspects of your site more specifically, but feel free to also play around with inline and internal styling if desired.
 
@@ -1485,21 +1497,21 @@ We may also want to use our newfound HTML and CSS skills to **more carefully exa
 
 __1. True or False: Classes are used to create categories of related elements, IDs are used create unique identifiers. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='40'>`Classes and IDs`</Link> to learn more.
+Revisit lesson :link[`Classes and IDs`]{workshop="html-css" page="40"} to learn more.
 
 __2. Which one of the following options is a relative link? (Select one of the following)__
 
-<Quiz>
+:::quiz
 - `<a href="digitalProject.html">Digital Project</a>`*
 - `<a href="https://www.nytimes.com/">The New York Times</a>`
-</Quiz>
+:::
 
-Revisit lesson<Link workshop='html-css' page='13'>`Links`</Link> to learn more.
+Revisit lesson:link[`Links`]{workshop="html-css" page="13"} to learn more.
 
 __3. Is the following code-snippet an example of inline styling or internal styling?__
 
@@ -1528,75 +1540,75 @@ __3. Is the following code-snippet an example of inline styling or internal styl
 </html>
 ```
 
-<Quiz>
+:::quiz
 - `Inline styling`
 - `Internal styling`*
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='29'>`Integrating CSS and HTML`</Link> to learn more.
+Revisit lesson :link[`Integrating CSS and HTML`]{workshop="html-css" page="29"} to learn more.
 
 __4. If I wanted to indicate that "About" is a subheading in my page, which element should I use? (Select one of the following)__
 
-<Quiz>
+:::quiz
 - `<h2>`*
 - `<head>`
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='10'>`Paragraphs and Headings`</Link> to learn more.
+Revisit lesson :link[`Paragraphs and Headings`]{workshop="html-css" page="10"} to learn more.
 
 __5. Which one of these two HTML commands is also known as the “root element”? (Select one of the following)__
 
-<Quiz>
+:::quiz
 - `<html lang="en">`
 - `<!DOCTYPE html>`*
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='5'>`Basic Template for HTML`</Link> to learn more.
+Revisit lesson :link[`Basic Template for HTML`]{workshop="html-css" page="5"} to learn more.
 
 __6. How do we associate a CSS file with an HTML page? (Select one of the following)__
 
-<Quiz>
+:::quiz
 - By including a link to the CSS file in the HTML page’s <head> element.*
 - By putting the CSS file in the same folder as the HTML page.
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='36'>`Rule Sets`</Link> to learn more.
+Revisit lesson :link[`Rule Sets`]{workshop="html-css" page="36"} to learn more.
 
 __7. Which one of the following statements is correct: (Select one of the following)__
 
-<Quiz>
+:::quiz
 - Elements have opening and closing tags.*
 - Tags have opening and closing elements.
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='8'>`Tags and Elements`</Link> to learn more.
+Revisit lesson :link[`Tags and Elements`]{workshop="html-css" page="8"} to learn more.
 
 __8. True or False: Does including “alt text” in websites improve their accessibility? (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='19'>`Images`</Link> to learn more.
+Revisit lesson :link[`Images`]{workshop="html-css" page="19"} to learn more.
 
 __9. Is CSS a markup language or a programming language? (Select one of the following)__
 
-<Quiz>
+:::quiz
 - Markup Language*
 - Programming Language
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='27'>`CSS Basics`</Link> to learn more.
+Revisit lesson :link[`CSS Basics`]{workshop="html-css" page="27"} to learn more.
 
 __10. True or False: The primary difference between markup languages and programming languages is that markup languages are used to determine the format, appearance, and purpose of content, whereas programming languages are used to transform data. (Select one of the following)__
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
-Revisit lesson <Link workshop='html-css' page='2'>`Getting Started with HTML and CSS`</Link> to learn more.
+Revisit lesson :link[`Getting Started with HTML and CSS`]{workshop="html-css" page="2"} to learn more.
 
 ## Suggested Further Readings
 

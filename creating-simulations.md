@@ -47,8 +47,9 @@ A simulation is a model of a real-world system or process. Simulations are used 
 
 In this workshop, you will learn how to create very basic simulations using Jupyter notebooks and the Python programming language. The workshop will employ the logic of Python's "object-oriented" methodology to create two small simulations:  a dice rolling simulation and a Critter simulation that tracks the population growth of an imaginary species of critter based on a variety of factors. 
 
-<Info>[Object-oriented programming](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior.) is a programming paradigm that uses objects and their interactions to design applications and computer programs. It is based on the concept of objects, which can contain data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods).
-</Info>
+:::info
+[Object-oriented programming](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior.) is a programming paradigm that uses objects and their interactions to design applications and computer programs. It is based on the concept of objects, which can contain data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods).
+:::
 
 In general, these exercises are meant to expose you to some of the higher-level concepts integral to Python programming. So, without further ado, let's begin!
 
@@ -80,7 +81,7 @@ As you can see, we will be covering quite a lot of new concepts and skills. It i
 
 A full source file of the program we will be writing in this section can be imported here: 
 
-<Jupyter IPYNB='https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/creating-simulations/DiceSim_full.ipynb' />
+::jupyter{ipynb="https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/creating-simulations/DiceSim_full.ipynb"}
 
 You are welcome to use the source file as a reference, but we encourage you to try to write the code yourself first. If you get stuck, you can always refer to the source file for help. 
 
@@ -93,8 +94,9 @@ import statistics as stats
 
 This import will allow us to use Python's `random` module. Remember to press <kbd>shift</kbd> + <kbd>enter</kbd> to run the cell.
 
-<Info>If you have used other programming languages you might be familiar with the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp). For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default.
-</Info>
+:::info
+If you have used other programming languages you might be familiar with the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp). For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default.
+:::
 
 Because we will be referencing the statistics library a few times in our code, we can `import` it `as stats`, just to shorten what we have to type every time.
 
@@ -154,7 +156,7 @@ If the user rolls a six, tell them that they're a winner and get a prize. If the
 
 
 
-<Secret>
+:::secret
 Create a new variable that stores a roll. Then, use an `if` statement to check if the roll is equal to 6, and display the appropriate message using an `f-string`:
 
 ```python
@@ -164,18 +166,18 @@ if r == 6:
 else:
     print(f"You rolled a {r}, not nearly as cool as a 6...")
 ```
-</Secret>
+:::
 
 ## Evaluation
 
 How are methods called?
 
-<Quiz>
+:::quiz
 - `method_name()`
 - `method_name.method()`
 - `object.method_name()`*
 - `object.method_name.method()`
-</Quiz>
+:::
 
 # Part 1 Cont'd - The Dice Simulator
 
@@ -266,8 +268,7 @@ And that's it! If you run the final cell, you should see a report of the results
 
 What are some differences and similarities between a function and a method?
 
-<Secret>
-    
+:::secret
 __Definition:__
 _Function_: A function is a self-contained block of code that performs a specific task and can be defined independently of any class or object. It takes input arguments, processes them, and returns a result.
 _Method_: A method is a function that is associated with an object or class. It is called on an object and can access the data within that object.
@@ -279,10 +280,9 @@ _Method_: Methods are associated with objects or classes and are called on insta
 __Syntax:__
 _Function_: Functions are defined using the `def` keyword and can be called using the function name.
 _Method_: Methods also use the def keyword but are defined within a class and are accessed using dot notation (`object.method()` or `class.method()`).
+:::
 
-</Secret>
-
-<Keywords>
+:::keywords
 - class
 Classes allow us to create new types of software objects, with their own attributes and functionalities.
 
@@ -291,7 +291,7 @@ Methods are functions that belong to a class. They are called using __.__ (dot) 
 
 - self
 The keyword self represents an instance of a class and binds its attributes with the given arguments.
-</Keywords>
+:::
 
 # Part 2 - The Critter Simulator
 
@@ -316,7 +316,7 @@ __Concepts to focus on:__
 
 You can import the full source file for this section here: 
 
-<Jupyter IPYNB='https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/creating-simulations/CritterSim_full.ipynb' />
+::jupyter{ipynb="https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/creating-simulations/CritterSim_full.ipynb"}
 
 Again, while you can use the source file as a reference, we encourage you to try to write the code yourself first. If you get stuck, you can always refer to the source file for help.
 
@@ -415,9 +415,9 @@ def popSim():
 
 Try to read through it line by line and describe what it does. Can you explain it? After giving it a try, you can reveal the description below.
 
-<Secret>
+:::secret
 Here we have created a new function `popSim()`. This function will take our `startPopulation` variable defined above and populate our `critterList` with that many objects. To give our simulation an added element of randomness, each starting critter will be created with a random age between 2 and 45. Lastly, we print the length of our `critterList` to make sure it is working properly.
-</Secret>
+:::
 
 To run the function, create a new cell and type the following:
 
@@ -429,13 +429,13 @@ popSim()
 
 How might we see the age of each critter in our list? Remember, we defined an `age` attribute in our initializer.
 
-<Secret>
+:::secret
 ```python
 # print out the age of each critter
 for critter in critterList:
     print(critter.age)
 ```
-</Secret>
+:::
 
 ## Creating Our Class Methods
 
@@ -500,7 +500,7 @@ This will show you if any new critters were born in the first (and currently onl
 
 Occasionally, new critters may not be born during a year. To analyze this, once the reproduction cycle has finished, print out a short message to the terminal saying "New critters have been born!", if indeed new critters were born that year.
 
-<Secret>
+:::secret
 At the start of the reproduce method, create a new local variable to record how many critters we start out with. Then, outside of the `for` loop, compare that initial value with the new quantity or length (`len()`) of the critter list. So, your modified code should look something like this:
 
 ```python
@@ -521,8 +521,7 @@ At the start of the reproduce method, create a new local variable to record how 
 ```
 
 Note that if you printed the message inside the `for` loop (instead of outside of its scope) you would display messages _every single_ time a new critter is created (making your readout rather messy), rather than after _all_ new critters are created.
-
-</Secret>
+:::
 
 ## The runYear() Function
 
@@ -612,13 +611,13 @@ If you run the simulation now, you should see that we now have a more interestin
 
 What is the difference between a global and a local variable?
 
-<Secret>
+:::secret
 __Global variables__ are variables that are defined outside of a function or class. They can be accessed _anywhere_ in your program. 
 
 __Local variables__, on the other hand, are variables that are defined within a function or class/method. They are only accessible _within_ the scope of that function or class.
-</Secret>
+:::
 
-<Keywords>
+:::keywords
 - len()
 The length function allows us to catch the number of elements in a given list.
 
@@ -630,7 +629,7 @@ Removes a particular range or slice from a list.
 
 - while
 While statements will loop through a set of instructions until certain conditions are met.
-</Keywords>
+:::
 
 # Theory to Practice
 

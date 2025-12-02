@@ -139,23 +139,24 @@ There are several components you can incorporate into your lessons, including:
 
 1. The Python REPL: You can embed the Python REPL into your lessons by using the following tag:
 
-<PythonREPL/>
+::pythonrepl
 
 2. A download button: If you have files you'd like the participant to download, you can add a download button to your lessons with the appropriate files by using the following syntax:
 
-<Download files='your_file1.csv, your_file2.md'>
+::download{files="your_file1.csv, your_file2.md"}
 
 Here, `your_file1` and `your_file2` are the two files to download (you can add as many as you'd like, just separate them with commas). The break tag at the end is just to add some space after the button. NOTE: You must include copies of the files indicated in the `uploads` folder.
 
-3. An info box: Use <Info> to highlight interesting additional information.
+3. An info box: Use :::info
+to highlight interesting additional information.
 
 <Info>
-Here's an interesting aside! 
-</Info>
+Here's an interesting aside!
+:::
 
 4. A way to link internally to other workshops.
 
-<Link workshop='python' page='5'> some text </Link>
+:link[some text]{workshop="python" page="5"}
 
 This is necessary when linking to another workshop page. 'workshop' is the workshop file name, and the 'page' can be found in the URL query string, for instance:   `?user=dhri-curriculum&repo=workshops&file=command-line&**page=15**&instUser=dhri-curriculum&instRepo=dhrift-site-template` 
 
@@ -167,23 +168,23 @@ This is an evaluation, which you can utilize in the form of a quiz. For the synt
 
 What are the characteristics of the REPL? Select all that apply.
 
-<Quiz>
+:::quiz
 - The REPL has a prompt that begins with `$`.
 - The REPL has a prompt that begins with `>>>`.*
 - The REPL and the terminal are the same thing.
 - The REPL can be used to evaluate mathematical expressions like `2 + 2`.*
-</Quiz>
+:::
 
 <!--- For quizzes, each list item in the <Quiz> tags is a potential answer. To indicate correct answers, place an asterisk at the end. --->
 
 <!-- Each section end should have a collection of key words related to the lesson, like so: -->
-<Keywords>
+:::keywords
 - keyword 1
 definition 1
 
 - keyword 2
 definition 2
-</Keywords>
+:::
 
 <!--- Keywords are a good way to reinforce the key concepts of the lesson. Definitions cannot be multiple paragraphs. --->
 
@@ -195,9 +196,9 @@ Where are DHRIFT workshops stored?
 
 ### Solution
 
-<Secret>
+:::secret
 In a GitHub repository.
-</Secret>
+:::
 
 In this example, the (optional heading) Challenge section poses a question or problem, and the <Secret> tag creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
 

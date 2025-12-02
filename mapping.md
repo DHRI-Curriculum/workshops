@@ -93,12 +93,12 @@ TODO: Have a section on vector data--there is a quiz about it but no explanation
 
 Vector data consists of? (check all that apply)
 
-<Quiz>
+:::quiz
 - points*
 - pixels
 - lines*
 - polygons*
-</Quiz>
+:::
 
 ### Keywords
 Do you remember the glossary terms from this section?
@@ -215,10 +215,10 @@ Now that we have the concepts for what a spatial join means, we can move on to p
 
 A spatial join by attribute is used when you want to join which combination of layers:
 
-<Quiz>
+:::quiz
 - spatial data to non-spatial data*
 - spatial data to spatial data
-</Quiz>
+:::
 
 ### Keywords
 
@@ -310,21 +310,21 @@ Mapping softwares typically offer two different types of spatial joins—join by
 
 The *Data Source Manager* is used to: (select one)
 
-<Quiz>
+:::quiz
 - import files into QGIS*
 - organize data files
 - stack map layers
 - export map layers
-</Quiz>
+:::
 
 <br />
 What's needed to perform a *spatial join by attribute*? (check all that apply)
 
-<Quiz>
+:::quiz
 - There must be a column in both datasets that matches and will serve as a key to link the two datasets.*
 - The columns that serve as a key must be the same data type.*
 - The text file must have precise location data, such as an address or latitude and longitude.
-</Quiz>
+:::
 
 ### Keywords
 - [Spatial join by attribute](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/joinbyattribute.md)
@@ -361,11 +361,11 @@ The last thing we have to do is **compress** the folder. ArcGIS Online will only
 
 Why do we create a folder for the exported shapefile? (check all that apply)
 
-<Quiz>
+:::quiz
 - The export won't work without it.
 - Shapefiles are actually 4-6 files, so it's a way to keep them organized and prevent accidentally separating them.*
 - ArcGIS will only import compressed shapefiles, so we need to create a folder to compress or zip the file.*
-</Quiz>
+:::
 
 # Importing Data to ArcGIS Online
 
@@ -479,7 +479,9 @@ To geocode the CSV file, the **Field Name** column (pulled from the CSV file) ne
 
 If they don't match, then click on the cell(s) to change it. Most likely, since the mapping software is pretty good at this stuff, they will all be automatically matched, so you won't have to change anything. Finally, click **Add Layer**.
 
-<Info>__Note__: ArcGIS will only geocode up to 100 entries. If you have more than 100, you can use the Census Geocoder which allows you to geocode up to 1000 entries.</Info>
+:::info
+__Note__: ArcGIS will only geocode up to 100 entries. If you have more than 100, you can use the Census Geocoder which allows you to geocode up to 1000 entries.
+:::
 
 ### Keywords
 
@@ -577,42 +579,42 @@ Congratulations! You've made an informative and interactive map with two layers 
 
 __1. A spatial join by attribute is used when you want to join which combination of layers: (Select one of the following)__
 
-<Quiz>
+:::quiz
 - spatial data to non-spatial data*
 - spatial data to spatial data
-</Quiz>
+:::
 
 Revisit lesson [Combining Data Through a Spatial Join](/workshops/mapping/?page=7) to learn more.
 
 __2. Why do we create a folder for the exported shapefile? (Select all that apply)__
 
-<Quiz>
+:::quiz
 - Shapefiles are actually 4-6 files, so it’s a way to keep them organized and prevent accidentally separating them.*
 - ArcGIS will only import compressed shapefiles, so we need to create a folder to compress or zip the file.*
 - The export won’t work without it.
-</Quiz>
+:::
 
 Revisit lesson [Exporting Data from QGIS](/workshops/mapping/?page=9) to learn more.
 
 __3. The Data Source Manager is used to: (Select one of the following)__
 
-<Quiz>
+:::quiz
 - import files into QGIS*
 - organize data files
 - stack map layers
 - export map layers
-</Quiz>
+:::
 
 Revisit lesson [Performing a Spatial Join](/workshops/mapping/?page=8) to learn more.
 
 __4. Vector data consists of? (Select all that apply)__
 
-<Quiz>
+:::quiz
 - points*
 - lines*
 - polygons*
 - pixels
-</Quiz>
+:::
 
 Revisit lesson [Introduction to Mapping](/workshops/mapping/?page=2) to learn more.
 

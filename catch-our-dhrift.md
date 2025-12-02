@@ -149,12 +149,12 @@ Quizzes can be fairly simple in format even if they are addressing complex ideas
 
 What front-end technology does DHRIFT use to build its user interfaces?
 
-<Quiz>
+:::quiz
 - React*
 - Angular
 - Vue
 - Ember
-</Quiz>
+:::
 
 To answer a multiple-choice question, simply click on the answer you think is correct and hit the Check My Answer button. If you choose the correct answer, you will be congratulated by a Correct! message. If you choose the incorrect answer, you will prompted to try again.
 
@@ -174,9 +174,9 @@ Where are DHRIFT workshops stored?
 
 ### Solution
 
-<Secret>
+:::secret
 In a GitHub repository.
-</Secret>
+:::
 
 To reveal the solution to the challenge, simply click on the Reveal button.
 
@@ -254,7 +254,7 @@ DHRIFT supports HTML and CSS code editors, which allow you to write and style we
 <!-- we should ask them to import the markdown file for the answers to the wizard-->
 To make things easier for participants, you can import files directly into the JupyterLite environment with the click of a button. Here is an example:
 
-<Jupyter IPYNB='https://raw.githubusercontent.com/DHRI-Curriculum/workshops/main/uploads/pandas/pandas_workshop_2024.ipynb' />
+::jupyter{ipynb="https://raw.githubusercontent.com/DHRI-Curriculum/workshops/main/uploads/pandas/pandas_workshop_2024.ipynb"}
 
 Clicking the button should import a .ipynb notebook file into Jupyter. You can see for yourself by opening the code editor and looking for the `pandas_workshop_2024` notebook in the file directory to the left.
 
@@ -264,13 +264,13 @@ Often, DHRIFT workshops will use specific terms or concepts that may be unfamili
 
 <!--Why is a glossary useful and important to a student / learner? For example, Most learning environments, like Jupyter Notebooks or R Studio don't come with explaner text... more importantly, the definitions are not shared across lessons. The advantage to DHRIFT is that it shares a vocabulary across lessons and helps learners, especially those who feel excluded or frustrated by the inaccessibility of technical terms, to build their vocabulary and to connect that vocabulary across workshops and lessons.-->
 
-<Keywords>
+:::keywords
 - DHRIFT
 DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology) is an open educational resource (OER) and publication platform for DH workshops. Designed by humanities scholars for humanities scholars, DHRIFT provides a minimal computing, accessibility-aware, and interactive environment for teaching fundamental DH concepts.
 
 - Markdown
 Each workshop is created using Markdown, a lightweight markup language that is easy to read and write. Markdown allows you to format text, add images, and create links without having to write HTML.
-</Keywords>
+:::
 
  To access the full glossary of key terms for DHRIFT workshops, you can click on the Glossary button in the header section of the site.
 
@@ -358,7 +358,9 @@ To begin using the wizard, please navigate to the following page:
 
 [DHRIFT wizard](https://app.dhrift.org/wizard/)
 
-<Info>To open the wizard on a new tab, hold the <kbd>control</kbd> / <kbd>command</kbd> key while clicking the link.</Info>
+:::info
+To open the wizard on a new tab, hold the <kbd>control</kbd> / <kbd>command</kbd> key while clicking the link.
+:::
 
 From there, we will fill out the form together.
 
@@ -558,19 +560,20 @@ In this example, `python` specifies the language of the code snippet, which help
 
 To create an info box with additional information or tips that stands out from the rest of your text, like the following...
 
-<Info>
+:::info
 This is an info box with additional information or tips for learners.
-</Info>
+:::
 
 ...you can use the following custom markdown syntax:
 
 ```markdown
-<Info>
+:::info
 This is an info box with additional information or tips for learners.
-</Info>
+:::
 ```
 
-In this example, the `<Info>` tag creates an info box with the enclosed text. This can be useful for highlighting important information, providing additional context, or offering tips and suggestions to learners.
+In this example, the `:::info
+` tag creates an info box with the enclosed text. This can be useful for highlighting important information, providing additional context, or offering tips and suggestions to learners.
 
 ## Incorporating Interactive Features
 
@@ -585,12 +588,12 @@ To create a quiz, you can use the following custom markdown syntax:
 
 What front-end technology does DHRIFT use to build its user interfaces?
 
-<Quiz>
+:::quiz
 - React*
 - Angular
 - Vue
 - Ember
-</Quiz>
+:::
 ```
 
 In this example, the (optional heading) `Evaluation` section introduces a multiple-choice quiz question, and the `<Quiz>` tag creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
@@ -606,9 +609,9 @@ Where are DHRIFT workshops stored?
 
 ### Solution
 
-<Secret>
+:::secret
 In a GitHub repository.
-</Secret>
+:::
 ```
 
 In this example, the (optional heading) `Challenge` section poses a question or problem, and the `<Secret>` tag creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
@@ -618,12 +621,12 @@ In this example, the (optional heading) `Challenge` section poses a question or 
 DHRIFT workshops may also include a section of key terms to define and explain unfamiliar concepts. You can include a key terms section in your workshop using the following custom markdown syntax:
 
 ```markdown
-<Keywords>
+:::keywords
 - DHRIFT
 DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology) is an open educational resource (OER) and publication platform for DH workshops. Designed by humanities scholars for humanities scholars, DHRIFT provides a minimal computing, accessibility-aware, and interactive environment for teaching fundamental DH concepts.
 - Markdown
 Each workshop is created using Markdown, a lightweight markup language that is easy to read and write. Markdown allows you to format text, add images, and create links without having to write HTML.
-</Keywords>
+:::
 ```
 
 In this example, the `<Keywords>` tag creates a section of key terms, and each term is defined with a bullet point list. This section can help learners understand and remember important concepts from the workshop.
@@ -706,15 +709,15 @@ Now you have a local copy of the DHRIFT platform on your machine that you can mo
 
 <Info>
 If you are not familiar with Bash or the command line, you can also simply click the "Download ZIP" button on your forked repository page to download a ZIP file of the repository to your local machine. You can then extract the ZIP file and work with the repository in your file explorer.
-</Info>
+:::
 
 ## Modifying the Platform
 
 DHRIFT's platform is built with React, a JavaScript library for building user interfaces. This means that you can modify the appearance and content of your DHRIFT site by editing the React components that make up the site. You can also customize the site by adding new components, changing the HTML/CSS styling, and updating the markdown content.
 
-<Info>
+:::info
 If you are unfamiliar with React, we would recommend starting with the [React documentation](https://react.dev/learn) to get a sense of how React works and how you can use it to build user interfaces.
-</Info>
+:::
 
 If you take a look at the DHRIFT repository you forked, you will see a number of directories and files that make up the platform.
 

@@ -63,13 +63,14 @@ This workshop approaches text analysis similar to introductions to quantitative 
 
  The following button will load a JupyterLite notebook with necessary code for the workshop.
  
-<Jupyter IPYNB='https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/text-analysis/TextAnalysis.ipynb' />
+::jupyter{ipynb="https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/text-analysis/TextAnalysis.ipynb"}
 
 
 ## Corpora
 
-<Info>A corpus is, simply put, a text under study or a set of texts to study (the plural is corpora) [Source](https://libguides.tulane.edu/text_analysis/corpora)
-</Info>
+:::info
+A corpus is, simply put, a text under study or a set of texts to study (the plural is corpora) [Source](https://libguides.tulane.edu/text_analysis/corpora)
+:::
 
 That is, *any* collection of texts that are somehow related to each other. 
 
@@ -88,14 +89,15 @@ Languages are inherently social, fraught with the power dynamics inherent in any
 
 Many existing tools for textual analysis, including the NLTK package used in this workshop, support many other languages, due to amazing contributions from the Python Text Analysis community. The support, however, varies according to the desired task. Not all functions and tools will be available for all the supported languages. The good news is that the available tools keep growing in quantity and quality.
 
-<Info>**Fun fact**: What five languages most frequently used for web content as of 2023, by share of websites [(Source)](https://www.statista.com/statistics/262946/most-common-languages-on-the-internet/)?
+:::info
+**Fun fact**: What five languages most frequently used for web content as of 2023, by share of websites [(Source)](https://www.statista.com/statistics/262946/most-common-languages-on-the-internet/)?
 
 * English at 58.8%
 * Russian at 5.3%
 * Spanish at 4.3 %
 * French at 3.7%
 * German at 3.7%
-</Info>
+:::
 
 
 <p style="text-align: center;">Is this surprising?
@@ -106,13 +108,13 @@ Many existing tools for textual analysis, including the NLTK package used in thi
 
 Which of the following could be considered a corpus?
 
-<Quiz>
+:::quiz
 - My 2-year-old nephew’s random keyboard mashings
 - Your grocery list for this past week
 - All of our grocery lists from this past week *
 - Your grocery lists from 2013-2023 *
 - Random sample of tweets containing #blessed *
-</Quiz>
+:::
 
 ## Keywords
 
@@ -144,8 +146,9 @@ When in *Command Mode*
 
 Run code in cell with (<kbd>shift</kbd> + <kbd>enter</kbd>).
 
-<Info>If you don't see an error when you run the notebook—that is, if there is no output—you can move on to the next step. It is not rare in programming that when you do things right, the result will be nothing happening. This is what we like to call a _silent success_.
-</Info>
+:::info
+If you don't see an error when you run the notebook—that is, if there is no output—you can move on to the next step. It is not rare in programming that when you do things right, the result will be nothing happening. This is what we like to call a _silent success_.
+:::
 
 JupyterLite print outputs/returns without the `print` function, but it will only print one thing per cell (the last output/return). Some times we want to print more than one thing so we should specify `print`. 
 
@@ -232,23 +235,25 @@ Pop quiz:
 
 1. This may be the most famous <u> number of words </u>  in the Western canon. 
 
-<Secret>
+:::secret
 10! Get the elements from position 0 to position 10 (not included)
-</Secret>
+:::
 
 2. As far as we can tell, is this text structured...?
 
 *Recall the Data Ethics workshop section on structured data.*
 
-<Secret>
+:::secret
 No, it is not organized or structured in a well-defined way or according to any rules. It appears to be just a list of all the words in the book. The text is not arranged in rows or columns, for example.
-</Secret>
+:::
 
 **What's Next?**
 
 So what we'll be doing the rest of the workshop is to whittle down this text to a smaller list of words, a "more meaningful" list of words. 
 
-<Info>If you got any error messages, check the code and make sure you typed everything correctly. Even spaces before words matter!</Info>
+:::info
+If you got any error messages, check the code and make sure you typed everything correctly. Even spaces before words matter!
+:::
 
 ## Keywords
 
@@ -266,8 +271,9 @@ Some of these texts, such as the _Book of Genesis_ or a collection of _Inaugural
 
 In our own research, these preconceived notions constitute **theory**. 
 
-<Info>Based on THEORY, what can we expect from a dataset about ice cream consumption and temperature? I'm trying to think of the least controversial question possible.
-</Info>
+:::info
+Based on THEORY, what can we expect from a dataset about ice cream consumption and temperature? I'm trying to think of the least controversial question possible.
+:::
 
 The conceptualization stage of research is *defining* the concept of our research question.
  
@@ -305,9 +311,9 @@ How does this work? similar("love") returns a list of other words that appear in
 text4.similar("patriotism")
 ```
 
-<Secret>
-They actually don't share the same contexts - "patriotism" does not show up on the list of similar words for "love". But "people", "government", "confidence", "freedom" showed up on both lists. Perhaps this is how patriotism relates to love -- through these concepts. 
-</Secret>
+:::secret
+They actually don't share the same contexts - "patriotism" does not show up on the list of similar words for "love". But "people", "government", "confidence", "freedom" showed up on both lists. Perhaps this is how patriotism relates to love -- through these concepts.
+:::
 
 ## Operationalization
 
@@ -322,17 +328,19 @@ As good researchers, we know that we must make a strong theoretical and empirica
 
 "When a measure becomes a target, it ceases to be a good measure" - [Goodhart's law](https://arxiv.org/pdf/1803.04585.pdf)
 
-<Info>Maybe paying per captured cobra head isn't the best way to incentivize eradication of cobras?</Info>
+:::info
+Maybe paying per captured cobra head isn't the best way to incentivize eradication of cobras?
+:::
 <!-- this doesn't make any sense-->
 
 ## Evaluation
 
 Which one of the following sentences is correct?
 
-<Quiz>
+:::quiz
 - The similar method brings a list of words that are similar in writing, but not necessarily in meaning, like "whale" and "while".
 - Using the `concordance` method with a specific word, such as "whale", returns the words that surround "whale" in different sentences, helping us to get a glimpse of the contexts in which the word "whale" shows up.*
-</Quiz>
+:::
 
 ## Keywords
 
@@ -365,8 +373,9 @@ Why might a tool like this be useful? A graph should appear with a tick mark eve
 
 Pick another text with a few words you want to compare. You can compare an unlimited number, but it's easier to read a few at a time. 
 
-<Info>Note that the comma in our writing here is _inside_ the quotation mark, because that is how proper English grammar works. However, in Python, you would have to put commas _outside_ of the quotation marks to create a _list_.
-</Info>
+:::info
+Note that the comma in our writing here is _inside_ the quotation mark, because that is how proper English grammar works. However, in Python, you would have to put commas _outside_ of the quotation marks to create a _list_.
+:::
 
 ## Solution
 
@@ -384,11 +393,11 @@ text2.dispersion_plot(["husband", "wife"])
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - You can get a visual representation of occurrences of a word with the `dispersion_plot` method.*
 - The `dispersion_plot` method allows you to input a list of strings, as long as you split them with commas.*
 - Contrary to grammatical rules, in a list of strings, the commas must come outside of the quotation marks.*
-</Quiz>
+:::
 
 # Types vs. Tokens
 
@@ -444,13 +453,11 @@ Three types for the word whale:
 
 But what do we need to do to the corpus so that all of the types of “whale” get treated the same way? 
 
-<Secret>
-
+:::secret
 Make a list of all the words lowercase!
 
 Bonus: That also means removing non-words (i.e. punctuation)
-
-</Secret>
+:::
 
 Why would we want each type to be treated the same way?
 
@@ -477,8 +484,7 @@ Let’s think through what we can do with these three ingredients to make a list
 
 What do we need the code to do? 
 
-<Secret>
-
+:::secret
 >>Create new list.
 
 >>In each element (in our case, it is each word) of the original corpus object, we ask, **True or False**,
@@ -486,13 +492,11 @@ What do we need the code to do?
  * If **False**, ignore it
 
 >>Take this new lower case object and add it to our list
-
-</Secret>
+:::
 
 Python Code version
 
-<Secret>
-
+:::secret
 ```
 text1_tokens = []
 for t in text1:
@@ -500,7 +504,7 @@ for t in text1:
     	t = t.lower()
     	text1_tokens.append(t)
 ```
-</Secret>
+:::
 
 
 If everything went right, you should get no output: 
@@ -546,12 +550,12 @@ If you feel like you are done playing with the loop, time to move to the next se
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - "Whale", "WHALE", and "whale" are all different tokens of the same type.
 - The `lower()` method returns the lowercase form of all of the alphabetical characters in a string.*
 - The `isalpha()` method transforms integers in alphabetical strings.
 - The `append()` method adds an item to the end of the list.*
-</Quiz>
+:::
 
 
 ## Keywords
@@ -605,19 +609,19 @@ list_example = [2,3,4,12,3,12,3,1,32]
 
 What should expect from set(list_example)?
 
-<Secret>
+:::secret
 32, 1, 2, 3, 4, 12
-</Secret>
+:::
 
 So let's find out the length of our set. just like in math, we can also nest our functions. So, rather than saying `x = set(text1_tokens)` and then finding the length of "x", we can do it all in one step.
 
 How do we do that? 
 
-<Secret>
+:::secret
 ```python
 len(set(text1_tokens))
 ```
-</Secret>
+:::
 
 
 # Lexical Density
@@ -661,11 +665,11 @@ len(set(text2_slice)) / len(text2_slice)
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - The `len` method returns the length of the input, which can mean different things depending on its type. If it is a string, it will return the number of characters; if it is a list or dictionary, it will return the number of items.*
 - The lexical density measures the number of unique words per total word, and it is an objective measure of writing quality.
 - Comparing the lexical density between texts of different sizes can give a problematic result. A possible solution is to use list slice and compare parts of both texts of a similar size.*
-</Quiz>
+:::
 
 
 
@@ -716,11 +720,11 @@ To read more about ethics and text analysis, see Lauren Klein's "[Distant Readin
 
 Which one of the following sentences is correct:
 
-<Quiz>
+:::quiz
 - Stop words are useless for text analysis, therefore the first step in any project is to remove them from the text.
 - In any type of data analysis, we usually want to cleanse the data in order to prepare it for the analysis. In text analysis, this process is called "text normalization" and can involve tasks such as removing undesired words and punctuation.*
 - Textual alterations can potentially change the original intended meaning. Therefore, we must always strive to work with the data exactly as it is in the source.
-</Quiz>
+:::
 
 ## Keywords
 
@@ -783,29 +787,24 @@ print(stops)
 
 What's the logic we'll use to make a new list of the corpus without stop words?
 
-<Secret>
-
+:::secret
 Start with a new empty list.
 
 we have a list of words from our corpus, we also have a list of words (stopword) we don't want in our new list, to check if every element is in this stopword list. 
 
 If the word is not in that list, we will append to our new list.
-
-</Secret>
+:::
 
 Python Code Version
 
-<Secret>
-
+:::secret
 ```python
 text1_stops = []
 for t in text1_tokens:
 	if t not in stops:
     	text1_stops.append(t)
 ```
-
-
-</Secret>
+:::
 
 Now try it with the one-liner, AKA list comprehension
 
@@ -844,11 +843,11 @@ Googling for the answers to your coding questions is an essential part of being 
 Try googling: 
 [Word Cloud python library displays apostrophes](https://www.google.com/search?q=Word+Cloud+python+library+displays+an+apostrophe)
 
-<Secret>
+:::secret
 Google search results may vary but this is one I got in Jan. 2024:
 
 [Word Cloud python library displays an apostrophe at the end of every word](https://stackoverflow.com/questions/59529467/word-cloud-python-library-displays-an-apostrophe-at-the-end-of-every-word)
-</Secret>
+:::
 
 Direct Copy and Paste from Stack Overflow: 
 
@@ -874,11 +873,11 @@ plt.imshow(wordcloud)
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - Stop words are words that usually don't contribute with much semantic content, like prepositions, determiners, etc.*
 - To use stop words we need to import them from the nltk corpus, using the following code: `import stopwords from nltk.corpus`
 - List comprehensions are faster ways of iterating and creating lists when compared with for loops.*
-</Quiz>
+:::
 
 ## Keywords
 
@@ -979,19 +978,19 @@ How to write the previous two for-loops in list comprehension?
 
 Lemmatize then stem:
 
-<Secret>
+:::secret
 ```python
 text1_clean = [wordnet_lemmatizer.lemmatize(porter_stemmer.stem(t)) for t in text1_stops]
 ```
-</Secret>
+:::
 
 Stem then lemmatize:
 
-<Secret>
+:::secret
 ```python
 text1_clean_test = [porter_stemmer.stem(wordnet_lemmatizer.lemmatize(t)) for t in text1_stops]
 ```
-</Secret>
+:::
 
 
 ## Verifying Clean List Contents
@@ -1017,10 +1016,10 @@ sorted(set(text1_clean))[:30]
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - Stemming and lemmatizing are different forms of reducing word variations to their roots.*
 - `sorted(set(list_of_strings))` returns the unique items of `list_of_strings` in alphabetical order.*
-</Quiz>
+:::
 
 ## Keywords
 
@@ -1035,10 +1034,10 @@ Do you remember the glossary terms from this section?
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - Both Stemming and Lemmatizing are far from perfect, so they must be used with caution.*
 - There is no obvious best choice between Stemmers and Lemmatizers, so the best way to go is experimenting and seeing what results better fit your goals.*
-</Quiz>
+:::
 
 # Data Cleaning: Results
 
@@ -1078,8 +1077,7 @@ b_words = ['god', 'apostle', 'angel']
 
 Then we will loop through the words in our cleaned corpus, and see if any of them are in our list of biblical words. We'll then save into another list just those words that appear in both.
 
-<Secret>
-
+:::secret
 ```python
 my_list = []
 for word in b_words:
@@ -1088,18 +1086,16 @@ for word in b_words:
 	else:
     	pass
 ```
-
-</Secret>
+:::
 
 
 And then we will print the results.
 
-<Secret>
-
+:::secret
 ```python
 print(my_list)
 ```
-</Secret>
+:::
 
 Now try with list comprehension
 
@@ -1175,8 +1171,9 @@ Since this is a list, we can look at any slice of it that we want. Let's inspect
 don_tokens[:10]
 ```
 
-<Info>That looks like metadata—not what we want to analyze. We will strip this off before proceeding. If you were doing this to many texts, you would want to use [Regular Expressions](https://regexone.com/). Regular Expressions are an extremely powerful way to match text in a document. 
-</Info>
+:::info
+That looks like metadata—not what we want to analyze. We will strip this off before proceeding. If you were doing this to many texts, you would want to use [Regular Expressions](https://regexone.com/). Regular Expressions are an extremely powerful way to match text in a document.
+:::
 
 We are just using this text, so we could either guess, or cut and paste the text into a text reader and identify the position of the first content (i.e., how many words in is the first word). That is the route we are going to take. We found that the content begins at word 320, so let's make a slice of the text from word position 320 to the end.
 
@@ -1202,26 +1199,22 @@ dq_text.similar("WINDMILLS")
 ```
 Did that work?
 
-<Secret>
-
-
+:::secret
 ```python
 dq_nltk_text = nltk.Text(dq_text)
 ```
 
 We would have to make a specific NLTK `Text` object.
-</Secret>
+:::
 
 How do we check if that worked?
 
-<Secret>
-
+:::secret
 ```python
 type(dq_nltk_text)
 dq_nltk_text.similar("WINDMILLS")
 ```
-
-</Secret>
+:::
 
 But if we only need to use the built-in Python functions, we can just stick with our list of words in `dq_text`.
 
@@ -1264,10 +1257,10 @@ If you want to spice your challenge up, do the first three operations _in a sing
 
 Check all sentences below that are correct:
 
-<Quiz>
+:::quiz
 - To use NLTK functions on a string, we can transform it into a NLTK Text object.*
 - NLTK let's you tokenize (split) a giant string into a list of substrings, considering punctuations and edge cases like `don't`.*
-</Quiz>
+:::
 
 ## Keywords
 

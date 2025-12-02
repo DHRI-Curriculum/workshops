@@ -296,24 +296,24 @@ Leaflet has [very extensive documentation](https://leafletjs.com/reference.html)
 
 1. Modular programming emphasizes separating the functionality of a program into smaller, independent pieces.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 2. After initializing your map, you should add the tile layer.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 3. The `.addTo()` method adds an object to a map.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 ## Challenges
 
@@ -337,7 +337,7 @@ Do you recall the following key terms?
 
 Here are the course files we created for this lesson if you need a reference:
 
-<Download files='11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js'> <br/>
+::download{files="11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js"} <br/>
 
 # Working With GeoSpatial Data
 
@@ -358,7 +358,7 @@ We have said that we'd like to use a dataset that defines the locations of neigh
 
 Let's use the dataset as a local file in our project folder. You can download it from the source website or simply use the download button below:
 
-<Download files='nycneighborhoods.json'><br />
+::download{files="nycneighborhoods.json"}<br />
 
 You'll see that we get a JSON file that contains the data we need. Make sure you save it in your working directory for this course. Let's open this file in VSCode and take a look at it:
 
@@ -676,26 +676,26 @@ We are only scratching the surface of what jQuery, JSON, and Leaflet can do work
 
 1. Each object in a GeoJSON dataset is called a:
 
-<Quiz>
+:::quiz
 - Property
 - Feature* 
 - Coordinate
-</Quiz>
+:::
 
 2. True or False - The `geometry` property contains coordinate data for a particular feature.
 
-<Quiz>
+:::quiz
 - True*
 - False
-</Quiz>
+:::
 
 3. When using a dataset pulled from an online source, it is wise to: (select all that apply)
 
-<Quiz>
+:::quiz
 - Check the data for redundancies, duplicates, or otherwise erroneous material*
 - `console.log()` your retrievals of the data for testing purposes*
 - Give attribution for your source*
-</Quiz>
+:::
 
 ## Challenges
 
@@ -717,7 +717,7 @@ Do you recall the meaning of the following terms?
 
 Here are the course files we created for this lesson if you need a reference:
 
-<Download files='12_index.html, 12_script.js, 12_styles.css, 12_poem.html, 12_poem.css, 12_poem.js, poem.json, 12_map.js, 12_nyc-data.css, 12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js'> <br/>
+::download{files="12_index.html, 12_script.js, 12_styles.css, 12_poem.html, 12_poem.css, 12_poem.js, poem.json, 12_map.js, 12_nyc-data.css, 12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"} <br/>
 
 # Reading Documentation
 
@@ -842,26 +842,26 @@ As you begin putting together your final project in the remaining weeks, try to 
 
 1. You should read documentation straight through, from top to bottom.
 
-<Quiz>
+:::quiz
 - True
 - False*
-</Quiz>
+:::
 
 2. You should copy and paste your entire error message when searching for guidance through Google.
 
-<Quiz>
+:::quiz
 - True
 - False*
-</Quiz>
+:::
 
 3. To get the most out of your Google searches, you should: (select all that apply)
 
-<Quiz>
+:::quiz
 - Include the target language/tool you are searching in as a search parameter.*
 - Break down your search into keywords.*
 - Be specific.*
 - Say please.
-</Quiz>
+:::
 
 ## Challenges
 

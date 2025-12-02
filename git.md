@@ -70,34 +70,34 @@ As we move forward it's important to make sure we're firm on the distinctions be
 
 Which of the following best describes _version control_: (select one)
 
-<Quiz>
+:::quiz
 - a software installed on my local machine
 - the practice of tracking and organizing the state of a file over time, as it changes*
 - a language that can be read and rendered by some web-based platforms
 - a cloud-based software
-</Quiz>
+:::
 
 Which of the following best describe Git: (select all that apply)
 
-<Quiz>
+:::quiz
 - a software installed on my local machine*
 - the practice of tracking and organizing the state of a file over time, as it changes
 - a web-based platform for storing and sharing files
 - a version control software*
 - a cloud-based software
 - refers to project folders as "repositories"*
-</Quiz>
+:::
 
 Which best describes GitHub: (select all that apply)
 
-<Quiz>
+:::quiz
 - a cloud-based software*
 - a software installed on my local machine
 - a web-based platform for storing and sharing files*
 - a version control software
 - refers to project folders as "repositories"*
 - the practice of tracking and organizing the state of a file over time, as it changes
-</Quiz>
+:::
 
 ### Keywords
 
@@ -185,7 +185,7 @@ We will cover these features in-depth in a later lesson in this workshop.
 
 What tasks could Git and/or GitHub offer support to? (select all that apply)
 
-<Quiz>
+:::quiz
 - Developing software*
 - Creating and sharing data sets*
 - Creating websites*
@@ -193,7 +193,7 @@ What tasks could Git and/or GitHub offer support to? (select all that apply)
 - Collating online resources*
 - Keeping research notes*
 - Hosting syllabi and course materials*
-</Quiz>
+:::
 
 ### Keywords
 
@@ -302,57 +302,57 @@ $ pwd
 
 Which best describes where you are working when you're writing in your plain text editor:
 
-<Quiz>
+:::quiz
 - on my local machine*
 - on the internet
-</Quiz>
+:::
 
 Which best describes where you are working when you're using your terminal to communicate with GitHub and share the files:
 
-<Quiz>
+:::quiz
 - on my local machine*
 - on the internet
-</Quiz>
+:::
 
 Which best describes where your files are when you are viewing them in GitHub:
 
-<Quiz>
+:::quiz
 - on my local machine
 - on the internet*
-</Quiz>
+:::
 
 Git-enabled repository means: (select one)
 
-<Quiz>
+:::quiz
 - none of the files on my local machine are being tracked
 - a specific file on my local machine is being tracked
 - a specific folder on my local machine is being tracked*
 - all the files on my local machine are being tracked
-</Quiz>
+:::
 
 Which command do you use to make a new folder?
 
-<Quiz>
+:::quiz
 - `pwd`
 - `cd`
 - `mkdir`*
-</Quiz>
+:::
 
 Which command do you use to enter into a folder?
 
-<Quiz>
+:::quiz
 - `pwd`
 - `cd`*
 - `mkdir`
-</Quiz>
+:::
 
 Which command do you use to check where you are?
 
-<Quiz>
+:::quiz
 - `pwd`*
 - `cd`
 - `mkdir`
-</Quiz>
+:::
 
 # Setting Up Git
 
@@ -396,12 +396,12 @@ user.email=gitsuperstar@gmail.com
 
 What are you doing when you set up git? (select one)
 
-<Quiz>
+:::quiz
 - You are creating a new version of the software on your local machine.
 - You are sending files from your local machine to GitHub?
 - You are introducing yourself to the software, so it knows who you are.*
 - You are creating a new version of a project folder on your local machine.
-</Quiz>
+:::
 
 # Creating a Syllabus File
 
@@ -543,24 +543,24 @@ You can look at an example syllabus in raw text form [here](https://raw.githubus
 
 Which best describes what you're doing when you initialize your project folder: (select all that apply)
 
-<Quiz>
+:::quiz
 - You created a new version of your project folder
 - You told Git to pay attention to your project folder*
 - You told Git to set up its file structure within your project folder so it can track changes to your files.*
 - You use the command `mkdir` in your terminal
 - You use the command `git init` in your terminal*
-</Quiz>
+:::
 
 Which best describes Markdown: (select all that apply)
 
-<Quiz>
+:::quiz
 - a software installed on my local machine
 - a language for formatting plain text files*
 - a language that can be read and rendered by some web-based platforms*
 - a version control software
 - a cloud-based software
 - refers to project folders as "repositories"
-</Quiz>
+:::
 
 ### Keywords
 
@@ -714,48 +714,48 @@ If you're ever stuck or "trapped" on the command line, try running through these
 
 Which best describe the process of _staging_: (select one)
 
-<Quiz>
+:::quiz
 - you telling Git to take a snapshot of changes made to a file.
 - you telling Git which files with changes you want it to pay attention to.*
 - you telling git to pay attention to a folder storing files you want to make changes to.
 - the second part of a two-step process.
-</Quiz>
+:::
 
 Which best describes the process of _committing_: (select all that apply)
 
-<Quiz>
+:::quiz
 - you telling Git to take a snapshot of changes made to a file.*
 - you telling Git which files with changes you want it to pay attention to.
 - you telling git to pay attention to a folder storing files you want to make changes to.
 - the second part of a two-step process.*
-</Quiz>
+:::
 
 What happens if you _stage_ the files, but don't _commit_ them? (select all that apply)
 
-<Quiz>
+:::quiz
 - Git won't know what files you want to take a snapshot of
 - Git won't take a snapshot of the files.*
 - Git will take the snapshot of the files
 - You will have told Git what files you would like it to take a snapshot of.*
-</Quiz>
+:::
 
 What happens if you _commit_ the files, but don't _stage_ them? (select all that apply)
 
-<Quiz>
+:::quiz
 - Git won't know what files you want to take a snapshot of*
 - Git won't take a snapshot of the files.*
 - You will have told Git what files you would like it to take a snapshot of.
 - Git will take the snapshot of the files*
-</Quiz>
+:::
 
 Which best describes the `-m` flag used when committing changes to a file? (select all that apply)
 
-<Quiz>
+:::quiz
 - a brief description of changes you made to your file*
 - Its just something Git needs so it doesn't break
 - future aids when you are trying to make sense of or recover changes you previously made to a file*
 - It's nonsense—who needs it?!
-</Quiz>
+:::
 
 ### Keywords
 
@@ -845,54 +845,54 @@ Use `git push origin main` to upload, or _push_, that file to your repository on
 
 ### Solution
 
-<Secret>
+:::secret
 In response to _Challenge 3_:
 - No, you don't need to push to GitHub every time, or at all even, if you didn't want to share your changes publicly. Git is the software that tracks the changes, and you review them on your local machine using Git as well.
 - No, you don't need to initialize the folder after adding a new file for an assignment or otherwise. In this case, we've already initialized the process; Git is tracking the folder. After the file is added, we just need to notify Git to take a snapshot of the additions and changes using the `git add`, `git commit` sequence. We can also use `git push` to share those changes on GitHub.
 - No, the `-u` flag does not need to be used again. This flag is only necessary when setting up the original connection between the folder on your local machine and the folder on GitHub.
-</Secret>
+:::
 
 ## Evaluation
 
 Which best describes what you're doing when you use the command `git push`? (select one)
 
-<Quiz>
+:::quiz
 - you telling Git to take a snapshot of changes made to a file.
 - you telling Git which files with changes you want it to pay attention to.
 - you telling git to pay attention to a folder storing files you want to make changes to.
 - you are copying the updated files with the changes to the repository on GitHub*
-</Quiz>
+:::
 
 How does the process of _pushing_ differ from the processes of _staging_ and _committing_ discussed in the previous lesson? (select one)
 
-<Quiz>
+:::quiz
 - There is no fundamental difference between these processes.
 - Staging and Committing set up the files whereas pushing is the act of taking the snapshot.
 - Staging and committing the files is to communicate with GitHub on the Internet, pushing the changes happens on your local machine.
 - Staging and committing the files happens on your local machine, pushing the changes is to communicate with GitHub on the Internet.*
-</Quiz>
+:::
 
 What happens if you use `git push` without staging and committing files? (select all that apply)
 
-<Quiz>
+:::quiz
 - Git won't know what files you want to take a snapshot of.*
 - Git won't take a snapshot of the files.*
 - Your computer won't know what changes to share with GitHub.*
 - Git will take the snapshot of the files
 - You will have successfully created a new version of the file.
 - You will have communicated with GitHub and shared a copy of the updated files.
-</Quiz>
+:::
 
 What happens if you _stage_ and _commit_ files, but not _push_ the changes? (select all that apply)
 
-<Quiz>
+:::quiz
 - Git won't know what files you want to take a snapshot of.
 - Git won't take a snapshot of the files.
 - Your computer won't know what changes to share with GitHub.
 - Git will take the snapshot of the files*
 - You will have successfully created a new version of the file.*
 - You will have communicated with GitHub and shared a copy of the updated files.
-</Quiz>
+:::
 
 ### Keywords
 
@@ -987,33 +987,33 @@ You might use this method if you were going to teach your own Git & GitHub works
 
 ### Solution
 
-<Secret>
+:::secret
 Rather than write out the solution here, I want to encourage you to go back through the lessons as needed.
 
 You'll know you've completed step one when the project folder (called `git`) shows up on your local machine.
 
 After you've made and saved the changes, you'll know you've completed step three when your changes appear in the project folder on _your_ GitHub account.
-</Secret>
+:::
 
 ## Evaluation
 
 Which best describes _cloning_? (select one)
 
-<Quiz>
+:::quiz
 - Copying a repository from GitHub to your local machine.*
 - Copying a repository from your local machine to GitHub.
 - Copying a repository from someone else's GitHub account to your own.
 - Copying a repository from your account to someone else's account.
-</Quiz>
+:::
 
 Which best describes _forking_? (select one)
 
-<Quiz>
+:::quiz
 - Copying a repository from GitHub to your local machine.
 - Copying a repository from your local machine to GitHub.
 - Copying a repository from someone else's GitHub account to your own.*
 - Copying a repository from your account to someone else's account.
-</Quiz>
+:::
 
 ### Keywords
 
@@ -1033,7 +1033,7 @@ TODO: Fix relative linking when switching between display formats
 
 __1. What tasks could Git and/or GitHub offer support to? (Select all that apply)__
 
-<Quiz>
+:::quiz
 - Developing software*
 - Creating and sharing data sets*
 - Creating websites*
@@ -1041,83 +1041,83 @@ __1. What tasks could Git and/or GitHub offer support to? (Select all that apply
 - Collating online resources*
 - Keeping research notes*
 - Hosting syllabi and course materials*
-</Quiz>
+:::
 
 Revisit lesson [What You Can Do with Git and GitHub](/workshops/git/?page=3) to learn more.
 
 __2. Which best describes what you're doing when you initialize your project folder: (select all that apply)__
 
-<Quiz>
+:::quiz
 - You created a new version of your project folder
 - You told Git to pay attention to your project folder*
 - You told Git to set up its file structure within your project folder so it can track changes to your files.*
 - You use the command `mkdir` in your terminal
 - You use the command `git init` in your terminal*
-</Quiz>
+:::
 
 Revisit lesson [Creating Syllabus Content Using Markdown](/workshops/git/?page=7) to learn more.
 
 __3. What are you doing when you set up git? (select one)__
 
-<Quiz>
+:::quiz
 - You are creating a new version of the software on your local machine.
 - You are sending files from your local machine to GitHub?
 - You are introducing yourself to the software, so it knows who you are.*
 - You are creating a new version of a project folder on your local machine.
-</Quiz>
+:::
 
 Revisit lesson [Setting Up Git](/workshops/git/?page=5 to learn more.
 
 __4. Which best describe the process of _staging_: (select one)__
 
-<Quiz>
+:::quiz
 - you telling Git to take a snapshot of changes made to a file.
 - you telling Git which files with changes you want it to pay attention to.*
 - you telling git to pay attention to a folder storing files you want to make changes to.
 - the second part of a two-step process.
-</Quiz>
+:::
 
 Revisit lesson [Staging and Committing Changes](/workshops/git/?page=8) to learn more.
 
 __5. Which of the following best describes _version control_: (select one)__
 
-<Quiz>
+:::quiz
 - a software installed on my local machine
 - the practice of tracking and organizing the state of a file over time, as it changes*
 - a language that can be read and rendered by some web-based platforms
 - a cloud-based software
-</Quiz>
+:::
 
 Revisit lesson [What are Git and GitHub?](/workshops/git/?page=2) to learn more.
 
 __6. Which best describes _cloning_? (select one)__
 
-<Quiz>
+:::quiz
 - Copying a repository from GitHub to your local machine.*
 - Copying a repository from your local machine to GitHub.
 - Copying a repository from someone else's GitHub account to your own.
 - Copying a repository from your account to someone else's account.
-</Quiz>
+:::
 
 Revisit lesson [Cloning and Forking](workshops/git/?page=11) to learn more.
 
 __7. Which best describes where you are working when you're writing in your plain text editor:__
 
-<Quiz>
+:::quiz
 - on my local machine*
 - on the internet
-</Quiz>
+:::
 
 Revisit lesson [Review of the Command Line](/workshops/git/?page=4) to learn more.
 
 __8. Which best describes what you're doing when you use the command `git push`? (select one)__
 
-<Quiz>
+:::quiz
 - you telling Git to take a snapshot of changes made to a file.
 - you telling Git which files with changes you want it to pay attention to.
 - you telling git to pay attention to a folder storing files you want to make changes to.
 - you are copying the updated files with the changes to the repository on GitHub*
-</Quiz>
+:::
 
 Revisit lesson [Pushing to GitHub](/workshops/git/?page=10) to learn more.
 
