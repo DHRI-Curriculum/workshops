@@ -19,14 +19,14 @@ estimated time:
   - 4 hours
 
 prerequisites:
-  - data-ethics:
-      description: "(Recommended) In order to have a better understanding of the data formats we handle in this workshop, if you don't already have a foundational understanding of data formats and types, you can start by walking through our Data Ethics workshop."
-      recommended: true
-  
+  - name: data-ethics
+    description: "(Recommended) In order to have a better understanding of the data formats we handle in this workshop, if you don't already have a foundational understanding of data formats and types, you can start by walking through our Data Ethics workshop."
+    recommended: true
+
 installations:
-  - qgisguide: 
-      description: "(Required) To complete this workshop you will need to install QGIS. Step by step installation instructions are available here."
-      required: true
+  - name: qgisguide
+    description: "(Required) To complete this workshop you will need to install QGIS. Step by step installation instructions are available here."
+    required: true
 
 before getting started:
   - "[Create an ESRI Online Public account](https://doc.arcgis.com/en/arcgis-online/get-started/create-account.htm) (required) You will need to create a free account for ESRI Online to participate in this workshop."

@@ -17,12 +17,12 @@ estimated time:
     - 3 hours
 
 prerequisites: 
-    - Intro to Python: 
-        description: (required) This workshop relies heavily on concepts from the Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about higher-level Python concepts.
-        required: true
-    - Data Ethics: 
-        description: (recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
-        recommended: true
+    - name: Intro to Python
+      description: (required) This workshop relies heavily on concepts from the Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about higher-level Python concepts.
+      required: true
+    - name: Data Ethics
+      description: (recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
+      recommended: true
 
 authors:
     - 'Zachary Lloyd'
@@ -35,9 +35,9 @@ ethical considerations:
     - Simulations are often used to model real-world scenarios. In this workshop, we will be creating a simulation that tracks the population growth of a proposed (imaginary) species of Critter, taking into account a variety of biological and environmental factors. While this simulation is not meant to be a realistic model, it is important to consider the ethical implications of creating simulations that are meant to model real-world scenarios. For example, what are the implications of creating a simulation that models the spread of a disease? What are the consequences if we fail to consider the racial or socioeconomic factors that might influence the spread of that disease? What about using that simulation to make policy decisions? These are all important questions to consider when creating simulations, and we encourage you to think through the ethical implications of your own simulations as you create them.
 
 projects:
-    - 4 Cool Simulation Projects with Python:
-        description: This video will give you some project ideas and links to the code for creating simulations in Python.
-        link: https://www.youtube.com/watch?v=M39R2A8kuh8
+    - name: 4 Cool Simulation Projects with Python
+      description: This video will give you some project ideas and links to the code for creating simulations in Python.
+      link: https://www.youtube.com/watch?v=M39R2A8kuh8
 
 ---
 

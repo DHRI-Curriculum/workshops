@@ -18,15 +18,15 @@ estimated time:
     - 2 hours
 
 prerequisites:
-    - python:
-        description: (required) This workshop relies heavily on concepts from the Intro to Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about data analysis with Python and Pandas.
-        required: true
-    - command-line:
-        description: (recommended) This workshop makes some reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about text analysis with Python and Pandas.
-        recommended: true
-    - data ethics: 
-        description: (recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
-        recommended: true
+    - name: python
+      description: (required) This workshop relies heavily on concepts from the Intro to Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about data analysis with Python and Pandas.
+      required: true
+    - name: command-line
+      description: (recommended) This workshop makes some reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about text analysis with Python and Pandas.
+      recommended: true
+    - name: data ethics
+      description: (recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
+      recommended: true
 
 instructors: 
     - 'Rebecca Krisel'
@@ -47,17 +47,17 @@ ethical considerations:
     - As with any dataset, responsible data analysis requires more than just technical tools like Pandas. We also need to interrogate the data. Who collected this data? How and why is this data being collected? What assumptions are baked into this data? What consequences does this data have in the world? What does this data tell us about our world? When exploring this dataset, we can consider the meaning of the status of refugee, who has a right to claim that status, and which refugees are considered eligible to legally resettle in the U.S.. We could also think about who may not be represented in this data, including asylum seekers who migrate to the U.S. and become undocumented immigrants while waiting for their asylum claims to be processed.
 
 projects:
-    - The Simplest Data Science Project Using Pandas & Matplotlib:
-        description: Further deepen your Pandas skills while making beautiful data visualizations in Matplotlib using a dataset (from Kaggle) of forest fires in Brazil.
-        link: https://towardsdatascience.com/the-simplest-data-science-project-using-pandas-matplotlib-9d7042e7ce6f
-    - Make a Gradebook With Python & pandas:
-        description: Learn how you can automate the process of calculating grades at the end of the semester using Pandas
-        link: https://realpython.com/pandas-project-gradebook/
+    - name: The Simplest Data Science Project Using Pandas & Matplotlib
+      description: Further deepen your Pandas skills while making beautiful data visualizations in Matplotlib using a dataset (from Kaggle) of forest fires in Brazil.
+      link: https://towardsdatascience.com/the-simplest-data-science-project-using-pandas-matplotlib-9d7042e7ce6f
+    - name: Make a Gradebook With Python & pandas
+      description: Learn how you can automate the process of calculating grades at the end of the semester using Pandas
+      link: https://realpython.com/pandas-project-gradebook/
 
 resources:
-    - Jupyter Notebook shortcuts, tips and tricks:
-        description: Here are some of the keyboard shortcuts and text snippets to help you program faster!
-        link: http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html
+    - name: Jupyter Notebook shortcuts, tips and tricks
+      description: Here are some of the keyboard shortcuts and text snippets to help you program faster!
+      link: http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html
 
 ---
 # Jupyter & JupyterLite

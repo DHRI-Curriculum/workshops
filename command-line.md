@@ -18,9 +18,9 @@ learning objectives:
 estimated time: 4 hours
 
 prerequisites: 
-    - None: 
-        description: This workshop does not have any prerequisites. 
-        required: true
+    - name: None
+      description: This workshop does not have any prerequisites.
+      required: true
 instructors:
     - 'Silvia Rivera Alfaro'
     
@@ -48,20 +48,20 @@ ethical considerations:
     - "'The command line' is laden with masculine and military metaphors, which is reflective of the history of computing and programming. As Wendy Hui Kyong Chun discusses in *On Software, or the Persistence of Visual Knowledge* (2004), almost all human computers in the US during World War II were young women. Human computers received commands from analysts —predominantly men with the military— that they then had to interpret and act upon the machine. As Chun argues, 'computation depends on 'yes, sir' in response to short declarative sentences and imperatives that are in essence commands'."  
     
 projects:
-    - Feminist Linguistics Repository:
-        description: This digital repository was created by Silvia Rivera Alfaro as her Interactive Technology and Pedagogy project. It belongs to Indisciplinadxs, a community of practice that was founded by LAILaC students along with feminist linguists from across the Americas. The command line is used in the project for doing installations of different programs required for DSpace and to install this repository software. The repository is hosted on a single-board computer so the command line was used to configure it as a home server. The command line is used to go into developer mode and make improvements in the front–end of the repository. It is also used for collaborating remotely in case of troubleshooting and to give general maintenance to the project.
-        link: https://repositorio.linguisticafeminista.com/
-    - Fair World 64:
-        description: A Text-Based Game of the 1964–1965 World's Fair. A recent digital capstone project by Christofer Gass runs a Python script on the command line.
-        link: https://academicworks.cuny.edu/gc_etds/3786/
-   
+    - name: Feminist Linguistics Repository
+      description: This digital repository was created by Silvia Rivera Alfaro as her Interactive Technology and Pedagogy project. It belongs to Indisciplinadxs, a community of practice that was founded by LAILaC students along with feminist linguists from across the Americas. The command line is used in the project for doing installations of different programs required for DSpace and to install this repository software. The repository is hosted on a single-board computer so the command line was used to configure it as a home server. The command line is used to go into developer mode and make improvements in the front–end of the repository. It is also used for collaborating remotely in case of troubleshooting and to give general maintenance to the project.
+      link: https://repositorio.linguisticafeminista.com/
+    - name: Fair World 64
+      description: A Text-Based Game of the 1964–1965 World's Fair. A recent digital capstone project by Christofer Gass runs a Python script on the command line.
+      link: https://academicworks.cuny.edu/gc_etds/3786/
+
 resources: 
-    - Command Line Basics by The Odin Project:
-        description: The Odin Project is an open learning resource. The Command Line Basics lessons include several projects for people interested in learning about the Command Line. 
-        link: https://www.theodinproject.com/lessons/foundations-command-line-basics 
-    - Awesome Bash:
-        description: A curated list of useful Bash scripts and resources
-        link: https://github.com/awesome-lists/awesome-bash 
+    - name: Command Line Basics by The Odin Project
+      description: The Odin Project is an open learning resource. The Command Line Basics lessons include several projects for people interested in learning about the Command Line.
+      link: https://www.theodinproject.com/lessons/foundations-command-line-basics
+    - name: Awesome Bash
+      description: A curated list of useful Bash scripts and resources
+      link: https://github.com/awesome-lists/awesome-bash
 ---
 
 # Introduction

@@ -18,11 +18,11 @@ estimated time:
   - 4 hours
 
 prerequisites:
-  - command-line: 
-      description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about git and GitHub.
-      required: true
-  - visual-studio-code: 
-      description: (Recommended) You can use any plain text editor, but for our purposes Visual Studio Code ("VS Code") will be used.
+  - name: command-line
+    description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about git and GitHub.
+    required: true
+  - name: visual-studio-code
+    description: (Recommended) You can use any plain text editor, but for our purposes Visual Studio Code ("VS Code") will be used.
 
 before getting started:
   - "[Create an account on GitHub](https://github.com/join) (required) You need to have a GitHub account for the purposes of this workshop. It is free to sign up via the link."

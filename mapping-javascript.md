@@ -13,12 +13,12 @@ programming_language: 'JavaScript'
 estimated time:
     - 3 - 4 hours
 prerequisites: 
-    - command line: 
-        description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
-        required: true
-    - data ethics: 
-        description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
-        recommended: true
+    - name: command line
+      description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
+      required: true
+    - name: data ethics
+      description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
+      recommended: true
 
 authors:
     - 'Zach Lloyd'
@@ -32,9 +32,9 @@ ethical considerations:
     - Data visualizations can be used to mislead or misrepresent data.
 
 resources:
-    - Leaflet:
-        link: https://leafletjs.com/
-        description: "Leaflet is an open-source JavaScript library for creating interactive maps on the web."
+    - name: Leaflet
+      link: https://leafletjs.com/
+      description: "Leaflet is an open-source JavaScript library for creating interactive maps on the web."
 
 ---
 # Mapping With Leaflet

@@ -29,12 +29,12 @@ estimated time:
     - 2-3 hours
 
 prerequisites:
-    - Command Line:
-        description: (Required) This workshop makes reference to concepts from the Command Line workshop, in particular, in creating new folders and files, as well as moving around in file directories. It includes opportunities to utilize Command Line on your operating system.  Completing the Command Line workshop will make you more comfortable with working with HTML/CSS.
-        required: true
+    - name: Command Line
+      description: (Required) This workshop makes reference to concepts from the Command Line workshop, in particular, in creating new folders and files, as well as moving around in file directories. It includes opportunities to utilize Command Line on your operating system.  Completing the Command Line workshop will make you more comfortable with working with HTML/CSS.
+      required: true
 
-    - Visual Studio Code: 
-        description: (Strongly recommended) You can use any plain text editor, but for our purposes [Visual Studio Code](https://github.com/DHRI-Curriculum/install/blob/v2.0/guides/visual-studio-code.md) ("VS Code") will be used and the exercise instructions are designed for this. It is recommended that you also enable the [Live Server plugin](https://www.geeksforgeeks.org/how-to-enable-live-server-on-visual-studio-code/), but it is not necessary to follow the exercises.
+    - name: Visual Studio Code
+      description: (Strongly recommended) You can use any plain text editor, but for our purposes [Visual Studio Code](https://github.com/DHRI-Curriculum/install/blob/v2.0/guides/visual-studio-code.md) ("VS Code") will be used and the exercise instructions are designed for this. It is recommended that you also enable the [Live Server plugin](https://www.geeksforgeeks.org/how-to-enable-live-server-on-visual-studio-code/), but it is not necessary to follow the exercises.
 
 readings:
     - "[Information Management: A Proposal](https://www.w3.org/History/1989/proposal.html) by Tim Berners-Lee. This concept paper, originally published in 1989 and converted to HTML format here, is the proposal that led to HTML. It is a foundational document of the Internet."
