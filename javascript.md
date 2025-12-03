@@ -2098,21 +2098,22 @@ Which debugging technique involves explaining your code step-by-step, often out 
     }
     console.log("Factorial of 5:", factorial(5)); // Should be 120
     ```
-    :::codeeditor{language="JavaScript"}
-// Fix the factorial function here
-    function factorial(n) {
-      if (n < 0) return undefined; // Factorial not defined for negative numbers
-      if (n === 0) return 1;      // Factorial of 0 is 1
 
-      let result = 1; // <<< FIX 1: Initialize to 1 (identity for multiplication)
-      for (let i = n; i >= 1; i--) {
-        console.log(`Calculating: ${result} * ${i}`); // Debugging log
-        result = result * i; // <<< FIX 2: Logic is correct, initialization was the issue.
-      }
-      return result;
-    }
-    console.log("Factorial of 5:", factorial(5));
-    console.log("Factorial of 0:", factorial(0));
+:::codeeditor{language="JavaScript"}
+// Fix the factorial function here
+function factorial(n) {
+  if (n < 0) return undefined; // Factorial not defined for negative numbers
+  if (n === 0) return 1;      // Factorial of 0 is 1
+
+  let result = 1; // <<< FIX 1: Initialize to 1 (identity for multiplication)
+  for (let i = n; i >= 1; i--) {
+    console.log(`Calculating: ${result} * ${i}`); // Debugging log
+    result = result * i; // <<< FIX 2: Logic is correct, initialization was the issue.
+  }
+  return result;
+}
+console.log("Factorial of 5:", factorial(5));
+console.log("Factorial of 0:", factorial(0));
 :::
 
 2.  **Pseudo-code Practice:** Write pseudo-code for a function that takes an array of strings and returns a new array containing only the strings that have more than 5 characters.
