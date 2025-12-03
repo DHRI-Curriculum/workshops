@@ -2,7 +2,9 @@
 title: 'Text Analysis Workshop'
 description: 'Analyzing textual data opens a new way to interrogate the world. Put simply, it is a way to "read" and interpret the incredible amount of text generated past and present. This workshop will introduce techniques that can help you get a handle on textual data, turn qualitative texts into quantitative objects. We will be using the Natural Language Toolkit (NLTK) package in Python and thinking through how to clean data and start using our analytical muscles to conceptualize and operationalize this textual data.'
 cover_image: '/images/workshops/img7.jpg'
-programming_language: "jupyter"
+editor_tabs:
+    - python
+    - jupyter
 
 learning objectives:
     - Expand data manipulation possibilities beyond quantitative data

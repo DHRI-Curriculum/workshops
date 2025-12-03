@@ -2,8 +2,9 @@
 title: Creating Simulations With Python
 cover title: Simulations With Python
 description: "In this workshop, you will learn how to create very basic simulations in Python. The workshop will employ the logic of Python's 'object-oriented' methodology to create two small simulations:  a dice rolling simulation and a Critter simulation that tracks the population growth of an imaginary species of critter based on a variety of factors. These exercises are intended to be a fun introduction to higher-level Python concepts, and to give you a sense of how you can use Python to create simulations that model real-world scenarios."
-
-programming_language: 'jupyter'
+editor_tabs:
+    - python
+    - jupyter
 
 learning objectives:
     - 'Become familiar with core programming concepts, including classes, functions, and methods.'

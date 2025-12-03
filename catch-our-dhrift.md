@@ -3,7 +3,9 @@ title: Catch our DHRIFT
 cover title: Catch our DHRIFT
 description: "This workshop is designed for those who are interested in learning and teaching with DHRIFT, including those who want to create and customize their own DHRIFT site, those who would like to write their own workshops to publish with the DHRIFT platform, and for workshop facilitators and developers who would like to make use of DHRIFT’s minimal computing environment to create their own DH curricula." 
 
-programming_language: 'jupyter'
+editor_tabs:
+    - python
+    - jupyter
 published: false
 
 learning objectives:
