@@ -136,9 +136,6 @@ alert("Hello, World!");
 
 *   **Note:** Pop-up blockers might prevent alerts. Also, `alert()` pauses all interaction with the page until dismissed, so it's generally disruptive and rarely used in modern web development except for simple warnings or very basic debugging. `console.log()` is preferred.
 
-<JSTerminal />
-*(This embedded terminal works like your browser's console. Try the `console.log` and `alert` commands here too!)*
-
 ---
 
 ## Data Types and Variables
@@ -157,7 +154,6 @@ Try these in the console:
 -1.2;
 ```
 
-<JSTerminal />
 
 You can perform arithmetic operations:
 
@@ -170,7 +166,6 @@ You can perform arithmetic operations:
 2 ** 3; // Exponentiation (2 to the power of 3 - result is 8)
 ```
 
-<JSTerminal />
 
 *   **Order of Operations (PEMDAS/BODMAS):** JavaScript follows standard mathematical rules. `5 + 5 * 10 / 2` evaluates multiplication/division first, resulting in `30`. Use parentheses `()` to control the order: `(5 + 5) * 10 / 2` results in `50`.
 
@@ -184,7 +179,6 @@ Strings represent textual data. They are enclosed in single quotes (`'...'`), do
 `Strings can use backticks too.`; // Template literals - more on these later
 ```
 
-<JSTerminal />
 
 *   **Quotes:** Use quotes consistently (start and end with the same type). Double quotes (`"`) are common and allow single quotes (`'`) inside without issues: `"It's a nice day."`. If you need the same type of quote inside, you can **escape** it with a backslash `\`: `"She said \"Hello!\""`. Or, use a different outer quote type: `'She said "Hello!"'`.
 *   **Concatenation:** Use the `+` operator to join strings:
@@ -192,7 +186,6 @@ Strings represent textual data. They are enclosed in single quotes (`'...'`), do
     "Hello, " + "World!"; // Results in "Hello, World!"
     ```
 
-<JSTerminal />
 
 ### Booleans
 
@@ -203,7 +196,6 @@ true;
 false;
 ```
 
-<JSTerminal />
 
 Booleans are often the result of **comparison operations**.
 
@@ -228,8 +220,7 @@ These operators compare values and evaluate to `true` or `false`.
 
 **Key takeaway:** Always use **strict equality (`===`)** and **strict inequality (`!==`)** unless you have a very specific reason for type coercion. Loose equality (`==`, `!=`) can lead to unexpected bugs due to automatic type conversions.
 
-Try some comparisons in the console:
-<JSTerminal />
+Try a few examples from the table in your console before moving on.
 
 ### Variables: `let` and `const`
 
@@ -267,7 +258,6 @@ visitorCount = visitorCount + 1;
 console.log("Visitors: " + visitorCount); // Output: Visitors: 11
 ```
 
-<JSTerminal />
 
 *   **Why not `var`?** You might see `var` in older code or tutorials. `var` has different scoping rules (function scope or global scope, not block scope like `let`/`const`) which can lead to confusion and bugs in larger programs. It's best practice to use `let` and `const` exclusively in modern JavaScript. We'll discuss scope in more detail later.
 
@@ -297,7 +287,6 @@ console.log(typeof 99.9);     // Output: number
 console.log(typeof false);    // Output: boolean
 ```
 
-<JSTerminal />
 This is useful for debugging or when you need to handle different types of data differently.
 
 ---
@@ -443,7 +432,6 @@ alert("Hello, " + userName + "!");
 console.log("User's name is: " + userName);
 ```
 
-<JSTerminal />
 *Try running the code above. Enter your name in the pop-up.*
 
 *   **Note:** Like `alert()`, `prompt()` pauses page interaction and is generally avoided in modern UI design. For real websites, you'd use HTML forms. However, `prompt()` is simple and useful for learning basic input/output.
@@ -468,7 +456,6 @@ const nextYearAge = userAge + 1;
 alert("Next year, you will be " + nextYearAge + ".");
 ```
 
-<JSTerminal />
 
 *   **`NaN` (Not a Number):** If the conversion fails (e.g., user enters "twenty"), `parseInt()`/`parseFloat()` return `NaN`. You can check for this using `isNaN(variable)`.
 
@@ -502,7 +489,6 @@ if (userAge >= 18) {
 console.log("Finished checking."); // This line always runs
 ```
 
-<JSTerminal />
 
 ## `if...else` Statements
 
@@ -530,7 +516,6 @@ if (userAge >= 18) {
 }
 ```
 
-<JSTerminal />
 
 ## `else if` Statements
 
@@ -564,7 +549,6 @@ if (userAge >= 65) {
 }
 ```
 
-<JSTerminal />
 
 *   Only **one** block (`if`, `else if`, or `else`) will execute – the first one whose condition is met.
 
@@ -656,7 +640,6 @@ switch (difficultyChoice) {
     // No break needed at the end of default
 }
 ```
-<JSTerminal />
 
 *   Note: We are comparing against strings (`"1"`, `"2"`, `"3"`) because `prompt()` returns a string.
 
@@ -856,7 +839,6 @@ console.log(fruits[2]); // Output: cherry (index 2 is the third element)
 console.log(fruits[3]); // Output: undefined (index 3 doesn't exist)
 ```
 
-<JSTerminal />
 
 ### Modifying Array Elements
 
@@ -868,7 +850,6 @@ colors[1] = 'yellow'; // Change the element at index 1
 console.log(colors); // Output: ['red', 'yellow', 'blue']
 ```
 
-<JSTerminal />
 
 ### Array Properties and Methods
 
