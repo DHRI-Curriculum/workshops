@@ -1556,6 +1556,7 @@ print("Have a nice day!")  # This always runs
 These operators create boolean values for our conditions:
 
 :::codeeditor{language="python"}
+```python
 x = 10
 y = 5
 
@@ -1569,6 +1570,7 @@ print(f"x <= y: {x <= y}")   # Less than or equal to
 # String comparisons work alphabetically
 print(f"'apple' < 'banana': {'apple' < 'banana'}")
 print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercase!
+```
 :::
 
 **Common mistake:** Using `=` instead of `==`
@@ -2286,6 +2288,7 @@ print(is_valid_email("user@"))             # False
 Functions that check if something is valid:
 
 :::codeeditor{language="python"}
+```python
 def is_positive(number):
     """Check if a number is positive."""
     return number > 0
@@ -2327,6 +2330,7 @@ print(f"Is -5 positive? {is_positive(-5)}")
 print(f"Is 25 a valid age? {is_valid_age(25)}")
 print(f"Is 'Password123' strong? {is_strong_password('Password123')}")
 print(f"Is 'weak' strong? {is_strong_password('weak')}")
+```
 :::
 
 ### Transformation Functions

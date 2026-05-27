@@ -574,8 +574,7 @@ This is an info box with additional information or tips for learners.
 :::
 ```
 
-In this example, the `:::info
-` tag creates an info box with the enclosed text. This can be useful for highlighting important information, providing additional context, or offering tips and suggestions to learners.
+In this example, the `:::info` directive creates an info box with the enclosed text. This can be useful for highlighting important information, providing additional context, or offering tips and suggestions to learners.
 
 ## Incorporating Interactive Features
 
@@ -598,7 +597,7 @@ What front-end technology does DHRIFT use to build its user interfaces?
 :::
 ```
 
-In this example, the (optional heading) `Evaluation` section introduces a multiple-choice quiz question, and the `<Quiz>` tag creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
+In this example, the (optional heading) `Evaluation` section introduces a multiple-choice quiz question, and the `:::quiz` directive creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
 
 ### Challenges
 
@@ -616,7 +615,7 @@ In a GitHub repository.
 :::
 ```
 
-In this example, the (optional heading) `Challenge` section poses a question or problem, and the `<Secret>` tag creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
+In this example, the (optional heading) `Challenge` section poses a question or problem, and the `:::secret` directive creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
 
 ## Key Terms
 
@@ -631,7 +630,7 @@ Each workshop is created using Markdown, a lightweight markup language that is e
 :::
 ```
 
-In this example, the `<Keywords>` tag creates a section of key terms, and each term is defined with a bullet point list. This section can help learners understand and remember important concepts from the workshop.
+In this example, the `:::keywords` directive creates a section of key terms, and each term is defined with a bullet point list. This section can help learners understand and remember important concepts from the workshop.
 
 ## Adding Your Workshop to Your DHRIFT Site
 
@@ -709,7 +708,7 @@ cd DHRIFT
 
 Now you have a local copy of the DHRIFT platform on your machine that you can modify and work with.
 
-<Info>
+:::info
 If you are not familiar with Bash or the command line, you can also simply click the "Download ZIP" button on your forked repository page to download a ZIP file of the repository to your local machine. You can then extract the ZIP file and work with the repository in your file explorer.
 :::
 

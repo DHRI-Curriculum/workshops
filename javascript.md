@@ -2122,7 +2122,7 @@ From now on, create a dedicated folder on your computer for this course's work (
 
 Click the button below to download starting files (`index.html`, `script.js`). Unzip the downloaded file and place these two files inside your new `javascript_course` folder.
 
-::download{files="index.html, script.js"}<br />
+::download{files="index.html, script.js"}
 *(These will be very basic files to get you started).*
 
 ## Visual Studio Code (VSCode)
@@ -2682,7 +2682,7 @@ Which selector is generally the *most* specific in CSS?
 
 Here are the course files reflecting the state at the end of this lesson:
 
-::download{files="8_index.html, 8_script.js, 8_styles.css"} <br/>
+::download{files="8_index.html, 8_script.js, 8_styles.css"}
 
 ---
 
@@ -3085,7 +3085,7 @@ Why is it common practice to wrap jQuery code inside `$(document).ready(function
 
 Here are the course files reflecting the state at the end of this lesson:
 
-::download{files="9_index.html, 9_script.js, 9_styles.css"} <br/>
+::download{files="9_index.html, 9_script.js, 9_styles.css"}
 
 ---
 
@@ -3558,7 +3558,7 @@ Why is using `.on("click", ".info-term", ...)` attached to `#poem` generally pre
 
 Here are the course files reflecting the state at the end of this lesson:
 
-::download{files="10_index.html, 10_script.js, 10_styles.css, 10_poem.html, 10_poem.css, 10_poem.js, poem.json"} <br/>
+::download{files="10_index.html, 10_script.js, 10_styles.css, 10_poem.html, 10_poem.css, 10_poem.js, poem.json"}
 
 ---
 
@@ -3874,7 +3874,7 @@ In a Leaflet map click event handler `map.on('click', function(e) { ... })`, how
 
 Here are the course files reflecting the state at the end of this lesson:
 
-::download{files="11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js"} <br/>
+::download{files="11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js"}
 
 ---
 
@@ -3908,7 +3908,7 @@ We'll use a GeoJSON file containing NYC neighborhood boundaries. GeoJSON has a s
 **Get the Data:**
 
 1.  Download the dataset: [nycneighborhoods.json](https://raw.githubusercontent.com/dwillis/nyc-maps/master/neighborhoods.geojson) (Right-click, Save Link As...) or use the button below.
-    ::download{files="nycneighborhoods.json"}<br />
+    ::download{files="nycneighborhoods.json"}
 2.  Save it in your `javascript_course` project folder.
 
 **Prepare the Data File for Leaflet (`L.geoJSON`):**
@@ -4310,7 +4310,7 @@ What is the primary purpose of using `event.preventDefault()` inside a click han
 
 Here are the course files reflecting the state at the end of this lesson:
 
-::download{files="12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"} <br/>
+::download{files="12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"}
 
 ---
 

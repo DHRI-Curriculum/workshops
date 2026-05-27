@@ -213,6 +213,3 @@ Important aside: The comments written to the right of the hash mark don’t get 
 Let's do something with head_size - how do we multiply by 2?
 
 ## What is a vector?
-
-
-<CodeEditor>

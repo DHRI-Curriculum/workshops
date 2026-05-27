@@ -1033,7 +1033,7 @@ refugee_df.info()
 
 This report tells us how many non-null, or non-blank, values are in each column, as well as what type of data is in each column. 
 
-Pandas uses a different lexicon to describe data types from those we learned in our intro to Python curriculum <Link workshop='python' page=5 />. Below is a table that explains what each data type means:
+Pandas uses a different lexicon to describe data types from those we learned in our :link[intro to Python curriculum]{workshop="python" page="5"}. Below is a table that explains what each data type means:
 
 
 

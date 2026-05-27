@@ -9,8 +9,8 @@ programming_language: python
 learning objectives:
     - Understand what Python is and, in general terms, what it can do.
     - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
-    - Distinguish among five core data types—integers, floats, strings, booleans, and lists.
-    - Become familiar with core programming concepts, including variables, loops, and conditionals.
+    - Distinguish among common Python data types (integers, floats, strings, booleans, and lists).
+    - Become familiar with variables and control flow.
     - Engage with error output and use the internet and documentation to independently research language features.
     - Learn how to find and import code from external sources to solve more complex problems.
 
@@ -20,7 +20,7 @@ estimated time:
 # has to be formatted like this!
 prerequisites: 
     - name: command line
-      description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
+      description: Introduction to the Command Line (Required). Participants need basic command line knowledge before learning Python programming.
       required: true
     - name: data ethics
       description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
@@ -44,20 +44,20 @@ editors:
     - 'Stephen Zweibel'
 
 readings:
-    - Want to learn programming, but not convinced that the Python language is the right language? Check out [Five Reasons Why Learning Python Is The Best Decision](https://medium.com/datadriveninvestor/)
-    - "Some concrete ideas for how to use Python: [What Can I Do With Python?](https://realpython.com/what-can-i-do-with-python/)"
+    - For a case for Python as a first language, see [Five Reasons Why Learning Python Is The Best Decision](https://medium.com/datadriveninvestor/)
+    - For examples of Python projects, see [What Can I Do With Python?](https://realpython.com/what-can-i-do-with-python/)
 
 ethical considerations:
-    - Python works by reducing data to portable units and presenting them in a way that prioritizes readability. These units are known as "data types" and include strings (words/letters), integers (numbers), booleans (true or false statements), and lists (groups of strings). The python grammar, which dictates how python statements ought to be ordered, values simplicity, efficiency, and concision. You can read more about Python values at [the Zen of Python](https://www.python.org/dev/peps/pep-0020/).
-    - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
+    - Programmers use Python to make data portable and readable. In a beginner lesson, show strings for text before you move to numbers or lists. You can read more about Python values at [the Zen of Python](https://www.python.org/dev/peps/pep-0020/).
+    - As we learn about Python data types and grammar, track the choices involved in designing a digital format. When using Python, name the assumptions you add while encoding data. For more on data types and ethical data work, see our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
 
 projects:
 # Title and then description and link
     - name: The NEH Impact Index
-      description: Built by former Digital Fellow Patrick Smyth, The NEH Impact Index makes visible the distribution of funds by National Endowment for the Humanities across the United States. The website uses python to map projects, communities, and cultural institutions who have received NEH support. You can check out the code on Github.
+      description: Former Digital Fellow Patrick Smyth built The NEH Impact Index to show how the National Endowment for the Humanities distributes funds across the United States. Smyth used Python to map NEH-supported projects and institutions. You can check out the code on Github.
       link: http://www.nehimpact.org/about
     - name: Mapping Arts NYC
-      description: Mapping Arts NYC, created in 2019 by the Graduate Center’s Data for Public Good fellows, “is a project that explores the geography and representation of arts and culture in New York City over time.” It includes a number of Python scripts written to clean and make sense of all the data.
+      description: Mapping Arts NYC, created in 2019 by the Graduate Center’s Data for Public Good fellows, “is a project that explores the geography and representation of arts and culture in New York City over time.” The project team wrote Python scripts to clean and interpret the data.
       link: http://gcdiprojects.org/MappingArtsNYC/
 
 resources:
@@ -77,29 +77,29 @@ General instructions for editing this template:
 
 YAML Metadata:
 
-Everything above this comment section (the YAML) constitutes the metadata of your workshop, which will populate the front page. It must be placed at the very top of your workshop file, beginning and ending with the three hyphens ---. Everything below (starting with #) is the actual content of your workshop. 
+Everything above this comment section (the YAML) is metadata for the front page. It must be placed at the very top of your workshop file, beginning and ending with the three hyphens ---. Everything below (starting with #) is the actual content of your workshop.
 
-For the metadata, you should typically include some or all of the following:
-- The title, and an excerpt (description) that will be displayed on the front page
-- The learning objectives, which should be a list of bullet points
-- The estimated time it will take to complete the workshop
-- The dependencies, which should be a list of workshops that are required or recommended to complete this workshop
-- The authors, which should be a list of the current and past authors of the workshop (if applicable)
-- The editors, which should be a list of the current and past editors of the workshop (if applicable)
-- The readings, which should be a list of readings that are relevant to the workshop
-- The ethical considerations, which should be a list of ethical considerations that are relevant to the workshop
-- The projects, which should be a list of projects that use the skills you'll learn in this workshop
-- The resources, which should be a list of resources that are relevant to the workshop
-- The goals, which should be a list of goals that are relevant to the workshop
+Copy the metadata fields you need:
+- Title and excerpt for the front page
+- Learning objectives as bullet points
+- Estimated time to complete the workshop
+- Dependencies for required or recommended workshops
+- Current and past authors, when applicable
+- Current and past editors, when applicable
+- Readings that support the workshop
+- Ethical considerations for the topic or method
+- Projects that use the skills taught here
+- Resources for participants
+- Goals for the workshop
 
-The metadata you are currently seeing above is just an example, which you can use as a template for your own workshop. Make sure to follow the syntax exactly (or you will likely create errors), and to modify/delete any metadata that is not relevant to your workshop. It should be noted that the only truly required fields are title, cover title, and description. The other fields are optional but highly recommended for providing a complete and informative workshop experience.
+The metadata above can serve as a starting point for your own workshop; after copying it, keep the syntax intact and remove fields that do not apply. At minimum, include title and description; cover title is optional.
 ---> 
 
 # Page 1
 
-Welcome to my workshop! This is the first page (the first lesson).
+Welcome to my workshop. This is the first page (the first lesson).
 
-<!--- Each h1 and h2 markdown header (the #) indicates the beginning of a new page. Use them to structure lessons in your workshops. --->
+<!--- DHRIFT starts a new page when you use an h1 or h2 markdown header (the #). Use them to structure lessons in your workshops. --->
 
 To add a lesson, simply type your lesson content below the header. You can use typical markdown styles to format your text.
 
@@ -109,9 +109,9 @@ This is a subsection of the first lesson.
 
 ### Sub-subsection 1
 
-This is a sub-subsection of the first lesson. Note that level 3 headings will be displayed on the same page as the level 1 or 2 heading they are nested under, and will not appear in the table of contents. This can be useful for breaking down content into smaller, more manageable sections without cluttering the table of contents or creating new pages.
+This is a sub-subsection of the first lesson. DHRIFT keeps level 3 headings on the same page as the level 1 or 2 heading they are nested under, and it leaves them out of the table of contents. Use them to break up long sections without adding table-of-contents entries or new pages.
 
-In addition to text content, you can also add images to your workshop. Images can help illustrate concepts, provide visual interest, and make your workshop more engaging.
+In addition to text content, you can add images to your workshop. Add images to clarify a concept or show the thing being discussed.
 
 ### Images
 
@@ -131,40 +131,39 @@ You can include code snippets in your workshop using standard markdown syntax fo
 print("Hello, world!")
 ```
 
-In this example, python specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace python with other supported languages like javascript, html, console, etc., as needed.
+Add `python` after the opening backticks so DHRIFT formats the code block correctly. You can replace `python` with another supported language such as `javascript` or `html`.
 
 ## Components
 
 There are several components you can incorporate into your lessons, including:
 
-1. The Python REPL: You can embed the Python REPL into your lessons by using the following tag:
+1. Embed the Python REPL with this directive:
 
 ::pythonrepl
 
-2. A download button: If you have files you'd like the participant to download, you can add a download button to your lessons with the appropriate files by using the following syntax:
+2. Add a download button with the file list you want participants to receive:
 
 ::download{files="your_file1.csv, your_file2.md"}
 
-Here, `your_file1` and `your_file2` are the two files to download (you can add as many as you'd like, just separate them with commas). The break tag at the end is just to add some space after the button. NOTE: You must include copies of the files indicated in the `uploads` folder.
+Here, `your_file1` and `your_file2` are the files to download. You can add as many as you need; separate each file with a comma. Include copies of the files indicated in the `uploads` folder.
 
-3. An info box: Use :::info
-to highlight interesting additional information.
+3. Add an info box with `:::info` to highlight an aside:
 
-<Info>
+:::info
 Here's an interesting aside!
 :::
 
-4. A way to link internally to other workshops.
+4. Link internally to another workshop with `:link`.
 
 :link[some text]{workshop="python" page="5"}
 
-This is necessary when linking to another workshop page. 'workshop' is the workshop file name, and the 'page' can be found in the URL query string, for instance:   `?user=dhri-curriculum&repo=workshops&file=command-line&**page=15**&instUser=dhri-curriculum&instRepo=dhrift-site-template` 
+Use the `:link` directive when linking to another workshop page. `workshop` is the workshop file name, and `page` can be found in the URL query string, for instance: `?user=dhri-curriculum&repo=workshops&file=command-line&page=15&instUser=dhri-curriculum&instRepo=dhrift-site-template`
 
 <!--- Most workshop lessons should include some form of a challenge, a solution, key terms, and an evaluation. See below for an example of each. --->
 
 ## Evaluation
 
-This is an evaluation, which you can utilize in the form of a quiz. For the syntax, see the example question and quiz below:
+This evaluation uses a quiz. For the syntax, see the example question and quiz below:
 
 What are the characteristics of the REPL? Select all that apply.
 
@@ -175,7 +174,7 @@ What are the characteristics of the REPL? Select all that apply.
 - The REPL can be used to evaluate mathematical expressions like `2 + 2`.*
 :::
 
-<!--- For quizzes, each list item in the <Quiz> tags is a potential answer. To indicate correct answers, place an asterisk at the end. --->
+<!--- For quizzes, each list item in the :::quiz directive is a potential answer. To indicate correct answers, place an asterisk at the end. --->
 
 <!-- Each section end should have a collection of key words related to the lesson, like so: -->
 :::keywords
@@ -186,7 +185,7 @@ definition 1
 definition 2
 :::
 
-<!--- Keywords are a good way to reinforce the key concepts of the lesson. Definitions cannot be multiple paragraphs. --->
+<!--- Keep each keyword definition to one paragraph. --->
 
 <!--- To create a challenge with a solution that you can show/hide, you can use the following custom markdown syntax: --->
 
@@ -200,7 +199,7 @@ Where are DHRIFT workshops stored?
 In a GitHub repository.
 :::
 
-In this example, the (optional heading) Challenge section poses a question or problem, and the <Secret> tag creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
+Write a challenge and place the solution inside `:::secret`.
 
 # Section 2
 

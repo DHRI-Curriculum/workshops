@@ -49,45 +49,6 @@ Keeping these ideas in mind, let's get started working with Leaflet.
 
 You are likely very familiar with web maps. I personally have found myself quite lost in NYC before. While "being lost" is not necessarily a bad way of being sometimes, if you have a specific destination (not to mention a certain time) in mind, having a map is quite helpful. You know what I mean--Google or Apple provide us with interactive geo-location almost every second of our lives.
 
-<!-- Before we begin integrating web maps into our project, it might be helpful to consider the basic "layering" of a web map. Take a look at the map below. It was created using Leaflet, and you can see some of the code (HTML, CSS, and JavaScript) powering it on the side. Click on stuff and zoom and drag around on the map.
-
-<HTMLEditor >
-
-<html>
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
- <script src="https://unpkg.com/leaflet@1.7.0/dist/leaflet.js"></script>
-    <div id="map"></div>
-</html>
-<css>
-#map {
-    height: 600px;
-    width: 600px;
-}
-</css>
-<javascript>
-```
-var map = L.map('map').setView([51.505, -0.09], 13);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('Here is a pop-up<br> on a marker')
-    .openPopup();
-```
-</javascript>
-
-</HTMLEditor>
-<br />
-
-You'll notice that there are several "layers" to this map. Web maps can be layered in many ways, but the most basic can resolve into just a few:
-1. The background or tile layer--the map itself, with all its internal data about streets, boroughs, cities, etc.
-2. The foreground layer--the parts that overlay the map: the markers, lines, and other elements.
-3. The popup layer--the text or notification that appears when you click on a marker or other element on the map.
-4. The control layer--the buttons that control the map, such as the zoom buttons. This layer is usually on top of the other layers.
-
-These layers all work together to comprise the interactivity of the map. For our purposes, we will mostly work with the foreground layer and the popup layer. -->
-
 ## Getting Started with Leaflet
 
 Leaflet is fairly straightforward to get started with and allows for a wide array of customization.
@@ -337,7 +298,7 @@ Do you recall the following key terms?
 
 Here are the course files we created for this lesson if you need a reference:
 
-::download{files="11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js"} <br/>
+::download{files="11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js"}
 
 # Working With GeoSpatial Data
 
@@ -358,7 +319,7 @@ We have said that we'd like to use a dataset that defines the locations of neigh
 
 Let's use the dataset as a local file in our project folder. You can download it from the source website or simply use the download button below:
 
-::download{files="nycneighborhoods.json"}<br />
+::download{files="nycneighborhoods.json"}
 
 You'll see that we get a JSON file that contains the data we need. Make sure you save it in your working directory for this course. Let's open this file in VSCode and take a look at it:
 
@@ -717,7 +678,7 @@ Do you recall the meaning of the following terms?
 
 Here are the course files we created for this lesson if you need a reference:
 
-::download{files="12_index.html, 12_script.js, 12_styles.css, 12_poem.html, 12_poem.css, 12_poem.js, poem.json, 12_map.js, 12_nyc-data.css, 12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"} <br/>
+::download{files="12_index.html, 12_script.js, 12_styles.css, 12_poem.html, 12_poem.css, 12_poem.js, poem.json, 12_map.js, 12_nyc-data.css, 12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"}
 
 # Reading Documentation
 
