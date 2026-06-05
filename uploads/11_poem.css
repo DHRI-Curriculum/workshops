@@ -1,3 +1,117 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #4a4a4a;
+  margin-top: 30px;
+}
+
+#poem blockquote {
+  margin-left: 40px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+#poem p {
+  margin-bottom: 0.5em;
+}
+
+/* Clickable literary-device terms */
+.info-term {
+  cursor: pointer;
+  color: #0066cc;
+  border-bottom: 1px dotted #0066cc;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.info-term:hover {
+  background-color: #e0f0ff;
+}
+
+
+.active-term {
+  background-color: #fffbcc;
+  font-weight: bold;
+  border-bottom: 2px solid #cc9900;
+  color: #333;
+}
+
+/* Info display area */
+#info {
+  margin-top: 10px;
+  padding: 15px;
+  border-left: 5px solid #ddd;
+  background-color: #f9f9f9;
+  min-height: 40px;
+}
+
+#info.active-info {
+  border-left-color: #0066cc;
+}
+
+#info p {
+  margin: 0 0 0.6em 0;
+}
+
+#info p:last-child {
+  margin-bottom: 0;
+}
+
+
+#info-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+#clearButton,
+#zoomToNYC {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.85em;
+  padding: 5px 12px;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#clearButton:hover,
+#zoomToNYC:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 30px 0;
+}
+
+/*Map container — Leaflet requires an explicit height */
 #map {
-    height: 400px;
-  }
+  height: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}

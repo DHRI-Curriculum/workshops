@@ -1,3 +1,4 @@
+// script.js
 $(document).ready(function() {
     console.log('DOM ready, script running!');
 

@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
   font-family: Arial, Helvetica, sans-serif; /* Font stack, tries Arial first */
   line-height: 1.5; /* Spacing between lines */
@@ -37,7 +39,6 @@ a:hover { /* Style links when mouse hovers over them */
   text-align: center;
 }
 
-/* Added in Lesson 9 via jQuery challenge */
 .highlight {
   background-color: yellow;
   font-weight: bold;

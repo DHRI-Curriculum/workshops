@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
   font-family: Arial, Helvetica, sans-serif; /* Font stack, tries Arial first */
   line-height: 1.5; /* Spacing between lines */
@@ -22,13 +24,13 @@ a:hover { /* Style links when mouse hovers over them */
   text-decoration: underline; /* Add underline on hover */
 }
 
-/* Example class */
+/* Example class — carried over from lesson 8 */
 .important-note {
   font-style: italic;
   color: firebrick;
 }
 
-/* Example ID */
+/* Example ID*/
 #page-footer {
   margin-top: 40px;
   padding-top: 10px;
@@ -37,17 +39,20 @@ a:hover { /* Style links when mouse hovers over them */
   text-align: center;
 }
 
-/* Added in Lesson 9 via jQuery challenge */
 .highlight {
   background-color: yellow;
   font-weight: bold;
 }
 
+/* Toggled on/off by jQuery when #myButton is clicked */
 .active {
-  color: darkred;
+  text-shadow: 2px 2px 5px grey;
 }
 
+/* CHALLENGE 3: CSS Class Toggling */
+/* Toggled on #outputArea by the #myButton click handler */
 .fancy {
   border: 3px dashed green;
   background-color: lightgreen;
 }
+/* END CHALLENGE 3 */
