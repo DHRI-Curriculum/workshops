@@ -1,39 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My JavaScript Project - L10</title>
-    <link rel="stylesheet" href="10_styles.css"> 
+    <title>My JavaScript Project</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="formatText">
-      <!-- Link to the new poem page -->
-      <h2><a href="10_poem.html">Explore Walt Whitman's <em>Broadway</em></a></h2>
-      <hr>
+    <h1>My Awesome JavaScript Project</h1>
 
-      <h1 id="mainHeading">My Awesome JavaScript Project</h1>
-      <p class="intro-para">This is the starting point for our project.</p>
-      <p class="important-note">Lesson 10 adds a data-driven poem page.</p>
+    <h2><a href="10_poem.html">Explore Walt Whitman's <em>Broadway</em></a></h2>
+    <hr>
 
-      <button id="toggleJokes">Toggle Jokes</button>
-      <button id="myButton">Click Me for Action</button>
+    <p>Let's make this interactive!</p>
+    <button id="myButton">Click Me</button>
+    <div id="outputArea"></div>
 
-      <section id="joke">
-          <!-- Jokes... -->
-          <p>Q: Why did the programmer quit his job?...</p>
-          <p>Q: What's the difference between an academic and a genie?...</p>
-          <p>Q. What do you call a fake noodle?...</p>
-      </section>
-
-      <div id="outputArea" style="margin-top: 20px; padding: 10px; border: 1px dashed grey; min-height: 30px;"></div>
-    </div>
-
-    <div id="page-footer">
-      <p>© 2024 Your Name Here</p>
-    </div>
-
+    <!-- Include jQuery FIRST -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="10_script.js"></script> 
+    <!-- Then include your script -->
+    <script src="10_script.js"></script>
   </body>
 </html>

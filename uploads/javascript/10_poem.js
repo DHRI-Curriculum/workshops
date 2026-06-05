@@ -43,11 +43,39 @@ $(document).ready(function() {
             // Get the info text stored in the data-info attribute of the clicked element
             const infoText = $(this).data("info"); // jQuery's .data() reads data-* attributes
 
-            // Display the info text in the #info div
-            $("#info").html(`<p><strong>${$(this).text()}:</strong> ${infoText}</p>`);
-            // Optional: Add a class to highlight the info area
-            $("#info").addClass("active-info");
+            // --- CHALLENGE 3: Highlight Active Term ---
+            // Remove the .active-term class from any previously highlighted term
+            $(".info-term").removeClass("active-term");
+            // Add the .active-term class to the term that was just clicked
+            $(this).addClass("active-term");
+            // --- END CHALLENGE 3 ---
+
+            // --- CHALLENGE 2: Improve Info Display ---
+            // Build the new info entry as a paragraph, including the clicked word as a label
+            const newEntry = `<p><strong>${$(this).text()}:</strong> ${infoText}</p>`;
+
+            // If the #info box still shows the default placeholder, clear it first
+            // then start appending; otherwise just append below existing entries
+            if ($("#info").hasClass("active-info")) {
+                // Already has content, append below it
+                $("#info").append(newEntry);
+            } else {
+                // First click: replace placeholder and mark the box as active
+                $("#info").html(newEntry);
+                $("#info").addClass("active-info");
+            }
         });
+
+        // --- CHALLENGE 2 cont'd: Clear Button ---
+        // When the clear button is clicked, remove all appended entries,
+        // restore the placeholder text, and reset the active-info state
+        $("#clearButton").on("click", function() {
+            $("#info").html("<p>Click on a highlighted term above.</p>");
+            $("#info").removeClass("active-info");
+            // Also remove active highlight from any term so the display stays in sync
+            $(".info-term").removeClass("active-term");
+        });
+        // --- END CHALLENGE 2 ---
 
     }).fail(function(jqXHR, textStatus, errorThrown) {
         // Handle errors if poem.json cannot be loaded

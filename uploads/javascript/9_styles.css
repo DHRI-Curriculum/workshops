@@ -1,92 +1,58 @@
-/* 9_styles.css */
+/* styles.css */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    background-color: rgb(118, 92, 120);
-    color: #eee;
-    margin: 20px;
-  }
-  
-  h1 {
-    color: #fff;
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-  }
+  font-family: Arial, Helvetica, sans-serif; /* Font stack, tries Arial first */
+  line-height: 1.5; /* Spacing between lines */
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  margin: 20px; /* Add some space around the body content */
+}
 
-  
-  a {
-    color: #aef;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #cff;
-    text-decoration: underline;
-  }
-  
-  .formatText {
-      color: rgb(255, 255, 255);
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      white-space: pre-line;
-  }
-  
-  #joke {
-      border: 5px solid rgb(16, 29, 55);
-      background-color: rgb(118, 125, 158);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 60%;
-      margin: 20px auto;
-      padding: 15px;
-      color: rgb(255, 230, 204);
-      border-radius: 8px;
-  }
-  
-  #joke p {
-     font-size: 1.1em;
-     margin: 0.5em 0;
-  }
-  
-  .important-note {
-    font-style: italic;
-    color: #f8d7da;
-    background-color: rgba(100, 0, 0, 0.3);
-    padding: 5px;
-    border-radius: 3px;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  
-   #page-footer {
-    margin-top: 40px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
-    font-size: 0.9em;
-    text-align: center;
-    color: #ccc;
-  }
-  
+h1 {
+  color: #0056b3; /* A shade of blue */
+  text-align: center; /* Center the heading */
+}
 
-  .highlight {
-    background-color: yellow;
-    color: black; /* Ensure text is visible on yellow */
-  }
-  
-  .active { /
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: lightcoral;
-  }
-  
-  button {
-      margin: 10px 5px;
-      padding: 8px 12px;
-      cursor: pointer;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-  }
+/* Style links */
+a {
+  color: #0066cc;
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover { /* Style links when mouse hovers over them */
+  color: #004080;
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Example class — carried over from lesson 8 */
+.important-note {
+  font-style: italic;
+  color: firebrick;
+}
+
+/* Example ID*/
+#page-footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc; /* Light gray top border */
+  font-size: 0.9em; /* Slightly smaller font */
+  text-align: center;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* Toggled on/off by jQuery when #myButton is clicked */
+.active {
+  text-shadow: 2px 2px 5px grey;
+}
+
+/* CHALLENGE 3: CSS Class Toggling */
+/* Toggled on #outputArea by the #myButton click handler */
+.fancy {
+  border: 3px dashed green;
+  background-color: lightgreen;
+}
+/* END CHALLENGE 3 */

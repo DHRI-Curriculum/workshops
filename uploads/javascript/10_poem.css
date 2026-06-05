@@ -1,94 +1,106 @@
-/* 10_poem.css */
+/* poem.css */
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.6;
-    margin: 20px;
-    background-color: #fdfdfd;
-    color: #222;
-  }
-  
-  .container {
-    max-width: 800px; /* Limit width for readability */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  h1 {
-    text-align: center;
-    color: #4a4a4a;
-    margin-bottom: 15px; /* Reduced margin */
-  }
-  
-  #intro p {
-      text-align: center;
-      font-size: 0.95em;
-      color: #555;
-  }
-  
-  #poem {
-      margin-top: 20px;
-  }
-  
-  #poem blockquote {
-    margin-left: 40px; /* Indent the poem */
-    font-size: 1.1em;
-    color: #333;
-    border-left: 3px solid #eee; /* Subtle left border */
-    padding-left: 15px;
-  }
-  
-  #poem p {
-      margin-bottom: 0.5em; /* Space between lines */
-  }
-  
-  /* Style the clickable terms */
-  .info-term {
-    cursor: pointer; /* Indicate interactivity */
-    color: #0066cc;
-    border-bottom: 1px dotted #0066cc;
-    text-decoration: none; /* Remove default underline */
-    transition: background-color 0.2s ease; /* Smooth hover effect */
-    padding: 0 2px; /* Tiny padding for hover effect */
-    border-radius: 2px;
-  }
-  
-  .info-term:hover {
-    background-color: #e0f0ff; /* Light blue background on hover */
-  }
-  
-  /* Style the info display area */
-  #info {
-    margin-top: 30px;
-    padding: 15px;
-    border-left: 5px solid #ddd;
-    background-color: #f9f9f9;
-    min-height: 40px; /* Ensure it has some height even when empty */
-    transition: border-left-color 0.3s ease; /* Smooth transition */
-    border-radius: 0 4px 4px 0; /* Rounded corners */
-  }
-  
-  #info.active-info { /* Style when info is displayed */
-     border-left-color: #0066cc; /* Change border color when active */
-     background-color: #f0f8ff; /* Slightly different background */
-  }
-  
-  #info p {
-      margin: 0; /* Remove default paragraph margin inside info box */
-      font-size: 0.95em;
-  }
-   #info p strong {
-       color: #0056b3;
-   }
-  
-  hr {
-      border: none;
-      border-top: 1px solid #eee;
-      margin: 30px 0;
-  }
-  
-  a { /* General link styling */
-    color: #0066cc;
-  }
-  a:hover {
-      color: #004080;
-  }
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.container {
+  max-width: 800px; /* Limit width for readability */
+  margin: 0 auto; /* Center the container */
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+#poem blockquote {
+  margin-left: 40px; /* Indent the poem */
+  font-size: 1.1em;
+  color: #333;
+}
+
+#poem p {
+    margin-bottom: 0.5em; /* Space between lines */
+}
+
+/* Style the clickable terms */
+.info-term {
+  cursor: pointer; /* Indicate interactivity */
+  color: #0066cc;
+  border-bottom: 1px dotted #0066cc;
+  text-decoration: none; /* Remove default underline */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.info-term:hover {
+  background-color: #e0f0ff; /* Light blue background on hover */
+}
+
+/* --- CHALLENGE 3: Highlight Active Term --- */
+/* Applied by JavaScript to whichever .info-term was most recently clicked */
+.active-term {
+  background-color: #fffbcc; /* Soft yellow highlight */
+  font-weight: bold;
+  border-bottom: 2px solid #cc9900; /* Stronger, gold-toned underline */
+  color: #333; /* Darken text so it reads well against the yellow */
+}
+/* --- END CHALLENGE 3 --- */
+
+/* Style the info display area */
+#info {
+  margin-top: 10px;
+  padding: 15px;
+  border-left: 5px solid #ddd;
+  background-color: #f9f9f9;
+  min-height: 40px; /* Ensure it has some height even when empty */
+}
+
+#info.active-info { /* Style when info is displayed */
+   border-left-color: #0066cc; /* Change border color when active */
+}
+
+#info p {
+    margin: 0 0 0.6em 0; /* Small gap between stacked entries */
+}
+
+#info p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- CHALLENGE 2: Clear Button --- */
+#info-header {
+  display: flex;
+  justify-content: flex-end; /* Push button to the right */
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+#clearButton {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.85em;
+  padding: 5px 12px;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#clearButton:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+/* --- END CHALLENGE 2 --- */
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}

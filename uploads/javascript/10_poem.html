@@ -3,35 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walt Whitman's Broadway</title>
-    <!-- Link to specific CSS for this page -->
+    <title>Walt Whitman's Broadway - Interactive</title>
+    <!-- Link to our specific CSS for this page -->
     <link rel="stylesheet" href="10_poem.css">
   </head>
   <body>
-    <div class="container"> 
+    <div class="container"> <!-- Optional container for layout -->
       <h1><em>Broadway</em> by Walt Whitman (Interactive)</h1>
 
       <div id="intro">
         <p>Click on highlighted words or phrases below to learn more about the literary devices used in the poem.</p>
-         <p><a href="10_index.html">« Back to Main Page</a></p>
       </div>
 
       <div id="poem">
         <!-- Poem text will be inserted here by JavaScript -->
-        <p><em>Loading poem...</em></p>
+        Loading poem...
       </div>
 
-      <hr>
+      <hr> <!-- Separator -->
+
+      <div id="info-header">
+        <!-- CHALLENGE 2: Clear Button — sits above the info box -->
+        <button id="clearButton">Clear Notes</button>
+      </div>
 
       <div id="info">
         <!-- Information about clicked elements will appear here -->
         <p>Click on a highlighted term above.</p>
       </div>
-    </div>
+    </div> <!-- End container -->
 
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- Include specific JS for this page -->
+    <!-- Include our specific JS for this page -->
     <script src="10_poem.js"></script>
   </body>
 </html>

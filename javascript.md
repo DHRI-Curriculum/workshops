@@ -1680,7 +1680,7 @@ function printGrades(studentArray) {
 function addStudent(studentArray, name, grades) {
   const newStudent = { name: name, grades: grades };
   studentArray.push(newStudent);
-  console.log(\`Added student: ${name}\`);
+  console.log(`Added student: ${name}`);
 }
 
 // 4. Function to Convert Grades to Letters
@@ -1749,7 +1749,7 @@ How do you access the value associated with the key `email` in an object named `
 :::quiz
 - `user(email)`
 - `user.email`*
-- `user[email]` (Only if `email` is a variable holding the string "email")
+- `user[email]` (Only if `email` is a variable holding the string "email")*
 - `user["email"]`*
 :::
 
