@@ -1599,7 +1599,7 @@ function addStudent(studentArray, name, grades) {
     grades: grades
   };
   studentArray.push(newStudent); // Adds the new object to the original array
-  console.log(\`Added student: ${name}\`);
+  console.log(`Added student: ${name}`);
 }
 ```
 *   Note: This function modifies the original `students` array passed into it.
@@ -1671,7 +1671,7 @@ function printGrades(studentArray) {
   console.log("--- Student Grades ---");
   for (let i = 0; i < studentArray.length; i++) {
     const student = studentArray[i];
-    console.log(\`${student.name}: ${student.grades.join(', ')}\`);
+    console.log(`${student.name}: ${student.grades.join(', ')}`);
   }
   console.log("--------------------");
 }
