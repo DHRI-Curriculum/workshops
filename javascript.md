@@ -4310,7 +4310,7 @@ What is the primary purpose of using `event.preventDefault()` inside a click han
 
 Here are the course files reflecting the state at the end of this lesson:
 
-::download{files="12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js"}
+::download{files="12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js, 12_nyc-data.css, 12_index.html, 12_script.js, 12_styles.css, 12_poem.html, 12_poem.css, 12_poem.js, poem.json"}
 
 ---
 
