@@ -1,31 +1,53 @@
 body {
-    background-color: rgb(118, 92, 120);
+  font-family: Arial, Helvetica, sans-serif; /* Font stack, tries Arial first */
+  line-height: 1.5; /* Spacing between lines */
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  margin: 20px; /* Add some space around the body content */
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: bold;
+  color: #0056b3; /* A shade of blue */
+  text-align: center; /* Center the heading */
 }
 
-p {
-    font-size: 30px;
+/* Style links */
+a {
+  color: #0066cc;
+  text-decoration: none; /* Remove underline */
 }
 
-.formatText {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    white-space: pre-line;
+a:hover { /* Style links when mouse hovers over them */
+  color: #004080;
+  text-decoration: underline; /* Add underline on hover */
 }
 
-#joke {
-    border: 5px solid rgb(16, 29, 55);
-    background-color: rgb(118, 125, 158);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 0 auto;
-    color: rgb(255, 230, 204);
+/* Example class */
+.important-note {
+  font-style: italic;
+  color: firebrick;
+}
+
+/* Example ID */
+#page-footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc; /* Light gray top border */
+  font-size: 0.9em; /* Slightly smaller font */
+  text-align: center;
+}
+
+/* Added in Lesson 9 via jQuery challenge */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.active {
+  color: darkred;
+}
+
+.fancy {
+  border: 3px dashed green;
+  background-color: lightgreen;
 }

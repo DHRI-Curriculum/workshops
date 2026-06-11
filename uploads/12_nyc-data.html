@@ -2,25 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>NYC Neighborhoods</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-    crossorigin=""/>
-    <link rel="stylesheet" href="12_nyc-data.css">
-   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-   crossorigin=""></script>
-   <script src="nycneighborhoods.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Neighborhoods Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Your specific CSS -->
+    <link rel="stylesheet" href="nyc-data.css">
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Load the Neighborhood Data (BEFORE your script that uses it) -->
+    <script src="nycneighborhoods.js"></script>
+
   </head>
   <body>
     <div class="container">
       <h1>NYC Neighborhoods</h1>
-      <a href = "https://data.beta.nyc/dataset/pediacities-nyc-neighborhoods/resource/35dd04fb-81b3-479b-a074-a27a37888ce7" alt="Data Source">Here's the source for NYC neighborhood boundaries.</a>
+      <p>Exploring neighborhood boundaries using Leaflet and GeoJSON.</p>
+      <p>Data source: <a href="https://data.beta.nyc/dataset/pediacities-nyc-neighborhoods/resource/35dd04fb-81b3-479b-a074-a27a37888ce7" target="_blank" rel="noopener noreferrer">NYC Planning - PediaCities Neighborhoods</a></p>
+
+      <div id="controls">
+         <!-- We can add buttons or lists here later -->
+         <button id="pan-to-flatbush" style="display: none;">Pan to Flatbush (Example)</button> <!-- Hidden initially -->
+      </div>
+
       <div id="map"></div>
-      <button id="pan-to-flatbush">Pan to Flatbush</button>
-      <div id ="neighborhoods"></div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="12_nyc-data.js"></script>
+
+      <div id="neighborhood-list-container">
+        <h2>Neighborhoods</h2>
+        <div id="neighborhoods">
+            <!-- List will be populated here -->
+        </div>
+      </div>
+
+    </div> <!-- End container -->
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Include your specific map script -->
+    <script src="nyc-data.js"></script>
   </body>
 </html>

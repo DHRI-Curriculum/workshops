@@ -1,106 +1,41 @@
-/* 12_nyc-data.css */
+/* nyc-data.css */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Cleaner font */
-    line-height: 1.6;
-    margin: 0; /* Remove default margin */
-    background-color: #f8f9fa; /* Very light grey */
-    color: #333;
-  }
-  
-  .container {
-    max-width: 1140px; /* Wider container */
-    margin: 20px auto;
-    padding: 15px;
-    background-color: #fff; /* White background for content area */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
-    border-radius: 5px;
-  }
-  
-  h1, h2 {
-      color: #0056b3;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 5px;
-      margin-top: 1em;
-       margin-bottom: 0.7em;
-  }
-  
-  p {
-      margin-bottom: 1em;
-  }
-  
-  #map {
-    height: 550px; /* Slightly taller map */
-    width: 100%;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    border-radius: 4px; /* Rounded corners */
-  }
-  
-  #neighborhood-list-container {
-      margin-top: 20px;
-  }
-  
-  #neighborhoods {
-    /* Responsive columns using CSS Grid */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Columns adjust */
-    gap: 10px; /* Space between columns/rows */
-    list-style: none;
-    padding-left: 0;
-    max-height: 300px; /* Limit height and allow scroll */
-    overflow-y: auto; /* Add scrollbar if needed */
-    border: 1px solid #eee;
-    padding: 10px;
-     border-radius: 4px;
-  }
-  
-  #neighborhoods li {
-      margin-bottom: 2px; /* Reduced space */
-  }
-  
-  #neighborhoods a {
-      text-decoration: none;
-      color: #0056b3;
-      cursor: pointer;
-      display: block; /* Make entire list item area clickable */
-      padding: 2px 5px;
-      border-radius: 3px;
-      transition: background-color 0.2s ease;
-  }
-  
-  #neighborhoods a:hover {
-      text-decoration: underline;
-      color: #003d80;
-      background-color: #e9ecef; /* Light hover */
-  }
-  
-  #controls button { /* Style example button if used */
-      margin: 5px;
-      padding: 8px 12px;
-      cursor: pointer;
-      background-color: #28a745; /* Green */
-      color: white;
-      border: none;
-      border-radius: 4px;
-  }
-   #controls button:hover {
-       background-color: #218838; /* Darker green */
-   }
-  
-  /* Leaflet popup styling improvements */
-  .leaflet-popup-content-wrapper {
-      border-radius: 5px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  }
-  .leaflet-popup-content {
-      margin: 12px 18px;
-      line-height: 1.5;
-  }
-  .leaflet-popup-content h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.2em;
-      color: #0056b3;
-  }
-  .leaflet-popup-tip {
-      background: white; /* Ensure tip matches popup */
-  }
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 15px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#map {
+  height: 500px; /* Adjust as needed */
+  width: 100%;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+}
+#neighborhood-list-container {
+    margin-top: 20px;
+}
+#neighborhoods {
+  columns: 150px 4; /* Aim for 4 columns, min width 150px */
+  list-style: none;
+  padding-left: 0;
+}
+#neighborhoods li {
+    margin-bottom: 5px;
+}
+#neighborhoods a {
+    text-decoration: none;
+    color: #0066cc;
+    cursor: pointer;
+}
+#neighborhoods a:hover {
+    text-decoration: underline;
+    color: #004080;
+}
+#controls button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}

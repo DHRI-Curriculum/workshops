@@ -1,25 +1,26 @@
-<!doctype HTML>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="12_styles.css">
-    <title>My JavaScripting Master's Student Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Project</title>
+    <link rel="stylesheet" href="11_styles.css">
   </head>
   <body>
-    <div class="formatText">
-      <h2><a href="poem.html">Walt Whitman's <em>Broadway</em></a></h2>
-      <h2><a href="12_nyc-data.html">NYC Neighborhoods</a></h2>
-      <h1 id="noShow">This is my project!</h1>
-      <h1>Bad Jokes Galore!</h1>
-      <button id="toggleJokes">Toggle Jokes</button>
-        <section id="joke">     
-          <p>Q: Why did the programmer quit his job?
-          A: Because he didn't get arrays.</p>
-          <p>Q: What's the difference between an academic and a genie?
-          A: One grants wishes, the other wishes for grants.</p>
-        </section>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="12_script.js"></script>
+    <h1>My Awesome JavaScript Project</h1>
+
+    <h2><a href="11_poem.html">Explore Walt Whitman's <em>Broadway</em></a></h2>
+    <hr>
+    <!-- In index.html -->
+    <h2><a href="nyc-data.html">NYC Neighborhood Map</a></h2>
+    <hr>
+    <p>Let's make this interactive!</p>
+    <button id="myButton">Click Me</button>
+    <div id="outputArea"></div>
+
+    <!-- Include jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Then include your script -->
+    <script src="11_script.js"></script>
   </body>
 </html>
